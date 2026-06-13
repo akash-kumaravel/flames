@@ -1,5 +1,6 @@
 import express from "express";
 import path from "path";
+import fs from "fs";
 import { createServer as createViteServer } from "vite";
 
 async function startServer() {
@@ -18,6 +19,21 @@ async function startServer() {
       appType: "spa",
     });
     app.use(vite.middlewares);
+
+    // Dynamic routing fallback in development to support refreshes on clean URLs
+    app.use("*", async (req, res, next) => {
+      const url = req.originalUrl;
+      try {
+        const templatePath = path.resolve(process.cwd(), "index.html");
+        let template = fs.readFileSync(templatePath, "utf-8");
+        // Apply Vite HTML transformation to inject HMR and build dependencies
+        template = await vite.transformIndexHtml(url, template);
+        res.status(200).set({ "Content-Type": "text/html" }).end(template);
+      } catch (e) {
+        vite.ssrFixStacktrace(e as Error);
+        next(e);
+      }
+    });
   } else {
     const distPath = path.join(process.cwd(), 'dist');
     // Serve static assets out of the distribution folder
