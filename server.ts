@@ -1,7 +1,6 @@
 import express from "express";
 import path from "path";
 import fs from "fs";
-import { createServer as createViteServer } from "vite";
 
 async function startServer() {
   const app = express();
@@ -12,8 +11,17 @@ async function startServer() {
     res.json({ status: "ok" });
   });
 
-  // Vite middleware for development
-  if (process.env.NODE_ENV !== "production") {
+  // Safe check if we are in production
+  // - Either NODE_ENV is set to production
+  // - Or we are executing from the compiled CJS server file
+  const isProd = process.env.NODE_ENV === "production" || 
+                 (typeof __filename !== "undefined" && __filename.includes("server.cjs")) ||
+                 process.argv[1]?.includes("server.cjs");
+
+  if (!isProd) {
+    console.log("Starting server in DEVELOPMENT mode with Vite live preview...");
+    // Dynamic import to prevent Node from resolving or crashing on production startup
+    const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
@@ -21,8 +29,12 @@ async function startServer() {
     app.use(vite.middlewares);
 
     // Dynamic routing fallback in development to support refreshes on clean URLs
-    app.use("*", async (req, res, next) => {
+    app.get("*", async (req, res, next) => {
       const url = req.originalUrl;
+      // Skip static files with extensions or API routes
+      if (url.startsWith("/api/") || url.includes(".")) {
+        return next();
+      }
       try {
         const templatePath = path.resolve(process.cwd(), "index.html");
         let template = fs.readFileSync(templatePath, "utf-8");
@@ -35,6 +47,7 @@ async function startServer() {
       }
     });
   } else {
+    console.log("Starting server in PRODUCTION mode...");
     const distPath = path.join(process.cwd(), 'dist');
     // Serve static assets out of the distribution folder
     app.use(express.static(distPath));
