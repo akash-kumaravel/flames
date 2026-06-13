@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   Flame, Info, ShieldCheck, Eye, Check, Search, ArrowRight, MessageCircle
 } from 'lucide-react';
@@ -20,18 +20,59 @@ import ProductsOverview from './components/ProductsOverview';
 import BlogPage from './components/BlogPage';
 import ContactPage from './components/ContactPage';
 
+const sectionToPath: Record<ActiveSection, string> = {
+  'home': '/',
+  'about': '/about',
+  'products': '/products',
+  'product-watercolor': '/product-watercolor',
+  'product-indoor': '/product-indoor',
+  'product-outdoor': '/product-outdoor',
+  'why-choose': '/why-choose',
+  'faq': '/faq',
+  'contact': '/contact',
+  'blog': '/blog'
+};
+
+const getSectionFromPath = (path: string): ActiveSection => {
+  if (path.endsWith('/about') || path.includes('/about')) return 'about';
+  if (path.endsWith('/products') || path.includes('/products')) return 'products';
+  if (path.endsWith('/product-watercolor') || path.includes('/product-watercolor')) return 'product-watercolor';
+  if (path.endsWith('/product-indoor') || path.includes('/product-indoor')) return 'product-indoor';
+  if (path.endsWith('/product-outdoor') || path.includes('/product-outdoor')) return 'product-outdoor';
+  if (path.endsWith('/why-choose') || path.includes('/why-choose')) return 'why-choose';
+  if (path.endsWith('/faq') || path.includes('/faq')) return 'faq';
+  if (path.endsWith('/contact') || path.includes('/contact')) return 'contact';
+  if (path.endsWith('/blog') || path.includes('/blog')) return 'blog';
+  return 'home';
+};
+
 export default function App() {
-  const [activeSection, setActiveSection] = useState<ActiveSection>('home');
+  const [activeSection, setActiveSection] = useState<ActiveSection>(() => getSectionFromPath(window.location.pathname));
   const [selectedProductId, setSelectedProductId] = useState<string>('vapor-fireplace');
   const [searchQuery, setSearchQuery] = useState('');
   const [faqCategory, setFaqCategory] = useState<'all' | 'general' | 'safety' | 'fuel'>('all');
   const [seoInspectorOpen, setSeoInspectorOpen] = useState(false);
 
-  // Auto scroll to top on page alteration
-  const handleNavigation = (section: ActiveSection) => {
+  // Sync state back to the URL on navigate, tracking history block
+  const handleNavigation = (section: ActiveSection, updateHistory = true) => {
     setActiveSection(section);
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (updateHistory) {
+      const path = sectionToPath[section] || '/';
+      window.history.pushState({ section }, '', path);
+    }
   };
+
+  // Listen to browser backwards/forwards popstate navigation
+  useEffect(() => {
+    const handlePopState = () => {
+      const matched = getSectionFromPath(window.location.pathname);
+      setActiveSection(matched);
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
 
   const handleSelectProduct = (id: string) => {
     setSelectedProductId(id);
