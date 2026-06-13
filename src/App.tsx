@@ -8,7 +8,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ActiveSection, FAQItem } from './types';
 import { 
   BRAND, PRODUCTS, TRUST_BAR, GENERAL_STATS, 
-  COMMON_FAQS, META_SUMMARY, WHY_CHOOSE_EXTRA 
+  COMMON_FAQS, META_SUMMARY, WHY_CHOOSE_EXTRA,
+  BLOG_ARTICLES
 } from './data';
 
 // Modular Web Components
@@ -20,85 +21,86 @@ import ProductsOverview from './components/ProductsOverview';
 import BlogPage from './components/BlogPage';
 import ContactPage from './components/ContactPage';
 
-const sectionToHash: Record<ActiveSection, string> = {
-  'home': '#/',
-  'about': '#/about',
-  'products': '#/products',
-  'product-watercolor': '#/product-watercolor',
-  'product-indoor': '#/product-indoor',
-  'product-outdoor': '#/product-outdoor',
-  'why-choose': '#/why-choose',
-  'faq': '#/faq',
-  'contact': '#/contact',
-  'blog': '#/blog'
+const sectionToPath: Record<ActiveSection, string> = {
+  'home': '/',
+  'about': '/about',
+  'products': '/products',
+  'product-watercolor': '/product-watercolor',
+  'product-indoor': '/product-indoor',
+  'product-outdoor': '/product-outdoor',
+  'why-choose': '/why-choose',
+  'faq': '/faq',
+  'contact': '/contact',
+  'blog': '/blog'
 };
 
-const getSectionFromHash = (): ActiveSection => {
-  const hash = window.location.hash || '#/';
-  
-  if (hash.includes('/about') || hash.includes('about')) return 'about';
-  if (hash.includes('/products') || hash.includes('products')) return 'products';
-  if (hash.includes('/product-watercolor') || hash.includes('product-watercolor')) return 'product-watercolor';
-  if (hash.includes('/product-indoor') || hash.includes('product-indoor')) return 'product-indoor';
-  if (hash.includes('/product-outdoor') || hash.includes('product-outdoor')) return 'product-outdoor';
-  if (hash.includes('/why-choose') || hash.includes('why-choose')) return 'why-choose';
-  if (hash.includes('/faq') || hash.includes('faq')) return 'faq';
-  if (hash.includes('/contact') || hash.includes('contact')) return 'contact';
-  if (hash.includes('/blog') || hash.includes('blog')) return 'blog';
-  
-  // Backwards compatibility list for plain path URLs so we resolve safely
+const getSectionFromPath = (): ActiveSection => {
   const path = window.location.pathname;
-  if (path.endsWith('/about') || path.includes('/about')) return 'about';
-  if (path.endsWith('/products') || path.includes('/products')) return 'products';
-  if (path.endsWith('/product-watercolor') || path.includes('/product-watercolor')) return 'product-watercolor';
-  if (path.endsWith('/product-indoor') || path.includes('/product-indoor')) return 'product-indoor';
-  if (path.endsWith('/product-outdoor') || path.includes('/product-outdoor')) return 'product-outdoor';
-  if (path.endsWith('/why-choose') || path.includes('/why-choose')) return 'why-choose';
-  if (path.endsWith('/faq') || path.includes('/faq')) return 'faq';
-  if (path.endsWith('/contact') || path.includes('/contact')) return 'contact';
-  if (path.endsWith('/blog') || path.includes('/blog')) return 'blog';
+  if (path.includes('/about')) return 'about';
+  if (path.includes('/products')) return 'products';
+  if (path.includes('/product-watercolor')) return 'product-watercolor';
+  if (path.includes('/product-indoor')) return 'product-indoor';
+  if (path.includes('/product-outdoor')) return 'product-outdoor';
+  if (path.includes('/why-choose')) return 'why-choose';
+  if (path.includes('/faq')) return 'faq';
+  if (path.includes('/contact')) return 'contact';
+  if (path.includes('/blog')) return 'blog';
 
   return 'home';
 };
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState<ActiveSection>(() => getSectionFromHash());
+  const [activeSection, setActiveSection] = useState<ActiveSection>(() => getSectionFromPath());
+  const [selectedArticleId, setSelectedArticleId] = useState<string | null>(() => {
+    const matched = BLOG_ARTICLES.find(article => article.slug === window.location.pathname);
+    return matched ? matched.id : null;
+  });
   const [selectedProductId, setSelectedProductId] = useState<string>('vapor-fireplace');
   const [searchQuery, setSearchQuery] = useState('');
   const [faqCategory, setFaqCategory] = useState<'all' | 'general' | 'safety' | 'fuel'>('all');
   const [seoInspectorOpen, setSeoInspectorOpen] = useState(false);
 
-  // Sync state back to the URL Hash on navigate, tracking history block
+  // Sync state back to the URL Path on navigate, tracking history block
   const handleNavigation = (section: ActiveSection, updateHistory = true) => {
     setActiveSection(section);
+    if (section !== 'blog') {
+      setSelectedArticleId(null);
+    }
     window.scrollTo({ top: 0, behavior: 'smooth' });
     if (updateHistory) {
-      const hash = sectionToHash[section] || '#/';
-      window.history.pushState({ section }, '', hash);
+      const path = sectionToPath[section] || '/';
+      window.history.pushState({ section, articleId: null }, '', path);
     }
   };
 
-  // Listen to browser backwards/forwards popstate and hashchange navigation
+  const handleSelectArticle = (articleId: string | null, updateHistory = true) => {
+    setSelectedArticleId(articleId);
+    setActiveSection('blog');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (updateHistory) {
+      if (articleId) {
+        const article = BLOG_ARTICLES.find(a => a.id === articleId);
+        const path = article ? article.slug : '/blog';
+        window.history.pushState({ section: 'blog', articleId }, '', path);
+      } else {
+        window.history.pushState({ section: 'blog', articleId: null }, '', '/blog');
+      }
+    }
+  };
+
+  // Listen to browser backwards/forwards popstate navigation
   useEffect(() => {
     const handleNavigationEvent = () => {
-      const matched = getSectionFromHash();
+      const matched = getSectionFromPath();
       setActiveSection(matched);
+      const matchedArticle = BLOG_ARTICLES.find(article => article.slug === window.location.pathname);
+      setSelectedArticleId(matchedArticle ? matchedArticle.id : null);
     };
 
     window.addEventListener('popstate', handleNavigationEvent);
-    window.addEventListener('hashchange', handleNavigationEvent);
-    
-    // In case they came with a clean path (before the hash update), we redirect once to clean hash representation
-    const path = window.location.pathname;
-    if (path !== '/' && path !== '/index.html') {
-      const matched = getSectionFromHash();
-      const hash = sectionToHash[matched] || '#/';
-      window.history.replaceState({ section: matched }, '', '/' + hash);
-    }
 
     return () => {
       window.removeEventListener('popstate', handleNavigationEvent);
-      window.removeEventListener('hashchange', handleNavigationEvent);
     };
   }, []);
 
@@ -119,7 +121,23 @@ export default function App() {
     return 'contact';
   };
 
-  const currentMeta = META_SUMMARY[getActiveMetaKey()] || META_SUMMARY.home;
+  // Construct dynamic SEO metadata based on whether a specific blog article is being read
+  const activeArticleObj = BLOG_ARTICLES.find(a => a.id === selectedArticleId);
+  const currentMeta = activeArticleObj ? {
+    title: `${activeArticleObj.title} | Flames Blog`,
+    description: activeArticleObj.content.intro,
+    primaryKW: activeArticleObj.targetKeyword,
+    secondaryKW: activeArticleObj.content.category
+  } : (META_SUMMARY[getActiveMetaKey()] || META_SUMMARY.home);
+
+  // Dynamically update the browser tab title and description metadata on route changes
+  useEffect(() => {
+    document.title = currentMeta.title;
+    const descEl = document.querySelector('meta[name="description"]');
+    if (descEl) {
+      descEl.setAttribute('content', currentMeta.description);
+    }
+  }, [currentMeta]);
 
   const filteredFaqs = COMMON_FAQS.filter((faq) => {
     const matchesSearch =
@@ -412,7 +430,13 @@ export default function App() {
             {activeSection === 'contact' && <ContactPage />}
 
             {/* ──── ROUTE: BLOG / ARTICLES ──── */}
-            {activeSection === 'blog' && <BlogPage onNavigateContact={() => handleNavigation('contact')} />}
+            {activeSection === 'blog' && (
+              <BlogPage 
+                onNavigateContact={() => handleNavigation('contact')} 
+                selectedArticleId={selectedArticleId}
+                onSelectArticle={handleSelectArticle}
+              />
+            )}
 
           </motion.div>
         </AnimatePresence>

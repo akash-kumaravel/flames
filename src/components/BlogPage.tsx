@@ -1,15 +1,14 @@
-import { useState } from 'react';
 import { BookOpen, Calendar, Clock, ArrowLeft, ArrowRight, CornerDownRight, Tag } from 'lucide-react';
 import { BLOG_ARTICLES } from '../data';
 import { BlogArticle } from '../types';
 
 interface BlogPageProps {
   onNavigateContact: () => void;
+  selectedArticleId: string | null;
+  onSelectArticle: (id: string | null) => void;
 }
 
-export default function BlogPage({ onNavigateContact }: BlogPageProps) {
-  const [selectedArticleId, setSelectedArticleId] = useState<string | null>(null);
-
+export default function BlogPage({ onNavigateContact, selectedArticleId, onSelectArticle }: BlogPageProps) {
   const activeArticle = BLOG_ARTICLES.find(a => a.id === selectedArticleId);
 
   return (
@@ -49,7 +48,7 @@ export default function BlogPage({ onNavigateContact }: BlogPageProps) {
                       </span>
                     </div>
 
-                    <h2 className="font-sans text-lg font-semibold text-neutral-900 hover:text-orange-500 leading-snug tracking-tight mb-3 cursor-pointer" onClick={() => setSelectedArticleId(article.id)}>
+                    <h2 className="font-sans text-lg font-semibold text-neutral-900 hover:text-orange-500 leading-snug tracking-tight mb-3 cursor-pointer" onClick={() => onSelectArticle(article.id)}>
                       {article.title}
                     </h2>
                     
@@ -66,7 +65,7 @@ export default function BlogPage({ onNavigateContact }: BlogPageProps) {
                     <button
                       id={`read-article-btn-${article.id}`}
                       onClick={() => {
-                        setSelectedArticleId(article.id);
+                        onSelectArticle(article.id);
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                       }}
                       className="text-xs font-bold font-sans text-orange-600 hover:text-orange-700 transition flex items-center gap-1 cursor-pointer"
@@ -96,7 +95,7 @@ export default function BlogPage({ onNavigateContact }: BlogPageProps) {
             
             <button
               id="back-to-hub-btn"
-              onClick={() => setSelectedArticleId(null)}
+              onClick={() => onSelectArticle(null)}
               className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-neutral-500 hover:text-neutral-900 mb-8 cursor-pointer transition"
             >
               <ArrowLeft className="w-4 h-4" />
