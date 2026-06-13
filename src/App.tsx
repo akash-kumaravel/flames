@@ -20,20 +20,34 @@ import ProductsOverview from './components/ProductsOverview';
 import BlogPage from './components/BlogPage';
 import ContactPage from './components/ContactPage';
 
-const sectionToPath: Record<ActiveSection, string> = {
-  'home': '/',
-  'about': '/about',
-  'products': '/products',
-  'product-watercolor': '/product-watercolor',
-  'product-indoor': '/product-indoor',
-  'product-outdoor': '/product-outdoor',
-  'why-choose': '/why-choose',
-  'faq': '/faq',
-  'contact': '/contact',
-  'blog': '/blog'
+const sectionToHash: Record<ActiveSection, string> = {
+  'home': '#/',
+  'about': '#/about',
+  'products': '#/products',
+  'product-watercolor': '#/product-watercolor',
+  'product-indoor': '#/product-indoor',
+  'product-outdoor': '#/product-outdoor',
+  'why-choose': '#/why-choose',
+  'faq': '#/faq',
+  'contact': '#/contact',
+  'blog': '#/blog'
 };
 
-const getSectionFromPath = (path: string): ActiveSection => {
+const getSectionFromHash = (): ActiveSection => {
+  const hash = window.location.hash || '#/';
+  
+  if (hash.includes('/about') || hash.includes('about')) return 'about';
+  if (hash.includes('/products') || hash.includes('products')) return 'products';
+  if (hash.includes('/product-watercolor') || hash.includes('product-watercolor')) return 'product-watercolor';
+  if (hash.includes('/product-indoor') || hash.includes('product-indoor')) return 'product-indoor';
+  if (hash.includes('/product-outdoor') || hash.includes('product-outdoor')) return 'product-outdoor';
+  if (hash.includes('/why-choose') || hash.includes('why-choose')) return 'why-choose';
+  if (hash.includes('/faq') || hash.includes('faq')) return 'faq';
+  if (hash.includes('/contact') || hash.includes('contact')) return 'contact';
+  if (hash.includes('/blog') || hash.includes('blog')) return 'blog';
+  
+  // Backwards compatibility list for plain path URLs so we resolve safely
+  const path = window.location.pathname;
   if (path.endsWith('/about') || path.includes('/about')) return 'about';
   if (path.endsWith('/products') || path.includes('/products')) return 'products';
   if (path.endsWith('/product-watercolor') || path.includes('/product-watercolor')) return 'product-watercolor';
@@ -43,35 +57,49 @@ const getSectionFromPath = (path: string): ActiveSection => {
   if (path.endsWith('/faq') || path.includes('/faq')) return 'faq';
   if (path.endsWith('/contact') || path.includes('/contact')) return 'contact';
   if (path.endsWith('/blog') || path.includes('/blog')) return 'blog';
+
   return 'home';
 };
 
 export default function App() {
-  const [activeSection, setActiveSection] = useState<ActiveSection>(() => getSectionFromPath(window.location.pathname));
+  const [activeSection, setActiveSection] = useState<ActiveSection>(() => getSectionFromHash());
   const [selectedProductId, setSelectedProductId] = useState<string>('vapor-fireplace');
   const [searchQuery, setSearchQuery] = useState('');
   const [faqCategory, setFaqCategory] = useState<'all' | 'general' | 'safety' | 'fuel'>('all');
   const [seoInspectorOpen, setSeoInspectorOpen] = useState(false);
 
-  // Sync state back to the URL on navigate, tracking history block
+  // Sync state back to the URL Hash on navigate, tracking history block
   const handleNavigation = (section: ActiveSection, updateHistory = true) => {
     setActiveSection(section);
     window.scrollTo({ top: 0, behavior: 'smooth' });
     if (updateHistory) {
-      const path = sectionToPath[section] || '/';
-      window.history.pushState({ section }, '', path);
+      const hash = sectionToHash[section] || '#/';
+      window.history.pushState({ section }, '', hash);
     }
   };
 
-  // Listen to browser backwards/forwards popstate navigation
+  // Listen to browser backwards/forwards popstate and hashchange navigation
   useEffect(() => {
-    const handlePopState = () => {
-      const matched = getSectionFromPath(window.location.pathname);
+    const handleNavigationEvent = () => {
+      const matched = getSectionFromHash();
       setActiveSection(matched);
     };
 
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
+    window.addEventListener('popstate', handleNavigationEvent);
+    window.addEventListener('hashchange', handleNavigationEvent);
+    
+    // In case they came with a clean path (before the hash update), we redirect once to clean hash representation
+    const path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      const matched = getSectionFromHash();
+      const hash = sectionToHash[matched] || '#/';
+      window.history.replaceState({ section: matched }, '', '/' + hash);
+    }
+
+    return () => {
+      window.removeEventListener('popstate', handleNavigationEvent);
+      window.removeEventListener('hashchange', handleNavigationEvent);
+    };
   }, []);
 
   const handleSelectProduct = (id: string) => {
