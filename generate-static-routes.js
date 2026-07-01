@@ -3,15 +3,12 @@ import path from 'path';
 
 const routes = [
   'about',
-  'products',
-  'product-watercolor',
-  'product-indoor',
-  'product-outdoor',
+  'services',
+  'portfolio',
   'why-choose',
   'faq',
   'contact',
   'blog',
-  'blog/water-vapor-fireplace-vs-bio-ethanol-fireplace',
   'blog/bio-ethanol-fireplace-buyers-guide',
   'blog/outdoor-entertaining-bio-ethanol-fireplace'
 ];

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Flame, Menu, X, ArrowUpRight } from 'lucide-react';
+import { Flame, Menu, X, ArrowUpRight, ChevronRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
 import { ActiveSection } from '../types';
 import { BRAND } from '../data';
 
@@ -27,18 +28,21 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
   const navItems: { label: string; value: ActiveSection }[] = [
     { label: 'Home', value: 'home' },
     { label: 'About Us', value: 'about' },
-    { label: 'Our Products', value: 'products' },
+    { label: 'Services', value: 'services' },
+    { label: 'Portfolio', value: 'portfolio' },
+    { label: 'Why Choose Us', value: 'why-choose' },
     { label: 'FAQs', value: 'faq' },
     { label: 'Blog', value: 'blog' },
+    { label: 'Contact Us', value: 'contact' },
   ];
 
   return (
     <header
       id="header-navigation"
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-neutral-50/80 backdrop-blur-xl border-b border-neutral-200/50 py-3 shadow-xs'
-          : 'bg-transparent py-5'
+          ? 'bg-[#FAF9F6]/95 backdrop-blur-md border-b border-neutral-200/40 py-2.5 sm:py-3 shadow-xs'
+          : 'bg-[#FAF9F6]/80 backdrop-blur-xs py-3.5 sm:py-5 border-b border-neutral-200/20'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -47,14 +51,14 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
           id="logo-btn"
           onClick={() => {
             onNavigate('home');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo(0, 0);
           }}
           className="flex items-center gap-2 group cursor-pointer"
         >
-          <div className="w-10 h-10 rounded-full bg-orange-500 flex items-center justify-center text-white shadow-lg shadow-orange-500/20 group-hover:scale-105 transition-transform duration-300">
-            <Flame className="w-5 h-5 fill-white" />
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-orange-500 flex items-center justify-center text-white shadow-lg shadow-orange-500/20 group-hover:scale-105 transition-transform duration-300">
+            <Flame className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-white" />
           </div>
-          <span className="font-sans font-semibold text-lg tracking-tight text-neutral-900 group-hover:text-orange-500 transition-colors duration-300">
+          <span className="font-sans font-semibold text-base sm:text-lg tracking-tight text-neutral-900 group-hover:text-orange-500 transition-colors duration-300">
             {BRAND}
           </span>
         </button>
@@ -62,10 +66,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8">
           {navItems.map((item) => {
-            const isActive =
-              item.value === activeSection ||
-              (item.value === 'products' &&
-                ['product-watercolor', 'product-indoor', 'product-outdoor'].includes(activeSection));
+            const isActive = item.value === activeSection;
 
             return (
               <button
@@ -94,7 +95,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
             onClick={() => onNavigate('contact')}
             className="flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-neutral-900 text-white font-sans text-xs font-semibold hover:bg-orange-500 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-pointer"
           >
-            Get a Quote
+            Contact Us
             <ArrowUpRight className="w-3.5 h-3.5" />
           </button>
         </div>
@@ -105,43 +106,75 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="lg:hidden p-2 rounded-full text-neutral-700 hover:bg-neutral-100 transition-colors cursor-pointer"
         >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
       </div>
 
-      {/* Mobile Drawer */}
-      {mobileMenuOpen && (
-        <div
-          id="mobile-drawer"
-          className="lg:hidden absolute top-full left-0 right-0 bg-neutral-50 border-b border-neutral-200/50 shadow-xl overflow-hidden py-6 px-8 flex flex-col gap-4"
-        >
-          {navItems.map((item) => (
-            <button
-              key={item.value}
-              id={`mobile-nav-${item.value}`}
-              onClick={() => {
-                onNavigate(item.value);
-                setMobileMenuOpen(false);
-              }}
-              className={`font-sans text-left text-base font-semibold py-2 cursor-pointer ${
-                activeSection === item.value ? 'text-orange-600' : 'text-neutral-600'
-              }`}
+      {/* Mobile Drawer with Backdrop and animations */}
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <>
+            {/* Backdrop behind mobile drawer */}
+            <motion.div
+              key="mobile-menu-backdrop"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setMobileMenuOpen(false)}
+              className="lg:hidden fixed inset-0 bg-neutral-900/35 backdrop-blur-xs z-40"
+            />
+
+            {/* Mobile Drawer Panel */}
+            <motion.div
+              key="mobile-menu-panel"
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.2, ease: 'easeOut' }}
+              id="mobile-drawer"
+              className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-neutral-100 border-b border-neutral-200 shadow-xl z-50 py-3.5 px-4 flex flex-col gap-1.5 max-h-[calc(100vh-120px)] overflow-y-auto"
             >
-              {item.label}
-            </button>
-          ))}
-          <button
-            id="mobile-cta-btn"
-            onClick={() => {
-              onNavigate('contact');
-              setMobileMenuOpen(false);
-            }}
-            className="w-full text-center py-3 mt-2 rounded-xl bg-orange-500 text-white font-sans text-sm font-semibold hover:bg-orange-600 cursor-pointer"
-          >
-            Get a Free Quote
-          </button>
-        </div>
-      )}
+              <div className="grid grid-cols-2 gap-1.5 p-1">
+                {navItems.map((item) => {
+                  const isActive = activeSection === item.value;
+                  return (
+                    <button
+                      key={item.value}
+                      id={`mobile-nav-${item.value}`}
+                      onClick={() => {
+                        onNavigate(item.value);
+                        setMobileMenuOpen(false);
+                      }}
+                      className={`text-left font-sans text-xs font-medium py-2.5 px-3 rounded-lg flex items-center justify-between transition-all duration-150 cursor-pointer ${
+                        isActive
+                          ? 'bg-orange-50 text-orange-600 font-semibold border-l-2 border-orange-500 pl-2'
+                          : 'text-neutral-700 hover:bg-neutral-50 active:bg-neutral-100'
+                      }`}
+                    >
+                      <span>{item.label}</span>
+                      <ChevronRight className={`w-3 h-3 transition-transform duration-150 ${isActive ? 'text-orange-500 scale-105' : 'text-neutral-400'}`} />
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="pt-2.5 border-t border-neutral-100 mt-1">
+                <button
+                  id="mobile-cta-btn"
+                  onClick={() => {
+                     onNavigate('contact');
+                     setMobileMenuOpen(false);
+                  }}
+                  className="w-full text-center py-2.5 rounded-lg bg-neutral-900 text-white font-sans text-xs font-semibold hover:bg-orange-600 active:scale-[0.98] transition-all cursor-pointer shadow-xs flex items-center justify-center gap-1"
+                >
+                  <span>Contact Us</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-orange-400" />
+                </button>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

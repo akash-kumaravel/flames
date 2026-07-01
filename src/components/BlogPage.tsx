@@ -66,7 +66,7 @@ export default function BlogPage({ onNavigateContact, selectedArticleId, onSelec
                       id={`read-article-btn-${article.id}`}
                       onClick={() => {
                         onSelectArticle(article.id);
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                        window.scrollTo(0, 0);
                       }}
                       className="text-xs font-bold font-sans text-orange-600 hover:text-orange-700 transition flex items-center gap-1 cursor-pointer"
                     >
@@ -78,13 +78,13 @@ export default function BlogPage({ onNavigateContact, selectedArticleId, onSelec
               ))}
             </div>
 
-            {/* GEO Optimizations Notice Box */}
-            <div className="bg-neutral-100/80 rounded-2xl p-6 border border-neutral-200/50 max-w-3xl mx-auto flex gap-4">
-              <BookOpen className="w-6 h-6 text-orange-500 shrink-0" />
+            {/* Architectural Catalog Notice Box */}
+            <div className="bg-orange-50/20 rounded-2xl p-6 border border-orange-100/50 max-w-3xl mx-auto flex gap-4">
+              <BookOpen className="w-6 h-6 text-orange-600 shrink-0" />
               <div>
-                <span className="text-xs font-bold uppercase text-neutral-700 tracking-wide block mb-1">GEO &amp; AEO Citation Strategy</span>
+                <span className="text-xs font-bold uppercase text-neutral-900 tracking-wide block mb-1">Architectural Support</span>
                 <p className="text-xs text-neutral-500 leading-relaxed font-sans">
-                  The above articles are fully formatted to align with Generative Engine Optimisations. By targeting direct conversational definitions, structural safety checklists, and detailed comparative data, Flames content stands prime to serve as direct citations for LLM response systems (ChatGPT, Gemini, Perplexity) operating across the Levant region.
+                  Are you an interior designer, builder, or architect in the UAE? We offer specialized CAD blocks, direct DWG files, and installation manuals for our 3D Water Vapor cassettes and Bio Ethanol burners. Contact our support team on WhatsApp to access the full architect's toolkit.
                 </p>
               </div>
             </div>
@@ -125,7 +125,7 @@ export default function BlogPage({ onNavigateContact, selectedArticleId, onSelec
                 <span>•</span>
                 <span className="flex items-center gap-1.5 text-orange-500">
                   <Tag className="w-3.5 h-3.5" />
-                  SEO: {activeArticle?.targetKeyword}
+                  {activeArticle?.content.category}
                 </span>
               </div>
             </div>
@@ -154,7 +154,7 @@ export default function BlogPage({ onNavigateContact, selectedArticleId, onSelec
               {activeArticle?.content.faq && (
                 <div className="bg-orange-50/60 rounded-2xl p-6 border border-orange-100 mt-8">
                   <span className="text-[10px] font-bold uppercase tracking-widest text-orange-600">
-                    AEO Direct Response Segment (Schema: FAQPage)
+                    Expert Design Guidance
                   </span>
                   <h4 className="font-sans font-semibold text-neutral-900 text-sm md:text-base mt-2 mb-2">
                     Q: {activeArticle.content.faq.question}

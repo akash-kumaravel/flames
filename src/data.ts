@@ -1,57 +1,75 @@
 import { FAQItem, ProductDetails, BlogArticle } from './types';
 
 export const BRAND = "Flames";
-export const TAGLINE = "Redefine Your Space with Living Fire";
+export const TAGLINE = "Premium Outdoor & Indoor Fire Features in Dubai & UAE";
 
 export const META_SUMMARY = {
   home: {
-    title: "Flames | 3D Water Vapor & Bio Ethanol Fireplaces — Redefine Your Space",
-    description: "Flames is the leading supplier of 3D Water Vapor Fireplaces and Bio Ethanol Fireplaces for indoor and outdoor living. Discover premium, smokeless, eco-friendly fire solutions.",
-    primaryKW: "3D water vapor fireplace, bio ethanol fireplace",
-    secondaryKW: "water mist fireplace, ventless fireplace UAE, outdoor fireplace Dubai"
+    title: "Flames | Premium Outdoor & Indoor Fire Features in Dubai & UAE",
+    description: "Flames is Dubai's trusted name in fire features. From elegant fire pits to eco-friendly bio ethanol fireplaces and premium BBQ setups, we supply and install across UAE.",
+    primaryKW: "bio ethanol fireplace, fire pits, outdoor kitchens",
+    secondaryKW: "ventless fireplace UAE, outdoor fireplace Dubai"
   },
   about: {
-    title: "About Flames | Our Story, Mission & Commitment to Quality Fire Features",
-    description: "Learn about Flames — a passionate team dedicated to bringing premium fire features to homes and businesses. Quality products, expert service, real relationships.",
+    title: "About Flames | Premium Fire Features & Outdoor Kitchens UAE",
+    description: "Your partner for Outdoor Kitchens, BBQs, Fire Pits & Fireplaces in the UAE. Quality products, professional installation, and honest pricing.",
     primaryKW: "about Flames, bio ethanol fireplace supplier UAE"
-  },
-  vapor: {
-    title: "3D Water Vapor Fireplace | Realistic Flameless Fire Effect — Flames",
-    description: "Ultra-realistic flame effects using ultrasonic mist technology. Smokeless, heatless, completely safe. Perfect for modern interiors. Shop Flames.",
-    primaryKW: "3D water vapor fireplace, electric fireplace UAE",
-    secondaryKW: "water mist fireplace, smokeless fireplace, flameless fireplace"
   },
   indoor: {
     title: "Indoor Bio Ethanol Fireplace | Ventless, Eco-Friendly Real Flame — Flames",
-    description: "Real flames, no chimney, no gas line. Clean-burning, ventless, beautifully designed for modern homes and commercial interiors. Browse Flames.",
+    description: "Real flame warmth without chimneys, flues, or gas connections. Clean-burning, modern, and beautiful flueless heating.",
     primaryKW: "indoor bio ethanol fireplace, ventless fireplace",
     secondaryKW: "bioethanol fireplace UAE, wall mounted fireplace, no chimney fireplace"
   },
   outdoor: {
-    title: "Outdoor Bio Ethanol Fireplace | Premium Alfresco Fire Features — Flames",
-    description: "Weather-resistant, smokeless, and powerfully designed for patios, gardens, pools, and rooftop terraces. Shop Flames outdoor fireplaces.",
+    title: "Outdoor Fire Features | Fire Pits & Fireplaces — Flames",
+    description: "Create an inviting outdoor retreat with bio ethanol fireplaces, fire pits, gas fire tables, and custom outdoor fire installations.",
     primaryKW: "outdoor bio ethanol fireplace, patio fireplace UAE",
     secondaryKW: "outdoor fire features Dubai, pool deck fireplace, terrace fire feature"
   },
   faq: {
-    title: "FAQs | Flames — 3D Water Vapor & Bio Ethanol Fireplace Questions Answered",
-    description: "Expert answers to the most common questions about safety, installation, fuel, and maintenance for 3D Water Vapor and Bio Ethanol Fireplaces from Flames.",
-    primaryKW: "bio ethanol fireplace FAQ, water vapor fireplace guide"
+    title: "FAQs | Flames — Bio Ethanol Fireplace Questions Answered",
+    description: "Expert answers to the most common questions about safety, installation, fuel, and maintenance for Bio Ethanol Fireplaces from Flames.",
+    primaryKW: "bio ethanol fireplace FAQ"
   },
   contact: {
-    title: "Contact Flames | Get a Quote for Your Fireplace — UAE",
-    description: "Get in touch with the Flames team. Ask about pricing, delivery, and custom projects. We are here to help.",
+    title: "Contact Flames | Office in Business Bay, Dubai — UAE",
+    description: "Get in touch with the Flames team in Dubai. Ask about pricing, custom outdoor kitchens, fire pits, and fireplaces.",
     primaryKW: "contact Flames, buy bio ethanol fireplace UAE, fireplace quote"
+  },
+  'why-choose': {
+    title: "Why Choose Flames | Pricing, Quality & Safety Specs",
+    description: "Discover why Flames is Dubai's trusted supplier of premium fire features and outdoor kitchens. Honest pricing, dedicated care, reliable delivery.",
+    primaryKW: "why choose Flames, bio ethanol fireplaces",
+    secondaryKW: "certified ventless fireplace, fireplace safety UAE"
+  },
+  'outdoor-features': {
+    title: "BBQ & Outdoor Kitchens Dubai UAE | Flames",
+    description: "Elevate your outdoor dining with custom outdoor kitchens, built-in BBQs, outdoor fridges, modular islands, and organized storage systems in Dubai.",
+    primaryKW: "outdoor fire features Dubai, outdoor kitchen Dubai",
+    secondaryKW: "fire pit products Dubai, BBQ grill Dubai, outdoor fireplace UAE"
+  },
+  services: {
+    title: "Our Services | Design, Advisory & Installation — Flames",
+    description: "Complete architectural integration, site inspections, custom drafting, and safe handover commissioning for luxury indoor and outdoor fire features in the UAE.",
+    primaryKW: "fireplace installation Dubai, outdoor kitchen design UAE",
+    secondaryKW: "architectural fireplace services, technical site inspection UAE"
+  },
+  portfolio: {
+    title: "Project Portfolio | Showcasing Finished Works — Flames",
+    description: "Explore our collection of premium indoor 3D water vapor fireplaces, clean bio-ethanol fire features, and bespoke outdoor kitchens installed across Dubai & UAE.",
+    primaryKW: "fireplace portfolio Dubai, custom outdoor kitchen gallery UAE",
+    secondaryKW: "bespoke fire pit installation, luxury garden barbecue setups"
   }
 };
 
 export const TRUST_BAR = [
-  { title: "Affordable Prices", desc: "Premium quality at highly competitive rates across the UAE region." },
-  { title: "Customer Satisfaction", desc: "Your experience is our priority, supported by a 5-star standard aftercare." },
-  { title: "Quality Products", desc: "Tested, certified, robustly constructed and designed to last." },
-  { title: "Professional Team", desc: "Expert, honest guidance from initial enquiry to final aesthetic integration." },
-  { title: "Trusted by Clients", desc: "Serving hundreds of real homeowners, interior designers, and architects." },
-  { title: "Committed to Deliver", desc: "On-time premium delivery, transparent logistics and post-sale support." }
+  { title: "Honest, Competitive Pricing", desc: "Premium products without the premium markup" },
+  { title: "Dedicated Customer Care", desc: "Real support before, during, and after your purchase" },
+  { title: "Consistent Quality", desc: "Every product checked and standard-tested before delivery" },
+  { title: "Experienced Team", desc: "Specialists who understand fire safety and outdoor design" },
+  { title: "Trusted Across the UAE", desc: "A growing base of satisfied homeowners and businesses" },
+  { title: "Reliable Delivery", desc: "We follow through on every commitment we make" }
 ];
 
 export const GENERAL_STATS = [
@@ -63,174 +81,96 @@ export const GENERAL_STATS = [
 
 export const PRODUCTS: ProductDetails[] = [
   {
-    id: "vapor-fireplace",
-    name: "3D Water Vapor Fireplace",
-    tagline: "The Future of Fire. No Heat. No Danger. Pure Magic.",
-    description: "Experience the ultimate illusion of fire. Our 3D Water Vapor Fireplaces produce ultra-realistic flame effects using advanced ultrasonic mist and warm light technology — completely safe and suitable for any luxurious interior space.",
-    detailedDescription: "A 3D Water Vapor Fireplace is a revolutionary decorative fire feature that creates an incredibly lifelike flame appearance using nothing more than water and light. An ultrasonic transducer vibrates at high frequency to atomise water into an ultra-fine cold mist. LED lighting is then projected through this mist, producing a three-dimensional, flickering flame effect that is virtually indistinguishable from real fire. The result is a mesmerising, fully safe fire display that produces no heat, no smoke, no CO2, and no combustion of any kind. You can even touch the 'flames' — they are completely cold.",
-    priceEstimate: "Available on Request",
-    imageUrl: "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=1200", // Warm architectural fireplace
-    bgGradient: "from-amber-50 to-orange-100",
-    features: [
-      "Ultra-realistic 3D flame simulation using ultrasonic water mist technology",
-      "Fully cold to the touch — zero burn risk, child and pet-friendly",
-      "Smokeless, emission-free, and hazardless — 100% safe for enclosed spaces",
-      "Adjustable flame colour: classic orange, futuristic blue, violet, multi-colour and more",
-      "Variable flame height and mist intensity via handheld remote or smart app",
-      "Optional LED ambient glow grids and realistic embedded logs/sandstone base",
-      "Plug-and-play setup — requires only a standard electric outlet and water tap refill",
-      "Whisper-quiet structural fans and ultrasonic transducers",
-      "Smart home automated controller compatibility for voice control"
-    ],
-    benefits: [
-      "No chimney, venting, structural flue, or hazardous gas line required",
-      "Zero fire safety liability hazards — ideal for bedrooms, public commercial areas & hotels",
-      "Zero indoor pollution or moisture damage — compatible with strict air quality standards",
-      "Minimal operational overhead — operates purely on filtered tap water and low electricity",
-      "Customisable modular design lengths ranging from 50cm up to 2.4 meters"
-    ],
-    howItWorks: [
-      "Fill the water reservoir (capacity varies from 2 to 6 litres).",
-      "Power the unit on using the sleek physical buttons, remote, or smart home companion app.",
-      "The heavy-duty ultrasonic plates vibrate to atomize the pure water into a cold, dense mist.",
-      "An array of ultra-bright custom LEDs projects colored light beams upwards through the rising vapor.",
-      "The natural convection currents carry the illuminated mist upward, creating the organic flicker of real flames."
-    ],
-    faqs: [
-      {
-        question: "Does a 3D Water Vapor Fireplace produce real heat?",
-        answer: "No. These fireplaces produce only a visual flame effect using cold water mist and LED light. They do not generate any heat, making them ideal for year-round use in warm climates like the UAE."
-      },
-      {
-        question: "How often do I need to refill the water?",
-        answer: "This depends on model size and usage, but most units run for 4–12 hours on a single fill. Distilled or filtered water is highly recommended to extend the lifespan of the ultrasonic plates and avoid scaling."
-      },
-      {
-        question: "Can a water vapor fireplace be used in a bedroom?",
-        answer: "Absolutely. Because there is no combustion, no flame, no heat, and no emissions, 3D Water Vapor Fireplaces are perfectly safe for use in bedrooms, children's rooms, and any enclosed space."
-      },
-      {
-        question: "Are the frames custom-made?",
-        answer: "Yes, Flames offers a selection of standard frame lengths (80cm, 100cm, 120cm, 150cm, 180cm, 240cm) and can coordinate bespoke architectural specifications for residential housing projects or hotels."
-      }
-    ]
-  },
-  {
     id: "indoor-ethanol",
     name: "Indoor Bio Ethanol Fireplace",
-    tagline: "Real Warmth, Real Fire. Clean Combustion. No Chimney.",
-    description: "Bring the captivating dance of authentic flames inside. Ventless, plant-powered, and effortlessly stylish, our Indoor Bio Ethanol Fireplaces are engineered for contemporary architecture with zero structural requirements.",
-    detailedDescription: "An Indoor Bio Ethanol Fireplace burns liquid bioethanol — a sustainable, plant-derived alcohol fuel — to produce a genuine, real warm flame with no smoke, no soot, and no harmful emissions. Unlike traditional wood or gas fireplaces, bio ethanol fireplaces require no chimney, no flue, no gas connection, and no external ventilation. The combustion process produces only water vapour and an extremely small amount of CO2 (equivalent to lighting a couple of candles), making these fireplaces safe for use in virtually any well-ventilated indoor space. They provide authentic cozy heat, a beautiful flickering golden flame, and a timeless visual anchor.",
+    tagline: "Ventless, Eco-Friendly Real Flame — Flames",
+    description: "Bring the warmth and elegance of a real flame into your indoor living spaces without the need for a chimney, flue, or gas connection. Flames offers a curated range of bio ethanol fireplaces, from sleek tabletop models to statement wall-mounted units and custom inserts.",
+    detailedDescription: "Bring the warmth and elegance of a real flame into your indoor living spaces without the need for a chimney, flue, or gas connection. Flames offers a curated range of bio ethanol fireplaces, from sleek tabletop models to statement wall-mounted units and custom inserts. With a flueless fireplace, 100% of the heat generated stays inside your home instead of escaping up a chimney. It is a highly efficient, clean-burning solution that adds both ambiance and supplementary warmth to any room.",
     priceEstimate: "Available on Request",
     imageUrl: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200", // Luxurious modern salon
     bgGradient: "from-orange-50 to-orange-100",
     features: [
-      "Real, living wood-like fire — genuine warmth and golden flicker",
-      "Ventless layout — requires absolutely no chimney, exhaust flue, or gas piping",
-      "Burns renewable, high-purity bioethanol fuel — zero smoke, ash, soot, or toxic residue",
-      "Extremely simple installation — freestanding tabletop, wall-mounted, and built-in cassette options",
-      "Manual and smart automatic burner control with safety shut-off systems",
-      "Sophisticated stainless-steel double walled fuel tank",
-      "Produces real ambient heat (2kW - 5kW output) — perfect for cooling air-conditioned spaces",
-      "Zero permanent structural building permit or legal planning permission required"
+      "No Chimney Needed — burns cleanly with zero smoke, ash, or soot, making it 100% ventless",
+      "Real Flame & Warmth — provides authentic radiant heat and a beautiful golden flicker",
+      "Easy Installation — freestanding and tabletop models are ready to go; recessed units fit into standard drywall",
+      "Eco-Friendly Fuel — powered by renewable, plant-derived bio ethanol liquid"
     ],
     benefits: [
-      "No heat conservation loss — 100% of the generated heat stays inside the room",
-      "Completely flexible and portable — take your freestanding unit with you if you move",
-      "Minimal maintenance — simple wiping down replaces clean-out of ashes and soot",
-      "Bespoke premium finish — available in matte black structural steel or titanium-finished accents"
+      "No Chimney Needed — burns cleanly with zero smoke, ash, or soot, making it 100% ventless",
+      "Real Flame & Warmth — provides authentic radiant heat and a beautiful golden flicker",
+      "Easy Installation — freestanding and tabletop models are ready to go; recessed units fit into standard drywall",
+      "Eco-Friendly Fuel — powered by renewable, plant-derived bio ethanol liquid"
     ],
     howItWorks: [
-      "Pour premium liquid bioethanol fuel into the safety steel burner tank until it reaches the fill line.",
-      "Use our extended safety matches or electric lighting wand to ignite the fuel vapor.",
-      "Adjust the slider closure lid to regulate the oxygen flow, which safely increases or dampens flame height.",
-      "The fuel burns cleanly for 3–6 hours, casting real ambient radiant warmth throughout the space.",
-      "To extinguish, slide the dampening plate completely over the burner opening to snuff out the oxygen supply."
+      "Pour premium liquid bioethanol fuel into the safety steel burner tank.",
+      "Ignite the fuel vapors using an extended lighter safely.",
+      "The fuel burns cleanly, producing comfortable physical heat and a gorgeous golden fire.",
+      "To extinguish, simply slide the damper plate over the opening to snuff out the oxygen supply."
     ],
     faqs: [
       {
-        question: "Does a bio ethanol fireplace produce real heat?",
-        answer: "Yes. Unlike water vapour fireplaces, bio ethanol fireplaces burn actual fuel and produce genuine heat output (around 2 to 5 kW), making them wonderful for adding comfort on cooler desert evenings."
+        question: "Does it require ventilation?",
+        answer: "A standard chimney is not needed because it burns cleanly without smoke or soot. However, because it burns oxygen, it should be placed in rooms with normal air circulation or a partially cracked window."
       },
       {
-        question: "What fuel do I need?",
-        answer: "You need high-purity liquid bioethanol fuel (minimum 96% ethanol concentration). Flames offers and premium fuel formulations that guarantee zero odor and stable burning."
-      },
-      {
-        question: "Do I need planning permission or a chimney?",
-        answer: "No. Bio ethanol fireplaces are 100% ventless and require no architectural modifications, chimneys, or local authority planning permission in residential or commercial settings."
-      },
-      {
-        question: "How long does one fill of fuel last?",
-        answer: "Burn time depends heavily on the size of the burner slot and dampener position. Usually, active burners run for 3–6 hours per single fuel tank fill."
+        question: "Where does the heat go?",
+        answer: "Because there is no chimney, 100% of the generated heat remains in the room, making it an incredibly efficient heating solution."
       }
     ]
   },
   {
     id: "outdoor-ethanol",
-    name: "Outdoor Bio Ethanol Fireplace",
-    tagline: "Unforgettable Alfresco Evenings and Living Fire Centerpieces.",
-    description: "Command your terraces, pools, and gardens. Our weather-resistant Outdoor Bio Ethanol fires are bold architectural visual highlights that create warm gathering spaces with no gas line hassle.",
-    detailedDescription: "An outdoor space is only as good as the atmosphere it creates. Flames' Outdoor Bio Ethanol Fireplaces transform patios, pool areas, terraces, garden lounges, and rooftop spaces into extraordinary environments — with the primal allure of real fire, zero smoke, and no permanent infrastructure. Our outdoor fire features are engineered for exposure. Built with weather-resistant materials and robust marine-grade alloys, they deliver reliable performance in the demanding outdoor conditions of the UAE — while maintaining the sleek, minimalist aesthetic that defines the Flames brand.",
+    name: "Outdoor Fire Features",
+    tagline: "Outdoor Fire Features | Fire Pits & Fireplaces | Flames",
+    description: "Create an inviting outdoor retreat with our range of outdoor fire features. Engineered to withstand the elements while providing a stunning visual anchor, our collection ranges from contemporary bio ethanol burners to sculptural gas-powered installations.",
+    detailedDescription: "Create an inviting outdoor retreat with our range of outdoor fire features. Engineered to withstand the elements while providing a stunning visual anchor, our collection ranges from contemporary bio ethanol burners to sculptural gas-powered installations.",
     priceEstimate: "Available on Request",
     imageUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200", // Luxury terrace and pool
     bgGradient: "from-orange-100 to-amber-100",
     features: [
-      "Vibrant genuine flame — dynamic wind-dancing fireplace with premium safety glass guards",
-      "High-grade weather-resistant materials — brushed stainless steel 316, epoxy stone resins and tempered glass",
-      "Fully self-contained — zero connection to LPG gas cylinders or municipal infrastructure",
-      "Modular design forms — available as elegant low fire tables, concrete column pillars, and fire pits",
-      "Clean combustion — zero toxic soot, flying sparks, hot embers or smelly charcoal smoke",
-      "Perfect for premium hotels, beach clubs, private gardens, and penthouse balconies",
-      "Instant outdoor heating — cuts through sea breezes and winter desert chill"
+      "Bio Ethanol Fireplaces — clean-burning and ventless, perfect for custom outdoor enclosures, patios, and decks",
+      "Fire Bowls & Fire Pits — durable concrete and steel fire bowls that create a warm, natural gathering spot",
+      "Gas Fire Features — convenient, high-performance gas fire burners that deliver instant fire at the touch of a button",
+      "Custom Outdoor Fire Installations — bespoke fire features designed and fitted to match your unique outdoor living space"
     ],
     benefits: [
-      "Extremely simple placement — move your fire feature easily to update your landscape design",
-      "No messy plumbing, electrical wiring, or external gas pipelines required",
-      "Safe and non-disruptive social companion — fire sits compactly without bothering guests with flying embers",
-      "Luxurious styling factor — premium heavy concrete look bases or contemporary metallic towers"
+      "Bio Ethanol Fireplaces — clean-burning and ventless, perfect for custom outdoor enclosures, patios, and decks",
+      "Fire Bowls & Fire Pits — durable concrete and steel fire bowls that create a warm, natural gathering spot",
+      "Gas Fire Features — convenient, high-performance gas fire burners that deliver instant fire at the touch of a button",
+      "Custom Outdoor Fire Installations — bespoke fire features designed and fitted to match your unique outdoor living space"
     ],
     howItWorks: [
-      "Uncover the weather-protective lid and insert the safety glass wind guards.",
-      "Fill the heavy-duty outdoor burner cup with bioethanol liquid up to the limit tab.",
-      "Carefully ignite the vapors using the extended-reach firing pen.",
-      "The flames develop a beautiful glowing volume within 10 minutes, protected from gusty winds by the tempered glass panels.",
-      "Use the included structural metal snuffing snip to extinguish the living fire gracefully."
+      "Position the weather-proof fire pit or fireplace in your desired terrace, pool, or garden layout.",
+      "Refill the clean burner using premium liquid fuel or hook up your gas-powered line.",
+      "Ignite using the safe integrated valve control or a remote trigger.",
+      "Enjoy a beautiful, wind-resistant visual centerpiece that keeps your guests warm and cozy."
     ],
     faqs: [
       {
-        question: "Can outdoor bio ethanol fireplaces be used in windy conditions?",
-        answer: "Light to moderate wind is fine, especially since our outdoor models come with protective tempered wind-guard glasses. We advise placing them in semi-sheltered terrace zones and avoiding usage in high storm gusts."
+        question: "What categories of outdoor fire features do you provide?",
+        answer: "We offer Bio Ethanol Fireplaces, concrete and steel Fire Bowls & Fire Pits, high-performance Gas Fire Features, and completely bespoke Custom Outdoor Fire Installations."
       },
       {
-        question: "Are these fireplaces easy to move?",
-        answer: "Yes! Many of our outdoor concrete-accent and powder-coated fire pits are completely freestanding. They require no gas fittings, allowing you to re-arrange your deck or pool layout whenever you desire."
-      },
-      {
-        question: "Do they produce smoke or odor?",
-        answer: "No, bioethanol burning is 100% clean and odorless. It burns with zero smoke, making it a dream for luxury dining tables where charcoal or wood smoke would otherwise irritate diners."
+        question: "Are they weather-resistant for UAE summers?",
+        answer: "Yes. All of our outdoor features are engineered from premium double-walled metals and concrete resins to resist heavy coastal air, high temperatures, and dust."
       }
     ]
   }
 ];
 
 export const WHY_CHOOSE_EXTRA = {
-  headline: "Where Fire Meets Next-Gen Design",
+  headline: "Flames — Dubai's Trusted Name in Fire Features",
   paragraphs: [
-    "Flames was born from a simple belief: fire is one of the most powerful elements in architectural design. It creates immediate human warmth, commands attention, and turns any space into an experiential destination. But traditional wood-burning or gas fireplaces come with heavy compromises — smoke, chimneys, constant clean-out, gas leaks, and regulatory hurdles.",
-    "We set out to change that forever. By combining cutting-edge 3D ultrasonic water vapour technology with the clean-burning, plant-derived efficiency of bio ethanol fuel, Flames offers authentic warm and decorative fire experiences that are safe, sustainable, and jaw-droppingly beautiful — without any of the architectural drawbacks.",
-    "Today, we supply premium, bespoke fire features to homeowners, interior designers, hotels, luxury restaurants, and commercial residential developers across the UAE and beyond who refuse to compromise on design, safety, or premium craftsmanship."
+    "Flames was founded to bring high-quality, beautifully designed fire features and outdoor kitchens to homes and commercial spaces across the UAE. Based in Dubai, our team specializes in sourcing, supplying, and installing premium fireplaces and outdoor living products that are safe, durable, and engineered to perform in the Gulf climate.",
+    "We believe that a fireplace or outdoor kitchen should be more than just an addition; it should be a central gathering space that brings people together. That’s why we partner with leading manufacturers to offer products that blend aesthetic elegance with robust, long-lasting construction.",
+    "Whether it is a rooftop lounge, a private garden, or a high-end hospitality venue, Flames serves clients in all emirates, including Dubai, Abu Dhabi, Sharjah, and beyond with uncompromising standards of customer care and craftsmanship."
   ]
 };
 
 export const COMMON_FAQS: FAQItem[] = [
   {
-    question: "What is the core difference between a 3D Water Vapor Fireplace and a Bio Ethanol Fireplace?",
-    answer: "A 3D Water Vapor Fireplace uses cold water mist and LED lighting to simulate a highly realistic flame — it produces no heat and involves no combustion, making it 100% child-safe and ideal for hot summer climates. A Bio Ethanol Fireplace burns real liquid plant alcohol to produce a genuine living flame and comfortable physical heat. Both are smokeless and do not require chimneys, but vapor is purely decorative, while bioethanol is functional and warm."
-  },
-  {
     question: "Do Flames fireplaces require highly complicated professional installation?",
-    answer: "Most of our catalog is designed for simple, plug-and-play installation! 3D Water Vapor fireplaces require a standard power outlet and water. Freestanding Bio Ethanol columns require no installation. Wall-recessed bioethanol models can be easily mounted on safety wall blocks, and our technical design team provides full schematics and remote assistance."
+    answer: "Most of our catalog is designed for simple, plug-and-play installation! Freestanding Bio Ethanol columns require no installation. Wall-recessed bioethanol models can be easily mounted on safety wall blocks, and our technical design team provides full schematics and remote assistance."
   },
   {
     question: "Are bioethanol fireplaces safe to burn in small apartments?",
@@ -238,7 +178,7 @@ export const COMMON_FAQS: FAQItem[] = [
   },
   {
     question: "What is the running cost compared to traditional wood or LPG gas?",
-    answer: "3D Water Vapor works on tap water and standard electricity, costing pennies per day to run. Bio Ethanol utilizes liquid fuel. Depending on burner size and flame opening, it consumes approximately 0.4L of fuel per hour, providing highly efficient heating compared to electric radiators with no heat loss through a chimney."
+    answer: "Bio Ethanol utilizes liquid fuel. It burns highly efficiently, providing cozy radiant heating compared to electric radiators with no heat loss through a chimney."
   },
   {
     question: "Does Flames deliver to all Emirates in the UAE?",
@@ -246,51 +186,11 @@ export const COMMON_FAQS: FAQItem[] = [
   },
   {
     question: "Can I customize the length of my fireplace?",
-    answer: "Yes! For large villas, penthouses, or commercial environments like hotel lounges, our 3D Water Vapor cassettes can be linked end-to-end to create a continuous, seamless flame line up to 10 meters long! Contact our team via the form to request architectural AutoCAD blocks."
+    answer: "Yes! For large villas, penthouses, or commercial environments like hotel lounges, our linear bio ethanol burners can be placed side-by-side to create a continuous, seamless flame line. Contact our team to request engineering assistance."
   }
 ];
 
 export const BLOG_ARTICLES: BlogArticle[] = [
-  {
-    id: "vapor-vs-ethanol",
-    title: "3D Water Vapor vs Bio Ethanol: Which Next-Gen Fireplace Fits Your Space?",
-    slug: "/blog/water-vapor-fireplace-vs-bio-ethanol-fireplace",
-    targetKeyword: "3D water vapor fireplace vs bio ethanol fireplace",
-    schema: "Article, FAQPage",
-    content: {
-      category: "Aesthetic Comparison",
-      readTime: "5 min read",
-      date: "June 10, 2026",
-      intro: "If you have been researching modern fire features, you have likely encountered two standout technologies changing the face of luxury design: 3D Water Vapor Fireplaces and Bio Ethanol Fireplaces. Both are smokeless, ventless, and beautifully designed — but they serve different purposes and suit different spaces. This detailed guide breaks down the core physics, advantages, and ideal layouts so you can make an educated choice.",
-      sections: [
-        {
-          heading: "How Each Technology Works Under the Hood",
-          paragraphs: [
-            "3D Water Vapor Fireplaces employ heavy-duty ultrasonic transducers vibrating at millions of cycles per second. This turns water inside an integrated container into a micro-fine, ultra-buoyant cold mist. Low-energy warm-toned LEDs project light streams through the rising mist, mimicking organic flames with remarkable fidelity. There is zero combustion and zero heat — you can run your hand directly through the flame.",
-            "Indoor Bio Ethanol Fireplaces utilize high-purity liquid plant-derived alcohol (ethanol). When lit, the liquid fuel burns directly on the stainless steel burner slots, yielding an authentic golden-orange fire dancing organically, warming the room. The only byproducts of this combustion are water vapor and a tiny concentration of CO2."
-          ]
-        },
-        {
-          heading: "Key Structural Comparisons",
-          paragraphs: [
-            "Safety parameters differ: 3D Water Vapor is cold to the touch and safe even for toddler play zones. Bio ethanol, on the other hand, produces authentic open flames and physical heat, requiring basic fireplace safety margins.",
-            "Aesthetic variables: Both offer superb ambient properties. Water vapor models let you change colors on-demand (orange to blue, magenta, or green via remote control), whereas Bio ethanol provides the classic primeval crackle dynamics and cozy warmth of active fire."
-          ]
-        },
-        {
-          heading: "The Climate and Room Suitability Verdict",
-          paragraphs: [
-            "For warm weather zones like summer in the UAE, a 3D Water Vapor model is a masterpiece. It provides the psychological relaxant of a glowing flame without overheating your air-conditioned living space.",
-            "For winter desert chill, or in constantly air-conditioned master bedrooms, an Indoor Bio Ethanol unit adds a touch of physical warmth, acting as an exceptional cozy center."
-          ]
-        }
-      ],
-      faq: {
-        question: "Is water vapor fireplace objectively safer than bioethanol?",
-        answer: "Yes, from a physical safety perspective. Because water vapor is cold water mist, it harbors zero burn risks or emissions, making it safe for high-traffic hotels. Bioethanol fireplaces are highly safe compared to wood, but they contain real fire."
-      }
-    }
-  },
   {
     id: "ethanol-buying-guide",
     title: "The Ultimate Bio Ethanol Fireplace Buyer's Guide & Safety Blueprint",
@@ -320,7 +220,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
         {
           heading: "3. Estimating Real-World Operational Budgets",
           paragraphs: [
-            "A standard 1.5-liter bioethanol burner compartment operating on a moderate flame setting consumes roughly 0.3 to 0.4 liters of fuel per hour. This translates to roughly 4-5 hours of authentic living fire on a single tank. Given the cost of high-grade bioethanol canisters, it is a highly economical and focused alternative to heating rooms."
+            "A standard bioethanol burner compartment operating on a moderate flame setting provides hours of authentic living fire on a single tank. Given the cost of high-grade bioethanol canisters, it is a highly economical and focused alternative to heating rooms."
           ]
         },
         {

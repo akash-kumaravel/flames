@@ -1,10 +1,8 @@
 export type ActiveSection =
   | 'home'
   | 'about'
-  | 'products'
-  | 'product-watercolor' // 3D Water Vapor
-  | 'product-indoor'     // Indoor Bio Ethanol
-  | 'product-outdoor'    // Outdoor Bio Ethanol
+  | 'services'           // Services, Advisory, and Installation
+  | 'portfolio'          // Portfolio of works
   | 'why-choose'
   | 'faq'
   | 'contact'
@@ -13,7 +11,7 @@ export type ActiveSection =
 export interface FAQItem {
   question: string;
   answer: string;
-  category?: 'vapor' | 'ethanol' | 'general';
+  category?: 'ethanol' | 'general';
 }
 
 export interface ProductFeature {
@@ -53,4 +51,16 @@ export interface BlogArticle {
     readTime: string;
     date: string;
   };
+}
+
+export interface PortfolioItem {
+  id: string;
+  title: string;
+  category: 'indoor' | 'fire-pit';
+  categoryLabel: string;
+  location: string;
+  description: string;
+  image: string;
+  specs: string[];
+  waMessage: string;
 }

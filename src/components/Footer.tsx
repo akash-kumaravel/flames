@@ -33,41 +33,41 @@ export default function Footer({ onNavigate }: FooterProps) {
             </p>
             
             <p className="text-xs text-neutral-500 leading-relaxed max-w-sm">
-              Flames is the leading supplier of clean, smokeless decorative fire features. Utilizing state-of-the-art 3D ultrasonic vapor and bio-ethanol combustion, we make warmth and ambience fully accessible.
+              Flames is the leading supplier of clean, smokeless decorative fire features. Utilizing premium, clean bio-ethanol combustion and eco-friendly designs, we make warmth and ambience fully accessible.
             </p>
           </div>
 
           {/* Quick structural catalog links column */}
           <div className="md:col-span-2 space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
-              Curated Catalog
+              Bespoke Spaces
             </h4>
             <ul className="space-y-2.5 text-xs">
               <li>
                 <button
-                  id="footer-nav-vapor"
-                  onClick={() => onNavigate('product-watercolor')}
-                  className="hover:text-white transition cursor-pointer"
+                  id="footer-nav-services"
+                  onClick={() => onNavigate('services')}
+                  className="hover:text-white transition cursor-pointer text-orange-400 font-medium"
                 >
-                  3D Water Vapor Fire
+                  Engineering &amp; Services
                 </button>
               </li>
               <li>
                 <button
-                  id="footer-nav-indoor"
-                  onClick={() => onNavigate('product-indoor')}
-                  className="hover:text-white transition cursor-pointer"
+                  id="footer-nav-portfolio"
+                  onClick={() => onNavigate('portfolio')}
+                  className="hover:text-white transition cursor-pointer text-orange-400 font-medium"
                 >
-                  Indoor Bio Ethanol
+                  Project Portfolio
                 </button>
               </li>
               <li>
                 <button
-                  id="footer-nav-outdoor"
-                  onClick={() => onNavigate('product-outdoor')}
-                  className="hover:text-white transition cursor-pointer"
+                  id="footer-nav-contact"
+                  onClick={() => onNavigate('contact')}
+                  className="hover:text-white transition cursor-pointer text-orange-400 font-medium"
                 >
-                  Outdoor Bio Ethanol
+                  Contact Us
                 </button>
               </li>
             </ul>
@@ -88,7 +88,15 @@ export default function Footer({ onNavigate }: FooterProps) {
                   Our Story &amp; Values
                 </button>
               </li>
-
+              <li>
+                <button
+                  id="footer-nav-why-choose"
+                  onClick={() => onNavigate('why-choose')}
+                  className="hover:text-white transition cursor-pointer"
+                >
+                  Why Choose Us
+                </button>
+              </li>
               <li>
                 <button
                   id="footer-nav-faq"
@@ -127,7 +135,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               </li>
               <li className="flex items-center gap-2.5">
                 <Mail className="w-4 h-4 text-orange-500 shrink-0" />
-                <span>info@flamesfireplaces.ae</span>
+                <span>info@flamesfireplace.com</span>
               </li>
             </ul>
           </div>
