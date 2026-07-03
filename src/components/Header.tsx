@@ -33,7 +33,6 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
     { label: 'Why Choose Us', value: 'why-choose' },
     { label: 'FAQs', value: 'faq' },
     { label: 'Blog', value: 'blog' },
-    { label: 'Contact Us', value: 'contact' },
   ];
 
   return (

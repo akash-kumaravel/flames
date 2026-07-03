@@ -40,7 +40,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           {/* Quick structural catalog links column */}
           <div className="md:col-span-2 space-y-4">
             <h4 className="text-xs font-bold uppercase tracking-wider text-white">
-              Bespoke Spaces
+              Custom Spaces
             </h4>
             <ul className="space-y-2.5 text-xs">
               <li>
@@ -146,25 +146,10 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="pt-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs text-neutral-500">
           
           <div>
-            <span>&copy; {new Date().getFullYear()} Flames UAE. All rights reserved.</span>
-            <span className="mx-2">|</span>
-            <span className="hover:text-white transition cursor-pointer">Privacy Charter</span>
-            <span className="mx-2">|</span>
-            <span className="hover:text-white transition cursor-pointer">Security Standards</span>
+            <span>&copy; {new Date().getFullYear()} Memo Infotech. All rights reserved.</span>
           </div>
 
-          {/* Schema designations */}
-          <div className="flex gap-4 items-center">
-            <span className="px-2 py-0.5 rounded-sm border border-neutral-800 text-[10px] font-semibold text-neutral-600 uppercase">
-              Schema: Organization
-            </span>
-            <span className="px-2 py-0.5 rounded-sm border border-neutral-800 text-[10px] font-semibold text-neutral-600 uppercase">
-              Schema: LocalBusiness
-            </span>
-            <span className="px-2 py-0.5 rounded-sm border border-neutral-800 text-[10px] font-semibold text-neutral-600 uppercase">
-              Schema: FAQPage
-            </span>
-          </div>
+          {/* Schema designations removed from UI (kept in JSON-LD only) */}
 
         </div>
 

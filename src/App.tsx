@@ -183,7 +183,7 @@ export default function App() {
       'og:description': currentMeta.description,
       'og:type': activeArticleObj ? 'article' : 'website',
       'og:url': `${origin}${currentPath}`,
-      'og:image': activeArticleObj ? 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=1200' : 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200',
+      'og:image': activeArticleObj ? 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=1200' : '/assets/Bio-Ethanol Fireplace _ Product Close-up.png',
       'twitter:card': 'summary_large_image',
       'twitter:title': currentMeta.title,
       'twitter:description': currentMeta.description
@@ -279,7 +279,7 @@ export default function App() {
         "@context": "https://schema.org",
         "@type": "Store",
         "name": "Flames Fireplaces UAE",
-        "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
+        "image": "/assets/Bio-Ethanol Fireplace _ Product Close-up.png",
         "@id": `${origin}/#organization`,
         "url": origin,
         "telephone": "+971542112891",
@@ -402,10 +402,10 @@ export default function App() {
 
                     <div className="lg:col-span-6 relative rounded-3xl overflow-hidden shadow-2xl bg-neutral-900 max-h-[440px]">
                       <img
-                        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200"
+                        src="/assets/about.png"
                         alt="Minimal Architect Surround Interior"
                         referrerPolicy="no-referrer"
-                        className="w-full h-[400px] object-cover mix-blend-overlay opacity-90"
+                        className="w-full h-[400px] object-cover"
                       />
                     </div>
                   </div>

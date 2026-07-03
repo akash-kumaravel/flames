@@ -115,7 +115,7 @@ export default function ContactPage() {
                       id="contact-name"
                       type="text"
                       required
-                      placeholder="e.g. John Doe"
+                      placeholder="Full Name"
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       className="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-200 focus:bg-white focus:outline-none focus:border-orange-500 transition-all font-sans text-xs h-12"
@@ -131,7 +131,7 @@ export default function ContactPage() {
                       id="contact-email"
                       type="email"
                       required
-                      placeholder="e.g. john@example.com"
+                      placeholder="flames@example.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       className="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-200 focus:bg-white focus:outline-none focus:border-orange-500 transition-all font-sans text-xs h-12"
@@ -305,22 +305,13 @@ export default function ContactPage() {
                 </div>
                 <div className="space-y-1 font-sans">
                   <span className="text-[11px] font-bold text-neutral-400 uppercase tracking-wider block font-mono">Enquiries Email</span>
-                  <a href="mailto:info@flames.ae" className="text-xs font-semibold text-neutral-900 hover:text-orange-500 block leading-tight">
-                    info@flames.ae
+                  <a href="mailto:info@flamesfireplace.com" className="text-xs font-semibold text-neutral-900 hover:text-orange-500 block leading-tight">
+                    info@flamesfireplace.com
                   </a>
                 </div>
               </div>
 
-              {/* Detail item: Hours */}
-              <div className="flex gap-4 items-start">
-                <div className="p-3 rounded-xl bg-neutral-50 text-neutral-600 border border-neutral-100">
-                  <Clock className="w-4 h-4 text-orange-500" />
-                </div>
-                <div className="space-y-1 font-sans">
-                  <span className="text-[11px] font-bold text-neutral-400 uppercase tracking-wider block font-mono">Business Hours</span>
-                  <span className="text-xs font-semibold text-neutral-900 block leading-tight">Monday — Saturday: 9:00 AM — 6:00 PM (GST)</span>
-                </div>
-              </div>
+              {/* Business Hours removed per request */}
             </div>
           </div>
 

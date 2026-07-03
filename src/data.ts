@@ -1,4 +1,4 @@
-import { FAQItem, ProductDetails, BlogArticle } from './types';
+import { FAQItem, ProductDetails, BlogArticle, ServiceItem } from './types';
 
 export const BRAND = "Flames";
 export const TAGLINE = "Premium Outdoor & Indoor Fire Features in Dubai & UAE";
@@ -70,6 +70,59 @@ export const TRUST_BAR = [
   { title: "Experienced Team", desc: "Specialists who understand fire safety and outdoor design" },
   { title: "Trusted Across the UAE", desc: "A growing base of satisfied homeowners and businesses" },
   { title: "Reliable Delivery", desc: "We follow through on every commitment we make" }
+];
+
+export const SERVICES: ServiceItem[] = [
+  {
+    id: "indoor-water-vapor",
+    title: "3D Water Vapor Fireplaces",
+    subtitle: "Eco-Safe Mist Technology",
+    description: "Realistic clean flames using ultrasonic water mist and colored LEDs. 100% cool-to-touch and safe beneath smart TV media centers.",
+    image: "/assets/Water Vapor Fireplace _ Wall Feature.png",
+    badge: "3D WATER MIST",
+    category: "indoor",
+    waMessage: "Inquiry regarding premium Indoor 3D Water Vapor Fireplaces"
+  },
+  {
+    id: "indoor-bioethanol",
+    title: "Bio-Ethanol Fireplaces",
+    subtitle: "Ventless Living Flames",
+    description: "Authentic physical heat and beautiful golden flames burning clean renewable liquid fuel with zero smoke, ash, or soot.",
+    image: "/assets/Bio-Ethanol Fireplace _ Product Close-up.png",
+    badge: "BIO-ETHANOL FLAMES",
+    category: "indoor",
+    waMessage: "Inquiry regarding bespoke Indoor Bio-Ethanol Fireplaces"
+  },
+  {
+    id: "outdoor-fire-pits",
+    title: "Premium Fire Pits & Tables",
+    subtitle: "Architectural Fire Features",
+    description: "Durable concrete fire tables and fire bowls running on clean bioethanol or gas, completed with tempered wind safety guards.",
+    image: "/assets/Fire Pit _ Product Close-up.png",
+    badge: "FIRE PITS & BOWLS",
+    category: "outdoor",
+    waMessage: "Inquiry regarding custom Outdoor Fire Pits & Fire Tables"
+  },
+  {
+    id: "outdoor-kitchens",
+    title: "Custom Outdoor Kitchens",
+    subtitle: "Culinary Luxury",
+    description: "Custom premium modular kitchens with high-durability sintered stone countertops, fully rated for extreme Gulf climates.",
+    image: "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&q=80&w=1200",
+    badge: "MODULAR KITCHENS",
+    category: "outdoor",
+    waMessage: "Inquiry regarding custom Outdoor Kitchens in Dubai"
+  },
+  {
+    id: "built-in-bbqs",
+    title: "Premium Built-In BBQs",
+    subtitle: "High-Performance Grills",
+    description: "Heavy-duty 304/316 marine-grade stainless steel grills integrated seamlessly into bespoke granite and marble countertops.",
+    image: "/assets/Built-In BBQ _ Flames Close-up.png",
+    badge: "PREMIUM GRILLS",
+    category: "outdoor",
+    waMessage: "Inquiry regarding Built-In BBQs & Side Burners"
+  }
 ];
 
 export const GENERAL_STATS = [

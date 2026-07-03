@@ -44,34 +44,34 @@ export default function WhyChoosePage() {
 
   const comparisonData: MetricDetail[] = [
     {
-      label: "Flame Nature",
-      ethanol: "Real Living Fire (Plant-derived Bioethanol burn)",
-      traditional: "Wood Sourced / LPG gas plumbing"
+      label: "Atmosphere",
+      ethanol: "Warm, sculptural flame that elevates interiors without visual clutter",
+      traditional: "Often heavy, permanent, and visually dominant in the room"
     },
     {
-      label: "Surface Safety",
-      ethanol: "Hot Golden Flame (Protected with glass shield)",
-      traditional: "High Burn Hazard (Spits embers, dangerous ash)"
+      label: "Safety",
+      ethanol: "Protected flame with clean operation and no ash, smoke, or soot",
+      traditional: "Higher exposure to sparks, residue, and maintenance concerns"
     },
     {
-      label: "Venting & Chimney",
-      ethanol: "Ventless (No chimney needed, only natural indoor air)",
-      traditional: "Mandatory Chimney (Major construction and heat loss)"
+      label: "Installation",
+      ethanol: "Flexible placement with minimal structural requirements",
+      traditional: "Often demands masonry, flues, or fuel line planning"
     },
     {
-      label: "UAE Climate Suitability",
-      ethanol: "Winter Desert Nights (Produces comfortable ambient heat)",
-      traditional: "Unusable in Hot Seasons (Overheats modern buildings)"
+      label: "Climate Fit",
+      ethanol: "Well suited to contemporary UAE interiors and outdoor living spaces",
+      traditional: "Less adaptable for modern, low-maintenance, high-design homes"
     },
     {
-      label: "Emission profile",
-      ethanol: "Clean Combustion (Water vapor and trace CO2 equal to candles)",
-      traditional: "High Carbon/Soot (Ash particles, toxic CO, heavy odor)"
+      label: "Maintenance",
+      ethanol: "Simple upkeep with a refined, elegant finish and no chimney cleaning",
+      traditional: "Regular care, ash handling, and service routines are typically required"
     },
     {
-      label: "Installation Complexity",
-      ethanol: "Minimalist (Freestanding or standard recess trim)",
-      traditional: "Extreme (Requires masonry, structural brick, gas line permits)"
+      label: "Design Freedom",
+      ethanol: "A seamless option for custom interiors, lounges, and hospitality settings",
+      traditional: "More constrained by construction limitations and existing infrastructure"
     }
   ];
 
@@ -92,239 +92,7 @@ export default function WhyChoosePage() {
           </p>
         </section>
 
-        {/* Dynamic Head-to-Head comparison section */}
-        <section className="bg-white rounded-3xl border border-neutral-200/50 p-6 md:p-14 mb-24 shadow-xs">
-          <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-12 border-b border-neutral-100 pb-8">
-            <div>
-              <h2 className="font-sans text-xl md:text-2xl font-semibold text-neutral-900 tracking-tight">
-                Head-To-Head Technology Matrix
-              </h2>
-              <p className="text-xs text-neutral-400 font-sans mt-1.5">
-                Compare architectural options to make the right spatial selection.
-              </p>
-            </div>
-            
-            <div className="flex items-center gap-1.5 bg-neutral-100 p-1 rounded-xl self-start">
-              {(['matrix', 'safety', 'efficiency'] as const).map((tab) => (
-                <button
-                  key={tab}
-                  onClick={() => setActiveTab(tab)}
-                  className={`px-4 py-2 rounded-lg text-[10px] font-bold uppercase tracking-wider transition ${
-                    activeTab === tab
-                      ? 'bg-neutral-900 text-white shadow-xs'
-                      : 'text-neutral-500 hover:text-neutral-900'
-                  }`}
-                >
-                  {tab === 'matrix' ? 'Overview Matrix' : tab === 'safety' ? 'Safety Rating' : 'Running Cost'}
-                </button>
-              ))}
-            </div>
-          </div>
 
-          {activeTab === 'matrix' && (
-            <div className="overflow-x-auto">
-              <table className="w-full text-left font-sans text-sm border-collapse min-w-[640px]">
-                <thead>
-                  <tr className="border-b border-neutral-100 text-[10px] font-bold uppercase text-neutral-400 tracking-widest">
-                    <th className="pb-4 w-[34%]">Feature Parameter</th>
-                    <th className="pb-4 px-4 w-[33%] text-orange-600 font-bold bg-orange-50/20 rounded-t-xl">Bio Ethanol Fire</th>
-                    <th className="pb-4 w-[33%]">Traditional Wood/Gas</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-neutral-100 text-neutral-600">
-                  {comparisonData.map((row, idx) => (
-                    <tr key={idx} className="hover:bg-neutral-50/40 transition">
-                      <td className="py-4.5 font-semibold text-neutral-900">{row.label}</td>
-                      <td className="py-4.5 px-4 font-medium text-orange-700 bg-orange-50/15">{row.ethanol}</td>
-                      <td className="py-4.5 font-normal text-neutral-400">{row.traditional}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-
-          {activeTab === 'safety' && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-4">
-              <div className="space-y-4">
-                <span className="px-2.5 py-0.5 rounded-sm bg-orange-100 text-orange-800 font-mono text-[9px] font-bold">INDOOR FIRE STANDARDS</span>
-                <h3 className="font-sans text-lg font-semibold text-neutral-900">Indoor Bio-Ethanol Safety Protocols</h3>
-                <p className="text-xs text-neutral-500 leading-relaxed font-sans">
-                  Our indoor cassettes are engineered with double-wall high-grade stainless steel to isolate fuel tanks from structural recess cavities. Active safety locks, overflow level sensors, and spill-proof absorbent linings guarantee simple, worry-free operation.
-                </p>
-                <ul className="space-y-2 text-xs text-neutral-600 font-sans">
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-orange-500 shrink-0" /> Zero chimney or toxic draft losses</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-orange-500 shrink-0" /> Safety-hardened tempered glass shields</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-orange-500 shrink-0" /> Automatic fuel tank sensors prevent overfill</li>
-                </ul>
-              </div>
-              <div className="space-y-4">
-                <span className="px-2.5 py-0.5 rounded-sm bg-amber-100 text-amber-800 font-mono text-[9px] font-bold">OUTDOOR DESIGN SAFETY</span>
-                <h3 className="font-sans text-lg font-semibold text-neutral-900">Outdoor Fireplace Elements</h3>
-                <p className="text-xs text-neutral-500 leading-relaxed font-sans">
-                  Our outdoor fire pits, fire tables, and taller structural torch columns feature high-efficiency wind protectors and stable concrete or steel foundations. Engineered to withstand intense Gulf elements, the clean-burning fuel generates instant golden warmth without hazardous ash.
-                </p>
-                <ul className="space-y-2 text-xs text-neutral-600 font-sans">
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-orange-500 shrink-0" /> Grade 316 Marine Stainless Steel weatherproofing</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-orange-500 shrink-0" /> Safe, physical fuel shut-off slide gates</li>
-                  <li className="flex items-center gap-2"><Check className="w-4 h-4 text-orange-500 shrink-0" /> Stable heavy-duty concrete and stone frames</li>
-                </ul>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'efficiency' && (
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 py-4">
-              <div className="bg-neutral-50 p-6 rounded-2xl border border-neutral-150 space-y-3">
-                <span className="font-bold text-neutral-400 font-mono text-[9px] uppercase tracking-wider block">EFFICIENCY & COST</span>
-                <h4 className="font-sans text-base font-semibold text-neutral-900">Running Cost Analysis</h4>
-                <p className="text-xs text-neutral-500 leading-relaxed font-sans">
-                  A traditional brick fireplace loses up to 80% of heat straight up the chimney, making fuel highly inefficient. Our ventless Bio Ethanol designs stay 100% internal, converting all fuel into usable radiant heat.
-                </p>
-              </div>
-              <div className="p-6 bg-[#FAF9F6] rounded-2xl border border-neutral-150 space-y-3">
-                <h4 className="font-sans text-sm font-semibold text-neutral-800 flex items-center gap-1.5">
-                  <Flame className="w-4 h-4 shrink-0 text-orange-500" />
-                  Bio Ethanol Cost & Consumption
-                </h4>
-                <p className="text-xs text-neutral-500 leading-relaxed font-sans">
-                  Consumes pure botanical liquid to cast authentic golden warmth with zero soot. High heating value with zero construction permit fees or brick masonry expenses.
-                </p>
-                <span className="block font-bold text-neutral-800 font-sans text-sm">~ 8.00 - 12.00 AED per operational hour</span>
-              </div>
-            </div>
-          )}
-        </section>
-
-        {/* INTERACTIVE ROOM-BY-ROOM ADVISOR */}
-        <section className="bg-neutral-900 text-white rounded-3xl p-8 md:p-14 mb-24 relative overflow-hidden">
-          <div className="absolute right-0 top-0 bottom-0 w-1/3 bg-radial from-orange-500/10 to-transparent blur-3xl pointer-events-none" />
-          
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
-            {/* Left selector form */}
-            <div className="lg:col-span-6 space-y-6">
-              <div>
-                <span className="text-[10px] font-mono font-bold text-orange-400 uppercase tracking-widest block mb-2">Help Me Choose</span>
-                <h2 className="font-sans text-2xl md:text-3xl font-semibold text-white tracking-tight">
-                  Find Your Ideal Fireplace
-                </h2>
-                <p className="text-xs text-neutral-400 mt-2 font-sans">
-                  Answer 3 short questions to discover the ideal system match for your space.
-                </p>
-              </div>
-
-              {/* Question 1 */}
-              <div className="space-y-2.5">
-                <span className="block text-xs font-bold text-neutral-300 font-sans uppercase tracking-wider">1. Where will this fireplace go?</span>
-                <div id="advisor-room-group" className="grid grid-cols-3 gap-2">
-                  {[
-                    { key: 'bedroom', label: 'Bedroom' },
-                    { key: 'living', label: 'Living' },
-                    { key: 'outdoor', label: 'Outdoor' }
-                  ].map((item) => (
-                    <button
-                      key={item.key}
-                      onClick={() => setRoomType(item.key)}
-                      className={`py-2 rounded-xl text-xs font-semibold font-sans cursor-pointer transition ${
-                        roomType === item.key 
-                          ? 'bg-orange-500 text-white shadow-xs' 
-                          : 'bg-neutral-800 hover:bg-neutral-750 text-neutral-400'
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Question 2 */}
-              <div className="space-y-2.5">
-                <span className="block text-xs font-bold text-neutral-300 font-sans uppercase tracking-wider">2. Do you need active heating output?</span>
-                <div id="advisor-heat-group" className="grid grid-cols-2 gap-2">
-                  {[
-                    { key: 'no', label: 'No (Visuals only)' },
-                    { key: 'yes', label: 'Yes (Heat & Fire)' }
-                  ].map((item) => (
-                    <button
-                      key={item.key}
-                      onClick={() => setNeedsHeat(item.key)}
-                      className={`py-2 rounded-xl text-xs font-semibold font-sans cursor-pointer transition ${
-                        needsHeat === item.key 
-                          ? 'bg-orange-500 text-white shadow-xs' 
-                          : 'bg-neutral-800 hover:bg-neutral-750 text-neutral-400'
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Question 3 */}
-              <div className="space-y-2.5">
-                <span className="block text-xs font-bold text-neutral-300 font-sans uppercase tracking-wider">3. Are there active toddlers or pets run around?</span>
-                <div id="advisor-kids-group" className="grid grid-cols-2 gap-2">
-                  {[
-                    { key: 'yes', label: 'Yes, safety first' },
-                    { key: 'no', label: 'No restrictions' }
-                  ].map((item) => (
-                    <button
-                      key={item.key}
-                      onClick={() => setHasKids(item.key)}
-                      className={`py-2 rounded-xl text-xs font-semibold font-sans cursor-pointer transition ${
-                        hasKids === item.key 
-                          ? 'bg-orange-500 text-white shadow-xs' 
-                          : 'bg-neutral-800 hover:bg-neutral-750 text-neutral-400'
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Right recommendation card */}
-            <div className="lg:col-span-6 bg-neutral-800/80 border border-neutral-700/50 p-6 md:p-8 rounded-2xl flex flex-col justify-between h-full">
-              <div>
-                <span className="px-2.5 py-0.5 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20 text-[9px] font-bold uppercase tracking-wider font-mono inline-block">
-                  Our Recommendation
-                </span>
-                <h3 className="font-sans text-xl font-bold mt-4 text-white">
-                  {recommendation.title}
-                </h3>
-                <span className="text-xs text-neutral-400 font-medium italic block mt-0.5 mb-4">
-                  {recommendation.tagline}
-                </span>
-                
-                <p className="text-xs text-neutral-300 leading-relaxed font-sans mb-6">
-                  {recommendation.reason}
-                </p>
-
-                <div className="grid grid-cols-2 gap-3 mb-8">
-                  {recommendation.features.map((feat, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-xs text-neutral-300">
-                      <Check className="w-3.5 h-3.5 text-orange-400 shrink-0" />
-                      <span>{feat}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <a
-                id="advisor-whatsapp-cta"
-                href={`https://wa.me/971542112891?text=${encodeURIComponent(recommendation.whatsappMsg)}`}
-                target="_blank"
-                rel="noreferrer"
-                className="w-full text-center py-3.5 rounded-full bg-orange-500 hover:bg-orange-600 font-sans text-xs font-semibold text-white transition block cursor-pointer"
-              >
-                Inquire on WhatsApp about {recommendation.title}
-              </a>
-            </div>
-
-          </div>
-        </section>
 
         {/* Bento highlights of material excellence */}
         <section className="mb-12">
@@ -365,6 +133,150 @@ export default function WhyChoosePage() {
                 Our technology adheres to globally recognized testing compliance structures guaranteeing safety triggers that shut down system feeds automatically in case of temperature surges or tilt.
               </p>
             </div>
+          </div>
+        </section>
+        
+        {/* Comparison Matrix */}
+        <section className="mb-12 bg-white p-8 rounded-3xl border border-neutral-200/50">
+          <div className="text-center mb-8">
+            <span className="text-xs font-bold uppercase tracking-widest text-orange-500 block mb-2">Direct Comparison</span>
+            <h3 className="font-sans text-xl font-semibold text-neutral-900">Ethanol vs Traditional Firepoints</h3>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-left table-auto">
+              <thead>
+                <tr className="text-xs text-neutral-500 uppercase border-b border-neutral-100">
+                  <th className="py-3 pl-3">Metric</th>
+                  <th className="py-3">Ethanol</th>
+                  <th className="py-3">Traditional</th>
+                </tr>
+              </thead>
+              <tbody>
+                {comparisonData.map((m, idx) => (
+                  <tr key={idx} className="align-top border-b border-neutral-100">
+                    <td className="py-4 pl-3 text-sm font-semibold text-neutral-800">{m.label}</td>
+                    <td className="py-4 text-sm text-neutral-600">{m.ethanol}</td>
+                    <td className="py-4 text-sm text-neutral-600">{m.traditional}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Interactive Room Advisor Recommendation */}
+        <section className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <div className="md:col-span-2 bg-white rounded-3xl p-8 border border-neutral-200/50">
+            <h4 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Room Advisor</h4>
+            <p className="text-neutral-600 text-sm mb-4">A quick, personality-free recommendation based on your answers above. Change the options to refine results.</p>
+
+            <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
+              <h3 className="font-sans font-semibold text-neutral-900 text-lg">{recommendation.title}</h3>
+              <p className="text-xs text-neutral-500 mt-1 mb-3">{recommendation.tagline}</p>
+              <p className="text-sm text-neutral-600 mb-3">{recommendation.reason}</p>
+              <ul className="list-none space-y-2 mb-4">
+                {recommendation.features.map((f, i) => (
+                  <li key={i} className="flex items-start gap-2 text-sm text-neutral-700">
+                    <Check className="w-4 h-4 text-orange-500 mt-0.5" />
+                    <span>{f}</span>
+                  </li>
+                ))}
+              </ul>
+
+              <a
+                href={`https://wa.me/971542112891?text=${encodeURIComponent(recommendation.whatsappMsg)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-orange-500 text-white text-sm font-semibold"
+              >
+                Discuss This Option
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Stats */}
+          <div className="bg-white rounded-3xl p-6 border border-neutral-200/50">
+            <h4 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Quick Stats</h4>
+            <div className="space-y-4">
+              <div>
+                <div className="text-xs text-neutral-500">Average Installation Time</div>
+                <div className="font-semibold">1 - 3 days</div>
+              </div>
+              <div>
+                <div className="text-xs text-neutral-500">Typical Warranty</div>
+                <div className="font-semibold">2 years (parts & labour)</div>
+              </div>
+              <div>
+                <div className="text-xs text-neutral-500">Maintenance</div>
+                <div className="font-semibold">Low — seasonal clean</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials */}
+        <section className="mb-16">
+          <div className="text-center mb-8">
+            <span className="text-xs font-bold uppercase tracking-widest text-orange-500 block mb-2">Trusted By</span>
+            <h3 className="font-sans text-2xl font-semibold text-neutral-900">What Our Clients Say</h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-3xl border border-neutral-200/50">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-orange-500">
+                  <HeartHandshake className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="font-semibold text-sm">Laila — Private Client</div>
+                  <p className="text-xs text-neutral-500">"Flawless install, warm ambience, and zero maintenance. Perfect for our family lounge."</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-3xl border border-neutral-200/50">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-orange-500">
+                  <Star className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="font-semibold text-sm">Hassan — Architect</div>
+                  <p className="text-xs text-neutral-500">"The design freedom saved our concept. Their technical team delivered precise CAD and install guidance."</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-6 rounded-3xl border border-neutral-200/50">
+              <div className="flex items-start gap-3">
+                <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-orange-500">
+                  <Check className="w-5 h-5" />
+                </div>
+                <div>
+                  <div className="font-semibold text-sm">Mariam — Developer</div>
+                  <p className="text-xs text-neutral-500">"Reliable delivery and excellent aftercare. We repeated the layout across three villas."</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section className="mb-20">
+          <div className="bg-neutral-900 text-white rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="max-w-2xl">
+              <h3 className="font-sans text-2xl font-semibold">Ready to reimagine your space?</h3>
+              <p className="text-xs text-neutral-300 mt-2">Get a tailored recommendation, CAD drawings, and an instal cost estimate from our project team.</p>
+            </div>
+            <a
+              href="https://wa.me/971542112891?text=Hi%20Flames%20team%2C%20I'd%20like%20to%20discuss%20a%20bespoke%20fireplace%20project."
+              target="_blank"
+              rel="noreferrer noopener"
+              className="px-6 py-3.5 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-sans text-xs font-semibold"
+            >
+              Speak to a Project Engineer
+            </a>
           </div>
         </section>
 
