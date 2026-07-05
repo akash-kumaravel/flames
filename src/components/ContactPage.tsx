@@ -280,7 +280,7 @@ export default function ContactPage() {
                   <MapPin className="w-4 h-4 text-orange-500" />
                 </div>
                 <div className="space-y-1 font-sans">
-                  <span className="text-[11px] font-bold text-neutral-400 uppercase tracking-wider block font-mono">Showroom / Office Location</span>
+                  <span className="text-[11px] font-bold text-neutral-400 uppercase tracking-wider block font-mono">Office Location</span>
                   <span className="text-xs font-semibold text-neutral-900 block leading-tight">Business Bay, Dubai, United Arab Emirates</span>
                 </div>
               </div>
@@ -313,21 +313,6 @@ export default function ContactPage() {
 
               {/* Business Hours removed per request */}
             </div>
-          </div>
-
-          {/* Contact Detail Card */}
-          <div className="bg-white rounded-3xl border border-neutral-200/60 shadow-xs p-6 md:p-8 space-y-4 text-left">
-            <div className="space-y-1">
-              <span className="text-[9px] font-mono font-bold text-orange-500 uppercase tracking-widest block">
-                Office Location
-              </span>
-              <h3 className="font-sans font-bold text-base text-neutral-900">
-                Business Bay, Dubai
-              </h3>
-            </div>
-            <p className="text-xs text-neutral-500 leading-relaxed font-sans">
-              Contact our Dubai office for local project coordination and architectural specification support.
-            </p>
           </div>
 
         </div>
