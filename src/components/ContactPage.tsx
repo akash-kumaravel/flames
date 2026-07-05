@@ -315,15 +315,19 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Quick Note Card */}
-          <div className="bg-[#FAF9F6] rounded-3xl border border-neutral-200 p-6 flex gap-3 text-left">
-            <Shield className="w-5 h-5 text-neutral-400 shrink-0 mt-0.5" />
+          {/* Contact Detail Card */}
+          <div className="bg-white rounded-3xl border border-neutral-200/60 shadow-xs p-6 md:p-8 space-y-4 text-left">
             <div className="space-y-1">
-              <span className="text-xs font-semibold text-neutral-800 block font-sans">Complimentary Technical Site Inspection</span>
-              <p className="text-[10px] text-neutral-400 leading-normal font-sans">
-                For projects within Dubai and Abu Dhabi regions, we provide pre-site wall inspection and measurement support free of charge to guarantee 100% fire-safe architectural integration.
-              </p>
+              <span className="text-[9px] font-mono font-bold text-orange-500 uppercase tracking-widest block">
+                Office Location
+              </span>
+              <h3 className="font-sans font-bold text-base text-neutral-900">
+                Business Bay, Dubai
+              </h3>
             </div>
+            <p className="text-xs text-neutral-500 leading-relaxed font-sans">
+              Contact our Dubai office for local project coordination and architectural specification support.
+            </p>
           </div>
 
         </div>
