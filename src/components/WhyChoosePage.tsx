@@ -97,7 +97,7 @@ export default function WhyChoosePage() {
         {/* Bento highlights of material excellence */}
         <section className="mb-12">
           <div className="text-center mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-orange-500 block mb-2">Quality Standards</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Quality Standards</span>
             <h2 className="font-sans text-2xl sm:text-3xl font-semibold text-neutral-900 tracking-tight leading-snug">
               Uncompromising Physical Security Specs
             </h2>
@@ -139,7 +139,7 @@ export default function WhyChoosePage() {
         {/* Comparison Matrix */}
         <section className="mb-12 bg-white p-8 rounded-3xl border border-neutral-200/50">
           <div className="text-center mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-orange-500 block mb-2">Direct Comparison</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Direct Comparison</span>
             <h3 className="font-sans text-xl font-semibold text-neutral-900">Ethanol vs Traditional Firepoints</h3>
           </div>
 
@@ -166,8 +166,8 @@ export default function WhyChoosePage() {
         </section>
 
         {/* Interactive Room Advisor Recommendation */}
-        <section className="mb-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          <div className="md:col-span-2 bg-white rounded-3xl p-8 border border-neutral-200/50">
+        <section className="mb-12 grid grid-cols-1 gap-8 items-start">
+          <div className="bg-white rounded-3xl p-8 border border-neutral-200/50">
             <h4 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Room Advisor</h4>
             <p className="text-neutral-600 text-sm mb-4">A quick, personality-free recommendation based on your answers above. Change the options to refine results.</p>
 
@@ -195,31 +195,12 @@ export default function WhyChoosePage() {
               </a>
             </div>
           </div>
-
-          {/* Quick Stats */}
-          <div className="bg-white rounded-3xl p-6 border border-neutral-200/50">
-            <h4 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-4">Quick Stats</h4>
-            <div className="space-y-4">
-              <div>
-                <div className="text-xs text-neutral-500">Average Installation Time</div>
-                <div className="font-semibold">1 - 3 days</div>
-              </div>
-              <div>
-                <div className="text-xs text-neutral-500">Typical Warranty</div>
-                <div className="font-semibold">2 years (parts & labour)</div>
-              </div>
-              <div>
-                <div className="text-xs text-neutral-500">Maintenance</div>
-                <div className="font-semibold">Low — seasonal clean</div>
-              </div>
-            </div>
-          </div>
         </section>
 
         {/* Testimonials */}
         <section className="mb-16">
           <div className="text-center mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-orange-500 block mb-2">Trusted By</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Trusted By</span>
             <h3 className="font-sans text-2xl font-semibold text-neutral-900">What Our Clients Say</h3>
           </div>
 

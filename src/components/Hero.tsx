@@ -14,9 +14,9 @@ export default function Hero({ onNavigate }: HeroProps) {
   const heroImages = [
     '/assets/Fireplace _ Wall Feature.png',
     '/assets/Fireplace _ Product Close-up.png',
-    '/assets/Outdoor Fireplace _ Poolside (1).png',
-    '/assets/image_webp.png',
-    '/assets/Poolside Fire Pit _ Luxury Patio.png'
+    '/assets/Bio-Ethanol Fireplace _ Product Close-up.png',
+    '/assets/Fire Pit _ Product Close-up.png',
+    '/assets/Built-In BBQ _ Flames Close-up.png'
   ];
   const [activeImageIndex, setActiveImageIndex] = useState(0);
 
@@ -28,22 +28,26 @@ export default function Hero({ onNavigate }: HeroProps) {
     return () => window.clearInterval(interval);
   }, [heroImages.length]);
 
+  useEffect(() => {
+    const nextIndex = (activeImageIndex + 1) % heroImages.length;
+    const nextImage = new Image();
+    nextImage.src = heroImages[nextIndex];
+  }, [activeImageIndex, heroImages]);
+
   return (
     <div id="hero-landing-page" className="pt-24 pb-20 px-6 md:px-12 bg-[#FAF9F6]">
       {/* 1. Hero Content & Tagline Section */}
       <section className="relative min-h-screen overflow-hidden shadow-2xl border border-neutral-200/20 rounded-none w-screen max-w-none ml-[calc(50%-50vw)]">
         <div className="absolute inset-0 z-0">
-          {heroImages.map((image, index) => (
-            <img
-              key={image}
-              src={image}
-              alt="Premium fireplace showcase"
-              referrerPolicy="no-referrer"
-              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
-                index === activeImageIndex ? 'opacity-100' : 'opacity-0'
-              }`}
-            />
-          ))}
+          <img
+            key={heroImages[activeImageIndex]}
+            src={heroImages[activeImageIndex]}
+            alt="Premium fireplace showcase"
+            loading="eager"
+            fetchpriority="high"
+            referrerPolicy="no-referrer"
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100"
+          />
           <div className="absolute inset-0 bg-gradient-to-br from-neutral-950/80 via-neutral-900/45 to-neutral-900/20" />
         </div>
 
@@ -90,7 +94,8 @@ export default function Hero({ onNavigate }: HeroProps) {
             <button
               id="hero-explore-services-btn"
               onClick={() => onNavigate('services')}
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-sans text-sm font-semibold hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-orange-700 hover:bg-orange-800 text-white font-sans text-sm font-semibold hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 group"
+              aria-label="Explore our services"
             >
               Explore Our Services
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -118,7 +123,7 @@ export default function Hero({ onNavigate }: HeroProps) {
       {/* 3. Welcome / Intro Copy Block */}
       <section className="max-w-7xl mx-auto mt-20 mb-36 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <div className="lg:col-span-5">
-          <span className="text-xs font-bold uppercase tracking-widest text-orange-500 block mb-3">Redefine Ambience</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-3">Redefine Ambience</span>
           <h2 className="font-sans text-2xl md:text-4xl font-semibold text-neutral-900 tracking-tight leading-tight">
             An extraordinary living flame with zero emissions.
           </h2>
@@ -138,7 +143,7 @@ export default function Hero({ onNavigate }: HeroProps) {
       {/* NEW SECTION: OUR PROFESSIONAL OUTDOOR SERVICES & FIRE FEATURES */}
       <section className="max-w-7xl mx-auto mb-28">
         <div className="text-center mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-orange-500 block mb-2">Our Professional Services</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Our Professional Services</span>
           <h2 className="font-sans text-3xl font-semibold text-neutral-900 tracking-tight">Outdoor Fire Features &amp; Kitchens in Dubai</h2>
           <p className="font-sans text-sm text-neutral-500 max-w-2xl mx-auto mt-3">
             Transforming luxury villas, pool decks, and gardens with weather-resistant fire features, custom kitchens, and premium barbecue installations.
@@ -155,7 +160,7 @@ export default function Hero({ onNavigate }: HeroProps) {
       {/* NEW SECTION B: Architectural Installation Gallery Case Exhibition */}
       <section className="max-w-7xl mx-auto mb-28">
         <div className="text-center mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-orange-500 block mb-2">Design Inspiration</span>
+          <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Design Inspiration</span>
           <h2 className="font-sans text-3xl font-semibold text-neutral-900 tracking-tight">Luxury UAE Architectural Showcases</h2>
           <p className="font-sans text-sm text-neutral-500 max-w-2xl mx-auto mt-3">
             Explore how premium interior designers and landscape architects integrate Flames systems inside the UAE's most prestigious living communities.
@@ -179,7 +184,7 @@ export default function Hero({ onNavigate }: HeroProps) {
                 </div>
                 <div className="p-8 space-y-4">
                   <h3 className="font-sans font-semibold text-neutral-900 text-lg line-clamp-2">{item.title}</h3>
-                  <p className="text-xs text-neutral-500 leading-relaxed font-sans line-clamp-3">
+                  <p className="text-xs text-neutral-600 leading-relaxed font-sans line-clamp-3">
                     {item.description}
                   </p>
                 </div>
@@ -189,7 +194,7 @@ export default function Hero({ onNavigate }: HeroProps) {
                   <span className="truncate max-w-[150px]">{item.specs[0] || 'Premium Quality'}</span>
                   <button
                     onClick={() => onNavigate('portfolio')}
-                    className="text-orange-600 font-bold hover:underline cursor-pointer flex items-center gap-1 shrink-0"
+                    className="text-orange-700 font-bold hover:underline cursor-pointer flex items-center gap-1 shrink-0"
                   >
                     View Project
                     <ArrowRight className="w-3 h-3" />
@@ -205,7 +210,7 @@ export default function Hero({ onNavigate }: HeroProps) {
       <section className="max-w-7xl mx-auto mb-24 bg-white border border-neutral-200/40 rounded-3xl p-8 md:p-14">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-orange-500 block mb-3">Guaranteed High-Standards</span>
+            <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-3">Guaranteed High-Standards</span>
             <h3 className="font-sans text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight leading-snug">
               Premium fire features, certified UAE safety.
             </h3>
@@ -215,7 +220,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             <button
               id="trust-cta-btn"
               onClick={() => onNavigate('about')}
-              className="mt-6 flex items-center gap-1.5 text-xs font-bold text-orange-600 hover:text-orange-700 hover:underline cursor-pointer"
+              className="mt-6 flex items-center gap-1.5 text-xs font-bold text-orange-700 hover:text-orange-800 hover:underline cursor-pointer"
             >
               Read our full story
               <ArrowRight className="w-3.5 h-3.5" />

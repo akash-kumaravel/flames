@@ -1,6 +1,6 @@
-import { Flame, Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, MapPin, ArrowUpRight } from 'lucide-react';
 import { ActiveSection } from '../types';
-import { BRAND, TAGLINE } from '../data';
+import { TAGLINE } from '../data';
 
 interface FooterProps {
   onNavigate: (section: ActiveSection) => void;
@@ -20,12 +20,11 @@ export default function Footer({ onNavigate }: FooterProps) {
           {/* Brand/Slogan Column */}
           <div className="md:col-span-4 space-y-4">
             <div className="flex items-center gap-2.5">
-              <div className="w-9 h-9 rounded-full bg-orange-500 flex items-center justify-center text-white">
-                <Flame className="w-5 h-5 fill-white" />
-              </div>
-              <span className="font-sans font-semibold text-white text-lg tracking-tight">
-                {BRAND}
-              </span>
+              <img
+                src="/assets/flames%20logo.svg"
+                alt="Flames logo"
+                className="h-6 w-auto object-contain"
+              />
             </div>
             
             <p className="text-sm font-medium text-neutral-300 italic">
@@ -39,9 +38,9 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Quick structural catalog links column */}
           <div className="md:col-span-2 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+            <p className="text-xs font-bold uppercase tracking-wider text-white">
               Custom Spaces
-            </h4>
+            </p>
             <ul className="space-y-2.5 text-xs">
               <li>
                 <button
@@ -75,9 +74,9 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Editorial / Info column */}
           <div className="md:col-span-2 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+            <p className="text-xs font-bold uppercase tracking-wider text-white">
               Our Organization
-            </h4>
+            </p>
             <ul className="space-y-2.5 text-xs">
               <li>
                 <button
@@ -120,9 +119,9 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           {/* Local UAE NAP details column */}
           <div className="md:col-span-4 space-y-4">
-            <h4 className="text-xs font-bold uppercase tracking-wider text-white">
+            <p className="text-xs font-bold uppercase tracking-wider text-white">
               Flames Office UAE
-            </h4>
+            </p>
             
             <ul className="space-y-3.5 text-xs">
               <li className="flex items-start gap-2.5">
@@ -143,7 +142,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         </div>
 
         {/* Bottom Segment: Corporate Rights and SEO notations */}
-        <div className="pt-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs text-neutral-500">
+        <div className="pt-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs text-neutral-300">
           
           <div>
             <span>&copy; {new Date().getFullYear()} Memo Infotech. All rights reserved.</span>

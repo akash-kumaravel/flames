@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
-import { Flame, Menu, X, ArrowUpRight, ChevronRight } from 'lucide-react';
+import { Menu, X, ArrowUpRight, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ActiveSection } from '../types';
-import { BRAND } from '../data';
 
 interface HeaderProps {
   activeSection: ActiveSection;
@@ -54,12 +53,11 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
           }}
           className="flex items-center gap-2 group cursor-pointer"
         >
-          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-orange-500 flex items-center justify-center text-white shadow-lg shadow-orange-500/20 group-hover:scale-105 transition-transform duration-300">
-            <Flame className="w-4.5 h-4.5 sm:w-5 sm:h-5 fill-white" />
-          </div>
-          <span className="font-sans font-semibold text-base sm:text-lg tracking-tight text-neutral-900 group-hover:text-orange-500 transition-colors duration-300">
-            {BRAND}
-          </span>
+          <img
+            src="/assets/flames%20logo.svg"
+            alt="Flames logo"
+            className="h-6 sm:h-7 w-auto object-contain"
+          />
         </button>
 
         {/* Desktop Navigation */}
@@ -102,6 +100,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
         {/* Mobile Control */}
         <button
           id="mobile-menu-toggle"
+          aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="lg:hidden p-2 rounded-full text-neutral-700 hover:bg-neutral-100 transition-colors cursor-pointer"
         >

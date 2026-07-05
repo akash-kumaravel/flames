@@ -26,8 +26,6 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     categoryLabel: "Indoor Fireplace",
     location: "Jumeirah Golf Estates, Dubai",
     description: "A contemporary living room media hub featuring an extra-wide flueless bioethanol burner. Built into a floating marble-clad drywall structure with specialized thermal ceramic isolation shields beneath a large ultra-HD television screen.",
-    image: "/assets/Bio-Ethanol Cassette Media Wall.png",
-    // Updated to use local project image
     image: "/assets/project 2.png",
     specs: [
       "Golden ventless real-fire flame with warm radiant heat",
@@ -189,6 +187,8 @@ export default function PortfolioPage() {
                   <img
                     src={item.image}
                     alt={item.title}
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 opacity-95 group-hover:opacity-100"
                   />
@@ -214,7 +214,7 @@ export default function PortfolioPage() {
                   </div>
 
                   <div className="pt-4 border-t border-neutral-100 flex items-center justify-between text-neutral-800 text-xs font-semibold font-sans">
-                    <span className="text-orange-600 group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
+                    <span className="text-orange-700 group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
                       View Project Details
                       <ArrowRight className="w-3.5 h-3.5" />
                     </span>

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, lazy, Suspense } from 'react';
 import { 
   Flame, Info, ShieldCheck, Check, Search, ArrowRight, MessageCircle
 } from 'lucide-react';
@@ -16,11 +16,11 @@ import {
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
-import BlogPage from './components/BlogPage';
-import ContactPage from './components/ContactPage';
-import WhyChoosePage from './components/WhyChoosePage';
-import ServicesPage from './components/ServicesPage';
-import PortfolioPage from './components/PortfolioPage';
+const BlogPage = lazy(() => import('./components/BlogPage'));
+const ContactPage = lazy(() => import('./components/ContactPage'));
+const WhyChoosePage = lazy(() => import('./components/WhyChoosePage'));
+const ServicesPage = lazy(() => import('./components/ServicesPage'));
+const PortfolioPage = lazy(() => import('./components/PortfolioPage'));
 import Breadcrumbs, { BreadcrumbStep } from './components/Breadcrumbs';
 
 const sectionToPath: Record<ActiveSection, string> = {
@@ -339,17 +339,19 @@ export default function App() {
                 <div className="py-20 px-6 md:px-12">
                   <div className="max-w-3xl mx-auto space-y-10">
                     <div className="text-center">
-                      <span className="text-xs font-bold uppercase tracking-widest text-orange-500 block mb-2">Quick Answers</span>
+                      <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Quick Answers</span>
                       <h3 className="font-sans text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight">Featured Q&amp;A</h3>
                     </div>
                     
                     <div className="space-y-6">
-                      <div className="bg-white p-6 rounded-2xl border border-neutral-200/40 shadow-xs">
-                        <strong className="text-sm font-bold text-neutral-900 font-sans block mb-2">Q: Are Bio Ethanol Fireplaces safe for indoor spaces?</strong>
-                        <p className="text-sm text-neutral-500 leading-relaxed font-sans">
-                          Yes. Bio Ethanol fireplaces burn plant-derived alcohol fuel cleanly, producing only water vapour and negligible concentrations of CO2 — comparable to lighting a few ambient candles. They are ventless, requiring no chimneys.
-                        </p>
-                      </div>
+                      {COMMON_FAQS.slice(0, 4).map((faq, index) => (
+                        <div key={`${faq.question}-${index}`} className="bg-white p-6 rounded-2xl border border-neutral-200/40 shadow-xs">
+                          <strong className="text-sm font-bold text-neutral-900 font-sans block mb-2">Q: {faq.question}</strong>
+                          <p className="text-sm text-neutral-500 leading-relaxed font-sans">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      ))}
                     </div>
                   </div>
                 </div>
@@ -365,7 +367,7 @@ export default function App() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                       <button
                         onClick={() => handleNavigation('services')}
-                        className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-sans text-xs font-semibold cursor-pointer transition"
+                        className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-orange-700 hover:bg-orange-800 text-white font-sans text-xs font-semibold cursor-pointer transition"
                       >
                         Explore Our Services
                       </button>
@@ -404,6 +406,8 @@ export default function App() {
                       <img
                         src="/assets/about.png"
                         alt="Minimal Architect Surround Interior"
+                        loading="lazy"
+                        decoding="async"
                         referrerPolicy="no-referrer"
                         className="w-full h-[400px] object-cover"
                       />
@@ -467,17 +471,23 @@ export default function App() {
 
             {/* ──── ROUTE: DESIGN & INSTALLATION SERVICES ──── */}
             {activeSection === 'services' && (
-              <ServicesPage />
+              <Suspense fallback={<div className="min-h-screen bg-[#FAF9F6]" />}>
+                <ServicesPage />
+              </Suspense>
             )}
 
             {/* ──── ROUTE: PROJECT PORTFOLIO ──── */}
             {activeSection === 'portfolio' && (
-              <PortfolioPage />
+              <Suspense fallback={<div className="min-h-screen bg-[#FAF9F6]" />}>
+                <PortfolioPage />
+              </Suspense>
             )}
 
             {/* ──── ROUTE: WHY CHOOSE US ──── */}
             {activeSection === 'why-choose' && (
-              <WhyChoosePage />
+              <Suspense fallback={<div className="min-h-screen bg-[#FAF9F6]" />}>
+                <WhyChoosePage />
+              </Suspense>
             )}
 
             {/* ──── ROUTE: GENERAL FAQ PAGE ──── */}
@@ -585,6 +595,7 @@ export default function App() {
         href="https://wa.me/971542112891"
         target="_blank"
         rel="noopener noreferrer"
+        aria-label="Open WhatsApp chat"
         className="fixed bottom-6 right-6 z-40 group flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-3 rounded-full shadow-2xl transition-all duration-300 hover:scale-[1.03] cursor-pointer font-sans"
         title="WhatsApp"
       >

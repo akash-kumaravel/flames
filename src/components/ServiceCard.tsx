@@ -13,6 +13,8 @@ export default function ServiceCard({ service, onNavigate }: ServiceCardProps) {
         <img
           src={service.image}
           alt={service.title}
+          loading="lazy"
+          decoding="async"
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-103"
         />
@@ -24,18 +26,18 @@ export default function ServiceCard({ service, onNavigate }: ServiceCardProps) {
       <div className="p-6 md:p-8 flex-1 flex flex-col justify-between space-y-6">
         <div className="space-y-3">
           <div className="space-y-1">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-orange-600 font-mono">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-orange-900 font-mono">
               {service.badge}
             </span>
             <h3 className="font-sans text-lg font-semibold text-neutral-900 tracking-tight leading-snug group-hover:text-orange-600 transition-colors">
               {service.title}
             </h3>
-            <p className="font-sans text-[11px] font-medium text-neutral-400 italic">
+            <p className="font-sans text-[11px] font-medium text-neutral-700 italic">
               {service.subtitle}
             </p>
           </div>
 
-          <p className="font-sans text-xs text-neutral-500 leading-relaxed font-light">
+          <p className="font-sans text-xs text-neutral-700 leading-relaxed font-light">
             {service.description}
           </p>
         </div>
