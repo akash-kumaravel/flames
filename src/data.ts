@@ -1,62 +1,62 @@
 import { FAQItem, ProductDetails, BlogArticle, ServiceItem } from './types';
 
-export const BRAND = "Flames";
-export const TAGLINE = "Premium Outdoor & Indoor Fire Features in Dubai & UAE";
+export const BRAND = "Flames Fireplace";
+export const TAGLINE = "Premium Indoor & Outdoor Fire Features in Dubai & UAE";
 
 export const META_SUMMARY = {
   home: {
-    title: "Flames | Premium Outdoor & Indoor Fire Features in Dubai & UAE",
-    description: "Flames is Dubai's trusted name in fire features. From elegant fire pits to eco-friendly bio ethanol fireplaces and premium BBQ setups, we supply and install across UAE.",
-    primaryKW: "bio ethanol fireplace, fire pits, outdoor kitchens",
-    secondaryKW: "ventless fireplace UAE, outdoor fireplace Dubai"
+    title: "Flames Fireplace Dubai | Premium Bio Ethanol Fireplaces, Fire Pits & Outdoor Kitchens",
+    description: "Discover premium bio ethanol fireplaces, fire pits, outdoor kitchens, and custom BBQs in Dubai and the UAE with Flames Fireplace.",
+    primaryKW: "bio ethanol fireplace Dubai, fire pits Dubai",
+    secondaryKW: "outdoor kitchen Dubai, luxury fireplace UAE"
   },
   about: {
-    title: "About Flames | Premium Fire Features & Outdoor Kitchens UAE",
-    description: "Your partner for Outdoor Kitchens, BBQs, Fire Pits & Fireplaces in the UAE. Quality products, professional installation, and honest pricing.",
-    primaryKW: "about Flames, bio ethanol fireplace supplier UAE"
+    title: "About Flames Fireplace | Premium Fire Features & Outdoor Kitchens UAE",
+    description: "Learn why Flames Fireplace is a trusted name for premium fireplaces, outdoor kitchens, and custom BBQ solutions across the UAE.",
+    primaryKW: "about Flames Fireplace, bio ethanol fireplace supplier UAE"
   },
   indoor: {
-    title: "Indoor Bio Ethanol Fireplace | Ventless, Eco-Friendly Real Flame — Flames",
-    description: "Real flame warmth without chimneys, flues, or gas connections. Clean-burning, modern, and beautiful flueless heating.",
+    title: "Indoor Bio Ethanol Fireplace | Ventless, Eco-Friendly Real Flame — Flames Fireplace",
+    description: "Real flame warmth without chimneys, flues, or gas connections. Clean-burning, modern, and beautiful flueless heating for modern Dubai homes.",
     primaryKW: "indoor bio ethanol fireplace, ventless fireplace",
     secondaryKW: "bioethanol fireplace UAE, wall mounted fireplace, no chimney fireplace"
   },
   outdoor: {
-    title: "Outdoor Fire Features | Fire Pits & Fireplaces — Flames",
-    description: "Create an inviting outdoor retreat with bio ethanol fireplaces, fire pits, gas fire tables, and custom outdoor fire installations.",
+    title: "Outdoor Fire Features | Fire Pits & Fireplaces — Flames Fireplace",
+    description: "Create an inviting outdoor retreat with bio ethanol fireplaces, fire pits, gas fire tables, and custom outdoor fire installations in Dubai.",
     primaryKW: "outdoor bio ethanol fireplace, patio fireplace UAE",
     secondaryKW: "outdoor fire features Dubai, pool deck fireplace, terrace fire feature"
   },
   faq: {
-    title: "FAQs | Flames — Bio Ethanol Fireplace Questions Answered",
-    description: "Expert answers to the most common questions about safety, installation, fuel, and maintenance for Bio Ethanol Fireplaces from Flames.",
+    title: "FAQs | Flames Fireplace — Bio Ethanol Fireplace Questions Answered",
+    description: "Expert answers to the most common questions about safety, installation, fuel, and maintenance for bio ethanol fireplaces from Flames Fireplace.",
     primaryKW: "bio ethanol fireplace FAQ"
   },
   contact: {
-    title: "Contact Flames | Office in Business Bay, Dubai — UAE",
-    description: "Get in touch with the Flames team in Dubai. Ask about pricing, custom outdoor kitchens, fire pits, and fireplaces.",
-    primaryKW: "contact Flames, buy bio ethanol fireplace UAE, fireplace quote"
+    title: "Contact Flames Fireplace | Dubai UAE Office",
+    description: "Get in touch with the Flames Fireplace team in Dubai. Ask about pricing, custom outdoor kitchens, fire pits, and fireplaces.",
+    primaryKW: "contact Flames Fireplace, buy bio ethanol fireplace UAE, fireplace quote"
   },
   'why-choose': {
-    title: "Why Choose Flames | Pricing, Quality & Safety Specs",
-    description: "Discover why Flames is Dubai's trusted supplier of premium fire features and outdoor kitchens. Honest pricing, dedicated care, reliable delivery.",
-    primaryKW: "why choose Flames, bio ethanol fireplaces",
+    title: "Why Choose Flames Fireplace | Pricing, Quality & Safety Specs",
+    description: "Discover why Flames Fireplace is Dubai's trusted supplier of premium fire features and outdoor kitchens. Honest pricing, dedicated care, reliable delivery.",
+    primaryKW: "why choose Flames Fireplace, bio ethanol fireplaces",
     secondaryKW: "certified ventless fireplace, fireplace safety UAE"
   },
   'outdoor-features': {
-    title: "BBQ & Outdoor Kitchens Dubai UAE | Flames",
+    title: "BBQ & Outdoor Kitchens Dubai UAE | Flames Fireplace",
     description: "Elevate your outdoor dining with custom outdoor kitchens, built-in BBQs, outdoor fridges, modular islands, and organized storage systems in Dubai.",
     primaryKW: "outdoor fire features Dubai, outdoor kitchen Dubai",
     secondaryKW: "fire pit products Dubai, BBQ grill Dubai, outdoor fireplace UAE"
   },
   services: {
-    title: "Our Services | Design, Advisory & Installation — Flames",
+    title: "Our Services | Design, Advisory & Installation — Flames Fireplace",
     description: "Complete architectural integration, site inspections, custom drafting, and safe handover commissioning for luxury indoor and outdoor fire features in the UAE.",
     primaryKW: "fireplace installation Dubai, outdoor kitchen design UAE",
     secondaryKW: "architectural fireplace services, technical site inspection UAE"
   },
   portfolio: {
-    title: "Project Portfolio | Showcasing Finished Works — Flames",
+    title: "Project Portfolio | Showcasing Finished Works — Flames Fireplace",
     description: "Explore our collection of premium indoor 3D water vapor fireplaces, clean bio-ethanol fire features, and bespoke outdoor kitchens installed across Dubai & UAE.",
     primaryKW: "fireplace portfolio Dubai, custom outdoor kitchen gallery UAE",
     secondaryKW: "bespoke fire pit installation, luxury garden barbecue setups"

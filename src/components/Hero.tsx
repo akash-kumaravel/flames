@@ -61,7 +61,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100/80 text-orange-700 font-sans text-xs font-semibold uppercase tracking-wider mb-6"
           >
             <Flame className="w-3.5 h-3.5 fill-orange-600 text-orange-600" />
-            Premium Eco-Friendly Fireplaces UAE
+            Premium Flames Fireplace Dubai & UAE
           </motion.div>
 
           <motion.h1
@@ -81,7 +81,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             transition={{ duration: 1, delay: 0.2 }}
             className="font-sans text-lg md:text-xl text-neutral-200 max-w-2xl mt-6 leading-relaxed"
           >
-            Premium Bio Ethanol Fireplaces, Fire Pits, and Outdoor Kitchens for indoor and outdoor living. Smokeless. Safe. Timeless.
+            Premium bio ethanol fireplaces, fire pits, outdoor kitchens, and built-in BBQs for indoor and outdoor living. Smokeless. Safe. Timeless.
           </motion.p>
 
           <motion.div
@@ -130,7 +130,7 @@ export default function Hero({ onNavigate }: HeroProps) {
         </div>
         <div className="lg:col-span-7 space-y-6 text-neutral-500 font-sans text-base leading-relaxed">
           <p>
-            Welcome to <strong className="text-neutral-800">Flames</strong> — your premium destination for next-generation architectural fire features. 
+            Welcome to <strong className="text-neutral-800">Flames Fireplace</strong> — your premium destination for next-generation architectural fire features in Dubai and the UAE. 
             Whether you are looking for elegant clean-burning Indoor Bio Ethanol Fireplaces, 
             or stunning custom-fitted Outdoor Fire Features, we formulate products engineered for sheer visual beauty, domestic safety, and physical permanence.
           </p>
