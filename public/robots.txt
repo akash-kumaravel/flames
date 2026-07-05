@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://flames.ae/sitemap.xml
+Sitemap: https://flamesfireplace.com/sitemap.xml
