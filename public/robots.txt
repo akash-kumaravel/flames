@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Host: flamesfireplace.com
 
 # Sitemap Location
 Sitemap: https://flamesfireplace.com/sitemap.xml
