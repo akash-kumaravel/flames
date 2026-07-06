@@ -81,6 +81,7 @@ export default function BlogPage({ onNavigateContact, selectedArticleId, onSelec
             <div className="bg-white rounded-3xl border border-neutral-200/50 p-8 md:p-10 mb-16 shadow-sm">
               <h2 className="font-sans text-2xl font-semibold text-neutral-900">Explore expert guidance for fireplaces, fire pits, and outdoor living</h2>
               <p className="font-sans text-sm text-neutral-600 leading-relaxed mt-3">Our blog covers popular topics like bio ethanol fireplace safety, installation planning, outdoor kitchen integration, and design ideas for luxury UAE homes.</p>
+              <p className="mt-4 text-sm text-neutral-600">Looking for the best options in Dubai? Read our comprehensive landing guide: <a href="/best-fireplace-dubai" className="text-orange-600 hover:underline">Best Fireplace in Dubai</a>.</p>
             </div>
 
             {/* Architectural Catalog Notice Box */}

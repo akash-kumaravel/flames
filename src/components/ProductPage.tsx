@@ -88,6 +88,16 @@ export default function ProductPage({
               Contact Us
               <ArrowRight className="w-4 h-4" />
             </button>
+
+            {/* Internal links to improve crawling and site structure */}
+            <div className="mt-6 text-sm text-neutral-600">
+              <span className="font-semibold">Explore more:</span>
+              <ul className="list-disc pl-5 mt-2 space-y-1">
+                <li><a href="/best-fireplace-dubai" className="text-orange-600 hover:underline">Why Flames is Dubai's top fireplace choice</a></li>
+                <li><a href="/blog" className="text-orange-600 hover:underline">Read our blog for design & safety guides</a></li>
+                <li><a href="/contact" className="text-orange-600 hover:underline">Request a site survey or consultation</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

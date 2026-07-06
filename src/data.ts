@@ -49,6 +49,12 @@ export const META_SUMMARY = {
     primaryKW: "outdoor fire features Dubai, outdoor kitchen Dubai",
     secondaryKW: "fire pit products Dubai, BBQ grill Dubai, outdoor fireplace UAE"
   },
+  'best-fireplace-dubai': {
+    title: "Best Fireplace in Dubai — Flames Fireplace",
+    description: "Find the best fireplace options in Dubai: bio-ethanol, water-vapor, fire pits, and custom built-in BBQs. Expert advice, site surveys, and certified installations across the UAE.",
+    primaryKW: "best fireplace Dubai, fireplace Dubai",
+    secondaryKW: "bio ethanol fireplace Dubai, best fireplace UAE"
+  },
   services: {
     title: "Our Services | Design, Advisory & Installation — Flames Fireplace",
     description: "Complete architectural integration, site inspections, custom drafting, and safe handover commissioning for luxury indoor and outdoor fire features in the UAE.",
