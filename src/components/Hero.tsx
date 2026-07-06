@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, Flame, ShieldCheck } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Flame, ShieldCheck } from 'lucide-react';
 import { ActiveSection } from '../types';
 import { TRUST_BAR, GENERAL_STATS, PRODUCTS, BRAND, SERVICES } from '../data';
 import { motion } from 'motion/react';
@@ -11,38 +11,32 @@ interface HeroProps {
 }
 
 export default function Hero({ onNavigate }: HeroProps) {
-  const heroImages = [
-    '/assets/Fireplace _ Wall Feature.png',
-    '/assets/Fireplace _ Product Close-up.png',
-    '/assets/Bio-Ethanol Fireplace _ Product Close-up.png',
-    '/assets/Fire Pit _ Product Close-up.png',
-    '/assets/Built-In BBQ _ Flames Close-up.png'
-  ];
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const heroSlides = SERVICES;
+  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   useEffect(() => {
     const interval = window.setInterval(() => {
-      setActiveImageIndex((prev) => (prev + 1) % heroImages.length);
+      setActiveSlideIndex((prev) => (prev + 1) % heroSlides.length);
     }, 4500);
 
     return () => window.clearInterval(interval);
-  }, [heroImages.length]);
+  }, [heroSlides.length]);
 
   useEffect(() => {
-    const nextIndex = (activeImageIndex + 1) % heroImages.length;
+    const nextIndex = (activeSlideIndex + 1) % heroSlides.length;
     const nextImage = new Image();
-    nextImage.src = heroImages[nextIndex];
-  }, [activeImageIndex, heroImages]);
+    nextImage.src = heroSlides[nextIndex].image;
+  }, [activeSlideIndex, heroSlides]);
 
   return (
-    <div id="hero-landing-page" className="pt-24 pb-20 px-6 md:px-12 bg-[#FAF9F6]">
+    <div id="hero-landing-page" className="pb-20 px-6 md:px-12 bg-[#FAF9F6]">
       {/* 1. Hero Content & Tagline Section */}
       <section className="relative min-h-screen overflow-hidden shadow-2xl border border-neutral-200/20 rounded-none w-screen max-w-none ml-[calc(50%-50vw)]">
         <div className="absolute inset-0 z-0">
           <img
-            key={heroImages[activeImageIndex]}
-            src={heroImages[activeImageIndex]}
-            alt="Fireplace showcase"
+            key={heroSlides[activeSlideIndex].image}
+            src={heroSlides[activeSlideIndex].image}
+            alt={`Featured service ${heroSlides[activeSlideIndex].title}`}
             loading="eager"
             fetchpriority="high"
             referrerPolicy="no-referrer"
@@ -115,6 +109,84 @@ export default function Hero({ onNavigate }: HeroProps) {
             >
               Get a Free Quote
             </button>
+          </motion.div>
+
+          <motion.div
+            className="mt-12 w-full max-w-3xl mx-auto"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.9, delay: 0.35 }}
+          >
+            <div
+              role="button"
+              onClick={() => onNavigate(heroSlides[activeSlideIndex].id as unknown as ActiveSection)}
+              className="group cursor-pointer rounded-3xl border border-white/15 bg-white/10 backdrop-blur-xl p-6 md:p-8 hover:border-orange-300/50 hover:bg-white/15 transition-all duration-300"
+            >
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div className="space-y-3 text-left md:max-w-2xl">
+                  <span className="text-xs uppercase tracking-[0.3em] text-orange-200 font-semibold">Featured Fireplace</span>
+                  <h2 className="font-sans text-2xl md:text-3xl font-semibold text-white tracking-tight">
+                    {heroSlides[activeSlideIndex].title}
+                  </h2>
+                  <p className="text-sm md:text-base text-neutral-100/90 leading-relaxed max-w-3xl">
+                    {heroSlides[activeSlideIndex].subtitle || heroSlides[activeSlideIndex].description}
+                  </p>
+                </div>
+
+                <button
+                  type="button"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    onNavigate(heroSlides[activeSlideIndex].id as unknown as ActiveSection);
+                  }}
+                  className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-5 py-3 text-sm font-semibold text-white shadow-xl shadow-orange-500/20 hover:bg-orange-700 transition-all duration-300"
+                >
+                  Explore {heroSlides[activeSlideIndex].title}
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+
+              <div className="mt-6 flex items-center justify-between gap-4">
+                <button
+                  type="button"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    setActiveSlideIndex((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
+                  }}
+                  className="inline-flex items-center justify-center h-11 w-11 rounded-full border border-white/20 bg-black/20 text-white transition-colors duration-300 hover:border-orange-300/80 hover:bg-orange-500/20"
+                  aria-label="Previous slide"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                </button>
+
+                <div className="flex items-center gap-2">
+                  {heroSlides.map((slide, index) => (
+                    <button
+                      key={slide.id}
+                      type="button"
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        setActiveSlideIndex(index);
+                      }}
+                      className={`h-3 w-3 rounded-full transition-all duration-200 ${index === activeSlideIndex ? 'bg-orange-500 scale-110' : 'bg-white/40 hover:bg-white/70'}`}
+                      aria-label={`View ${slide.title}`}
+                    />
+                  ))}
+                </div>
+
+                <button
+                  type="button"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    setActiveSlideIndex((prev) => (prev + 1) % heroSlides.length);
+                  }}
+                  className="inline-flex items-center justify-center h-11 w-11 rounded-full border border-white/20 bg-black/20 text-white transition-colors duration-300 hover:border-orange-300/80 hover:bg-orange-500/20"
+                  aria-label="Next slide"
+                >
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
           </motion.div>
           </div>
         </div>

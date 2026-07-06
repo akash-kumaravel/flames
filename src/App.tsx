@@ -502,8 +502,10 @@ export default function App() {
       
       {/* 1. Global Navigation header bar */}
       <Header activeSection={activeSection} onNavigate={handleNavigation} />
-      {/* Breadcrumbs (visible for navigation and for crawlers via JSON-LD) */}
-      <Breadcrumbs steps={getBreadcrumbsSteps()} onNavigate={handleNavigation} onSelectArticle={handleSelectArticle} />
+      {/* Breadcrumbs are hidden on home to remove the extra top gap; shown on all other pages. */}
+      {activeSection !== 'home' && (
+        <Breadcrumbs steps={getBreadcrumbsSteps()} onNavigate={handleNavigation} onSelectArticle={handleSelectArticle} />
+      )}
       {/* debug banner removed */}
 
       {/* 2. Main content switchboard wrapper */}
