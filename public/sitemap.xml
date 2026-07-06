@@ -1,28 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://flamesfireplace.com/</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
     <loc>https://flamesfireplace.com/about</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://flamesfireplace.com/services</loc>
     <lastmod>2026-07-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://flamesfireplace.com/portfolio</loc>
     <lastmod>2026-07-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://flamesfireplace.com/why-choose</loc>
@@ -33,20 +27,26 @@
   <url>
     <loc>https://flamesfireplace.com/faq</loc>
     <lastmod>2026-07-06</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://flamesfireplace.com/contact</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://flamesfireplace.com/blog</loc>
     <lastmod>2026-07-06</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://flamesfireplace.com/best-fireplace-dubai</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
   </url>
   <url>
     <loc>https://flamesfireplace.com/blog/bio-ethanol-fireplace-buyers-guide</loc>
@@ -61,10 +61,10 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://flamesfireplace.com/services/bio-ethanol-fireplace</loc>
+    <loc>https://flamesfireplace.com/blog/best-fireplace-in-dubai</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://flamesfireplace.com/services/water-vapor-fireplace</loc>
@@ -73,13 +73,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://flamesfireplace.com/services/outdoor-fireplace</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://flamesfireplace.com/services/indoor-fireplace</loc>
+    <loc>https://flamesfireplace.com/services/bio-ethanol-fireplace</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -91,31 +85,7 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://flamesfireplace.com/services/fire-table</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://flamesfireplace.com/services/outdoor-kitchen</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://flamesfireplace.com/services/built-in-bbq</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://flamesfireplace.com/services/fireplace-dubai</loc>
-    <lastmod>2026-07-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://flamesfireplace.com/services/ethanol-burner</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
