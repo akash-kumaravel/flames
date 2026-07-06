@@ -16,7 +16,8 @@ export type ActiveSection =
   | 'outdoor-kitchen'
   | 'built-in-bbq'
   | 'fireplace-dubai'
-  | 'ethanol-burner';
+  | 'ethanol-burner'
+  | 'best-fireplace-dubai';
 
 export interface FAQItem {
   question: string;
@@ -72,4 +73,16 @@ export interface PortfolioItem {
   image: string;
   specs: string[];
   waMessage: string;
+}
+
+export interface ServiceItem {
+  id: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  image: string;
+  badge?: string;
+  category?: 'indoor' | 'outdoor' | string;
+  waMessage?: string;
+  faqs?: FAQItem[];
 }

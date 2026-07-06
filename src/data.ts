@@ -82,6 +82,10 @@ export const SERVICES: ServiceItem[] = [
     badge: "3D WATER MIST",
     category: "indoor",
     waMessage: "Inquiry regarding Indoor 3D Water Vapor Fireplaces"
+    ,faqs: [
+      { question: "Are water vapor fireplaces safe around TVs?", answer: "Yes — they produce a cool mist and no heat, safe beneath AV units when installed correctly." },
+      { question: "Do they need maintenance?", answer: "Occasional tank refills and periodic descaling of the ultrasonic nebulizer keep performance optimal." }
+    ]
   },
   {
     id: "bio-ethanol-fireplace",
@@ -92,6 +96,10 @@ export const SERVICES: ServiceItem[] = [
     badge: "BIO-ETHANOL FLAMES FIREPLACE",
     category: "indoor",
     waMessage: "Inquiry regarding bespoke Indoor Bio-Ethanol Fireplaces"
+    ,faqs: [
+      { question: "Do bio-ethanol fireplaces produce smoke?", answer: "No — high-quality bio-ethanol burns cleanly without smoke or soot." },
+      { question: "Is ventilation required?", answer: "Normal room ventilation is sufficient; avoid completely sealed rooms when running large burners." }
+    ]
   },
   {
     id: "fire-pit",
@@ -102,6 +110,10 @@ export const SERVICES: ServiceItem[] = [
     badge: "FIRE PITS & BOWLS",
     category: "outdoor",
     waMessage: "Inquiry regarding custom Outdoor Fire Pits & Fire Tables"
+    ,faqs: [
+      { question: "Can I use fire pits near pools?", answer: "Yes — we design materials and finishes that resist pool-side corrosion and splash exposure." },
+      { question: "What fuels can be used?", answer: "We support bioethanol, wood, and gas options depending on model and site needs." }
+    ]
   },
   {
     id: "built-in-bbq",
@@ -112,6 +124,10 @@ export const SERVICES: ServiceItem[] = [
     badge: "OUTDOOR COOKING",
     category: "outdoor",
     waMessage: "Inquiry regarding Built-In BBQs in Dubai"
+    ,faqs: [
+      { question: "Do you install gas connections?", answer: "Yes — we coordinate with certified gas installers and provide technical schematics for plumbing connections." },
+      { question: "Can we add refrigeration drawers?", answer: "Absolutely — our custom islands can include fridges, drawers, and integrated waste systems." }
+    ]
   }
 ];
 
@@ -317,6 +333,50 @@ export const BLOG_ARTICLES: BlogArticle[] = [
           ]
         }
       ]
+    }
+  }
+  ,
+  {
+    id: "best-fireplace-guide",
+    title: "Best Fireplace in Dubai: How to Choose & Where to Buy",
+    slug: "/blog/best-fireplace-in-dubai",
+    targetKeyword: "best fireplace Dubai, fireplace Dubai",
+    schema: "Article, FAQPage",
+    content: {
+      category: "Buying Guide",
+      readTime: "8 min read",
+      date: "July 6, 2026",
+      intro: "A practical guide to selecting the best fireplace for Dubai homes — covering bio-ethanol, water-vapor, fire pits, and built-in BBQ solutions. Learn what matters for safety, installation, and long-term enjoyment.",
+      sections: [
+        {
+          heading: "1. Match the Product to the Space",
+          paragraphs: [
+            "Consider indoor vs outdoor use, ventilation constraints, and the aesthetic you want. Bio-ethanol is ideal for ventless indoor shows; water-vapor is perfect where cool-touch safety matters; fire pits offer a social outdoor centerpiece."
+          ]
+        },
+        {
+          heading: "2. Prioritise Safety and Certification",
+          paragraphs: [
+            "Choose units with clear CE/UL compliance and a documented installation procedure. For indoor installations ensure adequate air exchange and follow fuel-handling best practices."
+          ]
+        },
+        {
+          heading: "3. Budget vs Longevity",
+          paragraphs: [
+            "Invest in quality burners and marine-grade finishes for coastal UAE homes — they last longer and save on maintenance."
+          ]
+        },
+        {
+          heading: "4. Installation & Aftercare",
+          paragraphs: [
+            "Work with providers who offer site surveys, CAD-friendly casing diagrams, and post-installation commissioning to ensure optimal performance."
+          ]
+        }
+      ],
+      faq: {
+        question: "Which fireplace type is best for Dubai apartments?",
+        answer: "Ventless bio-ethanol and water-vapor models are best for apartments when installed per manufacturer guidance and with normal room ventilation."
+      }
     }
   }
 ];

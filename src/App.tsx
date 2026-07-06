@@ -11,6 +11,7 @@ import {
   COMMON_FAQS, META_SUMMARY, WHY_CHOOSE_EXTRA,
   BLOG_ARTICLES
 } from './data';
+import { SERVICES } from './data';
 
 // Modular Web Components
 import Header from './components/Header';
@@ -31,6 +32,7 @@ import OutdoorKitchenPage from './components/OutdoorKitchenPage';
 import BuiltInBbqPage from './components/BuiltInBbqPage';
 import FireplaceDubaiPage from './components/FireplaceDubaiPage';
 import EthanolBurnerPage from './components/EthanolBurnerPage';
+import BestFireplaceLanding from './components/BestFireplaceLanding';
 import Breadcrumbs, { BreadcrumbStep } from './components/Breadcrumbs';
 
 const sectionToPath: Record<ActiveSection, string> = {
@@ -52,6 +54,7 @@ const sectionToPath: Record<ActiveSection, string> = {
   'built-in-bbq': '/services/built-in-bbq',
   'fireplace-dubai': '/services/fireplace-dubai',
   'ethanol-burner': '/services/ethanol-burner',
+  'best-fireplace-dubai': '/best-fireplace-dubai',
 };
 
 const getSectionFromPath = (): ActiveSection => {
@@ -68,6 +71,7 @@ const getSectionFromPath = (): ActiveSection => {
     if (path.includes('/services/built-in-bbq')) return 'built-in-bbq';
     if (path.includes('/services/fireplace-dubai')) return 'fireplace-dubai';
     if (path.includes('/services/ethanol-burner')) return 'ethanol-burner';
+    if (path.includes('/best-fireplace-dubai')) return 'best-fireplace-dubai';
     if (path.includes('/about')) return 'about';
     if (path.includes('/services')) return 'services';
     if (path.includes('/portfolio')) return 'portfolio';
@@ -163,6 +167,8 @@ export default function App() {
       steps.push({ label: 'Built-In BBQs', section: 'built-in-bbq' });
     } else if (activeSection === 'fireplace-dubai') {
       steps.push({ label: 'Fireplaces for Dubai', section: 'fireplace-dubai' });
+    } else if (activeSection === 'best-fireplace-dubai') {
+      steps.push({ label: 'Best Fireplaces in Dubai', section: 'best-fireplace-dubai' });
     } else if (activeSection === 'ethanol-burner') {
       steps.push({ label: 'Ethanol Burners', section: 'ethanol-burner' });
     }
@@ -216,7 +222,18 @@ export default function App() {
     description: activeArticleObj.content.intro,
     primaryKW: activeArticleObj.targetKeyword,
     secondaryKW: activeArticleObj.content.category
-  } : (META_SUMMARY[getActiveMetaKey()] || META_SUMMARY.home);
+  } : (() => {
+    const svc = SERVICES.find(s => s.id === activeSection);
+    if (svc) {
+      return {
+        title: `${svc.title} | Flames Fireplace`,
+        description: svc.description,
+        primaryKW: svc.title,
+        secondaryKW: svc.category
+      };
+    }
+    return (META_SUMMARY[getActiveMetaKey()] || META_SUMMARY.home);
+  })();
 
   const currentKeywords = [currentMeta.primaryKW, currentMeta.secondaryKW].filter(Boolean).join(', ');
 
@@ -255,15 +272,21 @@ export default function App() {
     canonicalEl.setAttribute('href', pageUrl);
 
     // 3. Manage Open Graph (OG) Cards — direct injection for major indexing crawlers (Gemini, ChatGPT, Perplexity)
+    const svcForOg = SERVICES.find(s => s.id === activeSection);
+    const ogImage = activeArticleObj
+      ? 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=1200'
+      : (svcForOg ? `${origin}${svcForOg.image}` : `${origin}/assets/Bio-Ethanol Fireplace _ Product Close-up.png`);
+
     const ogProperties = {
       'og:title': currentMeta.title,
       'og:description': currentMeta.description,
       'og:type': activeArticleObj ? 'article' : 'website',
       'og:url': pageUrl,
-      'og:image': activeArticleObj ? 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=1200' : '/assets/Bio-Ethanol Fireplace _ Product Close-up.png',
+      'og:image': ogImage,
       'twitter:card': 'summary_large_image',
       'twitter:title': currentMeta.title,
-      'twitter:description': currentMeta.description
+      'twitter:description': currentMeta.description,
+      'twitter:image': ogImage
     };
 
     Object.entries(ogProperties).forEach(([property, value]) => {
@@ -438,6 +461,27 @@ export default function App() {
       ];
     }
 
+    // If viewing a specific service and it has FAQs, append FAQPage schema for rich results
+    const svc = SERVICES.find(s => s.id === activeSection);
+    if (svc && svc.faqs && svc.faqs.length > 0) {
+      const faqSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: svc.faqs.map(f => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: { '@type': 'Answer', 'text': f.answer }
+        }))
+      };
+
+      // If schemaObj is array, append, otherwise wrap
+      if (Array.isArray(schemaObj)) {
+        schemaObj = [...schemaObj, faqSchema];
+      } else {
+        schemaObj = [schemaObj, faqSchema];
+      }
+    }
+
     jsonLdEl.textContent = JSON.stringify(schemaObj, null, 2);
   }, [currentMeta.title, currentMeta.description, currentMeta.primaryKW, currentMeta.secondaryKW, activeSection, activeArticleObj?.id]);
 
@@ -458,6 +502,8 @@ export default function App() {
       
       {/* 1. Global Navigation header bar */}
       <Header activeSection={activeSection} onNavigate={handleNavigation} />
+      {/* Breadcrumbs (visible for navigation and for crawlers via JSON-LD) */}
+      <Breadcrumbs steps={getBreadcrumbsSteps()} onNavigate={handleNavigation} onSelectArticle={handleSelectArticle} />
       {/* debug banner removed */}
 
       {/* 2. Main content switchboard wrapper */}
@@ -711,6 +757,11 @@ export default function App() {
 
             {/* ──── ROUTE: CONTACT Enquiries ──── */}
             {activeSection === 'contact' && <ContactPage />}
+
+            {/* ──── ROUTE: BEST FIREPLACE LANDING (SEO) ──── */}
+            {activeSection === 'best-fireplace-dubai' && (
+              <BestFireplaceLanding onNavigate={handleNavigation} />
+            )}
 
             {/* ──── ROUTE: BIO ETHANOL FIREPLACE ──── */}
             {activeSection === 'bio-ethanol-fireplace' && (

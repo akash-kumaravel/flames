@@ -165,37 +165,7 @@ export default function WhyChoosePage() {
           </div>
         </section>
 
-        {/* Interactive Room Advisor Recommendation */}
-        <section className="mb-12 grid grid-cols-1 gap-8 items-start">
-          <div className="bg-white rounded-3xl p-8 border border-neutral-200/50">
-            <h4 className="text-sm font-bold text-neutral-400 uppercase tracking-widest mb-3">Room Advisor</h4>
-            <p className="text-neutral-600 text-sm mb-4">A quick, personality-free recommendation based on your answers above. Change the options to refine results.</p>
-
-            <div className="bg-neutral-50 rounded-2xl p-6 border border-neutral-100">
-              <h3 className="font-sans font-semibold text-neutral-900 text-lg">{recommendation.title}</h3>
-              <p className="text-xs text-neutral-500 mt-1 mb-3">{recommendation.tagline}</p>
-              <p className="text-sm text-neutral-600 mb-3">{recommendation.reason}</p>
-              <ul className="list-none space-y-2 mb-4">
-                {recommendation.features.map((f, i) => (
-                  <li key={i} className="flex items-start gap-2 text-sm text-neutral-700">
-                    <Check className="w-4 h-4 text-orange-500 mt-0.5" />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <a
-                href={`https://wa.me/971542112891?text=${encodeURIComponent(recommendation.whatsappMsg)}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-orange-500 text-white text-sm font-semibold"
-              >
-                Discuss This Option
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-          </div>
-        </section>
+        {/* Room Advisor removed per request */}
 
         <section className="mb-16 bg-white rounded-3xl border border-neutral-200/50 p-8 md:p-10">
           <div className="max-w-3xl">
