@@ -1,4 +1,4 @@
-import { useState, useEffect, lazy, Suspense } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   Flame, Info, ShieldCheck, Check, Search, ArrowRight, MessageCircle
 } from 'lucide-react';
@@ -16,11 +16,21 @@ import {
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
-const BlogPage = lazy(() => import('./components/BlogPage'));
-const ContactPage = lazy(() => import('./components/ContactPage'));
-const WhyChoosePage = lazy(() => import('./components/WhyChoosePage'));
-const ServicesPage = lazy(() => import('./components/ServicesPage'));
-const PortfolioPage = lazy(() => import('./components/PortfolioPage'));
+import BlogPage from './components/BlogPage';
+import ContactPage from './components/ContactPage';
+import WhyChoosePage from './components/WhyChoosePage';
+import ServicesPage from './components/ServicesPage';
+import PortfolioPage from './components/PortfolioPage';
+import BioEthanolFireplacePage from './components/BioEthanolFireplacePage';
+import WaterVaporFireplacePage from './components/WaterVaporFireplacePage';
+import OutdoorFireplacePage from './components/OutdoorFireplacePage';
+import IndoorFireplacePage from './components/IndoorFireplacePage';
+import FirePitPage from './components/FirePitPage';
+import FireTablePage from './components/FireTablePage';
+import OutdoorKitchenPage from './components/OutdoorKitchenPage';
+import BuiltInBbqPage from './components/BuiltInBbqPage';
+import FireplaceDubaiPage from './components/FireplaceDubaiPage';
+import EthanolBurnerPage from './components/EthanolBurnerPage';
 import Breadcrumbs, { BreadcrumbStep } from './components/Breadcrumbs';
 
 const sectionToPath: Record<ActiveSection, string> = {
@@ -31,18 +41,40 @@ const sectionToPath: Record<ActiveSection, string> = {
   'why-choose': '/why-choose',
   'faq': '/faq',
   'contact': '/contact',
-  'blog': '/blog'
+  'blog': '/blog',
+  'bio-ethanol-fireplace': '/services/bio-ethanol-fireplace',
+  'water-vapor-fireplace': '/services/water-vapor-fireplace',
+  'outdoor-fireplace': '/services/outdoor-fireplace',
+  'indoor-fireplace': '/services/indoor-fireplace',
+  'fire-pit': '/services/fire-pit',
+  'fire-table': '/services/fire-table',
+  'outdoor-kitchen': '/services/outdoor-kitchen',
+  'built-in-bbq': '/services/built-in-bbq',
+  'fireplace-dubai': '/services/fireplace-dubai',
+  'ethanol-burner': '/services/ethanol-burner',
 };
 
 const getSectionFromPath = (): ActiveSection => {
   const path = window.location.pathname;
-  if (path.includes('/about')) return 'about';
-  if (path.includes('/services')) return 'services';
-  if (path.includes('/portfolio')) return 'portfolio';
-  if (path.includes('/why-choose')) return 'why-choose';
-  if (path.includes('/faq')) return 'faq';
-  if (path.includes('/contact')) return 'contact';
-  if (path.includes('/blog')) return 'blog';
+    // Check specific service detail routes first so they don't get captured
+    // by the generic '/services' check below.
+    if (path.includes('/services/bio-ethanol-fireplace')) return 'bio-ethanol-fireplace';
+    if (path.includes('/services/water-vapor-fireplace')) return 'water-vapor-fireplace';
+    if (path.includes('/services/outdoor-fireplace')) return 'outdoor-fireplace';
+    if (path.includes('/services/indoor-fireplace')) return 'indoor-fireplace';
+    if (path.includes('/services/fire-pit')) return 'fire-pit';
+    if (path.includes('/services/fire-table')) return 'fire-table';
+    if (path.includes('/services/outdoor-kitchen')) return 'outdoor-kitchen';
+    if (path.includes('/services/built-in-bbq')) return 'built-in-bbq';
+    if (path.includes('/services/fireplace-dubai')) return 'fireplace-dubai';
+    if (path.includes('/services/ethanol-burner')) return 'ethanol-burner';
+    if (path.includes('/about')) return 'about';
+    if (path.includes('/services')) return 'services';
+    if (path.includes('/portfolio')) return 'portfolio';
+    if (path.includes('/why-choose')) return 'why-choose';
+    if (path.includes('/faq')) return 'faq';
+    if (path.includes('/contact')) return 'contact';
+    if (path.includes('/blog')) return 'blog';
 
   return 'home';
 };
@@ -66,6 +98,7 @@ export default function App() {
 
   // Sync state back to the URL Path on navigate, tracking history block
   const handleNavigation = (section: ActiveSection, updateHistory = true) => {
+    console.log('[App] handleNavigation ->', section, { updateHistory });
     setActiveSection(section);
     if (section !== 'blog') {
       setSelectedArticleId(null);
@@ -112,6 +145,26 @@ export default function App() {
           steps.push({ label: article.title, section: 'blog', articleId: selectedArticleId });
         }
       }
+    } else if (activeSection === 'bio-ethanol-fireplace') {
+      steps.push({ label: 'Bio Ethanol Fireplaces', section: 'bio-ethanol-fireplace' });
+    } else if (activeSection === 'water-vapor-fireplace') {
+      steps.push({ label: '3D Water Vapor Fireplaces', section: 'water-vapor-fireplace' });
+    } else if (activeSection === 'outdoor-fireplace') {
+      steps.push({ label: 'Outdoor Fireplaces', section: 'outdoor-fireplace' });
+    } else if (activeSection === 'indoor-fireplace') {
+      steps.push({ label: 'Indoor Fireplaces', section: 'indoor-fireplace' });
+    } else if (activeSection === 'fire-pit') {
+      steps.push({ label: 'Fire Pits', section: 'fire-pit' });
+    } else if (activeSection === 'fire-table') {
+      steps.push({ label: 'Fire Tables & Coffee Tables', section: 'fire-table' });
+    } else if (activeSection === 'outdoor-kitchen') {
+      steps.push({ label: 'Custom Outdoor Kitchens', section: 'outdoor-kitchen' });
+    } else if (activeSection === 'built-in-bbq') {
+      steps.push({ label: 'Built-In BBQs', section: 'built-in-bbq' });
+    } else if (activeSection === 'fireplace-dubai') {
+      steps.push({ label: 'Fireplaces for Dubai', section: 'fireplace-dubai' });
+    } else if (activeSection === 'ethanol-burner') {
+      steps.push({ label: 'Ethanol Burners', section: 'ethanol-burner' });
     }
     return steps;
   };
@@ -120,6 +173,7 @@ export default function App() {
   useEffect(() => {
     const handleNavigationEvent = () => {
       const matched = getSectionFromPath();
+      console.log('[App] popstate matched ->', matched, 'path=', window.location.pathname);
       setActiveSection(matched);
       const matchedArticle = BLOG_ARTICLES.find(article => article.slug === window.location.pathname);
       setSelectedArticleId(matchedArticle ? matchedArticle.id : null);
@@ -140,6 +194,18 @@ export default function App() {
     if (activeSection === 'portfolio') return 'portfolio';
     if (activeSection === 'faq') return 'faq';
     if (activeSection === 'why-choose') return 'why-choose';
+    if (
+      activeSection === 'bio-ethanol-fireplace' ||
+      activeSection === 'water-vapor-fireplace' ||
+      activeSection === 'outdoor-fireplace' ||
+      activeSection === 'indoor-fireplace' ||
+      activeSection === 'fire-pit' ||
+      activeSection === 'fire-table' ||
+      activeSection === 'outdoor-kitchen' ||
+      activeSection === 'built-in-bbq' ||
+      activeSection === 'fireplace-dubai' ||
+      activeSection === 'ethanol-burner'
+    ) return 'services';
     return 'contact';
   };
 
@@ -242,8 +308,6 @@ export default function App() {
       '@id': `${origin}/#localbusiness`,
       url: origin,
       telephone: '+971542112891',
-      priceRange: 'AED 4,500 - AED 18,000',
-      currenciesAccepted: 'AED',
       paymentAccepted: 'Cash, Credit Card, Bank Transfer',
       serviceType: ['Bio Ethanol Fireplaces', 'Outdoor Fire Features', 'Outdoor Kitchens', 'Built-In BBQs'],
       areaServed: ['Dubai', 'Abu Dhabi', 'Sharjah', 'Ajman', 'Umm Al Quwain', 'Ras Al Khaimah', 'Fujairah', 'UAE'],
@@ -363,7 +427,6 @@ export default function App() {
           '@id': `${origin}/#organization`,
           url: origin,
           telephone: '+971542112891',
-          priceRange: 'AED 4,500 - AED 18,000',
           address: {
             '@type': 'PostalAddress',
             streetAddress: 'Sheikh Zayed Road',
@@ -395,6 +458,7 @@ export default function App() {
       
       {/* 1. Global Navigation header bar */}
       <Header activeSection={activeSection} onNavigate={handleNavigation} />
+      {/* debug banner removed */}
 
       {/* 2. Main content switchboard wrapper */}
       <main className="flex-grow">
@@ -443,7 +507,7 @@ export default function App() {
                     <div className="absolute right-0 bottom-0 top-0 w-1/3 bg-radial from-orange-500/20 to-transparent blur-3xl pointer-events-none" />
                     <span className="text-xs font-mono font-bold uppercase tracking-widest text-orange-400">Ready to Transform Your Casing?</span>
                     <h2 className="font-sans font-light text-2xl md:text-4xl leading-tight max-w-2xl mx-auto mt-4 mb-6">
-                      Redefine your living space with our premium fireplace solutions today.
+                      Redefine your living space with our fireplace solutions today.
                     </h2>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                       <button
@@ -552,23 +616,17 @@ export default function App() {
 
             {/* ──── ROUTE: DESIGN & INSTALLATION SERVICES ──── */}
             {activeSection === 'services' && (
-              <Suspense fallback={<div className="min-h-screen bg-[#FAF9F6]" />}>
-                <ServicesPage />
-              </Suspense>
+              <ServicesPage onNavigate={handleNavigation} />
             )}
 
             {/* ──── ROUTE: PROJECT PORTFOLIO ──── */}
             {activeSection === 'portfolio' && (
-              <Suspense fallback={<div className="min-h-screen bg-[#FAF9F6]" />}>
-                <PortfolioPage />
-              </Suspense>
+              <PortfolioPage />
             )}
 
             {/* ──── ROUTE: WHY CHOOSE US ──── */}
             {activeSection === 'why-choose' && (
-              <Suspense fallback={<div className="min-h-screen bg-[#FAF9F6]" />}>
-                <WhyChoosePage />
-              </Suspense>
+              <WhyChoosePage />
             )}
 
             {/* ──── ROUTE: GENERAL FAQ PAGE ──── */}
@@ -653,6 +711,56 @@ export default function App() {
 
             {/* ──── ROUTE: CONTACT Enquiries ──── */}
             {activeSection === 'contact' && <ContactPage />}
+
+            {/* ──── ROUTE: BIO ETHANOL FIREPLACE ──── */}
+            {activeSection === 'bio-ethanol-fireplace' && (
+              <BioEthanolFireplacePage onNavigate={handleNavigation} />
+            )}
+
+            {/* ──── ROUTE: WATER VAPOR FIREPLACE ──── */}
+            {activeSection === 'water-vapor-fireplace' && (
+              <WaterVaporFireplacePage onNavigate={handleNavigation} />
+            )}
+
+            {/* ──── ROUTE: OUTDOOR FIREPLACE ──── */}
+            {activeSection === 'outdoor-fireplace' && (
+              <OutdoorFireplacePage onNavigate={handleNavigation} />
+            )}
+
+            {/* ──── ROUTE: INDOOR FIREPLACE ──── */}
+            {activeSection === 'indoor-fireplace' && (
+              <IndoorFireplacePage onNavigate={handleNavigation} />
+            )}
+
+            {/* ──── ROUTE: FIRE PIT ──── */}
+            {activeSection === 'fire-pit' && (
+              <FirePitPage onNavigate={handleNavigation} />
+            )}
+
+            {/* ──── ROUTE: FIRE TABLE ──── */}
+            {activeSection === 'fire-table' && (
+              <FireTablePage onNavigate={handleNavigation} />
+            )}
+
+            {/* ──── ROUTE: OUTDOOR KITCHEN ──── */}
+            {activeSection === 'outdoor-kitchen' && (
+              <OutdoorKitchenPage onNavigate={handleNavigation} />
+            )}
+
+            {/* ──── ROUTE: BUILT-IN BBQ ──── */}
+            {activeSection === 'built-in-bbq' && (
+              <BuiltInBbqPage onNavigate={handleNavigation} />
+            )}
+
+            {/* ──── ROUTE: FIREPLACE DUBAI ──── */}
+            {activeSection === 'fireplace-dubai' && (
+              <FireplaceDubaiPage onNavigate={handleNavigation} />
+            )}
+
+            {/* ──── ROUTE: ETHANOL BURNER ──── */}
+            {activeSection === 'ethanol-burner' && (
+              <EthanolBurnerPage onNavigate={handleNavigation} />
+            )}
 
             {/* ──── ROUTE: BLOG / ARTICLES ──── */}
             {activeSection === 'blog' && (

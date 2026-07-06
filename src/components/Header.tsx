@@ -83,6 +83,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
               </button>
             );
           })}
+
         </nav>
 
         {/* CTA Button */}
@@ -132,7 +133,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
               id="mobile-drawer"
               className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-neutral-100 border-b border-neutral-200 shadow-xl z-50 py-3.5 px-4 flex flex-col gap-1.5 max-h-[calc(100vh-120px)] overflow-y-auto"
             >
-              <div className="grid grid-cols-2 gap-1.5 p-1">
+              <div className="space-y-1.5 p-1">
                 {navItems.map((item) => {
                   const isActive = activeSection === item.value;
                   return (
@@ -143,7 +144,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
                         onNavigate(item.value);
                         setMobileMenuOpen(false);
                       }}
-                      className={`text-left font-sans text-xs font-medium py-2.5 px-3 rounded-lg flex items-center justify-between transition-all duration-150 cursor-pointer ${
+                      className={`w-full text-left font-sans text-xs font-medium py-2.5 px-3 rounded-lg flex items-center justify-between transition-all duration-150 cursor-pointer ${
                         isActive
                           ? 'bg-orange-50 text-orange-600 font-semibold border-l-2 border-orange-500 pl-2'
                           : 'text-neutral-700 hover:bg-neutral-50 active:bg-neutral-100'
@@ -154,6 +155,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
                     </button>
                   );
                 })}
+
               </div>
 
               <div className="pt-2.5 border-t border-neutral-100 mt-1">

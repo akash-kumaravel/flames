@@ -259,7 +259,7 @@ export default function ContactPage() {
           </AnimatePresence>
         </div>
 
-        {/* Right Column: Premium Side Details */}
+        {/* Right Column: Project Details */}
         <div className="lg:col-span-5 space-y-6">
           
           {/* Company Details Block */}

@@ -24,16 +24,16 @@ export default function WhyChoosePage() {
         reason: "For pool decks, outdoor terraces, and gardens, our weather-proof Bio Ethanol fire tables and tall pillar torches cut through the wind and sea breeze, offering authentic cozy warmth without pesky electrical cords.",
         features: ["Genuine living fire", "316 Marine-grade stainless steel", "Tempered wind guards", "100% wireless"],
         buttonCode: "outdoor-ethanol",
-        whatsappMsg: "Hi, I ran your Room Advisor. I got recommended an Outdoor Bio Ethanol Fireplace. Can I get a quote?"
+        whatsappMsg: "Hi, I ran your Room Advisor. I got recommended an Outdoor Bio Ethanol Fireplace. Can I get more details?"
       };
     } else {
       return {
         title: "Indoor Bio Ethanol Fireplace",
         tagline: "Cozy Real Flame with Zero Soot",
         reason: hasKids === 'yes'
-          ? "Your setting calls for beautiful real warmth. For homes with children and pets, our premium Indoor Bio Ethanol cassettes include custom heat-shielded glass guards and active automatic safety valves that prevent accidental fuel contact."
+          ? "Your setting calls for beautiful real warmth. For homes with children and pets, our Indoor Bio Ethanol cassettes include custom heat-shielded glass guards and active automatic safety valves that prevent accidental fuel contact."
           : "Your setting calls for real flame ambience and comfortable heat. Our Indoor Bio Ethanol system burns plant-derived fuel, producing cozy warmth with zero soot, zero chimneys, and zero permit hurdles.",
-        features: ["Real warming fire", "Chimney-free", "Premium clean burn", "Active safety guards"],
+        features: ["Real warming fire", "Chimney-free", "Clean burn", "Active safety guards"],
         buttonCode: "indoor-ethanol",
         whatsappMsg: "Hi, I ran your Room Advisor. I got recommended an Indoor Bio Ethanol Fireplace. Can I explore built-in cassette specs?"
       };
@@ -110,7 +110,7 @@ export default function WhyChoosePage() {
               </div>
               <h3 className="font-sans font-semibold text-neutral-900 text-base">Grade 316 Marine Stainless Steel</h3>
               <p className="text-xs font-sans text-neutral-500 leading-relaxed">
-                All burner bays and outdoor casings utilize premium double-wall marine-grade steel resistant to high atmospheric humidity, garden water spray, and fuel thermal stress.
+                All burner bays and outdoor casings utilize double-wall marine-grade steel resistant to high atmospheric humidity, garden water spray, and fuel thermal stress.
               </p>
             </div>
 
@@ -256,7 +256,7 @@ export default function WhyChoosePage() {
           <div className="bg-neutral-900 text-white rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="max-w-2xl">
               <h3 className="font-sans text-2xl font-semibold">Ready to reimagine your space?</h3>
-              <p className="text-xs text-neutral-300 mt-2">Get a tailored recommendation, CAD drawings, and an instal cost estimate from our project team.</p>
+              <p className="text-xs text-neutral-300 mt-2">Get a tailored recommendation, CAD drawings, and comprehensive specifications from our project team.</p>
             </div>
             <a
               href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%20team%2C%20I'd%20like%20to%20discuss%20a%20bespoke%20fireplace%20project."

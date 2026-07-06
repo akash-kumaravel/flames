@@ -7,8 +7,17 @@ interface ServiceCardProps {
 }
 
 export default function ServiceCard({ service, onNavigate }: ServiceCardProps) {
+  const handleCardClick = () => {
+    if (onNavigate) {
+      onNavigate(service.id as unknown as ActiveSection);
+    }
+  };
+
   return (
-    <div className="bg-white rounded-3xl border border-neutral-200/50 overflow-hidden hover:border-orange-500/25 hover:shadow-xl hover:shadow-orange-500/[0.02] transition-all duration-300 flex flex-col justify-between group h-full">
+    <div 
+      onClick={handleCardClick}
+      className="bg-white rounded-3xl border border-neutral-200/50 overflow-hidden hover:border-orange-500/25 hover:shadow-xl hover:shadow-orange-500/[0.02] transition-all duration-300 flex flex-col justify-between group h-full cursor-pointer"
+    >
       <div className="relative h-52 w-full overflow-hidden bg-neutral-100">
         <img
           src={service.image}
@@ -48,6 +57,7 @@ export default function ServiceCard({ service, onNavigate }: ServiceCardProps) {
             href={`https://wa.me/971542112891?text=${encodeURIComponent(service.waMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
             className="w-full sm:min-w-[140px] justify-center px-4 py-3 rounded-2xl bg-[#FAF9F6] hover:bg-emerald-50 border border-neutral-200 hover:border-emerald-300 transition-all duration-300 flex items-center gap-2 cursor-pointer text-sm font-semibold text-neutral-800"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552" className="w-4 h-4 shrink-0">

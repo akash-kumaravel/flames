@@ -2,14 +2,34 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Flame, Droplets, Compass, ArrowRight } from 'lucide-react';
 import { SERVICES } from '../data';
+import { ActiveSection } from '../types';
 import ServiceCard from './ServiceCard';
 
-export default function ServicesPage() {
+interface ExtendedService {
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  image: string;
+  badge: string;
+  category: 'indoor' | 'outdoor';
+  waMessage: string;
+}
+
+const EXTENDED_SERVICES: ExtendedService[] = [
+  ...SERVICES
+];
+
+interface ServicesPageProps {
+  onNavigate?: (section: ActiveSection) => void;
+}
+
+export default function ServicesPage({ onNavigate }: ServicesPageProps) {
   const [activeTab, setActiveTab] = useState<'all' | 'indoor' | 'outdoor'>('all');
 
   const filteredServices = activeTab === 'all' 
-    ? SERVICES.filter(s => s.id !== 'outdoor-kitchens')
-    : SERVICES.filter(s => s.category === activeTab && s.id !== 'outdoor-kitchens');
+    ? EXTENDED_SERVICES
+    : EXTENDED_SERVICES.filter(s => s.category === activeTab);
 
   return (
     <div id="services-page" className="min-h-screen bg-[#FAF9F6] text-neutral-800 pt-28 pb-28 selection:bg-orange-500 selection:text-white">
@@ -39,7 +59,7 @@ export default function ServicesPage() {
           transition={{ delay: 0.2 }}
           className="font-sans text-sm text-neutral-500 max-w-2xl mx-auto mt-4 leading-relaxed font-light"
         >
-          Discover premium, safe visual indoor fireplaces and weather-proof luxury outdoor kitchens built for UAE environments.
+          Discover safe indoor fireplaces and weather-proof outdoor kitchens built for UAE environments.
         </motion.p>
       </section>
 
@@ -56,7 +76,7 @@ export default function ServicesPage() {
                   : 'text-neutral-500 hover:text-neutral-800 hover:bg-neutral-200/50'
               }`}
             >
-              All Services ({SERVICES.length})
+              All Services ({EXTENDED_SERVICES.length})
             </button>
             <button
               id="btn-filter-indoor"
@@ -68,7 +88,7 @@ export default function ServicesPage() {
               }`}
             >
               <Droplets className="w-3.5 h-3.5" />
-              Indoor Features ({SERVICES.filter(s => s.category === 'indoor').length})
+              Indoor Features ({EXTENDED_SERVICES.filter(s => s.category === 'indoor').length})
             </button>
             <button
               id="btn-filter-outdoor"
@@ -80,7 +100,7 @@ export default function ServicesPage() {
               }`}
             >
               <Flame className="w-3.5 h-3.5 fill-current text-orange-600" />
-              Outdoor Features ({SERVICES.filter(s => s.category === 'outdoor').length})
+              Outdoor Features ({EXTENDED_SERVICES.filter(s => s.category === 'outdoor').length})
             </button>
           </div>
         </div>
@@ -90,7 +110,11 @@ export default function ServicesPage() {
       <section className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((srv) => (
-            <ServiceCard key={srv.id} service={srv} onNavigate={() => undefined} />
+            <ServiceCard 
+              key={srv.id} 
+              service={srv as any} 
+              onNavigate={onNavigate ? () => onNavigate(srv.id as ActiveSection) : undefined} 
+            />
           ))}
         </div>
       </section>
@@ -100,7 +124,7 @@ export default function ServicesPage() {
           <div className="bg-white rounded-3xl border border-neutral-200/60 p-8 md:p-10 shadow-sm">
             <span className="text-xs font-bold uppercase tracking-[0.24em] text-orange-700">Why clients choose us</span>
             <h3 className="font-sans text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight mt-4">
-              Premium fire features with technical support from concept to handover.
+              Fire features with technical support from concept to handover.
             </h3>
             <p className="font-sans text-sm text-neutral-600 leading-relaxed mt-4">
               Whether your brief is a clean indoor flame feature or a full outdoor chef’s kitchen, our team delivers design guidance, installation details, and aftercare support for every project.

@@ -40,7 +40,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     category: "fire-pit",
     categoryLabel: "Fire Pit & Table",
     location: "Yas Island, Abu Dhabi",
-    description: "A gorgeous sunken seating garden pavilion designed for late-night family gatherings. Centered by a bespoke concrete fire table operating on a concealed LPG supply with premium tempered fire glass beads and a wind-guard shroud.",
+    description: "A gorgeous sunken seating garden pavilion designed for late-night family gatherings. Centered by a bespoke concrete fire table operating on a concealed LPG supply with tempered fire glass beads and a wind-guard shroud.",
     image: "/assets/project 3.png",
     specs: [
       "Custom hand-cast volcanic basalt concrete tabletop housing",
@@ -70,7 +70,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     category: "indoor",
     categoryLabel: "Indoor Fireplace",
     location: "Arabian Ranches, Dubai",
-    description: "A premium glass-framed flueless divider between a cozy family lounge and private study. Utilizing two glass security side-panels to isolate the flame while providing deep room-to-room visibility.",
+    description: "A glass-framed flueless divider between a cozy family lounge and private study. Utilizing two glass security side-panels to isolate the flame while providing deep room-to-room visibility.",
     image: "/assets/project 5.png",
     specs: [
       "Full 360-degree visibility of safe, glowing amber fire",
@@ -117,7 +117,7 @@ export default function PortfolioPage() {
           transition={{ delay: 0.2 }}
           className="font-sans text-sm md:text-base text-neutral-500 max-w-2xl mx-auto mt-4 leading-relaxed font-light"
         >
-          Discover a curated selection of our premium custom indoor fireplaces, flueless water vapor features, and custom fire tables across prestigious GCC developments.
+          Discover a curated selection of our custom indoor fireplaces, flueless water vapor features, and custom fire tables across GCC developments.
         </motion.p>
       </section>
 

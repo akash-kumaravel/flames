@@ -6,7 +6,17 @@ export type ActiveSection =
   | 'why-choose'
   | 'faq'
   | 'contact'
-  | 'blog';
+  | 'blog'
+  | 'bio-ethanol-fireplace'
+  | 'water-vapor-fireplace'
+  | 'outdoor-fireplace'
+  | 'indoor-fireplace'
+  | 'fire-pit'
+  | 'fire-table'
+  | 'outdoor-kitchen'
+  | 'built-in-bbq'
+  | 'fireplace-dubai'
+  | 'ethanol-burner';
 
 export interface FAQItem {
   question: string;
@@ -25,7 +35,6 @@ export interface ProductDetails {
   tagline: string;
   description: string;
   detailedDescription: string;
-  priceEstimate: string;
   features: string[];
   benefits: string[];
   howItWorks: string[];

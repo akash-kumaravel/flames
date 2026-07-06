@@ -1,18 +1,18 @@
 import { FAQItem, ProductDetails, BlogArticle, ServiceItem } from './types';
 
 export const BRAND = "Flames Fireplace";
-export const TAGLINE = "Premium Indoor & Outdoor Fire Features in Dubai & UAE";
+export const TAGLINE = "Indoor & Outdoor Fire Features in Dubai & UAE";
 
 export const META_SUMMARY = {
   home: {
-    title: "Flames Fireplace Dubai | Premium Bio Ethanol Fireplaces, Fire Pits & Outdoor Kitchens",
-    description: "Discover premium bio ethanol fireplaces, fire pits, outdoor kitchens, and custom BBQs in Dubai and the UAE with Flames Fireplace.",
+    title: "Flames Fireplace Dubai | Bio Ethanol Fireplaces, Fire Pits & Outdoor Kitchens",
+    description: "Discover bio ethanol fireplaces, fire pits, outdoor kitchens, and custom BBQs in Dubai and the UAE with Flames Fireplace.",
     primaryKW: "bio ethanol fireplace Dubai, fire pits Dubai",
     secondaryKW: "outdoor kitchen Dubai, luxury fireplace UAE"
   },
   about: {
-    title: "About Flames Fireplace | Premium Fire Features & Outdoor Kitchens UAE",
-    description: "Learn why Flames Fireplace is a trusted name for premium fireplaces, outdoor kitchens, and custom BBQ solutions across the UAE.",
+    title: "About Flames Fireplace | Fire Features & Outdoor Kitchens UAE",
+    description: "Learn why Flames Fireplace is a trusted name for fireplaces, outdoor kitchens, and custom BBQ solutions across the UAE.",
     primaryKW: "about Flames Fireplace, bio ethanol fireplace supplier UAE"
   },
   indoor: {
@@ -39,7 +39,7 @@ export const META_SUMMARY = {
   },
   'why-choose': {
     title: "Why Choose Flames Fireplace | Pricing, Quality & Safety Specs",
-    description: "Discover why Flames Fireplace is Dubai's trusted supplier of premium fire features and outdoor kitchens. Honest pricing, dedicated care, reliable delivery.",
+    description: "Discover why Flames Fireplace is Dubai's trusted supplier of fire features and outdoor kitchens. Honest guidance, dedicated care, reliable delivery.",
     primaryKW: "why choose Flames Fireplace, bio ethanol fireplaces",
     secondaryKW: "certified ventless fireplace, fireplace safety UAE"
   },
@@ -57,14 +57,14 @@ export const META_SUMMARY = {
   },
   portfolio: {
     title: "Project Portfolio | Showcasing Finished Works — Flames Fireplace",
-    description: "Explore our collection of premium indoor 3D water vapor fireplaces, clean bio-ethanol fire features, and bespoke outdoor kitchens installed across Dubai & UAE.",
+    description: "Explore our collection of indoor 3D water vapor fireplaces, clean bio-ethanol fire features, and bespoke outdoor kitchens installed across Dubai & UAE.",
     primaryKW: "fireplace portfolio Dubai, custom outdoor kitchen gallery UAE",
     secondaryKW: "bespoke fire pit installation, luxury garden barbecue setups"
   }
 };
 
 export const TRUST_BAR = [
-  { title: "Honest, Competitive Pricing", desc: "Premium products without the premium markup" },
+  { title: "Honest, Competitive Pricing", desc: "Quality products without inflated pricing" },
   { title: "Dedicated Customer Care", desc: "Real support before, during, and after your purchase" },
   { title: "Consistent Quality", desc: "Every product checked and standard-tested before delivery" },
   { title: "Experienced Team", desc: "Specialists who understand fire safety and outdoor design" },
@@ -74,17 +74,17 @@ export const TRUST_BAR = [
 
 export const SERVICES: ServiceItem[] = [
   {
-    id: "indoor-water-vapor",
+    id: "water-vapor-fireplace",
     title: "3D Water Vapor Fireplaces",
     subtitle: "Eco-Safe Mist Technology",
     description: "Realistic clean flames using ultrasonic water mist and colored LEDs. 100% cool-to-touch and safe beneath smart TV media centers.",
     image: "/assets/Water Vapor Fireplace _ Wall Feature.png",
     badge: "3D WATER MIST",
     category: "indoor",
-    waMessage: "Inquiry regarding premium Indoor 3D Water Vapor Fireplaces"
+    waMessage: "Inquiry regarding Indoor 3D Water Vapor Fireplaces"
   },
   {
-    id: "indoor-bioethanol",
+    id: "bio-ethanol-fireplace",
     title: "Bio-Ethanol Fireplaces",
     subtitle: "Ventless Living Flames Fireplace",
     description: "Authentic physical heat and beautiful golden flames burning clean renewable liquid fuel with zero smoke, ash, or soot.",
@@ -94,8 +94,8 @@ export const SERVICES: ServiceItem[] = [
     waMessage: "Inquiry regarding bespoke Indoor Bio-Ethanol Fireplaces"
   },
   {
-    id: "outdoor-fire-pits",
-    title: "Premium Fire Pits & Tables",
+    id: "fire-pit",
+    title: "Fire Pits & Tables",
     subtitle: "Architectural Fire Features",
     description: "Durable concrete fire tables and fire bowls running on clean bioethanol or gas, completed with tempered wind safety guards.",
     image: "/assets/Fire Pit _ Product Close-up.png",
@@ -104,24 +104,14 @@ export const SERVICES: ServiceItem[] = [
     waMessage: "Inquiry regarding custom Outdoor Fire Pits & Fire Tables"
   },
   {
-    id: "outdoor-kitchens",
-    title: "Custom Outdoor Kitchens",
-    subtitle: "Culinary Luxury",
-    description: "Custom premium modular kitchens with high-durability sintered stone countertops, fully rated for extreme Gulf climates.",
-    image: "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?auto=format&fit=crop&q=80&w=1200",
-    badge: "MODULAR KITCHENS",
-    category: "outdoor",
-    waMessage: "Inquiry regarding custom Outdoor Kitchens in Dubai"
-  },
-  {
-    id: "built-in-bbqs",
-    title: "Premium Built-In BBQs",
-    subtitle: "High-Performance Grills",
-    description: "Heavy-duty 304/316 marine-grade stainless steel grills integrated seamlessly into bespoke granite and marble countertops.",
+    id: "built-in-bbq",
+    title: "Built-In BBQs",
+    subtitle: "Outdoor Cooking Spaces",
+    description: "Tailored built-in BBQ stations with durable finishes and functional layouts for modern outdoor entertaining.",
     image: "/assets/Built-In BBQ _ Flames Close-up.png",
-    badge: "PREMIUM GRILLS",
+    badge: "OUTDOOR COOKING",
     category: "outdoor",
-    waMessage: "Inquiry regarding Built-In BBQs & Side Burners"
+    waMessage: "Inquiry regarding Built-In BBQs in Dubai"
   }
 ];
 
@@ -139,7 +129,6 @@ export const PRODUCTS: ProductDetails[] = [
     tagline: "Ventless, Eco-Friendly Real Flame — Flames Fireplace",
     description: "Bring the warmth and elegance of a real flame into your indoor living spaces without the need for a chimney, flue, or gas connection. Flames Fireplace offers a curated range of bio ethanol fireplaces, from sleek tabletop models to statement wall-mounted units and custom inserts.",
     detailedDescription: "Bring the warmth and elegance of a real flame into your indoor living spaces without the need for a chimney, flue, or gas connection. Flames Fireplace offers a curated range of bio ethanol fireplaces, from sleek tabletop models to statement wall-mounted units and custom inserts. With a flueless fireplace, 100% of the heat generated stays inside your home instead of escaping up a chimney. It is a highly efficient, clean-burning solution that adds both ambiance and supplementary warmth to any room.",
-    priceEstimate: "Available on Request",
     imageUrl: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200", // Luxurious modern salon
     bgGradient: "from-orange-50 to-orange-100",
     features: [
@@ -155,7 +144,7 @@ export const PRODUCTS: ProductDetails[] = [
       "Eco-Friendly Fuel — powered by renewable, plant-derived bio ethanol liquid"
     ],
     howItWorks: [
-      "Pour premium liquid bioethanol fuel into the safety steel burner tank.",
+      "Pour clean liquid bioethanol fuel into the safety steel burner tank.",
       "Ignite the fuel vapors using an extended lighter safely.",
       "The fuel burns cleanly, producing comfortable physical heat and a gorgeous golden fire.",
       "To extinguish, simply slide the damper plate over the opening to snuff out the oxygen supply."
@@ -177,7 +166,6 @@ export const PRODUCTS: ProductDetails[] = [
     tagline: "Outdoor Fire Features | Fire Pits & Fireplaces | Flames Fireplace",
     description: "Create an inviting outdoor retreat with our range of outdoor fire features. Engineered to withstand the elements while providing a stunning visual anchor, our collection ranges from contemporary bio ethanol burners to sculptural gas-powered installations.",
     detailedDescription: "Create an inviting outdoor retreat with our range of outdoor fire features. Engineered to withstand the elements while providing a stunning visual anchor, our collection ranges from contemporary bio ethanol burners to sculptural gas-powered installations.",
-    priceEstimate: "Available on Request",
     imageUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200", // Luxury terrace and pool
     bgGradient: "from-orange-100 to-amber-100",
     features: [
@@ -194,7 +182,7 @@ export const PRODUCTS: ProductDetails[] = [
     ],
     howItWorks: [
       "Position the weather-proof fire pit or fireplace in your desired terrace, pool, or garden layout.",
-      "Refill the clean burner using premium liquid fuel or hook up your gas-powered line.",
+      "Refill the clean burner using liquid fuel or hook up your gas-powered line.",
       "Ignite using the safe integrated valve control or a remote trigger.",
       "Enjoy a beautiful, wind-resistant visual centerpiece that keeps your guests warm and cozy."
     ],
@@ -205,7 +193,7 @@ export const PRODUCTS: ProductDetails[] = [
       },
       {
         question: "Are they weather-resistant for UAE summers?",
-        answer: "Yes. All of our outdoor features are engineered from premium double-walled metals and concrete resins to resist heavy coastal air, high temperatures, and dust."
+        answer: "Yes. All of our outdoor features are engineered from double-walled metals and concrete resins to resist heavy coastal air, high temperatures, and dust."
       }
     ]
   }
@@ -214,7 +202,7 @@ export const PRODUCTS: ProductDetails[] = [
 export const WHY_CHOOSE_EXTRA = {
   headline: "Flames Fireplace — Dubai's Trusted Name in Fire Features",
   paragraphs: [
-    "Flames Fireplace was founded to bring high-quality, beautifully designed fire features and outdoor kitchens to homes and commercial spaces across the UAE. Based in Dubai, our team specializes in sourcing, supplying, and installing premium fireplaces and outdoor living products that are safe, durable, and engineered to perform in the Gulf climate.",
+    "Flames Fireplace was founded to bring high-quality, beautifully designed fire features and outdoor kitchens to homes and commercial spaces across the UAE. Based in Dubai, our team specializes in sourcing, supplying, and installing fireplaces and outdoor living products that are safe, durable, and engineered to perform in the Gulf climate.",
     "We believe that a fireplace or outdoor kitchen should be more than just an addition; it should be a central gathering space that brings people together. That’s why we partner with leading manufacturers to offer products that blend aesthetic elegance with robust, long-lasting construction.",
     "Whether it is a rooftop lounge, a private garden, or a high-end hospitality venue, Flames Fireplace serves clients in all emirates, including Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Ajman, Umm Al Quwain, and Fujairah, with uncompromising standards of customer care and craftsmanship."
   ]
@@ -227,7 +215,7 @@ export const COMMON_FAQS: FAQItem[] = [
   },
   {
     question: "Are bioethanol fireplaces safe to burn in small apartments?",
-    answer: "Yes, when used as directed! Premium bioethanol burns cleanly, releasing vapor and minimal carbon dioxide equal to lighting a couple of candles. As long as your room has a normal ventilation inflow (like an open door, typical AC breeze, or a partially open window), it is fully safe."
+    answer: "Yes, when used as directed! Bioethanol burns cleanly, releasing vapor and minimal carbon dioxide equal to lighting a couple of candles. As long as your room has a normal ventilation inflow (like an open door, typical AC breeze, or a partially open window), it is fully safe."
   },
   {
     question: "What is the running cost compared to traditional wood or LPG gas?",
@@ -243,7 +231,7 @@ export const COMMON_FAQS: FAQItem[] = [
   },
   {
     question: "Where does Flames Fireplace install fireplaces in the UAE?",
-    answer: "We serve Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Umm Al Quwain, and Fujairah for premium residential and hospitality projects."
+    answer: "We serve Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Umm Al Quwain, and Fujairah for residential and hospitality projects."
   },
   {
     question: "Is Flames Fireplace suitable for villas, penthouses, and hotel lounges?",
@@ -279,7 +267,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
         {
           heading: "2. Fuel Quality is Non-Negotiable",
           paragraphs: [
-            "Always purchase liquid bioethanol fuel with a clean purity rating of 96% or more. Cheaper, substandard fuel variants can introduce chemical odors, burn with a yellow-grey color, or leave black soot carbon stains around your stainless steel burner slots. Double-distilled premium fuel produces completely clean combustion."
+            "Always purchase liquid bioethanol fuel with a clean purity rating of 96% or more. Cheaper, substandard fuel variants can introduce chemical odors, burn with a yellow-grey color, or leave black soot carbon stains around your stainless steel burner slots. Double-distilled fuel produces completely clean combustion."
           ]
         },
         {
@@ -300,7 +288,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
   },
   {
     id: "outdoor-entertaining-ideas",
-    title: "Designing the Ultimate Premium Alfresco Lounge with Bio Ethanol Style",
+    title: "Designing the Ultimate Alfresco Lounge with Bio Ethanol Style",
     slug: "/blog/outdoor-entertaining-bio-ethanol-fireplace",
     targetKeyword: "outdoor fireplace ideas UAE, outdoor bio ethanol fireplace design",
     schema: "Article",

@@ -42,7 +42,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           <img
             key={heroImages[activeImageIndex]}
             src={heroImages[activeImageIndex]}
-            alt="Premium fireplace showcase"
+            alt="Fireplace showcase"
             loading="eager"
             fetchpriority="high"
             referrerPolicy="no-referrer"
@@ -61,7 +61,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100/80 text-orange-700 font-sans text-xs font-semibold uppercase tracking-wider mb-6"
           >
             <Flame className="w-3.5 h-3.5 fill-orange-600 text-orange-600" />
-            Premium Flames Fireplace Dubai & UAE
+            Flames Fireplace Dubai & UAE
           </motion.div>
 
           <motion.h1
@@ -81,7 +81,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             transition={{ duration: 1, delay: 0.2 }}
             className="font-sans text-lg md:text-xl text-neutral-200 max-w-2xl mt-6 leading-relaxed"
           >
-            Premium bio ethanol fireplaces, fire pits, outdoor kitchens, and built-in BBQs for indoor and outdoor living. Smokeless. Safe. Timeless.
+            Bio ethanol fireplaces, fire pits, outdoor kitchens, and built-in BBQs for indoor and outdoor living. Smokeless. Safe. Timeless.
           </motion.p>
 
           <motion.div
@@ -130,7 +130,7 @@ export default function Hero({ onNavigate }: HeroProps) {
         </div>
         <div className="lg:col-span-7 space-y-6 text-neutral-500 font-sans text-base leading-relaxed">
           <p>
-            Welcome to <strong className="text-neutral-800">Flames Fireplace</strong> — your premium destination for next-generation architectural fire features in Dubai and the UAE. 
+            Welcome to <strong className="text-neutral-800">Flames Fireplace</strong> — your destination for next-generation architectural fire features in Dubai and the UAE. 
             Whether you are looking for elegant clean-burning Indoor Bio Ethanol Fireplaces, 
             or stunning custom-fitted Outdoor Fire Features, we formulate products engineered for sheer visual beauty, domestic safety, and physical permanence.
           </p>
@@ -144,10 +144,10 @@ export default function Hero({ onNavigate }: HeroProps) {
         <div className="bg-white rounded-3xl border border-neutral-200/60 p-8 md:p-12 shadow-sm">
           <span className="text-xs font-bold uppercase tracking-[0.24em] text-orange-700">A complete fireplace experience</span>
           <h2 className="font-sans text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight mt-4">
-            Elegant fireplace design, premium installation, and expert support for Dubai and the UAE.
+            Elegant fireplace design, professional installation, and expert support for Dubai and the UAE.
           </h2>
           <p className="font-sans text-sm md:text-base text-neutral-600 leading-relaxed mt-4 max-w-3xl">
-            From concept to installation, Flames Fireplace brings together thoughtful design, certified safety, and premium craftsmanship for every project.
+            From concept to installation, Flames Fireplace brings together thoughtful design, certified safety, and careful craftsmanship for every project.
           </p>
         </div>
       </section>
@@ -158,7 +158,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Our Professional Services</span>
           <h2 className="font-sans text-3xl font-semibold text-neutral-900 tracking-tight">Outdoor Fire Features &amp; Kitchens in Dubai, Abu Dhabi &amp; Sharjah</h2>
           <p className="font-sans text-sm text-neutral-500 max-w-2xl mx-auto mt-3">
-            Transforming luxury villas, pool decks, and gardens with weather-resistant fire features, custom kitchens, and premium barbecue installations across Dubai, Abu Dhabi, Sharjah, and the wider UAE.
+            Transforming luxury villas, pool decks, and gardens with weather-resistant fire features, custom kitchens, and barbecue installations across Dubai, Abu Dhabi, Sharjah, and the wider UAE.
           </p>
         </div>
 
@@ -175,7 +175,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Design Inspiration</span>
           <h2 className="font-sans text-3xl font-semibold text-neutral-900 tracking-tight">Luxury UAE Architectural Showcases</h2>
           <p className="font-sans text-sm text-neutral-500 max-w-2xl mx-auto mt-3">
-            Explore how premium interior designers and landscape architects integrate Flames Fireplace systems inside the UAE's most prestigious living communities.
+            Explore how interior designers and landscape architects integrate Flames Fireplace systems inside the UAE's most prestigious living communities.
           </p>
         </div>
 
@@ -203,7 +203,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               </div>
               <div className="p-8 pt-0">
                 <div className="border-t border-neutral-100 pt-4 flex justify-between items-center text-[11px] font-mono text-neutral-600">
-                  <span className="truncate max-w-[150px]">{item.specs[0] || 'Premium Quality'}</span>
+                  <span className="truncate max-w-[150px]">{item.specs[0] || 'Quality Craftsmanship'}</span>
                   <button
                     onClick={() => onNavigate('portfolio')}
                     className="text-orange-700 font-bold hover:underline cursor-pointer flex items-center gap-1 shrink-0"
@@ -224,10 +224,10 @@ export default function Hero({ onNavigate }: HeroProps) {
           <div className="lg:col-span-4">
             <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-3">Guaranteed High-Standards</span>
             <h3 className="font-sans text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight leading-snug">
-              Premium fire features, certified UAE safety.
+              Fire features, certified UAE safety.
             </h3>
             <p className="font-sans text-sm text-neutral-500 mt-4 leading-relaxed">
-              We engineer our components with premium double-wall structural steels, high-precision safety valves, and robust wind-guards.
+              We engineer our components with double-wall structural steels, high-precision safety valves, and robust wind-guards.
             </p>
             <button
               id="trust-cta-btn"

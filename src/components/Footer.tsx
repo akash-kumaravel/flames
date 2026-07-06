@@ -32,7 +32,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             </p>
             
             <p className="text-xs text-neutral-500 leading-relaxed max-w-sm">
-              Flames Fireplace is the leading supplier of clean, smokeless decorative fire features. Utilizing premium, clean bio-ethanol combustion and eco-friendly designs, we make warmth and ambience fully accessible.
+              Flames Fireplace is the leading supplier of clean, smokeless decorative fire features. Utilizing clean bio-ethanol combustion and eco-friendly designs, we make warmth and ambience fully accessible.
             </p>
           </div>
 
