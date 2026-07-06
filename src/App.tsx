@@ -146,18 +146,21 @@ export default function App() {
   // Construct dynamic SEO metadata based on whether a specific blog article is being read
   const activeArticleObj = BLOG_ARTICLES.find(a => a.id === selectedArticleId);
   const currentMeta = activeArticleObj ? {
-    title: `${activeArticleObj.title} | Flames Blog`,
+    title: `${activeArticleObj.title} | Flames Fireplace Blog`,
     description: activeArticleObj.content.intro,
     primaryKW: activeArticleObj.targetKeyword,
     secondaryKW: activeArticleObj.content.category
   } : (META_SUMMARY[getActiveMetaKey()] || META_SUMMARY.home);
 
+  const currentKeywords = [currentMeta.primaryKW, currentMeta.secondaryKW].filter(Boolean).join(', ');
+
   // Dynamically update the browser tab title, description metadata, canonical links, Open Graph cards, and JSON-LD structured data on route changes
   useEffect(() => {
     document.title = currentMeta.title;
-    
+
     const currentPath = window.location.pathname;
-    const origin = window.location.origin || "https://premiumflames.com"; // Fallback to live domain
+    const origin = window.location.origin || "https://flamesfireplace.com";
+    const pageUrl = `${origin}${currentPath}`;
 
     // 1. Manage Meta Description
     let descEl = document.querySelector('meta[name="description"]');
@@ -168,21 +171,29 @@ export default function App() {
     }
     descEl.setAttribute('content', currentMeta.description);
 
-    // 2. Manage Canonical Link (Protects SEO against duplicate content indices)
+    // 2. Manage Keywords and Canonical Link
+    let keywordEl = document.querySelector('meta[name="keywords"]');
+    if (!keywordEl) {
+      keywordEl = document.createElement('meta');
+      keywordEl.setAttribute('name', 'keywords');
+      document.head.appendChild(keywordEl);
+    }
+    keywordEl.setAttribute('content', currentKeywords);
+
     let canonicalEl = document.querySelector('link[rel="canonical"]');
     if (!canonicalEl) {
       canonicalEl = document.createElement('link');
       canonicalEl.setAttribute('rel', 'canonical');
       document.head.appendChild(canonicalEl);
     }
-    canonicalEl.setAttribute('href', `${origin}${currentPath}`);
+    canonicalEl.setAttribute('href', pageUrl);
 
     // 3. Manage Open Graph (OG) Cards — direct injection for major indexing crawlers (Gemini, ChatGPT, Perplexity)
     const ogProperties = {
       'og:title': currentMeta.title,
       'og:description': currentMeta.description,
       'og:type': activeArticleObj ? 'article' : 'website',
-      'og:url': `${origin}${currentPath}`,
+      'og:url': pageUrl,
       'og:image': activeArticleObj ? 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=1200' : '/assets/Bio-Ethanol Fireplace _ Product Close-up.png',
       'twitter:card': 'summary_large_image',
       'twitter:title': currentMeta.title,
@@ -211,91 +222,161 @@ export default function App() {
       document.head.appendChild(jsonLdEl);
     }
 
+    const websiteSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'Flames Fireplace',
+      url: origin,
+      potentialAction: {
+        '@type': 'SearchAction',
+        target: `${origin}/?q={search_term_string}`,
+        'query-input': 'required name=search_term_string'
+      }
+    };
+
+    const localBusinessSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'Flames Fireplace',
+      image: `${origin}/assets/Bio-Ethanol Fireplace _ Product Close-up.png`,
+      '@id': `${origin}/#localbusiness`,
+      url: origin,
+      telephone: '+971542112891',
+      priceRange: 'AED 4,500 - AED 18,000',
+      currenciesAccepted: 'AED',
+      paymentAccepted: 'Cash, Credit Card, Bank Transfer',
+      serviceType: ['Bio Ethanol Fireplaces', 'Outdoor Fire Features', 'Outdoor Kitchens', 'Built-In BBQs'],
+      areaServed: ['Dubai', 'Abu Dhabi', 'Sharjah', 'Ajman', 'Umm Al Quwain', 'Ras Al Khaimah', 'Fujairah', 'UAE'],
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Sheikh Zayed Road',
+        addressLocality: 'Dubai',
+        addressRegion: 'Dubai',
+        addressCountry: 'AE'
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: '25.2048',
+        longitude: '55.2708'
+      },
+      description: currentMeta.description
+    };
+
+    const breadcrumbSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        {
+          '@type': 'ListItem',
+          position: 1,
+          name: 'Home',
+          item: origin
+        },
+        {
+          '@type': 'ListItem',
+          position: 2,
+          name: currentMeta.title,
+          item: pageUrl
+        }
+      ]
+    };
+
     let schemaObj: any = null;
 
     if (activeArticleObj) {
-      // Blog Posting Rich Schema
-      schemaObj = {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": activeArticleObj.title,
-        "description": activeArticleObj.content.intro,
-        "datePublished": activeArticleObj.content.date,
-        "author": {
-          "@type": "Organization",
-          "name": "Flames UAE",
-          "url": origin
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Flames UAE",
-          "logo": {
-            "@type": "ImageObject",
-            "url": `${origin}/assets/logo.png`
+      schemaObj = [
+        websiteSchema,
+        localBusinessSchema,
+        breadcrumbSchema,
+        {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          headline: activeArticleObj.title,
+          description: activeArticleObj.content.intro,
+          datePublished: activeArticleObj.content.date,
+          keywords: currentKeywords,
+          author: {
+            '@type': 'Organization',
+            name: 'Flames Fireplace',
+            url: origin
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Flames Fireplace',
+            logo: {
+              '@type': 'ImageObject',
+              url: `${origin}/assets/icon.svg`
+            }
+          },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': pageUrl
           }
-        },
-        "mainEntityOfPage": {
-          "@type": "WebPage",
-          "@id": `${origin}${currentPath}`
         }
-      };
-      
-      // Merge FAQ format for articles having inline Q&A
+      ];
+
       if (activeArticleObj.content.faq) {
         schemaObj = [
-          schemaObj,
+          ...schemaObj,
           {
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [{
-              "@type": "Question",
-              "name": activeArticleObj.content.faq.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": activeArticleObj.content.faq.answer
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [{
+              '@type': 'Question',
+              name: activeArticleObj.content.faq.question,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: activeArticleObj.content.faq.answer
               }
             }]
           }
         ];
       }
     } else if (activeSection === 'faq') {
-      // Direct FAQ page Schema representation (makes Q&As crawlable immediately as rich search results)
-      schemaObj = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": COMMON_FAQS.slice(0, 6).map(item => ({
-          "@type": "Question",
-          "name": item.question,
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": item.answer
-          }
-        }))
-      };
-
-    } else {
-      // Global Brand Organization / Local Business Schema for Home/About paths
-      schemaObj = {
-        "@context": "https://schema.org",
-        "@type": "Store",
-        "name": "Flames Fireplaces UAE",
-        "image": "/assets/Bio-Ethanol Fireplace _ Product Close-up.png",
-        "@id": `${origin}/#organization`,
-        "url": origin,
-        "telephone": "+971542112891",
-        "priceRange": "AED 4,500 - AED 18,000",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Sheikh Zayed Road",
-          "addressLocality": "Dubai",
-          "addressRegion": "Dubai",
-          "addressCountry": "AE"
+      schemaObj = [
+        websiteSchema,
+        localBusinessSchema,
+        breadcrumbSchema,
+        {
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: COMMON_FAQS.slice(0, 6).map(item => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: item.answer
+            }
+          }))
         }
-      };
+      ];
+    } else {
+      schemaObj = [
+        websiteSchema,
+        localBusinessSchema,
+        breadcrumbSchema,
+        {
+          '@context': 'https://schema.org',
+          '@type': 'Store',
+          name: 'Flames Fireplace',
+          image: `${origin}/assets/Bio-Ethanol Fireplace _ Product Close-up.png`,
+          '@id': `${origin}/#organization`,
+          url: origin,
+          telephone: '+971542112891',
+          priceRange: 'AED 4,500 - AED 18,000',
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: 'Sheikh Zayed Road',
+            addressLocality: 'Dubai',
+            addressRegion: 'Dubai',
+            addressCountry: 'AE'
+          }
+        }
+      ];
     }
 
     jsonLdEl.textContent = JSON.stringify(schemaObj, null, 2);
-  }, [currentMeta]);
+  }, [currentMeta.title, currentMeta.description, currentMeta.primaryKW, currentMeta.secondaryKW, activeSection, activeArticleObj?.id]);
 
   const filteredFaqs = COMMON_FAQS.filter((faq) => {
     const matchesSearch =

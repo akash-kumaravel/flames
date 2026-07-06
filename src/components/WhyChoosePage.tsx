@@ -20,7 +20,7 @@ export default function WhyChoosePage() {
     if (roomType === 'outdoor') {
       return {
         title: "Outdoor Bio Ethanol Fireplace",
-        tagline: "Weather-Resistant Living Flames",
+        tagline: "Weather-Resistant Living Flames Fireplace",
         reason: "For pool decks, outdoor terraces, and gardens, our weather-proof Bio Ethanol fire tables and tall pillar torches cut through the wind and sea breeze, offering authentic cozy warmth without pesky electrical cords.",
         features: ["Genuine living fire", "316 Marine-grade stainless steel", "Tempered wind guards", "100% wireless"],
         buttonCode: "outdoor-ethanol",
@@ -197,6 +197,14 @@ export default function WhyChoosePage() {
           </div>
         </section>
 
+        <section className="mb-16 bg-white rounded-3xl border border-neutral-200/50 p-8 md:p-10">
+          <div className="max-w-3xl">
+            <span className="text-xs font-bold uppercase tracking-[0.24em] text-orange-700">Complete project support</span>
+            <h3 className="font-sans text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight mt-4">From design consultation to installation handover, every step is supported by our technical team.</h3>
+            <p className="font-sans text-sm text-neutral-600 leading-relaxed mt-4">We help clients choose the right burner format, fuel type, finish, placement, and safety plan for modern homes, hospitality projects, and outdoor living spaces.</p>
+          </div>
+        </section>
+
         {/* Testimonials */}
         <section className="mb-16">
           <div className="text-center mb-8">
@@ -251,7 +259,7 @@ export default function WhyChoosePage() {
               <p className="text-xs text-neutral-300 mt-2">Get a tailored recommendation, CAD drawings, and an instal cost estimate from our project team.</p>
             </div>
             <a
-              href="https://wa.me/971542112891?text=Hi%20Flames%20team%2C%20I'd%20like%20to%20discuss%20a%20bespoke%20fireplace%20project."
+              href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%20team%2C%20I'd%20like%20to%20discuss%20a%20bespoke%20fireplace%20project."
               target="_blank"
               rel="noreferrer noopener"
               className="px-6 py-3.5 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-sans text-xs font-semibold"

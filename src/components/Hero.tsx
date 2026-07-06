@@ -140,13 +140,25 @@ export default function Hero({ onNavigate }: HeroProps) {
         </div>
       </section>
 
+      <section className="max-w-7xl mx-auto mb-24">
+        <div className="bg-white rounded-3xl border border-neutral-200/60 p-8 md:p-12 shadow-sm">
+          <span className="text-xs font-bold uppercase tracking-[0.24em] text-orange-700">A complete fireplace experience</span>
+          <h2 className="font-sans text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight mt-4">
+            Elegant fireplace design, premium installation, and expert support for Dubai and the UAE.
+          </h2>
+          <p className="font-sans text-sm md:text-base text-neutral-600 leading-relaxed mt-4 max-w-3xl">
+            From concept to installation, Flames Fireplace brings together thoughtful design, certified safety, and premium craftsmanship for every project.
+          </p>
+        </div>
+      </section>
+
       {/* NEW SECTION: OUR PROFESSIONAL OUTDOOR SERVICES & FIRE FEATURES */}
       <section className="max-w-7xl mx-auto mb-28">
         <div className="text-center mb-16">
           <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Our Professional Services</span>
-          <h2 className="font-sans text-3xl font-semibold text-neutral-900 tracking-tight">Outdoor Fire Features &amp; Kitchens in Dubai</h2>
+          <h2 className="font-sans text-3xl font-semibold text-neutral-900 tracking-tight">Outdoor Fire Features &amp; Kitchens in Dubai, Abu Dhabi &amp; Sharjah</h2>
           <p className="font-sans text-sm text-neutral-500 max-w-2xl mx-auto mt-3">
-            Transforming luxury villas, pool decks, and gardens with weather-resistant fire features, custom kitchens, and premium barbecue installations.
+            Transforming luxury villas, pool decks, and gardens with weather-resistant fire features, custom kitchens, and premium barbecue installations across Dubai, Abu Dhabi, Sharjah, and the wider UAE.
           </p>
         </div>
 
@@ -163,7 +175,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Design Inspiration</span>
           <h2 className="font-sans text-3xl font-semibold text-neutral-900 tracking-tight">Luxury UAE Architectural Showcases</h2>
           <p className="font-sans text-sm text-neutral-500 max-w-2xl mx-auto mt-3">
-            Explore how premium interior designers and landscape architects integrate Flames systems inside the UAE's most prestigious living communities.
+            Explore how premium interior designers and landscape architects integrate Flames Fireplace systems inside the UAE's most prestigious living communities.
           </p>
         </div>
 

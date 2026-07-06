@@ -17,7 +17,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "Ultrasonic cool mist technology with gentle humidification",
       "Custom recessed wall housing designed in architectural steel"
     ],
-    waMessage: "Hi Flames team, I am interested in a 3D Water Vapor project similar to the Emirates Hills showcase."
+    waMessage: "Hi Flames Fireplace team, I am interested in a 3D Water Vapor project similar to the Emirates Hills showcase."
   },
   {
     id: "proj-jumeirah-ethanol",
@@ -32,7 +32,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "Comprehensive heat isolation barrier protection framework",
       "Manual adjustable sliding dampers for flame height control"
     ],
-    waMessage: "Hi Flames team, please send me details about the flueless Bio-Ethanol Cassette project in Jumeirah."
+    waMessage: "Hi Flames Fireplace team, please send me details about the flueless Bio-Ethanol Cassette project in Jumeirah."
   },
   {
     id: "proj-yas-firetable",
@@ -47,7 +47,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "Rust-proof aluminum tray with electronic flame monitoring",
       "Clear heavy-duty tempered glass breeze barrier guards"
     ],
-    waMessage: "Hi Flames team, tell me more about custom concrete Gas Fire Tables like Yas Island."
+    waMessage: "Hi Flames Fireplace team, tell me more about custom concrete Gas Fire Tables like Yas Island."
   },
   {
     id: "proj-penthouse-bowl",
@@ -62,7 +62,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "High-grade stainless steel fuel tank with easy-pour port",
       "No smoke, ashes, or electrical cords needed"
     ],
-    waMessage: "Hi Flames team, I want to learn about freestanding bioethanol burners like the Downtown Penthouse one."
+    waMessage: "Hi Flames Fireplace team, I want to learn about freestanding bioethanol burners like the Downtown Penthouse one."
   },
   {
     id: "proj-arabian-double",
@@ -77,7 +77,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
       "Tempered safety-rated glass side panels",
       "Quick-snuff sliding lid damper mechanism"
     ],
-    waMessage: "Hi Flames team, please send me info on freestanding room dividers like the Arabian Ranches setup."
+    waMessage: "Hi Flames Fireplace team, please send me info on freestanding room dividers like the Arabian Ranches setup."
   }
 ];
 
@@ -160,6 +160,16 @@ export default function PortfolioPage() {
               <Compass className="w-3.5 h-3.5" />
               Fire Pits &amp; Tables
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto px-6 md:px-12 mb-16">
+        <div className="bg-gradient-to-br from-neutral-900 to-neutral-950 rounded-3xl p-8 md:p-12 text-white shadow-sm">
+          <div className="max-w-3xl">
+            <span className="text-xs font-bold uppercase tracking-[0.24em] text-orange-400">Project showcase</span>
+            <h2 className="font-sans text-2xl md:text-3xl font-semibold tracking-tight mt-4">Luxury fire features installed in iconic homes and hospitality spaces across the UAE.</h2>
+            <p className="font-sans text-sm md:text-base text-neutral-300 leading-relaxed mt-4">Each installation is tailored to the architecture, interior palette, and functional needs of the property, delivering a distinct result every time.</p>
           </div>
         </div>
       </section>
@@ -352,7 +362,7 @@ export default function PortfolioPage() {
             <div className="pt-2 flex flex-wrap gap-4">
               <a
                 id="portfolio-bottom-wa-btn"
-                href="https://wa.me/971542112891?text=Hi%20Flames%20team%2C%20I'd%20like%20to%20send%20you%20a%20blueprint%20or%20project%20CAD%20for%20my%20upcoming%20fireplace%2Fkitchen."
+                href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%20team%2C%20I'd%20like%20to%20send%20you%20a%20blueprint%20or%20project%20CAD%20for%20my%20upcoming%20fireplace%2Fkitchen."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3.5 rounded-full bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold font-sans transition flex items-center gap-2 cursor-pointer"

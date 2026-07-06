@@ -1,6 +1,6 @@
 {
   "name": "Flames Fireplaces Catalog",
-  "description": "Super minimal, high-end Apple-style premium showcase for Flames 3D Water Vapor and Bio-Ethanol fireplaces, complete with an interactive custom design lab, detailed product spec sheets, full knowledge hub, and searchable FAQ portal.",
+  "description": "Super minimal, high-end Apple-style premium showcase for Flames Fireplace 3D Water Vapor and Bio-Ethanol fireplaces, complete with an interactive custom design lab, detailed product spec sheets, full knowledge hub, and searchable FAQ portal.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

@@ -26,7 +26,7 @@ export default function BlogPage({ onNavigateContact, selectedArticleId, onSelec
                 Fireplace Design &amp; Technology Articles
               </h1>
               <p className="font-sans text-sm text-neutral-500 leading-relaxed">
-                Expert insights, detailed comparisons, performance reviews, and safety rules directly from the Flames technical validation group.
+                Expert insights, detailed comparisons, performance reviews, and safety rules directly from the Flames Fireplace technical validation group.
               </p>
             </div>
 
@@ -76,6 +76,11 @@ export default function BlogPage({ onNavigateContact, selectedArticleId, onSelec
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className="bg-white rounded-3xl border border-neutral-200/50 p-8 md:p-10 mb-16 shadow-sm">
+              <h2 className="font-sans text-2xl font-semibold text-neutral-900">Explore expert guidance for fireplaces, fire pits, and outdoor living</h2>
+              <p className="font-sans text-sm text-neutral-600 leading-relaxed mt-3">Our blog covers popular topics like bio ethanol fireplace safety, installation planning, outdoor kitchen integration, and design ideas for luxury UAE homes.</p>
             </div>
 
             {/* Architectural Catalog Notice Box */}
@@ -173,7 +178,7 @@ export default function BlogPage({ onNavigateContact, selectedArticleId, onSelec
                   Found this deep-dive insightful?
                 </h4>
                 <p className="text-xs text-neutral-400 mt-0.5">
-                  Speak direct with the Flames design validation team for free product consultations.
+                  Speak direct with the Flames Fireplace design validation team for free product consultations.
                 </p>
               </div>
               <button

@@ -86,10 +86,10 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "indoor-bioethanol",
     title: "Bio-Ethanol Fireplaces",
-    subtitle: "Ventless Living Flames",
+    subtitle: "Ventless Living Flames Fireplace",
     description: "Authentic physical heat and beautiful golden flames burning clean renewable liquid fuel with zero smoke, ash, or soot.",
     image: "/assets/Bio-Ethanol Fireplace _ Product Close-up.png",
-    badge: "BIO-ETHANOL FLAMES",
+    badge: "BIO-ETHANOL FLAMES FIREPLACE",
     category: "indoor",
     waMessage: "Inquiry regarding bespoke Indoor Bio-Ethanol Fireplaces"
   },
@@ -136,9 +136,9 @@ export const PRODUCTS: ProductDetails[] = [
   {
     id: "indoor-ethanol",
     name: "Indoor Bio Ethanol Fireplace",
-    tagline: "Ventless, Eco-Friendly Real Flame — Flames",
-    description: "Bring the warmth and elegance of a real flame into your indoor living spaces without the need for a chimney, flue, or gas connection. Flames offers a curated range of bio ethanol fireplaces, from sleek tabletop models to statement wall-mounted units and custom inserts.",
-    detailedDescription: "Bring the warmth and elegance of a real flame into your indoor living spaces without the need for a chimney, flue, or gas connection. Flames offers a curated range of bio ethanol fireplaces, from sleek tabletop models to statement wall-mounted units and custom inserts. With a flueless fireplace, 100% of the heat generated stays inside your home instead of escaping up a chimney. It is a highly efficient, clean-burning solution that adds both ambiance and supplementary warmth to any room.",
+    tagline: "Ventless, Eco-Friendly Real Flame — Flames Fireplace",
+    description: "Bring the warmth and elegance of a real flame into your indoor living spaces without the need for a chimney, flue, or gas connection. Flames Fireplace offers a curated range of bio ethanol fireplaces, from sleek tabletop models to statement wall-mounted units and custom inserts.",
+    detailedDescription: "Bring the warmth and elegance of a real flame into your indoor living spaces without the need for a chimney, flue, or gas connection. Flames Fireplace offers a curated range of bio ethanol fireplaces, from sleek tabletop models to statement wall-mounted units and custom inserts. With a flueless fireplace, 100% of the heat generated stays inside your home instead of escaping up a chimney. It is a highly efficient, clean-burning solution that adds both ambiance and supplementary warmth to any room.",
     priceEstimate: "Available on Request",
     imageUrl: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200", // Luxurious modern salon
     bgGradient: "from-orange-50 to-orange-100",
@@ -174,7 +174,7 @@ export const PRODUCTS: ProductDetails[] = [
   {
     id: "outdoor-ethanol",
     name: "Outdoor Fire Features",
-    tagline: "Outdoor Fire Features | Fire Pits & Fireplaces | Flames",
+    tagline: "Outdoor Fire Features | Fire Pits & Fireplaces | Flames Fireplace",
     description: "Create an inviting outdoor retreat with our range of outdoor fire features. Engineered to withstand the elements while providing a stunning visual anchor, our collection ranges from contemporary bio ethanol burners to sculptural gas-powered installations.",
     detailedDescription: "Create an inviting outdoor retreat with our range of outdoor fire features. Engineered to withstand the elements while providing a stunning visual anchor, our collection ranges from contemporary bio ethanol burners to sculptural gas-powered installations.",
     priceEstimate: "Available on Request",
@@ -212,17 +212,17 @@ export const PRODUCTS: ProductDetails[] = [
 ];
 
 export const WHY_CHOOSE_EXTRA = {
-  headline: "Flames — Dubai's Trusted Name in Fire Features",
+  headline: "Flames Fireplace — Dubai's Trusted Name in Fire Features",
   paragraphs: [
-    "Flames was founded to bring high-quality, beautifully designed fire features and outdoor kitchens to homes and commercial spaces across the UAE. Based in Dubai, our team specializes in sourcing, supplying, and installing premium fireplaces and outdoor living products that are safe, durable, and engineered to perform in the Gulf climate.",
+    "Flames Fireplace was founded to bring high-quality, beautifully designed fire features and outdoor kitchens to homes and commercial spaces across the UAE. Based in Dubai, our team specializes in sourcing, supplying, and installing premium fireplaces and outdoor living products that are safe, durable, and engineered to perform in the Gulf climate.",
     "We believe that a fireplace or outdoor kitchen should be more than just an addition; it should be a central gathering space that brings people together. That’s why we partner with leading manufacturers to offer products that blend aesthetic elegance with robust, long-lasting construction.",
-    "Whether it is a rooftop lounge, a private garden, or a high-end hospitality venue, Flames serves clients in all emirates, including Dubai, Abu Dhabi, Sharjah, and beyond with uncompromising standards of customer care and craftsmanship."
+    "Whether it is a rooftop lounge, a private garden, or a high-end hospitality venue, Flames Fireplace serves clients in all emirates, including Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah, Ajman, Umm Al Quwain, and Fujairah, with uncompromising standards of customer care and craftsmanship."
   ]
 };
 
 export const COMMON_FAQS: FAQItem[] = [
   {
-    question: "Do Flames fireplaces require highly complicated professional installation?",
+    question: "Do Flames Fireplace products require highly complicated professional installation?",
     answer: "Most of our catalog is designed for simple, plug-and-play installation! Freestanding Bio Ethanol columns require no installation. Wall-recessed bioethanol models can be easily mounted on safety wall blocks, and our technical design team provides full schematics and remote assistance."
   },
   {
@@ -234,12 +234,24 @@ export const COMMON_FAQS: FAQItem[] = [
     answer: "Bio Ethanol utilizes liquid fuel. It burns highly efficiently, providing cozy radiant heating compared to electric radiators with no heat loss through a chimney."
   },
   {
-    question: "Does Flames deliver to all Emirates in the UAE?",
+    question: "Does Flames Fireplace deliver to all Emirates in the UAE?",
     answer: "Yes, we handle complete, secure door-to-door delivery across Dubai, Abu Dhabi, Sharjah, Ajman, Umm Al Quwain, Ras Al Khaimah, and Fujairah. Our fulfillment is prompt, double-packed, and fully insured."
   },
   {
     question: "Can I customize the length of my fireplace?",
     answer: "Yes! For large villas, penthouses, or commercial environments like hotel lounges, our linear bio ethanol burners can be placed side-by-side to create a continuous, seamless flame line. Contact our team to request engineering assistance."
+  },
+  {
+    question: "Where does Flames Fireplace install fireplaces in the UAE?",
+    answer: "We serve Dubai, Abu Dhabi, Sharjah, Ajman, Ras Al Khaimah, Umm Al Quwain, and Fujairah for premium residential and hospitality projects."
+  },
+  {
+    question: "Is Flames Fireplace suitable for villas, penthouses, and hotel lounges?",
+    answer: "Absolutely. Our custom fireplace and outdoor living solutions are designed for private villas, rooftop penthouses, modern apartments, and high-end hospitality spaces."
+  },
+  {
+    question: "What is the best fireplace option for a modern Dubai home?",
+    answer: "A bio ethanol fireplace is one of the most popular choices for modern Dubai homes because it offers real flame, no chimney, and elegant installation with minimal structural disruption."
   }
 ];
 

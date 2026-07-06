@@ -22,7 +22,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             <div className="flex items-center gap-2.5">
               <img
                 src="/assets/flames%20logo.svg"
-                alt="Flames logo"
+                alt="Flames Fireplace logo"
                 className="h-6 w-auto object-contain"
               />
             </div>
@@ -32,7 +32,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             </p>
             
             <p className="text-xs text-neutral-500 leading-relaxed max-w-sm">
-              Flames is the leading supplier of clean, smokeless decorative fire features. Utilizing premium, clean bio-ethanol combustion and eco-friendly designs, we make warmth and ambience fully accessible.
+              Flames Fireplace is the leading supplier of clean, smokeless decorative fire features. Utilizing premium, clean bio-ethanol combustion and eco-friendly designs, we make warmth and ambience fully accessible.
             </p>
           </div>
 
@@ -120,7 +120,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           {/* Local UAE NAP details column */}
           <div className="md:col-span-4 space-y-4">
             <p className="text-xs font-bold uppercase tracking-wider text-white">
-              Flames Office UAE
+              Flames Fireplace Office UAE
             </p>
             
             <ul className="space-y-3.5 text-xs">

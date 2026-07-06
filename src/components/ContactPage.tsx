@@ -45,7 +45,7 @@ export default function ContactPage() {
       interest === 'indoor-ethanol' ? 'Indoor Bio Ethanol Fireplace' :
       interest === 'outdoor-features' ? 'Outdoor Fire Features' : 'General Enquiry';
 
-    const text = `Hi Flames team, I'm reaching out from your website contact form:\n\n` +
+    const text = `Hi Flames Fireplace team, I'm reaching out from your website contact form:\n\n` +
       `- Name: ${name || 'Interested Client'}\n` +
       `- Email: ${email || 'Not provided'}\n` +
       `- Phone: ${phone || 'Not provided'}\n` +
@@ -131,7 +131,7 @@ export default function ContactPage() {
                       id="contact-email"
                       type="email"
                       required
-                      placeholder="flames@example.com"
+                      placeholder="hello@flamesfireplace.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       className="w-full px-4 py-3 rounded-xl bg-neutral-50 border border-neutral-200 focus:bg-white focus:outline-none focus:border-orange-500 transition-all font-sans text-xs h-12"
