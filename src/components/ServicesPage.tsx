@@ -32,7 +32,7 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
     : EXTENDED_SERVICES.filter(s => s.category === activeTab);
 
   return (
-    <div id="services-page" className="min-h-screen bg-[#FAF9F6] text-neutral-800 pt-28 pb-28 selection:bg-orange-500 selection:text-white">
+    <div id="services-page" className="min-h-screen bg-[#FAF9F6] text-neutral-800 pb-28 selection:bg-orange-500 selection:text-white">
       {/* Page Header */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 pt-8 pb-6 text-center">
         <motion.div

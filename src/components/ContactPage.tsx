@@ -56,7 +56,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div id="contact-us-page-wrapper" className="min-h-screen bg-[#FAF9F6] text-neutral-800 pt-28 pb-24 selection:bg-orange-500 selection:text-white">
+    <div id="contact-us-page-wrapper" className="min-h-screen bg-[#FAF9F6] text-neutral-800 pb-28 selection:bg-orange-500 selection:text-white">
       {/* Top Header Block */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 pt-8 pb-12 text-center">
         <motion.div

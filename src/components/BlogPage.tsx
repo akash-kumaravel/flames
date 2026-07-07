@@ -12,8 +12,8 @@ export default function BlogPage({ onNavigateContact, selectedArticleId, onSelec
   const activeArticle = BLOG_ARTICLES.find(a => a.id === selectedArticleId);
 
   return (
-    <div id="blog-catalog-page" className="pt-28 pb-20 px-6 md:px-12 bg-[#FAF9F6]">
-      <div className="max-w-7xl mx-auto">
+    <div id="blog-catalog-page" className="min-h-screen bg-[#FAF9F6] text-neutral-800 pb-28 selection:bg-orange-500 selection:text-white">
+      <div className="max-w-7xl mx-auto pt-8 px-6 md:px-12">
         
         {!selectedArticleId ? (
           /* SECTION 1: BLOG DIRECTORY OVERVIEW */

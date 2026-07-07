@@ -502,7 +502,6 @@ export default function App() {
       
       {/* 1. Global Navigation header bar */}
       <Header activeSection={activeSection} onNavigate={handleNavigation} />
-      {/* Breadcrumbs are hidden on home to remove the extra top gap; shown on all other pages. */}
       {activeSection !== 'home' && (
         <Breadcrumbs steps={getBreadcrumbsSteps()} onNavigate={handleNavigation} onSelectArticle={handleSelectArticle} />
       )}
@@ -679,8 +678,8 @@ export default function App() {
 
             {/* ──── ROUTE: GENERAL FAQ PAGE ──── */}
             {activeSection === 'faq' && (
-              <div id="section-faq" className="pt-28 pb-20 px-6 md:px-12 bg-white">
-                <div className="max-w-4xl mx-auto">
+              <div id="section-faq" className="min-h-screen bg-[#FAF9F6] text-neutral-800 pb-28 selection:bg-orange-500 selection:text-white">
+                <div className="max-w-4xl mx-auto pt-8 px-6 md:px-12">
                   <div className="text-center mb-12">
                     <span className="px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-xs font-semibold uppercase tracking-widest font-sans inline-block">
                       Common Questions

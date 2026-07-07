@@ -76,8 +76,8 @@ export default function WhyChoosePage() {
   ];
 
   return (
-    <div id="section-why-choose" className="pt-28 pb-20 px-6 md:px-12 bg-[#FAF9F6]">
-      <div className="max-w-7xl mx-auto">
+    <div id="section-why-choose" className="min-h-screen bg-[#FAF9F6] text-neutral-800 pb-28 selection:bg-orange-500 selection:text-white">
+      <div className="max-w-7xl mx-auto pt-8 px-6 md:px-12">
         
         {/* Header Block Description */}
         <section className="text-center max-w-4xl mx-auto mb-16">

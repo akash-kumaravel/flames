@@ -4,8 +4,8 @@ interface Props { onNavigate: (section: ActiveSection) => void }
 
 export default function BestFireplaceLanding({ onNavigate }: Props) {
   return (
-    <div className="min-h-screen bg-[#FAF9F6] text-neutral-800 pt-28 pb-16">
-      <section className="max-w-5xl mx-auto px-6 md:px-12 py-20">
+    <div className="min-h-screen bg-[#FAF9F6] text-neutral-800 pb-28 selection:bg-orange-500 selection:text-white">
+      <section className="max-w-5xl mx-auto pt-8 px-6 md:px-12 py-20">
         <h1 className="text-4xl md:text-5xl font-semibold text-neutral-900 mb-4">Best Fireplace in Dubai — Flames Fireplace</h1>
         <p className="text-neutral-600 mb-6">Flames Fireplace designs and installs premium bio-ethanol fireplaces, fire pits, and outdoor kitchens across Dubai and the UAE. We combine safety-first engineering with sculptural finishes to deliver the best fireplace solutions for villas, penthouses and luxury hospitality.</p>
 

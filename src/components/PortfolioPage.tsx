@@ -90,7 +90,7 @@ export default function PortfolioPage() {
   );
 
   return (
-    <div id="portfolio-page" className="min-h-screen bg-[#FAF9F6] text-neutral-800 pt-28 pb-28 selection:bg-orange-500 selection:text-white">
+    <div id="portfolio-page" className="min-h-screen bg-[#FAF9F6] text-neutral-800 pb-28 selection:bg-orange-500 selection:text-white">
       {/* Header section */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 pt-8 pb-6 text-center">
         <motion.div

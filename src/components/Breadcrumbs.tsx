@@ -17,11 +17,11 @@ export default function Breadcrumbs({ steps, onNavigate, onSelectArticle }: Brea
   return (
     <nav 
       aria-label="Breadcrumb" 
-      className="pt-6 pb-2 px-6 md:px-12 max-w-7xl mx-auto flex items-center"
+      className="pt-24 pb-3 px-6 md:px-12 max-w-7xl mx-auto flex items-center"
       itemScope 
       itemType="https://schema.org/BreadcrumbList"
     >
-      <ol className="flex items-center flex-wrap gap-1 sm:gap-1.5 text-[11px] sm:text-xs font-sans text-neutral-400 font-medium tracking-tight">
+      <ol className="flex items-center flex-wrap gap-1 sm:gap-1.5 text-[10px] sm:text-xs font-sans text-neutral-500 font-medium tracking-wide">
         {/* Home is always the first item */}
         <li 
           itemProp="itemListElement" 
