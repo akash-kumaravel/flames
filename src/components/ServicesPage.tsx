@@ -50,7 +50,7 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
           transition={{ delay: 0.1 }}
           className="font-sans font-semibold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-tight max-w-4xl mx-auto"
         >
-          Custom Indoor &amp; Outdoor Services
+          Best Fireplace Services in Dubai by Flames Fireplace
         </motion.h1>
         
         <motion.p

@@ -50,6 +50,8 @@ export interface BlogArticle {
   slug: string;
   targetKeyword: string;
   schema: string;
+  seoTitle?: string;
+  seoDescription?: string;
   content: {
     intro: string;
     sections: {
@@ -85,4 +87,6 @@ export interface ServiceItem {
   category?: 'indoor' | 'outdoor' | string;
   waMessage?: string;
   faqs?: FAQItem[];
+  seoTitle?: string;
+  seoDescription?: string;
 }

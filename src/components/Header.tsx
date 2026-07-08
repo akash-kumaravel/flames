@@ -56,6 +56,8 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
           <img
             src="/assets/flames%20logo.svg"
             alt="Flames Fireplace logo"
+            width={150}
+            height={28}
             className="h-6 sm:h-7 w-auto object-contain"
           />
         </button>

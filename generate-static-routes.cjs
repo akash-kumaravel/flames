@@ -36,7 +36,7 @@ function extractBlogSlugs(src) {
   return slugs;
 }
 
-const staticPages = ['about','services','portfolio','why-choose','faq','contact','blog','best-fireplace-dubai'];
+const staticPages = ['','about','services','portfolio','why-choose','faq','contact','blog','best-fireplace-dubai'];
 const serviceIds = extractServiceIds(dataRaw).map(id => `services/${id}`);
 const blogSlugs = extractBlogSlugs(dataRaw);
 
@@ -52,6 +52,7 @@ try {
 
 // Generate physical routes allowing safe refresh checks
 routes.forEach((route) => {
+  if (route === '') return; // Skip folder generation for empty route
   const targetDir = path.join(distPath, route);
   const targetIndex = path.join(targetDir, 'index.html');
   
@@ -68,13 +69,13 @@ console.log('Static route fallbacks generated successfully!');
 
 // Regenerate sitemap.xml in public/ from derived routes
 try {
-  const origin = 'https://flamesfireplace.com';
+  const origin = 'https://www.flamesfireplace.com';
   const today = new Date().toISOString().slice(0,10);
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
   routes.forEach(r => {
-    const loc = `${origin}/${r}`;
-    const priority = r.startsWith('blog') ? '0.8' : r === 'best-fireplace-dubai' ? '1.0' : r.startsWith('services/') ? '0.9' : '0.7';
+    const loc = r === '' ? `${origin}/` : `${origin}/${r}`;
+    const priority = r === '' ? '1.0' : r === 'best-fireplace-dubai' ? '1.0' : r.startsWith('services/') ? '0.9' : r.startsWith('blog') ? '0.8' : '0.7';
     sitemap += `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>\n  </url>\n`;
   });
 

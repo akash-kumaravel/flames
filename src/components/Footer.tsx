@@ -23,6 +23,8 @@ export default function Footer({ onNavigate }: FooterProps) {
               <img
                 src="/assets/flames%20logo.svg"
                 alt="Flames Fireplace logo"
+                width={150}
+                height={24}
                 className="h-6 w-auto object-contain"
               />
             </div>
@@ -32,7 +34,7 @@ export default function Footer({ onNavigate }: FooterProps) {
             </p>
             
             <p className="text-xs text-neutral-500 leading-relaxed max-w-sm">
-              Flames Fireplace is the leading supplier of clean, smokeless decorative fire features. Utilizing clean bio-ethanol combustion and eco-friendly designs, we make warmth and ambience fully accessible.
+              Flames Fireplace is the leading supplier of clean, smokeless decorative fire features. Utilizing clean bio-ethanol combustion and eco-friendly designs, we make warmth and ambiance fully accessible.
             </p>
           </div>
 
@@ -43,31 +45,34 @@ export default function Footer({ onNavigate }: FooterProps) {
             </p>
             <ul className="space-y-2.5 text-xs">
               <li>
-                <button
+                <a
                   id="footer-nav-services"
-                  onClick={() => onNavigate('services')}
+                  href="https://www.flamesfireplace.com/services"
+                  onClick={(e) => { e.preventDefault(); onNavigate('services'); }}
                   className="hover:text-white transition cursor-pointer text-orange-400 font-medium"
                 >
                   Engineering &amp; Services
-                </button>
+                </a>
               </li>
               <li>
-                <button
+                <a
                   id="footer-nav-portfolio"
-                  onClick={() => onNavigate('portfolio')}
+                  href="https://www.flamesfireplace.com/portfolio"
+                  onClick={(e) => { e.preventDefault(); onNavigate('portfolio'); }}
                   className="hover:text-white transition cursor-pointer text-orange-400 font-medium"
                 >
                   Project Portfolio
-                </button>
+                </a>
               </li>
               <li>
-                <button
+                <a
                   id="footer-nav-contact"
-                  onClick={() => onNavigate('contact')}
+                  href="https://www.flamesfireplace.com/contact"
+                  onClick={(e) => { e.preventDefault(); onNavigate('contact'); }}
                   className="hover:text-white transition cursor-pointer text-orange-400 font-medium"
                 >
                   Contact Us
-                </button>
+                </a>
               </li>
             </ul>
           </div>
@@ -79,40 +84,54 @@ export default function Footer({ onNavigate }: FooterProps) {
             </p>
             <ul className="space-y-2.5 text-xs">
               <li>
-                <button
+                <a
                   id="footer-nav-about"
-                  onClick={() => onNavigate('about')}
-                  className="hover:text-white transition cursor-pointer"
+                  href="https://www.flamesfireplace.com/about"
+                  onClick={(e) => { e.preventDefault(); onNavigate('about'); }}
+                  className="hover:text-white transition cursor-pointer block"
                 >
                   Our Story &amp; Values
-                </button>
+                </a>
               </li>
               <li>
-                <button
+                <a
                   id="footer-nav-why-choose"
-                  onClick={() => onNavigate('why-choose')}
-                  className="hover:text-white transition cursor-pointer"
+                  href="https://www.flamesfireplace.com/why-choose"
+                  onClick={(e) => { e.preventDefault(); onNavigate('why-choose'); }}
+                  className="hover:text-white transition cursor-pointer block"
                 >
                   Why Choose Us
-                </button>
+                </a>
               </li>
               <li>
-                <button
+                <a
                   id="footer-nav-faq"
-                  onClick={() => onNavigate('faq')}
-                  className="hover:text-white transition cursor-pointer"
+                  href="https://www.flamesfireplace.com/faq"
+                  onClick={(e) => { e.preventDefault(); onNavigate('faq'); }}
+                  className="hover:text-white transition cursor-pointer block"
                 >
                   FAQs &amp; Buyer Guides
-                </button>
+                </a>
               </li>
               <li>
-                <button
+                <a
                   id="footer-nav-blog"
-                  onClick={() => onNavigate('blog')}
-                  className="hover:text-white transition cursor-pointer"
+                  href="https://www.flamesfireplace.com/blog"
+                  onClick={(e) => { e.preventDefault(); onNavigate('blog'); }}
+                  className="hover:text-white transition cursor-pointer block"
                 >
-                  Blog
-                </button>
+                  Blog &amp; Articles
+                </a>
+              </li>
+              <li>
+                <a
+                  id="footer-nav-best-fireplace"
+                  href="https://www.flamesfireplace.com/best-fireplace-dubai"
+                  onClick={(e) => { e.preventDefault(); onNavigate('best-fireplace-dubai'); }}
+                  className="hover:text-white transition cursor-pointer text-orange-400 font-semibold block"
+                >
+                  Best Fireplace in Dubai
+                </a>
               </li>
             </ul>
           </div>

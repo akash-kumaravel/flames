@@ -21,7 +21,9 @@ export default function ServiceCard({ service, onNavigate }: ServiceCardProps) {
       <div className="relative h-52 w-full overflow-hidden bg-neutral-900">
         <img
           src={service.image}
-          alt={service.title}
+          alt={`${service.title} — Premium design and installation by Flames Fireplace in Dubai UAE`}
+          width={400}
+          height={208}
           loading="lazy"
           decoding="async"
           referrerPolicy="no-referrer"

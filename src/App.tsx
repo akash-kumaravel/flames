@@ -193,13 +193,15 @@ export default function App() {
   }, []);
 
   // Map active section to its relevant SEO meta summary inside data.ts
-  const getActiveMetaKey = (): 'home' | 'about' | 'services' | 'portfolio' | 'faq' | 'contact' | 'why-choose' => {
+  const getActiveMetaKey = (): string => {
     if (activeSection === 'home') return 'home';
     if (activeSection === 'about') return 'about';
     if (activeSection === 'services') return 'services';
     if (activeSection === 'portfolio') return 'portfolio';
     if (activeSection === 'faq') return 'faq';
     if (activeSection === 'why-choose') return 'why-choose';
+    if (activeSection === 'blog') return 'blog';
+    if (activeSection === 'best-fireplace-dubai') return 'best-fireplace-dubai';
     if (
       activeSection === 'bio-ethanol-fireplace' ||
       activeSection === 'water-vapor-fireplace' ||
@@ -218,21 +220,22 @@ export default function App() {
   // Construct dynamic SEO metadata based on whether a specific blog article is being read
   const activeArticleObj = BLOG_ARTICLES.find(a => a.id === selectedArticleId);
   const currentMeta = activeArticleObj ? {
-    title: `${activeArticleObj.title} | Flames Fireplace Blog`,
-    description: activeArticleObj.content.intro,
+    title: activeArticleObj.seoTitle || `${activeArticleObj.title} | Flames Fireplace Blog`,
+    description: activeArticleObj.seoDescription || activeArticleObj.content.intro,
     primaryKW: activeArticleObj.targetKeyword,
     secondaryKW: activeArticleObj.content.category
   } : (() => {
     const svc = SERVICES.find(s => s.id === activeSection);
     if (svc) {
       return {
-        title: `${svc.title} | Flames Fireplace`,
-        description: svc.description,
+        title: svc.seoTitle || `${svc.title} | Flames Fireplace`,
+        description: svc.seoDescription || svc.description,
         primaryKW: svc.title,
         secondaryKW: svc.category
       };
     }
-    return (META_SUMMARY[getActiveMetaKey()] || META_SUMMARY.home);
+    const metaKey = getActiveMetaKey();
+    return (META_SUMMARY[metaKey as keyof typeof META_SUMMARY] || META_SUMMARY.home);
   })();
 
   const currentKeywords = [currentMeta.primaryKW, currentMeta.secondaryKW].filter(Boolean).join(', ');
@@ -242,8 +245,9 @@ export default function App() {
     document.title = currentMeta.title;
 
     const currentPath = window.location.pathname;
-    const origin = window.location.origin || "https://flamesfireplace.com";
-    const pageUrl = `${origin}${currentPath}`;
+    const origin = "https://www.flamesfireplace.com";
+    const path = currentPath.endsWith('/') && currentPath !== '/' ? currentPath.slice(0, -1) : currentPath;
+    const pageUrl = `${origin}${path === '/' ? '/' : path}`;
 
     // 1. Manage Meta Description
     let descEl = document.querySelector('meta[name="description"]');
@@ -275,7 +279,7 @@ export default function App() {
     const svcForOg = SERVICES.find(s => s.id === activeSection);
     const ogImage = activeArticleObj
       ? 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=1200'
-      : (svcForOg ? `${origin}${svcForOg.image}` : `${origin}/assets/Bio-Ethanol Fireplace _ Product Close-up.png`);
+      : (svcForOg ? `${origin}${svcForOg.image}` : `${origin}/assets/Bio-Ethanol%20Fireplace%20_%20Product%20Close-up.png`);
 
     const ogProperties = {
       'og:title': currentMeta.title,
@@ -327,10 +331,12 @@ export default function App() {
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
       name: 'Flames Fireplace',
-      image: `${origin}/assets/Bio-Ethanol Fireplace _ Product Close-up.png`,
+      image: `${origin}/assets/Bio-Ethanol%20Fireplace%20_%20Product%20Close-up.png`,
       '@id': `${origin}/#localbusiness`,
       url: origin,
       telephone: '+971542112891',
+      priceRange: '$$$',
+      openingHours: 'Mo-Su 08:00-20:00',
       paymentAccepted: 'Cash, Credit Card, Bank Transfer',
       serviceType: ['Bio Ethanol Fireplaces', 'Outdoor Fire Features', 'Outdoor Kitchens', 'Built-In BBQs'],
       areaServed: ['Dubai', 'Abu Dhabi', 'Sharjah', 'Ajman', 'Umm Al Quwain', 'Ras Al Khaimah', 'Fujairah', 'UAE'],
@@ -339,6 +345,7 @@ export default function App() {
         streetAddress: 'Sheikh Zayed Road',
         addressLocality: 'Dubai',
         addressRegion: 'Dubai',
+        postalCode: '00000',
         addressCountry: 'AE'
       },
       geo: {
@@ -585,7 +592,7 @@ export default function App() {
                         Who We Are
                       </span>
                       <h1 className="font-sans font-semibold text-3xl md:text-5xl text-white tracking-tight leading-none">
-                        Our Story
+                        About Flames Fireplace — Our Story
                       </h1>
                       <div className="space-y-4 font-sans text-neutral-400 leading-relaxed text-base">
                         <p>{WHY_CHOOSE_EXTRA.paragraphs[0]}</p>
@@ -597,7 +604,9 @@ export default function App() {
                     <div className="lg:col-span-6 relative rounded-3xl overflow-hidden shadow-2xl bg-neutral-900 max-h-[440px]">
                       <img
                         src="/assets/about.png"
-                        alt="Minimal Architect Surround Interior"
+                        alt="Flames Fireplace showroom interior design with luxury bio ethanol fireplace in Dubai"
+                        width={600}
+                        height={400}
                         loading="lazy"
                         decoding="async"
                         referrerPolicy="no-referrer"
@@ -685,7 +694,7 @@ export default function App() {
                       Common Questions
                     </span>
                     <h1 className="font-sans font-semibold text-3xl md:text-5xl text-white tracking-tight mt-4 mb-3">
-                      Fireplace Buyer Guide Desk
+                      Flames Fireplace FAQs — Best Fireplace in Dubai Guide
                     </h1>
                     <p className="font-sans text-sm text-neutral-400 leading-relaxed max-w-2xl mx-auto">
                       Review direct answers to practical queries regarding safety rules, bio-ethanol liquid pure fuels, power draws, and custom architectural frame sizing.
@@ -818,6 +827,7 @@ export default function App() {
             {activeSection === 'blog' && (
               <BlogPage 
                 onNavigateContact={() => handleNavigation('contact')} 
+                onNavigate={handleNavigation}
                 selectedArticleId={selectedArticleId}
                 onSelectArticle={handleSelectArticle}
               />

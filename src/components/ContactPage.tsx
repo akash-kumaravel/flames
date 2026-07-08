@@ -69,7 +69,7 @@ export default function ContactPage() {
             Get In Touch
           </span>
           <h1 className="font-sans font-medium text-3xl md:text-5xl text-white tracking-tight max-w-2xl mx-auto leading-none">
-            Contact Our Design Team
+            Contact Flames Fireplace — Best Fireplace in Dubai
           </h1>
           <p className="font-sans text-xs md:text-sm text-neutral-400 max-w-xl mx-auto leading-relaxed">
             Have a project in mind? Fill out the contact form below, and our engineering advisory group will reach out within 1 business day to coordinate specifications.

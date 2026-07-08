@@ -77,8 +77,11 @@ export default function ProductPage({
               <div className="rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-black/5">
                 <img
                   src={imageUrl}
-                  alt={title}
+                  alt={`Premium ${title} installation showroom view — Flames Fireplace Dubai`}
+                  width={800}
+                  height={600}
                   loading="eager"
+                  decoding="async"
                   className="w-full h-full min-h-[420px] object-cover"
                 />
               </div>
@@ -141,9 +144,9 @@ export default function ProductPage({
             <div className="rounded-[2rem] border border-neutral-800 bg-[#121212] p-8 shadow-sm">
               <h4 className="text-base font-semibold text-white mb-4 uppercase tracking-[0.16em] text-orange-400">Quick links</h4>
               <ul className="space-y-3 text-neutral-300">
-                <li><a href="/best-fireplace-dubai" className="hover:text-orange-600 transition-colors">Best Fireplace in Dubai</a></li>
-                <li><a href="/services" className="hover:text-orange-600 transition-colors">Explore all services</a></li>
-                <li><a href="/contact" className="hover:text-orange-600 transition-colors">Book a site visit</a></li>
+                <li><a href="https://www.flamesfireplace.com/best-fireplace-dubai" onClick={(e) => { e.preventDefault(); onNavigate('best-fireplace-dubai'); }} className="hover:text-orange-600 transition-colors">Best Fireplace in Dubai</a></li>
+                <li><a href="https://www.flamesfireplace.com/services" onClick={(e) => { e.preventDefault(); onNavigate('services'); }} className="hover:text-orange-600 transition-colors">Explore all services</a></li>
+                <li><a href="https://www.flamesfireplace.com/contact" onClick={(e) => { e.preventDefault(); onNavigate('contact'); }} className="hover:text-orange-600 transition-colors">Book a site visit</a></li>
               </ul>
             </div>
           </aside>

@@ -4,11 +4,12 @@ import { BlogArticle } from '../types';
 
 interface BlogPageProps {
   onNavigateContact: () => void;
+  onNavigate: (section: import('../types').ActiveSection) => void;
   selectedArticleId: string | null;
   onSelectArticle: (id: string | null) => void;
 }
 
-export default function BlogPage({ onNavigateContact, selectedArticleId, onSelectArticle }: BlogPageProps) {
+export default function BlogPage({ onNavigateContact, onNavigate, selectedArticleId, onSelectArticle }: BlogPageProps) {
   const activeArticle = BLOG_ARTICLES.find(a => a.id === selectedArticleId);
 
   return (
@@ -23,7 +24,7 @@ export default function BlogPage({ onNavigateContact, selectedArticleId, onSelec
                 Blog
               </span>
               <h1 className="font-sans font-semibold text-3xl md:text-5xl text-white tracking-tight mt-4 mb-3">
-                Fireplace Design &amp; Technology Articles
+                Flames Fireplace Blog — Design &amp; Technology Articles
               </h1>
               <p className="font-sans text-sm text-neutral-400 leading-relaxed">
                 Expert insights, detailed comparisons, performance reviews, and safety rules directly from the Flames Fireplace technical validation group.
@@ -81,7 +82,7 @@ export default function BlogPage({ onNavigateContact, selectedArticleId, onSelec
             <div className="bg-[#121212] rounded-3xl border border-neutral-800 p-8 md:p-10 mb-16 shadow-sm">
               <h2 className="font-sans text-2xl font-semibold text-white">Explore expert guidance for fireplaces, fire pits, and outdoor living</h2>
               <p className="font-sans text-sm text-neutral-300 leading-relaxed mt-3">Our blog covers popular topics like bio ethanol fireplace safety, installation planning, outdoor kitchen integration, and design ideas for luxury UAE homes.</p>
-              <p className="mt-4 text-sm text-neutral-300">Looking for the best options in Dubai? Read our comprehensive landing guide: <a href="/best-fireplace-dubai" className="text-orange-400 hover:underline">Best Fireplace in Dubai</a>.</p>
+              <p className="mt-4 text-sm text-neutral-300">Looking for the best options in Dubai? Read our comprehensive landing guide: <a href="https://www.flamesfireplace.com/best-fireplace-dubai" onClick={(e) => { e.preventDefault(); onNavigate('best-fireplace-dubai'); }} className="text-orange-400 hover:underline">Best Fireplace in Dubai</a>.</p>
             </div>
 
             {/* Architectural Catalog Notice Box */}

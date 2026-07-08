@@ -108,7 +108,7 @@ export default function PortfolioPage() {
           transition={{ delay: 0.1 }}
           className="font-sans font-semibold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-tight max-w-4xl mx-auto"
         >
-          Our Finished Works &amp; Installs
+          Flames Fireplace Project Portfolio &amp; Installations
         </motion.h1>
         
         <motion.p
@@ -196,7 +196,9 @@ export default function PortfolioPage() {
                 <div className="relative h-64 overflow-hidden bg-neutral-950">
                   <img
                     src={item.image}
-                    alt={item.title}
+                    alt={`${item.title} — Best fireplace installation in ${item.location} by Flames Fireplace`}
+                    width={500}
+                    height={256}
                     loading="lazy"
                     decoding="async"
                     referrerPolicy="no-referrer"
@@ -277,7 +279,11 @@ export default function PortfolioPage() {
                 <div className="md:col-span-6 relative bg-neutral-950 h-64 sm:h-80 md:h-full min-h-[320px]">
                   <img
                     src={selectedProject.image}
-                    alt={selectedProject.title}
+                    alt={`${selectedProject.title} custom fireplace design installed in ${selectedProject.location} by Flames Fireplace`}
+                    width={600}
+                    height={450}
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"
                   />

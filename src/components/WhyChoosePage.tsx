@@ -85,7 +85,7 @@ export default function WhyChoosePage() {
             Engineering Excellence
           </span>
           <h1 className="font-sans font-semibold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-none mb-6">
-            The Sustainable Alternative to Traditional Firepoints
+            Why Choose Flames Fireplace — The Best Fireplace in Dubai
           </h1>
           <p className="font-sans text-base sm:text-lg text-neutral-400 leading-relaxed">
             By merging high-specification casing designs with plant-derived clean fuel, we completely bypass the soot, ash, permit paperwork, and safety hazards of older wood or gas line systems.

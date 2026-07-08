@@ -6,6 +6,19 @@ async function startServer() {
   const app = express();
   const PORT = 3000;
 
+  // Redirect HTTP -> HTTPS and non-www -> www in production
+  app.use((req, res, next) => {
+    const host = req.headers.host || "";
+    const isHttp = req.headers["x-forwarded-proto"] === "http";
+    const isNonWww = !host.startsWith("www.") && !host.includes("localhost") && !host.includes("127.0.0.1");
+
+    if (isHttp || isNonWww) {
+      const secureHost = host.startsWith("www.") ? host : `www.${host}`;
+      return res.redirect(301, `https://${secureHost}${req.originalUrl}`);
+    }
+    next();
+  });
+
   // Add a simple API health check endpoint if needed
   app.get("/api/health", (req, res) => {
     res.json({ status: "ok" });

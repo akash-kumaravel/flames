@@ -36,7 +36,9 @@ export default function Hero({ onNavigate }: HeroProps) {
           <img
             key={heroSlides[activeSlideIndex].image}
             src={heroSlides[activeSlideIndex].image}
-            alt={`Featured service ${heroSlides[activeSlideIndex].title}`}
+            alt={`Luxury ${heroSlides[activeSlideIndex].title} design and installation by Flames Fireplace in Dubai UAE`}
+            width={1920}
+            height={1080}
             loading="eager"
             fetchpriority="high"
             referrerPolicy="no-referrer"
@@ -205,9 +207,16 @@ export default function Hero({ onNavigate }: HeroProps) {
             Welcome to <strong className="text-white">Flames Fireplace</strong> — your destination for next-generation architectural fire features in Dubai and the UAE. 
             Whether you are looking for elegant clean-burning Indoor Bio Ethanol Fireplaces, 
             or stunning custom-fitted Outdoor Fire Features, we formulate products engineered for sheer visual beauty, domestic safety, and physical permanence.
+            Our premium flueless units offer real heat and beautiful golden flames without the need for traditional chimneys, flues, or gas connections.
           </p>
           <p>
             From modern city apartments to expansive seaside pool gardens, our smokeless fire solutions are trusted by luxury homeowners, interior designers, architects, and hospitality specialists across the UAE.
+            We supply the best fireplace systems in Dubai, including built-in bioethanol cassette inserts, freestanding fire columns, and water-vapor cassettes.
+            Our team works closely with developers in Dubai Marina, Palm Jumeirah, Emirates Hills, and Business Bay to design custom media walls and outdoor kitchens that elevate lifestyle experiences.
+          </p>
+          <p>
+            Our bio-ethanol burners utilize high-grade, clean-burning liquid bioethanol to produce a warm golden flame with zero soot, ash, or smoke.
+            For commercial lobbies or spaces where cool-to-touch safety is required, our 3D water vapor fireplaces combine ultrasonic water mist with colored LED lights to produce highly realistic flames that are completely safe around children and pets.
           </p>
         </div>
       </section>
@@ -218,8 +227,11 @@ export default function Hero({ onNavigate }: HeroProps) {
           <h2 className="font-sans text-2xl md:text-3xl font-semibold text-white tracking-tight mt-4">
             Elegant fireplace design, professional installation, and expert support for Dubai and the UAE.
           </h2>
-          <p className="font-sans text-sm md:text-base text-neutral-300 leading-relaxed mt-4 max-w-3xl">
+          <p className="font-sans text-sm md:text-base text-neutral-350 leading-relaxed mt-4 max-w-3xl">
             From concept to installation, Flames Fireplace brings together thoughtful design, certified safety, and careful craftsmanship for every project.
+            We provide comprehensive site surveys, custom CAD casing blocks, and direct DWG diagrams for interior designers and builders.
+            Our installers are certified specialists in heat insulation, ensuring that built-in cassettes are securely isolated using specialized thermal isolation barriers.
+            This ensures that our fireplaces can be safely mounted directly beneath smart television screens, marble drywall wraps, or custom wood paneling.
           </p>
         </div>
       </section>
@@ -258,7 +270,11 @@ export default function Hero({ onNavigate }: HeroProps) {
                 <div className="h-52 overflow-hidden relative">
                   <img
                     src={item.image}
-                    alt={item.title}
+                    alt={`${item.title} — Best fireplace installation in ${item.location} by Flames Fireplace`}
+                    width={400}
+                    height={208}
+                    loading="lazy"
+                    decoding="async"
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover hover:scale-103 transition duration-500"
                   />
