@@ -5,10 +5,10 @@ export const TAGLINE = "Indoor & Outdoor Fire Features in Dubai & UAE";
 
 export const META_SUMMARY = {
   home: {
-    title: "Flames Fireplace Dubai | Bio Ethanol Fireplaces, Fire Pits & Outdoor Kitchens",
-    description: "Discover bio ethanol fireplaces, fire pits, outdoor kitchens, and custom BBQs in Dubai and the UAE with Flames Fireplace.",
-    primaryKW: "bio ethanol fireplace Dubai, fire pits Dubai",
-    secondaryKW: "outdoor kitchen Dubai, luxury fireplace UAE"
+    title: "Flames Fireplace | Best Fireplace in Dubai & Premium Bio Ethanol Fireplaces",
+    description: "Looking for the best fireplace in Dubai? Flames Fireplace designs, supplies, and installs premium ventless bio ethanol fireplaces, mist water vapor burners, and custom fire pits in the UAE.",
+    primaryKW: "Flames fireplace, best fireplace Dubai, bio ethanol fireplace Dubai",
+    secondaryKW: "fireplace Dubai, outdoor fire pits Dubai, luxury fireplace UAE"
   },
   about: {
     title: "About Flames Fireplace | Fire Features & Outdoor Kitchens UAE",
@@ -50,10 +50,10 @@ export const META_SUMMARY = {
     secondaryKW: "fire pit products Dubai, BBQ grill Dubai, outdoor fireplace UAE"
   },
   'best-fireplace-dubai': {
-    title: "Best Fireplace in Dubai — Flames Fireplace",
-    description: "Find the best fireplace options in Dubai: bio-ethanol, water-vapor, fire pits, and custom built-in BBQs. Expert advice, site surveys, and certified installations across the UAE.",
-    primaryKW: "best fireplace Dubai, fireplace Dubai",
-    secondaryKW: "bio ethanol fireplace Dubai, best fireplace UAE"
+    title: "Best Fireplace in Dubai | Flames Fireplace — Premium Fire Features",
+    description: "Find the best fireplace in Dubai with Flames Fireplace. We offer bespoke ventless bio ethanol fireplaces, water-vapor cassettes, custom fire pits, and professional installations across the UAE.",
+    primaryKW: "best fireplace Dubai, Flames fireplace, fireplace Dubai",
+    secondaryKW: "bio ethanol fireplace Dubai, best fireplace UAE, fireplace install Dubai"
   },
   services: {
     title: "Our Services | Design, Advisory & Installation — Flames Fireplace",
@@ -383,6 +383,72 @@ export const BLOG_ARTICLES: BlogArticle[] = [
         question: "Which fireplace type is best for Dubai apartments?",
         answer: "Ventless bio-ethanol and water-vapor models are best for apartments when installed per manufacturer guidance and with normal room ventilation."
       }
+    }
+  },
+  {
+    id: "vapor-fireplace-technology",
+    title: "Water Vapor Fireplaces: The Safe & Modern Aesthetic Trend in Dubai",
+    slug: "/blog/water-vapor-fireplace-technology-dubai",
+    targetKeyword: "water vapor fireplace Dubai, 3D mist fireplace UAE",
+    schema: "Article",
+    content: {
+      category: "Technology",
+      readTime: "5 min read",
+      date: "July 8, 2026",
+      intro: "Water vapor technology has revolutionized indoor design, allowing a completely ventless, 100% safe living fire visual directly under smart TVs. Learn how this 3D mist flame technology works and why it is the fastest-growing design trend in premium Dubai residences.",
+      sections: [
+        {
+          heading: "How Ultrasonic Mist Becomes Realistic Flame",
+          paragraphs: [
+            "Using silent high-frequency ultrasonic transducers, water vapor cassettes atomize normal water into an extremely fine, cool mist. When illuminated by warm, high-intensity LED light strips, this mist takes on the precise appearance of a three-dimensional flickering flame."
+          ]
+        },
+        {
+          heading: "Perfect Match for Dubai Media Walls",
+          paragraphs: [
+            "Unlike standard gas or bio-ethanol burners, water vapor mist generates zero physical heat. This makes it completely safe to install directly beneath large TV consoles, expensive artwork, or sensitive soundbars without building complex insulated heat barriers or deflector shields."
+          ]
+        },
+        {
+          heading: "Simple Setup and Refill Mechanics",
+          paragraphs: [
+            "Water vapor units can be plumbed directly to a local water line or operated via internal manual reservoirs. A single fill can last up to 10-15 hours, providing continuous flame aesthetics with only periodic descaling maintenance."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: "modern-outdoor-kitchen-trends",
+    title: "Bespoke Outdoor Kitchens & BBQs: Designing Luxury GCC Gardens",
+    slug: "/blog/luxury-outdoor-kitchen-bbq-trends",
+    targetKeyword: "outdoor kitchen Dubai, built-in BBQ Dubai",
+    schema: "Article",
+    content: {
+      category: "Outdoor Living",
+      readTime: "6 min read",
+      date: "July 8, 2026",
+      intro: "An outdoor kitchen is the ultimate luxury feature for villa gardens and rooftops. With the GCC outdoor entertaining season being highly valued, having a customized BBQ island with weather-resistant finishes is a must-have. Here are the top trends in luxury outdoor kitchen layouts for UAE properties.",
+      sections: [
+        {
+          heading: "Integrating Built-in BBQs and Smokers",
+          paragraphs: [
+            "A luxury outdoor kitchen centers around a high-performance built-in barbecue grill. Anodized burners, heavy-duty stainless steel grates, and integrated temperature gauges allow restaurant-level cooking. Complementing the grill with slow smokers or pizza ovens creates a complete culinary hub."
+          ]
+        },
+        {
+          heading: "Weatherproofing for Extreme Summer Heat",
+          paragraphs: [
+            "In the UAE, outdoor structures face high humidity, saline sea breezes, and intense summer sun. Selecting durable materials is vital: choose marine-grade stainless steel 316, sintered stone surfaces (like Dekton), and powder-coated doors that resist UV fading and rust."
+          ]
+        },
+        {
+          heading: "Creating a Social Island Hub",
+          paragraphs: [
+            "The best outdoor kitchens are designed as social bar spaces. Extending the worktop into a bar counter with high stools allows guests to converse with the chef while enjoying cold drinks from an under-counter outdoor beverage fridge."
+          ]
+        }
+      ]
     }
   }
 ];

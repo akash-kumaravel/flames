@@ -75,7 +75,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             transition={{ duration: 1, delay: 0.2 }}
             className="font-sans text-lg md:text-xl text-neutral-300 max-w-2xl mt-6 leading-relaxed"
           >
-            Bio ethanol fireplaces, fire pits, outdoor kitchens, and built-in BBQs for indoor and outdoor living. Smokeless. Safe. Timeless.
+            Looking for the best fireplace in Dubai? Flames Fireplace offers premium bio ethanol fireplaces, 3D water vapor mist systems, custom fire pits, and outdoor kitchens. Smokeless. Safe. Timeless.
           </motion.p>
 
           <motion.div
