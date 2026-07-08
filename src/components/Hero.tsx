@@ -29,7 +29,7 @@ export default function Hero({ onNavigate }: HeroProps) {
   }, [activeSlideIndex, heroSlides]);
 
   return (
-    <div id="hero-landing-page" className="pb-20 px-6 md:px-12 bg-[#FAF9F6]">
+    <div id="hero-landing-page" className="pb-20 px-6 md:px-12 bg-[#0b0b0b]">
       {/* 1. Hero Content & Tagline Section */}
       <section className="relative min-h-screen overflow-hidden shadow-2xl border border-neutral-200/20 rounded-none w-screen max-w-none ml-[calc(50%-50vw)]">
         <div className="absolute inset-0 z-0">
@@ -52,7 +52,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100/80 text-orange-700 font-sans text-xs font-semibold uppercase tracking-wider mb-6"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-500/15 text-orange-300 font-sans text-xs font-semibold uppercase tracking-wider mb-6"
           >
             <Flame className="w-3.5 h-3.5 fill-orange-600 text-orange-600" />
             Flames Fireplace Dubai & UAE
@@ -73,7 +73,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="font-sans text-lg md:text-xl text-neutral-200 max-w-2xl mt-6 leading-relaxed"
+            className="font-sans text-lg md:text-xl text-neutral-300 max-w-2xl mt-6 leading-relaxed"
           >
             Bio ethanol fireplaces, fire pits, outdoor kitchens, and built-in BBQs for indoor and outdoor living. Smokeless. Safe. Timeless.
           </motion.p>
@@ -105,7 +105,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             <button
               id="hero-quote-btn"
               onClick={() => onNavigate('contact')}
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/90 hover:bg-neutral-50 text-neutral-800 font-sans text-sm font-semibold border border-neutral-300 shadow-xs transition-colors cursor-pointer"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/15 text-white font-sans text-sm font-semibold border border-white/15 shadow-xs transition-colors cursor-pointer"
             >
               Get a Free Quote
             </button>
@@ -195,14 +195,14 @@ export default function Hero({ onNavigate }: HeroProps) {
       {/* 3. Welcome / Intro Copy Block */}
       <section className="max-w-7xl mx-auto mt-20 mb-36 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
         <div className="lg:col-span-5">
-          <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-3">Redefine Ambience</span>
-          <h2 className="font-sans text-2xl md:text-4xl font-semibold text-neutral-900 tracking-tight leading-tight">
+          <span className="text-xs font-bold uppercase tracking-widest text-orange-400 block mb-3">Redefine Ambience</span>
+          <h2 className="font-sans text-2xl md:text-4xl font-semibold text-white tracking-tight leading-tight">
             An extraordinary living flame with zero emissions.
           </h2>
         </div>
-        <div className="lg:col-span-7 space-y-6 text-neutral-500 font-sans text-base leading-relaxed">
+        <div className="lg:col-span-7 space-y-6 text-neutral-400 font-sans text-base leading-relaxed">
           <p>
-            Welcome to <strong className="text-neutral-800">Flames Fireplace</strong> — your destination for next-generation architectural fire features in Dubai and the UAE. 
+            Welcome to <strong className="text-white">Flames Fireplace</strong> — your destination for next-generation architectural fire features in Dubai and the UAE. 
             Whether you are looking for elegant clean-burning Indoor Bio Ethanol Fireplaces, 
             or stunning custom-fitted Outdoor Fire Features, we formulate products engineered for sheer visual beauty, domestic safety, and physical permanence.
           </p>
@@ -213,12 +213,12 @@ export default function Hero({ onNavigate }: HeroProps) {
       </section>
 
       <section className="max-w-7xl mx-auto mb-24">
-        <div className="bg-white rounded-3xl border border-neutral-200/60 p-8 md:p-12 shadow-sm">
-          <span className="text-xs font-bold uppercase tracking-[0.24em] text-orange-700">A complete fireplace experience</span>
-          <h2 className="font-sans text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight mt-4">
+        <div className="bg-[#121212] rounded-3xl border border-neutral-800 p-8 md:p-12 shadow-sm">
+          <span className="text-xs font-bold uppercase tracking-[0.24em] text-orange-400">A complete fireplace experience</span>
+          <h2 className="font-sans text-2xl md:text-3xl font-semibold text-white tracking-tight mt-4">
             Elegant fireplace design, professional installation, and expert support for Dubai and the UAE.
           </h2>
-          <p className="font-sans text-sm md:text-base text-neutral-600 leading-relaxed mt-4 max-w-3xl">
+          <p className="font-sans text-sm md:text-base text-neutral-300 leading-relaxed mt-4 max-w-3xl">
             From concept to installation, Flames Fireplace brings together thoughtful design, certified safety, and careful craftsmanship for every project.
           </p>
         </div>
@@ -227,9 +227,9 @@ export default function Hero({ onNavigate }: HeroProps) {
       {/* NEW SECTION: OUR PROFESSIONAL OUTDOOR SERVICES & FIRE FEATURES */}
       <section className="max-w-7xl mx-auto mb-28">
         <div className="text-center mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Our Professional Services</span>
-          <h2 className="font-sans text-3xl font-semibold text-neutral-900 tracking-tight">Outdoor Fire Features &amp; Kitchens in Dubai, Abu Dhabi &amp; Sharjah</h2>
-          <p className="font-sans text-sm text-neutral-500 max-w-2xl mx-auto mt-3">
+          <span className="text-xs font-bold uppercase tracking-widest text-orange-400 block mb-2">Our Professional Services</span>
+          <h2 className="font-sans text-3xl font-semibold text-white tracking-tight">Outdoor Fire Features &amp; Kitchens in Dubai, Abu Dhabi &amp; Sharjah</h2>
+          <p className="font-sans text-sm text-neutral-400 max-w-2xl mx-auto mt-3">
             Transforming luxury villas, pool decks, and gardens with weather-resistant fire features, custom kitchens, and barbecue installations across Dubai, Abu Dhabi, Sharjah, and the wider UAE.
           </p>
         </div>
@@ -244,16 +244,16 @@ export default function Hero({ onNavigate }: HeroProps) {
       {/* NEW SECTION B: Architectural Installation Gallery Case Exhibition */}
       <section className="max-w-7xl mx-auto mb-28">
         <div className="text-center mb-16">
-          <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Design Inspiration</span>
-          <h2 className="font-sans text-3xl font-semibold text-neutral-900 tracking-tight">Luxury UAE Architectural Showcases</h2>
-          <p className="font-sans text-sm text-neutral-500 max-w-2xl mx-auto mt-3">
+          <span className="text-xs font-bold uppercase tracking-widest text-orange-400 block mb-2">Design Inspiration</span>
+          <h2 className="font-sans text-3xl font-semibold text-white tracking-tight">Luxury UAE Architectural Showcases</h2>
+          <p className="font-sans text-sm text-neutral-400 max-w-2xl mx-auto mt-3">
             Explore how interior designers and landscape architects integrate Flames Fireplace systems inside the UAE's most prestigious living communities.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {PORTFOLIO_ITEMS.slice(0, 3).map((item) => (
-            <div key={item.id} className="bg-white rounded-3xl overflow-hidden border border-neutral-200/50 shadow-2xs hover:shadow-lg transition duration-300 flex flex-col justify-between">
+            <div key={item.id} className="bg-[#121212] rounded-3xl overflow-hidden border border-neutral-800 shadow-2xs hover:shadow-lg transition duration-300 flex flex-col justify-between">
               <div>
                 <div className="h-52 overflow-hidden relative">
                   <img
@@ -267,18 +267,18 @@ export default function Hero({ onNavigate }: HeroProps) {
                   </div>
                 </div>
                 <div className="p-8 space-y-4">
-                  <h3 className="font-sans font-semibold text-neutral-900 text-lg line-clamp-2">{item.title}</h3>
-                  <p className="text-xs text-neutral-600 leading-relaxed font-sans line-clamp-3">
+                  <h3 className="font-sans font-semibold text-white text-lg line-clamp-2">{item.title}</h3>
+                  <p className="text-xs text-neutral-350 leading-relaxed font-sans line-clamp-3">
                     {item.description}
                   </p>
                 </div>
               </div>
               <div className="p-8 pt-0">
-                <div className="border-t border-neutral-100 pt-4 flex justify-between items-center text-[11px] font-mono text-neutral-600">
+                <div className="border-t border-neutral-800 pt-4 flex justify-between items-center text-[11px] font-mono text-neutral-450">
                   <span className="truncate max-w-[150px]">{item.specs[0] || 'Quality Craftsmanship'}</span>
                   <button
                     onClick={() => onNavigate('portfolio')}
-                    className="text-orange-700 font-bold hover:underline cursor-pointer flex items-center gap-1 shrink-0"
+                    className="text-orange-400 font-bold hover:underline cursor-pointer flex items-center gap-1 shrink-0"
                   >
                     View Project
                     <ArrowRight className="w-3 h-3" />
@@ -291,20 +291,20 @@ export default function Hero({ onNavigate }: HeroProps) {
       </section>
 
       {/* 5. Trust Bar / Why Us Segment */}
-      <section className="max-w-7xl mx-auto mb-24 bg-white border border-neutral-200/40 rounded-3xl p-8 md:p-14">
+      <section className="max-w-7xl mx-auto mb-24 bg-[#121212] border border-neutral-800 rounded-3xl p-8 md:p-14">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
           <div className="lg:col-span-4">
-            <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-3">Guaranteed High-Standards</span>
-            <h3 className="font-sans text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight leading-snug">
+            <span className="text-xs font-bold uppercase tracking-widest text-orange-400 block mb-3">Guaranteed High-Standards</span>
+            <h3 className="font-sans text-2xl md:text-3xl font-semibold text-white tracking-tight leading-snug">
               Fire features, certified UAE safety.
             </h3>
-            <p className="font-sans text-sm text-neutral-500 mt-4 leading-relaxed">
+            <p className="font-sans text-sm text-neutral-450 mt-4 leading-relaxed">
               We engineer our components with double-wall structural steels, high-precision safety valves, and robust wind-guards.
             </p>
             <button
               id="trust-cta-btn"
               onClick={() => onNavigate('about')}
-              className="mt-6 flex items-center gap-1.5 text-xs font-bold text-orange-700 hover:text-orange-800 hover:underline cursor-pointer"
+              className="mt-6 flex items-center gap-1.5 text-xs font-bold text-orange-400 hover:text-orange-500 hover:underline cursor-pointer"
             >
               Read our full story
               <ArrowRight className="w-3.5 h-3.5" />
@@ -314,12 +314,12 @@ export default function Hero({ onNavigate }: HeroProps) {
           <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
             {TRUST_BAR.map((trust, idx) => (
               <div key={idx} className="flex gap-4 items-start">
-                <div className="w-10 h-10 rounded-full bg-orange-50/80 border border-orange-100 flex items-center justify-center text-orange-500 shrink-0">
+                <div className="w-10 h-10 rounded-full bg-orange-500/10 border border-orange-950 flex items-center justify-center text-orange-400 shrink-0">
                   <ShieldCheck className="w-5 h-5 shrink-0" />
                 </div>
                 <div>
-                  <h4 className="font-sans text-sm font-semibold text-neutral-900">{trust.title}</h4>
-                  <p className="font-sans text-xs text-neutral-500 mt-1.5 leading-relaxed">{trust.desc}</p>
+                  <h4 className="font-sans text-sm font-semibold text-white">{trust.title}</h4>
+                  <p className="font-sans text-xs text-neutral-450 mt-1.5 leading-relaxed">{trust.desc}</p>
                 </div>
               </div>
             ))}

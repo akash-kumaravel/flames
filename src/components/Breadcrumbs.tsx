@@ -57,7 +57,7 @@ export default function Breadcrumbs({ steps, onNavigate, onSelectArticle }: Brea
               {isLast ? (
                 <span 
                   itemProp="name" 
-                  className="text-neutral-700 font-semibold truncate max-w-[150px] sm:max-w-xs md:max-w-md"
+                  className="text-neutral-200 font-semibold truncate max-w-[150px] sm:max-w-xs md:max-w-md"
                   aria-current="page"
                 >
                   {step.label}

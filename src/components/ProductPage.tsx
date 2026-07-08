@@ -33,20 +33,20 @@ export default function ProductPage({
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   return (
-    <div id={`product-${productId}`} className="bg-white text-neutral-900 selection:bg-orange-500 selection:text-white">
+    <div id={`product-${productId}`} className="bg-[#0b0b0b] text-neutral-100 selection:bg-orange-500 selection:text-white">
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(251,146,60,0.18),_transparent_40%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.14),_transparent_35%)] pointer-events-none" />
         <div className="relative">
           <div className="max-w-7xl mx-auto px-6 md:px-12 py-24 lg:py-32">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative z-10">
-                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-50 text-orange-700 text-xs font-semibold uppercase tracking-[0.3em] mb-6">
+                <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/10 text-orange-300 text-xs font-semibold uppercase tracking-[0.3em] mb-6">
                   {title}
                 </span>
-                <h1 className="font-sans font-bold text-4xl sm:text-5xl md:text-6xl tracking-tight leading-tight text-neutral-950 mb-6">
+                <h1 className="font-sans font-bold text-4xl sm:text-5xl md:text-6xl tracking-tight leading-tight text-white mb-6">
                   {tagline}
                 </h1>
-                <p className="text-lg md:text-xl text-neutral-700 leading-relaxed max-w-3xl mb-10">
+                <p className="text-lg md:text-xl text-neutral-300 leading-relaxed max-w-3xl mb-10">
                   {description}
                 </p>
 
@@ -56,7 +56,7 @@ export default function ProductPage({
                     href={`https://wa.me/971542112891?text=${encodeURIComponent(`Book now for ${title}`)}`}
                     target="_blank"
                     rel="noreferrer noopener"
-                    className="w-full sm:min-w-[220px] justify-center px-6 py-4 rounded-3xl bg-[#FAF9F6] hover:bg-emerald-50 border border-neutral-200 hover:border-emerald-300 transition-all duration-300 flex items-center gap-3 cursor-pointer text-base font-semibold text-neutral-800"
+                    className="w-full sm:min-w-[220px] justify-center px-6 py-4 rounded-3xl bg-[#151515] hover:bg-emerald-950/60 border border-neutral-700 hover:border-emerald-500/50 transition-all duration-300 flex items-center gap-3 cursor-pointer text-base font-semibold text-neutral-100"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552" className="w-5 h-5 shrink-0">
                       <defs>
@@ -90,18 +90,18 @@ export default function ProductPage({
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
         <div className="grid lg:grid-cols-[1.3fr_0.9fr] gap-16 items-start">
           <div className="space-y-10">
-            <div className="bg-neutral-100 rounded-[2rem] p-10 shadow-sm border border-neutral-200">
+            <div className="bg-[#121212] rounded-[2rem] p-10 shadow-sm border border-neutral-800">
               <span className="text-xs uppercase tracking-[0.3em] text-orange-600 font-semibold">Overview</span>
-              <h2 className="mt-4 text-3xl font-semibold text-neutral-950">A complete fireplace solution built for UAE homes</h2>
-              <p className="mt-6 text-neutral-700 leading-relaxed text-base md:text-lg">
+              <h2 className="mt-4 text-3xl font-semibold text-white">A complete fireplace solution built for UAE homes</h2>
+              <p className="mt-6 text-neutral-300 leading-relaxed text-base md:text-lg">
                 {detailedDescription}
               </p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="rounded-[1.5rem] border border-neutral-200 bg-white p-8 shadow-sm">
-                <h3 className="text-xl font-semibold text-neutral-900 mb-4">What makes it different</h3>
-                <ul className="space-y-4 text-neutral-700">
+              <div className="rounded-[1.5rem] border border-neutral-800 bg-[#121212] p-8 shadow-sm">
+                <h3 className="text-xl font-semibold text-white mb-4">What makes it different</h3>
+                <ul className="space-y-4 text-neutral-300">
                   {benefits.slice(0, 3).map((benefit, idx) => (
                     <li key={idx} className="flex gap-3">
                       <span className="mt-1 text-orange-600"><Check className="w-5 h-5" /></span>
@@ -111,9 +111,9 @@ export default function ProductPage({
                 </ul>
               </div>
 
-              <div className="rounded-[1.5rem] border border-neutral-200 bg-white p-8 shadow-sm">
-                <h3 className="text-xl font-semibold text-neutral-900 mb-4">How it works</h3>
-                <ol className="space-y-4 text-neutral-700 list-decimal list-inside">
+              <div className="rounded-[1.5rem] border border-neutral-800 bg-[#121212] p-8 shadow-sm">
+                <h3 className="text-xl font-semibold text-white mb-4">How it works</h3>
+                <ol className="space-y-4 text-neutral-300 list-decimal list-inside">
                   {howItWorks.map((step, idx) => (
                     <li key={idx}>{step}</li>
                   ))}
@@ -123,7 +123,7 @@ export default function ProductPage({
           </div>
 
           <aside className="space-y-6">
-            <div className="rounded-[2rem] border border-neutral-200 bg-neutral-950/95 p-8 text-white shadow-2xl shadow-orange-500/10">
+            <div className="rounded-[2rem] border border-neutral-800 bg-neutral-950/95 p-8 text-white shadow-2xl shadow-orange-500/10">
               <span className="text-xs uppercase tracking-[0.3em] text-orange-300 font-semibold">Need help choosing?</span>
               <h3 className="mt-4 text-2xl font-semibold">Talk to our UAE fireplace experts</h3>
               <p className="mt-4 text-neutral-300 leading-relaxed">
@@ -138,9 +138,9 @@ export default function ProductPage({
               </button>
             </div>
 
-            <div className="rounded-[2rem] border border-neutral-200 bg-white p-8 shadow-sm">
-              <h4 className="text-base font-semibold text-neutral-900 mb-4 uppercase tracking-[0.16em] text-orange-600">Quick links</h4>
-              <ul className="space-y-3 text-neutral-700">
+            <div className="rounded-[2rem] border border-neutral-800 bg-[#121212] p-8 shadow-sm">
+              <h4 className="text-base font-semibold text-white mb-4 uppercase tracking-[0.16em] text-orange-400">Quick links</h4>
+              <ul className="space-y-3 text-neutral-300">
                 <li><a href="/best-fireplace-dubai" className="hover:text-orange-600 transition-colors">Best Fireplace in Dubai</a></li>
                 <li><a href="/services" className="hover:text-orange-600 transition-colors">Explore all services</a></li>
                 <li><a href="/contact" className="hover:text-orange-600 transition-colors">Book a site visit</a></li>
@@ -150,21 +150,21 @@ export default function ProductPage({
         </div>
       </section>
 
-      <section className="bg-neutral-50 py-20">
+      <section className="bg-[#0f0f0f] py-20">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="text-center mb-14">
             <span className="text-xs uppercase tracking-[0.3em] text-orange-600 font-semibold">Key Benefits</span>
-            <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-neutral-950">What owners love most</h2>
+            <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-white">What owners love most</h2>
           </div>
 
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {benefits.map((benefit, idx) => (
-              <div key={idx} className="rounded-[1.75rem] border border-neutral-200 bg-white p-8 shadow-sm hover:shadow-md transition-shadow">
+              <div key={idx} className="rounded-[1.75rem] border border-neutral-800 bg-[#121212] p-8 shadow-sm hover:shadow-md transition-shadow">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-orange-50 text-orange-600">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl bg-orange-500/10 text-orange-400">
                     <Check className="w-5 h-5" />
                   </span>
-                <p className="font-semibold text-neutral-900">{benefit}</p>
+                  <p className="font-semibold text-white">{benefit}</p>
                 </div>
               </div>
             ))}
@@ -176,24 +176,24 @@ export default function ProductPage({
         <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
           <div className="text-center mb-14">
             <span className="text-xs uppercase tracking-[0.3em] text-orange-600 font-semibold">Questions answered</span>
-            <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-neutral-950">Frequently Asked Questions</h2>
+            <h2 className="mt-4 text-3xl md:text-4xl font-semibold text-white">Frequently Asked Questions</h2>
           </div>
 
           <div className="grid gap-4">
             {faqs.map((faq, idx) => (
-              <div key={idx} className="rounded-[1.5rem] border border-neutral-200 bg-white shadow-sm overflow-hidden">
+              <div key={idx} className="rounded-[1.5rem] border border-neutral-800 bg-[#121212] shadow-sm overflow-hidden">
                 <button
                   onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
-                  className="w-full px-8 py-6 flex items-center justify-between text-left gap-6 hover:bg-neutral-50 transition-colors"
+                  className="w-full px-8 py-6 flex items-center justify-between text-left gap-6 hover:bg-[#161616] transition-colors"
                 >
-                  <span className="font-medium text-neutral-900">{faq.question}</span>
+                  <span className="font-medium text-white">{faq.question}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-neutral-600 transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`}
+                    className={`w-5 h-5 text-neutral-500 transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`}
                   />
                 </button>
                 {expandedFaq === idx && (
-                  <div className="px-8 py-6 bg-neutral-50 border-t border-neutral-200">
-                    <p className="text-neutral-700 leading-relaxed">{faq.answer}</p>
+                  <div className="px-8 py-6 bg-[#0f0f0f] border-t border-neutral-800">
+                    <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
                   </div>
                 )}
               </div>
@@ -210,7 +210,7 @@ export default function ProductPage({
           </p>
           <button
             onClick={() => onNavigate('contact')}
-            className="inline-flex items-center gap-3 rounded-full bg-white px-8 py-4 text-sm font-semibold text-orange-600 shadow-xl shadow-orange-500/20 hover:bg-orange-50 transition-all"
+            className="inline-flex items-center gap-3 rounded-full bg-neutral-900 px-8 py-4 text-sm font-semibold text-white shadow-xl hover:bg-neutral-950 transition-all border border-white/10"
           >
             <MessageCircle className="w-5 h-5" />
             Schedule a Consultation

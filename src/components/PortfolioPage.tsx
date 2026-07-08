@@ -90,13 +90,13 @@ export default function PortfolioPage() {
   );
 
   return (
-    <div id="portfolio-page" className="min-h-screen bg-[#FAF9F6] text-neutral-800 pb-28 selection:bg-orange-500 selection:text-white">
+    <div id="portfolio-page" className="min-h-screen bg-[#0b0b0b] text-neutral-350 pb-28 selection:bg-orange-500 selection:text-white">
       {/* Header section */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 pt-8 pb-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-100/60 text-orange-700 font-sans text-xs font-semibold uppercase tracking-wider mb-5"
+          className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-500/10 text-orange-400 font-sans text-xs font-semibold uppercase tracking-wider mb-5"
         >
           <Compass className="w-3.5 h-3.5" />
           The Gallery of Fire &amp; Craft
@@ -106,7 +106,7 @@ export default function PortfolioPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="font-sans font-semibold text-3xl sm:text-4xl md:text-5xl text-neutral-900 tracking-tight leading-tight max-w-4xl mx-auto"
+          className="font-sans font-semibold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-tight max-w-4xl mx-auto"
         >
           Our Finished Works &amp; Installs
         </motion.h1>
@@ -115,7 +115,7 @@ export default function PortfolioPage() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="font-sans text-sm md:text-base text-neutral-500 max-w-2xl mx-auto mt-4 leading-relaxed font-light"
+          className="font-sans text-sm md:text-base text-neutral-400 max-w-2xl mx-auto mt-4 leading-relaxed font-light"
         >
           Discover a curated selection of our custom indoor fireplaces, flueless water vapor features, and custom fire tables across GCC developments.
         </motion.p>
@@ -124,14 +124,14 @@ export default function PortfolioPage() {
       {/* Filter Navigation */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-16">
         <div className="flex justify-center">
-          <div className="bg-neutral-100 p-1.5 rounded-2xl inline-flex flex-wrap justify-center items-center gap-1 border border-neutral-200/50">
+          <div className="bg-[#121212] p-1.5 rounded-2xl inline-flex flex-wrap justify-center items-center gap-1 border border-neutral-800">
             <button
               id="filter-all-btn"
               onClick={() => setFilter('all')}
               className={`px-5 py-2.5 rounded-xl font-sans text-xs font-medium transition-all duration-300 cursor-pointer ${
                 filter === 'all'
-                  ? 'bg-neutral-900 text-white shadow-xs'
-                  : 'text-neutral-500 hover:text-neutral-800 hover:bg-neutral-200/50'
+                  ? 'bg-orange-600 text-white shadow-xs'
+                  : 'text-neutral-400 hover:text-white hover:bg-neutral-800/40'
               }`}
             >
               Show All Works ({PORTFOLIO_ITEMS.length})
@@ -141,8 +141,8 @@ export default function PortfolioPage() {
               onClick={() => setFilter('indoor')}
               className={`px-5 py-2.5 rounded-xl font-sans text-xs font-medium transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${
                 filter === 'indoor'
-                  ? 'bg-orange-500 text-white shadow-xs'
-                  : 'text-neutral-500 hover:text-neutral-800 hover:bg-neutral-200/50'
+                  ? 'bg-orange-600 text-white shadow-xs'
+                  : 'text-neutral-400 hover:text-white hover:bg-neutral-800/40'
               }`}
             >
               <Droplets className="w-3.5 h-3.5" />
@@ -153,8 +153,8 @@ export default function PortfolioPage() {
               onClick={() => setFilter('fire-pit')}
               className={`px-5 py-2.5 rounded-xl font-sans text-xs font-medium transition-all duration-300 cursor-pointer flex items-center gap-1.5 ${
                 filter === 'fire-pit'
-                  ? 'bg-orange-500 text-white shadow-xs'
-                  : 'text-neutral-500 hover:text-neutral-800 hover:bg-neutral-200/50'
+                  ? 'bg-orange-600 text-white shadow-xs'
+                  : 'text-neutral-400 hover:text-white hover:bg-neutral-800/40'
               }`}
             >
               <Compass className="w-3.5 h-3.5" />
@@ -190,10 +190,10 @@ export default function PortfolioPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                className="bg-white rounded-3xl overflow-hidden border border-neutral-200/60 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+                className="bg-[#121212] rounded-3xl overflow-hidden border border-neutral-800 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
                 onClick={() => setSelectedProject(item)}
               >
-                <div className="relative h-64 overflow-hidden bg-neutral-900">
+                <div className="relative h-64 overflow-hidden bg-neutral-950">
                   <img
                     src={item.image}
                     alt={item.title}
@@ -215,16 +215,16 @@ export default function PortfolioPage() {
 
                 <div className="p-6 space-y-4 flex-1 flex flex-col justify-between">
                   <div className="space-y-2">
-                    <h3 className="font-sans font-semibold text-neutral-900 text-base leading-snug group-hover:text-orange-500 transition-colors">
+                    <h3 className="font-sans font-semibold text-white text-base leading-snug group-hover:text-orange-400 transition-colors">
                       {item.title}
                     </h3>
-                    <p className="font-sans text-xs text-neutral-500 line-clamp-2 leading-relaxed font-light">
+                    <p className="font-sans text-xs text-neutral-400 line-clamp-2 leading-relaxed font-light">
                       {item.description}
                     </p>
                   </div>
 
-                  <div className="pt-4 border-t border-neutral-100 flex items-center justify-between text-neutral-800 text-xs font-semibold font-sans">
-                    <span className="text-orange-700 group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
+                  <div className="pt-4 border-t border-neutral-800 flex items-center justify-between text-neutral-300 text-xs font-semibold font-sans">
+                    <span className="text-orange-400 group-hover:translate-x-0.5 transition-transform flex items-center gap-1">
                       View Project Details
                       <ArrowRight className="w-3.5 h-3.5" />
                     </span>
@@ -236,7 +236,7 @@ export default function PortfolioPage() {
         </motion.div>
 
         {filteredItems.length === 0 && (
-          <div className="text-center py-20 bg-white rounded-3xl border border-neutral-250/50">
+          <div className="text-center py-20 bg-[#121212] rounded-3xl border border-neutral-800">
             <Compass className="w-10 h-10 text-neutral-300 mx-auto mb-3" />
             <p className="font-sans text-sm text-neutral-500">No projects found in this selection. Explore other work disciplines.</p>
           </div>
@@ -260,7 +260,7 @@ export default function PortfolioPage() {
               animate={{ scale: 1, y: 0, opacity: 1 }}
               exit={{ scale: 0.95, y: 20, opacity: 0 }}
               transition={{ type: "spring", damping: 25 }}
-              className="bg-white rounded-3xl overflow-hidden max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative"
+              className="bg-[#121212] border border-neutral-800 rounded-3xl overflow-hidden max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl relative"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}
@@ -293,12 +293,12 @@ export default function PortfolioPage() {
                 <div className="md:col-span-6 p-8 md:p-10 flex flex-col justify-between space-y-8">
                   <div className="space-y-6">
                     <div>
-                      <h2 className="font-sans font-semibold text-neutral-900 text-xl md:text-2xl tracking-tight leading-tight">
+                      <h2 className="font-sans font-semibold text-white text-xl md:text-2xl tracking-tight leading-tight">
                         {selectedProject.title}
                       </h2>
                     </div>
 
-                    <p className="font-sans text-xs md:text-sm text-neutral-500 leading-relaxed font-light">
+                    <p className="font-sans text-xs md:text-sm text-neutral-350 leading-relaxed font-light">
                       {selectedProject.description}
                     </p>
 
@@ -309,7 +309,7 @@ export default function PortfolioPage() {
                       </h4>
                       <ul className="space-y-2.5">
                         {selectedProject.specs.map((spec, sIdx) => (
-                          <li key={sIdx} className="flex gap-2 items-start font-sans text-xs text-neutral-700 leading-snug">
+                          <li key={sIdx} className="flex gap-2 items-start font-sans text-xs text-neutral-350 leading-snug">
                             <CheckCircle2 className="w-4 h-4 text-orange-500 shrink-0 mt-0.5" />
                             <span>{spec}</span>
                           </li>
@@ -319,7 +319,7 @@ export default function PortfolioPage() {
                   </div>
 
                   {/* WhatsApp Action */}
-                  <div className="pt-6 border-t border-neutral-100 flex flex-col sm:flex-row gap-3">
+                  <div className="pt-6 border-t border-neutral-800 flex flex-col sm:flex-row gap-3">
                     <a
                       id={`wa-cta-portfolio-modal-${selectedProject.id}`}
                       href={`https://wa.me/971542112891?text=${encodeURIComponent(selectedProject.waMessage)}`}
@@ -333,7 +333,7 @@ export default function PortfolioPage() {
                     <button
                       id="modal-secondary-close"
                       onClick={() => setSelectedProject(null)}
-                      className="px-5 py-3.5 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-neutral-700 font-sans text-xs font-semibold transition"
+                      className="px-5 py-3.5 rounded-xl bg-neutral-900 hover:bg-neutral-950 text-white font-sans text-xs font-semibold transition border border-white/10"
                     >
                       Close Gallery
                     </button>

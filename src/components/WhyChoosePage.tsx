@@ -76,18 +76,18 @@ export default function WhyChoosePage() {
   ];
 
   return (
-    <div id="section-why-choose" className="min-h-screen bg-[#FAF9F6] text-neutral-800 pb-28 selection:bg-orange-500 selection:text-white">
+    <div id="section-why-choose" className="min-h-screen bg-[#0b0b0b] text-neutral-350 pb-28 selection:bg-orange-500 selection:text-white">
       <div className="max-w-7xl mx-auto pt-8 px-6 md:px-12">
         
         {/* Header Block Description */}
         <section className="text-center max-w-4xl mx-auto mb-16">
-          <span className="px-3.5 py-1.5 rounded-full bg-orange-100 text-orange-700 text-xs font-semibold uppercase tracking-widest font-sans inline-block mb-4">
+          <span className="px-3.5 py-1.5 rounded-full bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-widest font-sans inline-block mb-4">
             Engineering Excellence
           </span>
-          <h1 className="font-sans font-semibold text-3xl sm:text-4xl md:text-5xl text-neutral-900 tracking-tight leading-none mb-6">
+          <h1 className="font-sans font-semibold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-none mb-6">
             The Sustainable Alternative to Traditional Firepoints
           </h1>
-          <p className="font-sans text-base sm:text-lg text-neutral-500 leading-relaxed">
+          <p className="font-sans text-base sm:text-lg text-neutral-400 leading-relaxed">
             By merging high-specification casing designs with plant-derived clean fuel, we completely bypass the soot, ash, permit paperwork, and safety hazards of older wood or gas line systems.
           </p>
         </section>
@@ -97,39 +97,39 @@ export default function WhyChoosePage() {
         {/* Bento highlights of material excellence */}
         <section className="mb-12">
           <div className="text-center mb-16">
-            <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Quality Standards</span>
-            <h2 className="font-sans text-2xl sm:text-3xl font-semibold text-neutral-900 tracking-tight leading-snug">
+            <span className="text-xs font-bold uppercase tracking-widest text-orange-400 block mb-2">Quality Standards</span>
+            <h2 className="font-sans text-2xl sm:text-3xl font-semibold text-white tracking-tight leading-snug">
               Uncompromising Physical Security Specs
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white border border-neutral-200/50 p-8 rounded-3xl space-y-4 shadow-2xs hover:shadow-md transition">
-              <div className="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center text-orange-600">
+            <div className="bg-[#121212] border border-neutral-800 p-8 rounded-3xl space-y-4 shadow-2xs hover:shadow-md transition">
+              <div className="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center text-orange-400">
                 <ShieldCheck className="w-5 h-5 shrink-0" />
               </div>
-              <h3 className="font-sans font-semibold text-neutral-900 text-base">Grade 316 Marine Stainless Steel</h3>
-              <p className="text-xs font-sans text-neutral-500 leading-relaxed">
+              <h3 className="font-sans font-semibold text-white text-base">Grade 316 Marine Stainless Steel</h3>
+              <p className="text-xs font-sans text-neutral-400 leading-relaxed">
                 All burner bays and outdoor casings utilize double-wall marine-grade steel resistant to high atmospheric humidity, garden water spray, and fuel thermal stress.
               </p>
             </div>
 
-            <div className="bg-white border border-neutral-200/50 p-8 rounded-3xl space-y-4 shadow-2xs hover:shadow-md transition">
-              <div className="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center text-orange-600">
+            <div className="bg-[#121212] border border-neutral-800 p-8 rounded-3xl space-y-4 shadow-2xs hover:shadow-md transition">
+              <div className="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center text-orange-400">
                 <Star className="w-5 h-5 shrink-0" />
               </div>
-              <h3 className="font-sans font-semibold text-neutral-900 text-base">Adjustable Safety Slides</h3>
-              <p className="text-xs font-sans text-neutral-500 leading-relaxed">
+              <h3 className="font-sans font-semibold text-white text-base">Adjustable Safety Slides</h3>
+              <p className="text-xs font-sans text-neutral-400 leading-relaxed">
                 Manually control physical flame length and thermal intensity easily with quick-slide structural dampers, ensuring absolute control over fuel consumption and local room ambient heating.
               </p>
             </div>
 
-            <div className="bg-white border border-neutral-200/50 p-8 rounded-3xl space-y-4 shadow-2xs hover:shadow-md transition">
-              <div className="w-10 h-10 bg-orange-50 rounded-full flex items-center justify-center text-orange-600">
+            <div className="bg-[#121212] border border-neutral-800 p-8 rounded-3xl space-y-4 shadow-2xs hover:shadow-md transition">
+              <div className="w-10 h-10 bg-orange-500/10 rounded-full flex items-center justify-center text-orange-400">
                 <Star className="w-5 h-5 shrink-0" />
               </div>
-              <h3 className="font-sans font-semibold text-neutral-900 text-base">CE, UL, and AHD Certifications</h3>
-              <p className="text-xs font-sans text-neutral-500 leading-relaxed">
+              <h3 className="font-sans font-semibold text-white text-base">CE, UL, and AHD Certifications</h3>
+              <p className="text-xs font-sans text-neutral-400 leading-relaxed">
                 Our technology adheres to globally recognized testing compliance structures guaranteeing safety triggers that shut down system feeds automatically in case of temperature surges or tilt.
               </p>
             </div>
@@ -137,16 +137,16 @@ export default function WhyChoosePage() {
         </section>
         
         {/* Comparison Matrix */}
-        <section className="mb-12 bg-white p-8 rounded-3xl border border-neutral-200/50">
+        <section className="mb-12 bg-[#121212] p-8 rounded-3xl border border-neutral-800">
           <div className="text-center mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Direct Comparison</span>
-            <h3 className="font-sans text-xl font-semibold text-neutral-900">Ethanol vs Traditional Firepoints</h3>
+            <span className="text-xs font-bold uppercase tracking-widest text-orange-400 block mb-2">Direct Comparison</span>
+            <h3 className="font-sans text-xl font-semibold text-white">Ethanol vs Traditional Firepoints</h3>
           </div>
 
           <div className="overflow-x-auto">
             <table className="w-full text-left table-auto">
               <thead>
-                <tr className="text-xs text-neutral-500 uppercase border-b border-neutral-100">
+                <tr className="text-xs text-neutral-400 uppercase border-b border-neutral-800">
                   <th className="py-3 pl-3">Metric</th>
                   <th className="py-3">Ethanol</th>
                   <th className="py-3">Traditional</th>
@@ -154,10 +154,10 @@ export default function WhyChoosePage() {
               </thead>
               <tbody>
                 {comparisonData.map((m, idx) => (
-                  <tr key={idx} className="align-top border-b border-neutral-100">
-                    <td className="py-4 pl-3 text-sm font-semibold text-neutral-800">{m.label}</td>
-                    <td className="py-4 text-sm text-neutral-600">{m.ethanol}</td>
-                    <td className="py-4 text-sm text-neutral-600">{m.traditional}</td>
+                  <tr key={idx} className="align-top border-b border-neutral-800">
+                    <td className="py-4 pl-3 text-sm font-semibold text-white">{m.label}</td>
+                    <td className="py-4 text-sm text-neutral-350">{m.ethanol}</td>
+                    <td className="py-4 text-sm text-neutral-350">{m.traditional}</td>
                   </tr>
                 ))}
               </tbody>
@@ -167,54 +167,54 @@ export default function WhyChoosePage() {
 
         {/* Room Advisor removed per request */}
 
-        <section className="mb-16 bg-white rounded-3xl border border-neutral-200/50 p-8 md:p-10">
+        <section className="mb-16 bg-[#121212] rounded-3xl border border-neutral-800 p-8 md:p-10">
           <div className="max-w-3xl">
-            <span className="text-xs font-bold uppercase tracking-[0.24em] text-orange-700">Complete project support</span>
-            <h3 className="font-sans text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight mt-4">From design consultation to installation handover, every step is supported by our technical team.</h3>
-            <p className="font-sans text-sm text-neutral-600 leading-relaxed mt-4">We help clients choose the right burner format, fuel type, finish, placement, and safety plan for modern homes, hospitality projects, and outdoor living spaces.</p>
+            <span className="text-xs font-bold uppercase tracking-[0.24em] text-orange-400">Complete project support</span>
+            <h3 className="font-sans text-2xl md:text-3xl font-semibold text-white tracking-tight mt-4">From design consultation to installation handover, every step is supported by our technical team.</h3>
+            <p className="font-sans text-sm text-neutral-300 leading-relaxed mt-4">We help clients choose the right burner format, fuel type, finish, placement, and safety plan for modern homes, hospitality projects, and outdoor living spaces.</p>
           </div>
         </section>
 
         {/* Testimonials */}
         <section className="mb-16">
           <div className="text-center mb-8">
-            <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Trusted By</span>
-            <h3 className="font-sans text-2xl font-semibold text-neutral-900">What Our Clients Say</h3>
+            <span className="text-xs font-bold uppercase tracking-widest text-orange-400 block mb-2">Trusted By</span>
+            <h3 className="font-sans text-2xl font-semibold text-white">What Our Clients Say</h3>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-3xl border border-neutral-200/50">
+            <div className="bg-[#121212] p-6 rounded-3xl border border-neutral-800">
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-orange-500">
+                <div className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400">
                   <HeartHandshake className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-semibold text-sm">Laila — Private Client</div>
-                  <p className="text-xs text-neutral-500">"Flawless install, warm ambience, and zero maintenance. Perfect for our family lounge."</p>
+                  <div className="font-semibold text-sm text-white">Laila — Private Client</div>
+                  <p className="text-xs text-neutral-450">"Flawless install, warm ambience, and zero maintenance. Perfect for our family lounge."</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-3xl border border-neutral-200/50">
+            <div className="bg-[#121212] p-6 rounded-3xl border border-neutral-800">
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-orange-500">
+                <div className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400">
                   <Star className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-semibold text-sm">Hassan — Architect</div>
-                  <p className="text-xs text-neutral-500">"The design freedom saved our concept. Their technical team delivered precise CAD and install guidance."</p>
+                  <div className="font-semibold text-sm text-white">Hassan — Architect</div>
+                  <p className="text-xs text-neutral-450">"The design freedom saved our concept. Their technical team delivered precise CAD and install guidance."</p>
                 </div>
               </div>
             </div>
 
-            <div className="bg-white p-6 rounded-3xl border border-neutral-200/50">
+            <div className="bg-[#121212] p-6 rounded-3xl border border-neutral-800">
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-orange-500">
+                <div className="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center text-orange-400">
                   <Check className="w-5 h-5" />
                 </div>
                 <div>
-                  <div className="font-semibold text-sm">Mariam — Developer</div>
-                  <p className="text-xs text-neutral-500">"Reliable delivery and excellent aftercare. We repeated the layout across three villas."</p>
+                  <div className="font-semibold text-sm text-white">Mariam — Developer</div>
+                  <p className="text-xs text-neutral-450">"Reliable delivery and excellent aftercare. We repeated the layout across three villas."</p>
                 </div>
               </div>
             </div>

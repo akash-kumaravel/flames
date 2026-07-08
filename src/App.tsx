@@ -498,7 +498,7 @@ export default function App() {
   });
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] text-neutral-800 selection:bg-orange-500/10 selection:text-orange-600 flex flex-col justify-between overflow-x-hidden antialiased">
+    <div className="min-h-screen bg-[#0b0b0b] text-neutral-100 selection:bg-orange-500/20 selection:text-orange-300 flex flex-col justify-between overflow-x-hidden antialiased">
       
       {/* 1. Global Navigation header bar */}
       <Header activeSection={activeSection} onNavigate={handleNavigation} />
@@ -531,15 +531,15 @@ export default function App() {
                 <div className="py-20 px-6 md:px-12">
                   <div className="max-w-3xl mx-auto space-y-10">
                     <div className="text-center">
-                      <span className="text-xs font-bold uppercase tracking-widest text-orange-700 block mb-2">Quick Answers</span>
-                      <h3 className="font-sans text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight">Featured Q&amp;A</h3>
+                      <span className="text-xs font-bold uppercase tracking-widest text-orange-400 block mb-2">Quick Answers</span>
+                      <h3 className="font-sans text-2xl md:text-3xl font-semibold text-white tracking-tight">Featured Q&amp;A</h3>
                     </div>
                     
                     <div className="space-y-6">
                       {COMMON_FAQS.slice(0, 4).map((faq, index) => (
-                        <div key={`${faq.question}-${index}`} className="bg-white p-6 rounded-2xl border border-neutral-200/40 shadow-xs">
-                          <strong className="text-sm font-bold text-neutral-900 font-sans block mb-2">Q: {faq.question}</strong>
-                          <p className="text-sm text-neutral-500 leading-relaxed font-sans">
+                        <div key={`${faq.question}-${index}`} className="bg-[#121212] p-6 rounded-2xl border border-neutral-800 shadow-xs">
+                          <strong className="text-sm font-bold text-white font-sans block mb-2">Q: {faq.question}</strong>
+                          <p className="text-sm text-neutral-350 leading-relaxed font-sans">
                             {faq.answer}
                           </p>
                         </div>
@@ -581,13 +581,13 @@ export default function App() {
                 <div className="max-w-7xl mx-auto">
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
                     <div className="lg:col-span-6 space-y-6">
-                      <span className="px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-xs font-semibold uppercase tracking-widest font-sans inline-block">
+                      <span className="px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-widest font-sans inline-block">
                         Who We Are
                       </span>
-                      <h1 className="font-sans font-semibold text-3xl md:text-5xl text-neutral-900 tracking-tight leading-none">
+                      <h1 className="font-sans font-semibold text-3xl md:text-5xl text-white tracking-tight leading-none">
                         Our Story
                       </h1>
-                      <div className="space-y-4 font-sans text-neutral-500 leading-relaxed text-base">
+                      <div className="space-y-4 font-sans text-neutral-400 leading-relaxed text-base">
                         <p>{WHY_CHOOSE_EXTRA.paragraphs[0]}</p>
                         <p>{WHY_CHOOSE_EXTRA.paragraphs[1]}</p>
                         <p>{WHY_CHOOSE_EXTRA.paragraphs[2]}</p>
@@ -607,32 +607,32 @@ export default function App() {
                   </div>
 
                   {/* Core Corporate Values */}
-                  <div className="bg-white rounded-3xl p-8 md:p-14 border border-neutral-200/50 mb-20">
+                  <div className="bg-[#121212] rounded-3xl p-8 md:p-14 border border-neutral-800 mb-20">
                     <div className="text-center mb-12">
-                      <span className="text-xs font-bold uppercase tracking-widest text-orange-500 block mb-2">Our Mission</span>
-                      <h2 className="font-sans text-2xl md:text-3xl font-semibold text-neutral-900 tracking-tight leading-snug max-w-2xl mx-auto">
+                      <span className="text-xs font-bold uppercase tracking-widest text-orange-450 block mb-2">Our Mission</span>
+                      <h2 className="font-sans text-2xl md:text-3xl font-semibold text-white tracking-tight leading-snug max-w-2xl mx-auto">
                         To make extraordinary fire experiences accessible to everyone—indoors and outdoors—through innovative products, honest pricing, and stellar personal aftercare.
                       </h2>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-neutral-100">
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-neutral-800">
                       <div className="space-y-3">
-                        <div className="w-9 h-9 rounded-full bg-orange-50 text-orange-500 flex items-center justify-center font-bold text-sm">1</div>
-                        <h4 className="font-sans font-semibold text-neutral-900 text-sm">Quality First</h4>
+                        <div className="w-9 h-9 rounded-full bg-orange-500/10 text-orange-450 flex items-center justify-center font-bold text-sm">1</div>
+                        <h4 className="font-sans font-semibold text-white text-sm">Quality First</h4>
                         <p className="text-xs text-neutral-400 font-sans leading-relaxed">
                           We only import and manufacture fireplace structures that fulfill our strict specifications for material safety and physical longevity.
                         </p>
                       </div>
                       <div className="space-y-3">
-                        <div className="w-9 h-9 rounded-full bg-orange-50 text-orange-500 flex items-center justify-center font-bold text-sm">2</div>
-                        <h4 className="font-sans font-semibold text-neutral-900 text-sm">Client Transparency</h4>
+                        <div className="w-9 h-9 rounded-full bg-orange-500/10 text-orange-450 flex items-center justify-center font-bold text-sm">2</div>
+                        <h4 className="font-sans font-semibold text-white text-sm">Client Transparency</h4>
                         <p className="text-xs text-neutral-400 font-sans leading-relaxed">
                           Honest dimensional constraints guidance, fair pricing structures, and zero hidden local delivery surcharges.
                         </p>
                       </div>
                       <div className="space-y-3">
-                        <div className="w-9 h-9 rounded-full bg-orange-50 text-orange-500 flex items-center justify-center font-bold text-sm">3</div>
-                        <h4 className="font-sans font-semibold text-neutral-900 text-sm">Aesthetic Innovation</h4>
+                        <div className="w-9 h-9 rounded-full bg-orange-500/10 text-orange-450 flex items-center justify-center font-bold text-sm">3</div>
+                        <h4 className="font-sans font-semibold text-white text-sm">Aesthetic Innovation</h4>
                         <p className="text-xs text-neutral-400 font-sans leading-relaxed">
                           Consistently exploring water atomizers and biofuel safety sensors to keep bringing our clients the highest tier flame models on the market.
                         </p>
@@ -641,10 +641,10 @@ export default function App() {
                   </div>
 
                   {/* Commitment banner */}
-                  <div className="bg-[#FAF9F6] p-8 md:p-12 rounded-3xl border border-neutral-200 flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="bg-[#121212] p-8 md:p-12 rounded-3xl border border-neutral-800 flex flex-col md:flex-row items-center justify-between gap-6">
                     <div className="max-w-2xl">
-                      <h3 className="font-sans text-xl font-semibold text-neutral-900">Our Commitment to You</h3>
-                      <p className="text-xs text-neutral-500 mt-2 leading-relaxed">
+                      <h3 className="font-sans text-xl font-semibold text-white">Our Commitment to You</h3>
+                      <p className="text-xs text-neutral-400 mt-2 leading-relaxed">
                         We are not just a fireplace supplier—we are your long-term partner in shaping spaces. From your first enquiry to years after your purchase, our team is directly available for casing diagrams, remodeling consultations, or clean-out refills.
                       </p>
                     </div>
@@ -678,22 +678,22 @@ export default function App() {
 
             {/* ──── ROUTE: GENERAL FAQ PAGE ──── */}
             {activeSection === 'faq' && (
-              <div id="section-faq" className="min-h-screen bg-[#FAF9F6] text-neutral-800 pb-28 selection:bg-orange-500 selection:text-white">
+              <div id="section-faq" className="min-h-screen bg-[#0b0b0b] text-neutral-350 pb-28 selection:bg-orange-500 selection:text-white">
                 <div className="max-w-4xl mx-auto pt-8 px-6 md:px-12">
                   <div className="text-center mb-12">
-                    <span className="px-3 py-1 rounded-full bg-orange-100 text-orange-700 text-xs font-semibold uppercase tracking-widest font-sans inline-block">
+                    <span className="px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-widest font-sans inline-block">
                       Common Questions
                     </span>
-                    <h1 className="font-sans font-semibold text-3xl md:text-5xl text-neutral-900 tracking-tight mt-4 mb-3">
+                    <h1 className="font-sans font-semibold text-3xl md:text-5xl text-white tracking-tight mt-4 mb-3">
                       Fireplace Buyer Guide Desk
                     </h1>
-                    <p className="font-sans text-sm text-neutral-500 leading-relaxed max-w-2xl mx-auto">
+                    <p className="font-sans text-sm text-neutral-400 leading-relaxed max-w-2xl mx-auto">
                       Review direct answers to practical queries regarding safety rules, bio-ethanol liquid pure fuels, power draws, and custom architectural frame sizing.
                     </p>
                   </div>
 
                   {/* Search and Category Toggle controls */}
-                  <div className="bg-[#FAF9F6] p-4 rounded-3xl border border-neutral-200/60 mb-12 flex flex-col md:flex-row items-center justify-between gap-4">
+                  <div className="bg-[#121212] p-4 rounded-3xl border border-neutral-800 mb-12 flex flex-col md:flex-row items-center justify-between gap-4">
                     
                     {/* Live search input */}
                     <div className="relative w-full md:w-80">
@@ -704,7 +704,7 @@ export default function App() {
                         placeholder="Search questions or terms..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full bg-white pl-10 pr-4 py-3 rounded-2xl border border-neutral-200 text-xs font-sans focus:outline-none focus:border-orange-500"
+                        className="w-full bg-[#161616] pl-10 pr-4 py-3 rounded-2xl border border-neutral-800 text-xs font-sans focus:outline-none focus:border-orange-500 text-white"
                       />
                     </div>
 
@@ -717,8 +717,8 @@ export default function App() {
                           onClick={() => setFaqCategory(cat)}
                           className={`px-4 py-2 rounded-xl text-[10px] font-semibold uppercase tracking-wider font-sans cursor-pointer transition-all ${
                             faqCategory === cat
-                              ? 'bg-neutral-900 text-white shadow-sm'
-                              : 'bg-white hover:bg-neutral-100 text-neutral-500 border border-neutral-200'
+                              ? 'bg-orange-600 text-white shadow-sm'
+                              : 'bg-[#161616] hover:bg-neutral-800 hover:text-white text-neutral-400 border border-neutral-800'
                           }`}
                         >
                           {cat}
@@ -740,13 +740,13 @@ export default function App() {
                       ))}
                     </div>
                   ) : (
-                    <div className="text-center py-12 text-neutral-400 text-sm font-sans italic p-8 bg-neutral-50 rounded-xl">
+                    <div className="text-center py-12 text-neutral-450 text-sm font-sans italic p-8 bg-[#121212] rounded-xl border border-neutral-800">
                       No matching questions found around &ldquo;{searchQuery}&rdquo;. Try another generic phrase.
                     </div>
                   )}
 
                   {/* Standards disclosure section */}
-                  <div className="mt-12 p-5 rounded-2xl bg-orange-50/20 border border-orange-100/55 text-[11px] text-neutral-550 font-sans leading-relaxed flex gap-3">
+                  <div className="mt-12 p-5 rounded-2xl bg-orange-950/20 border border-orange-900/40 text-[11px] text-neutral-450 font-sans leading-relaxed flex gap-3">
                     <Info className="w-5 h-5 text-orange-500 shrink-0" />
                     <p>
                       <strong>Certification &amp; Compliance Statement:</strong> Our fireplace cassettes and bio-ethanol burners are manufactured in compliance with strict international CE, UL, and AHD safety standards, ensuring optimal security and eco-friendly operations for luxury residential and commercial installations across the UAE.
@@ -875,21 +875,21 @@ function FAQAccordionItem({ idx, faq, defaultOpen }: FAQAccordionItemProps) {
 
   return (
     <div
-      className="bg-neutral-50/50 rounded-2xl border border-neutral-200/50 overflow-hidden"
+      className="bg-[#121212]/50 rounded-2xl border border-neutral-800 overflow-hidden"
     >
       <button
         id={`general-faq-toggle-${idx}`}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full text-left p-6 flex justify-between items-center font-sans font-semibold text-neutral-800 text-sm md:text-base hover:text-orange-500 transition-colors cursor-pointer"
+        className="w-full text-left p-6 flex justify-between items-center font-sans font-semibold text-white text-sm md:text-base hover:text-orange-400 transition-colors cursor-pointer"
       >
         <span>{faq.question}</span>
-        <div className="w-5 h-5 rounded-full bg-white flex items-center justify-center border border-neutral-200 text-neutral-400 transform transition-transform">
+        <div className="w-5 h-5 rounded-full bg-[#161616] flex items-center justify-center border border-neutral-850 text-neutral-450 transform transition-transform">
           <span className="text-xs">{isOpen ? '−' : '+'}</span>
         </div>
       </button>
 
       {isOpen && (
-        <div className="p-6 pt-0 border-t border-neutral-200/30 max-w-none prose font-sans text-xs md:text-sm text-neutral-500 leading-relaxed">
+        <div className="p-6 pt-0 border-t border-neutral-800 max-w-none prose font-sans text-xs md:text-sm text-neutral-350 leading-relaxed">
           {faq.answer}
         </div>
       )}

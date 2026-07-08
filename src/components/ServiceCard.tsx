@@ -16,9 +16,9 @@ export default function ServiceCard({ service, onNavigate }: ServiceCardProps) {
   return (
     <div 
       onClick={handleCardClick}
-      className="bg-white rounded-3xl border border-neutral-200/50 overflow-hidden hover:border-orange-500/25 hover:shadow-xl hover:shadow-orange-500/[0.02] transition-all duration-300 flex flex-col justify-between group h-full cursor-pointer"
+      className="bg-[#121212] rounded-3xl border border-neutral-800 overflow-hidden hover:border-orange-500/40 hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 flex flex-col justify-between group h-full cursor-pointer"
     >
-      <div className="relative h-52 w-full overflow-hidden bg-neutral-100">
+      <div className="relative h-52 w-full overflow-hidden bg-neutral-900">
         <img
           src={service.image}
           alt={service.title}
@@ -27,7 +27,7 @@ export default function ServiceCard({ service, onNavigate }: ServiceCardProps) {
           referrerPolicy="no-referrer"
           className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-103"
         />
-        <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md border border-neutral-200/40 px-3 py-1 rounded-full text-[9px] font-bold text-neutral-800 tracking-wider uppercase font-mono">
+        <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-md border border-neutral-700/80 px-3 py-1 rounded-full text-[9px] font-bold text-neutral-200 tracking-wider uppercase font-mono">
           {service.category}
         </div>
       </div>
@@ -35,30 +35,30 @@ export default function ServiceCard({ service, onNavigate }: ServiceCardProps) {
       <div className="p-6 md:p-8 flex-1 flex flex-col justify-between space-y-6">
         <div className="space-y-3">
           <div className="space-y-1">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-orange-900 font-mono">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-orange-400 font-mono">
               {service.badge}
             </span>
-            <h3 className="font-sans text-lg font-semibold text-neutral-900 tracking-tight leading-snug group-hover:text-orange-600 transition-colors">
+            <h3 className="font-sans text-lg font-semibold text-white tracking-tight leading-snug group-hover:text-orange-400 transition-colors">
               {service.title}
             </h3>
-            <p className="font-sans text-[11px] font-medium text-neutral-700 italic">
+            <p className="font-sans text-[11px] font-medium text-neutral-400 italic">
               {service.subtitle}
             </p>
           </div>
 
-          <p className="font-sans text-xs text-neutral-700 leading-relaxed font-light">
+          <p className="font-sans text-xs text-neutral-400 leading-relaxed font-light">
             {service.description}
           </p>
         </div>
 
-        <div className="pt-4 border-t border-neutral-100 flex justify-center">
+        <div className="pt-4 border-t border-neutral-800 flex justify-center">
           <a
             id={`wa-cta-service-${service.id}`}
             href={`https://wa.me/971542112891?text=${encodeURIComponent(service.waMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="w-full sm:min-w-[140px] justify-center px-4 py-3 rounded-2xl bg-[#FAF9F6] hover:bg-emerald-50 border border-neutral-200 hover:border-emerald-300 transition-all duration-300 flex items-center gap-2 cursor-pointer text-sm font-semibold text-neutral-800"
+            className="w-full sm:min-w-[140px] justify-center px-4 py-3 rounded-2xl bg-[#1b1b1b] hover:bg-emerald-950/60 border border-neutral-700 hover:border-emerald-500/50 transition-all duration-300 flex items-center gap-2 cursor-pointer text-sm font-semibold text-neutral-100"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552" className="w-4 h-4 shrink-0">
               <defs>

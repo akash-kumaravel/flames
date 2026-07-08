@@ -39,8 +39,8 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
       id="header-navigation"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#FAF9F6]/95 backdrop-blur-md border-b border-neutral-200/40 py-2.5 sm:py-3 shadow-xs'
-          : 'bg-[#FAF9F6]/80 backdrop-blur-xs py-3.5 sm:py-5 border-b border-neutral-200/20'
+          ? 'bg-[#111]/95 backdrop-blur-md border-b border-neutral-800/80 py-2.5 sm:py-3 shadow-xs'
+          : 'bg-[#111]/80 backdrop-blur-xs py-3.5 sm:py-5 border-b border-neutral-800/70'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -72,8 +72,8 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
                 onClick={() => onNavigate(item.value)}
                 className={`font-sans text-sm font-medium transition-all duration-300 relative py-1 cursor-pointer ${
                   isActive
-                    ? 'text-orange-600'
-                    : 'text-neutral-500 hover:text-neutral-800'
+                    ? 'text-orange-500'
+                    : 'text-neutral-400 hover:text-neutral-100'
                 }`}
               >
                 {item.label}
@@ -103,7 +103,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
           id="mobile-menu-toggle"
           aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 rounded-full text-neutral-700 hover:bg-neutral-100 transition-colors cursor-pointer"
+          className="lg:hidden p-2 rounded-full text-neutral-400 hover:bg-neutral-800 transition-colors cursor-pointer"
         >
           {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -131,7 +131,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.2, ease: 'easeOut' }}
               id="mobile-drawer"
-              className="lg:hidden absolute top-full left-0 right-0 bg-white border-t border-neutral-100 border-b border-neutral-200 shadow-xl z-50 py-3.5 px-4 flex flex-col gap-1.5 max-h-[calc(100vh-120px)] overflow-y-auto"
+              className="lg:hidden absolute top-full left-0 right-0 bg-[#161616] border-t border-neutral-800 border-b border-neutral-800 shadow-xl z-50 py-3.5 px-4 flex flex-col gap-1.5 max-h-[calc(100vh-120px)] overflow-y-auto"
             >
               <div className="space-y-1.5 p-1">
                 {navItems.map((item) => {
@@ -146,8 +146,8 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
                       }}
                       className={`w-full text-left font-sans text-xs font-medium py-2.5 px-3 rounded-lg flex items-center justify-between transition-all duration-150 cursor-pointer ${
                         isActive
-                          ? 'bg-orange-50 text-orange-600 font-semibold border-l-2 border-orange-500 pl-2'
-                          : 'text-neutral-700 hover:bg-neutral-50 active:bg-neutral-100'
+                          ? 'bg-orange-500/10 text-orange-400 font-semibold border-l-2 border-orange-500 pl-2'
+                          : 'text-neutral-400 hover:bg-neutral-800/50 hover:text-white active:bg-neutral-800'
                       }`}
                     >
                       <span>{item.label}</span>
@@ -158,7 +158,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
 
               </div>
 
-              <div className="pt-2.5 border-t border-neutral-100 mt-1">
+              <div className="pt-2.5 border-t border-neutral-800 mt-1">
                 <button
                   id="mobile-cta-btn"
                   onClick={() => {

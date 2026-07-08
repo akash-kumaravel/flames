@@ -4,15 +4,15 @@ interface Props { onNavigate: (section: ActiveSection) => void }
 
 export default function BestFireplaceLanding({ onNavigate }: Props) {
   return (
-    <div className="min-h-screen bg-[#FAF9F6] text-neutral-800 pb-28 selection:bg-orange-500 selection:text-white">
+    <div className="min-h-screen bg-[#0b0b0b] text-neutral-300 pb-28 selection:bg-orange-500 selection:text-white">
       <section className="max-w-5xl mx-auto pt-8 px-6 md:px-12 py-20">
-        <h1 className="text-4xl md:text-5xl font-semibold text-neutral-900 mb-4">Best Fireplace in Dubai — Flames Fireplace</h1>
-        <p className="text-neutral-600 mb-6">Flames Fireplace designs and installs premium bio-ethanol fireplaces, fire pits, and outdoor kitchens across Dubai and the UAE. We combine safety-first engineering with sculptural finishes to deliver the best fireplace solutions for villas, penthouses and luxury hospitality.</p>
+        <h1 className="text-4xl md:text-5xl font-semibold text-white mb-4">Best Fireplace in Dubai — Flames Fireplace</h1>
+        <p className="text-neutral-300 mb-6">Flames Fireplace designs and installs premium bio-ethanol fireplaces, fire pits, and outdoor kitchens across Dubai and the UAE. We combine safety-first engineering with sculptural finishes to deliver the best fireplace solutions for villas, penthouses and luxury hospitality.</p>
 
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           <div className="space-y-4">
-            <h2 className="text-2xl font-semibold text-neutral-900">Why choose Flames Fireplace?</h2>
-            <ul className="list-disc pl-5 text-neutral-700 space-y-2">
+            <h2 className="text-2xl font-semibold text-white">Why choose Flames Fireplace?</h2>
+            <ul className="list-disc pl-5 text-neutral-300 space-y-2">
               <li>Specialist installers with deep compliance knowledge for UAE climates.</li>
               <li>Wide product range: bio-ethanol, water vapor, gas, and built-in BBQs.</li>
               <li>End-to-end service: design, site inspection, and certified handover.</li>
@@ -20,19 +20,19 @@ export default function BestFireplaceLanding({ onNavigate }: Props) {
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold">Quick links</h3>
+            <h3 className="text-lg font-semibold text-white">Quick links</h3>
             <div className="mt-4 flex flex-col gap-3">
-              <button onClick={() => onNavigate('bio-ethanol-fireplace')} className="text-left hover:text-orange-600">Bio-Ethanol Fireplaces</button>
-              <button onClick={() => onNavigate('water-vapor-fireplace')} className="text-left hover:text-orange-600">3D Water Vapor Fireplaces</button>
-              <button onClick={() => onNavigate('fire-pit')} className="text-left hover:text-orange-600">Fire Pits & Tables</button>
-              <button onClick={() => onNavigate('built-in-bbq')} className="text-left hover:text-orange-600">Built-In BBQs</button>
+              <button onClick={() => onNavigate('bio-ethanol-fireplace')} className="text-left text-neutral-300 hover:text-orange-400">Bio-Ethanol Fireplaces</button>
+              <button onClick={() => onNavigate('water-vapor-fireplace')} className="text-left text-neutral-300 hover:text-orange-400">3D Water Vapor Fireplaces</button>
+              <button onClick={() => onNavigate('fire-pit')} className="text-left text-neutral-300 hover:text-orange-400">Fire Pits & Tables</button>
+              <button onClick={() => onNavigate('built-in-bbq')} className="text-left text-neutral-300 hover:text-orange-400">Built-In BBQs</button>
             </div>
           </div>
         </div>
 
-        <div className="bg-white rounded-2xl p-8 border border-neutral-200">
-          <h3 className="font-semibold text-neutral-900 mb-3">Featured FAQs</h3>
-          <div className="space-y-3 text-neutral-700">
+        <div className="bg-[#121212] rounded-2xl p-8 border border-neutral-800">
+          <h3 className="font-semibold text-white mb-3">Featured FAQs</h3>
+          <div className="space-y-3 text-neutral-300">
             <div>
               <strong>Are your fireplaces safe for apartments?</strong>
               <p className="text-sm">Yes — our ventless bio-ethanol and water-vapor units are designed for enclosed living spaces when installed per our guidance.</p>
