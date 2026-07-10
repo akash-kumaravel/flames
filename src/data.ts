@@ -473,5 +473,75 @@ export const BLOG_ARTICLES: BlogArticle[] = [
         }
       ]
     }
+  },
+  {
+    id: "ethanol-burner-media-walls",
+    title: "Ethanol Burners for Media Walls: A Dubai Architect's Guide",
+    slug: "/blog/ethanol-burner-inserts-media-wall-dubai",
+    targetKeyword: "ethanol burner inserts Dubai, custom media wall fireplace",
+    schema: "Article, HowTo",
+    seoTitle: "Ethanol Burners for Media Walls | Dubai Architect Guide",
+    seoDescription: "Learn how to integrate bio ethanol burner inserts into custom media walls in Dubai. Architect guidelines for safety, clearance, and heat isolation.",
+    content: {
+      category: "Design Guides",
+      readTime: "7 min read",
+      date: "July 10, 2026",
+      intro: "Integrating a real fire feature directly below a large smart TV has become the ultimate focal point for luxury living rooms in Dubai. By combining bioethanol burner inserts with custom media walls, designers achieve a stunning visual balance. Here is a technical design guide for architects and interior decorators to ensure safety and elegance in these installations.",
+      sections: [
+        {
+          heading: "Choosing Between Manual and Automatic Burners",
+          paragraphs: [
+            "Manual bioethanol inserts are budget-friendly and require no electrical wiring. However, automatic electronic burners offer push-button ignition, remote control, smart home integration, and safety sensors that monitor heat, tilt, and fuel levels. For high-end Dubai projects, automatic burners are highly recommended."
+          ]
+        },
+        {
+          heading: "Required Clearances and TV Protection",
+          paragraphs: [
+            "The primary challenge when mounting a television above an active fireplace is protecting sensitive electronics from rising hot air. We recommend a minimum clearance of 100 cm between the burner opening and the TV. Additionally, creating a recessed niche for the TV or installing a non-combustible deflector mantle redirects heat flow safely away from the screen."
+          ]
+        },
+        {
+          heading: "Thermal Insulation and Non-Combustible Materials",
+          paragraphs: [
+            "Never construct a media wall fireplace chamber with standard drywall. The inner casing must be lined with premium insulation materials, such as calcium silicate boards (e.g., Promafour) or cement boards. The surrounding finishes should consist of non-combustible materials like natural marble, sintered stone, or metal sheets."
+          ]
+        }
+      ]
+    }
+  },
+  {
+    id: "luxury-fire-tables-rooftops",
+    title: "Luxury Fire Tables & Bowls: Dubai Rooftops & Penthouses",
+    slug: "/blog/luxury-fire-tables-rooftop-penthouses-dubai",
+    targetKeyword: "luxury fire tables Dubai, rooftop fire pit UAE",
+    schema: "Article",
+    seoTitle: "Luxury Fire Tables & Bowls | Dubai Penthouses & Rooftops",
+    seoDescription: "Create a stunning penthouse terrace in Dubai with luxury fire tables and fire bowls. Learn about wind guards, weight limits, and clean-burning fuels.",
+    content: {
+      category: "Outdoor Living",
+      readTime: "5 min read",
+      date: "July 10, 2026",
+      intro: "Penthouses and rooftop terraces in Dubai offer spectacular views of the skyline and Arabian Gulf. Adding a luxury fire table or fire bowl creates a warm, inviting social hub that transforms these outdoor areas. Let's explore the key design rules for setting up high-wind, high-elevation fire centerpieces in the UAE.",
+      sections: [
+        {
+          heading: "Fuel Selections: Gas vs. Bio-Ethanol",
+          paragraphs: [
+            "Rooftop installations must adapt to high winds. While liquid bio-ethanol burns beautifully in sheltered setups, propane or natural gas fire tables provide a more robust flame structure under drafty conditions. Always install tempered glass wind guards to shield the flames and maintain safety."
+          ]
+        },
+        {
+          heading: "Weight and Structural Load Planning",
+          paragraphs: [
+            "Concrete and natural stone fire tables can be extremely heavy. For penthouses and balcony structures, it is vital to select lightweight materials that do not exceed floor load limits. Specialized glass-fiber reinforced concrete (GFRC) offers the aesthetic of heavy concrete with only a fraction of the weight, making it ideal for elevated balconies."
+          ]
+        },
+        {
+          heading: "Weather Protection for Coastal Exposure",
+          paragraphs: [
+            "Rooftop terraces in Dubai face intense coastal humidity, salt water breezes, and UV rays. Ensure your fire bowl features marine-grade stainless steel burners (grade 316) and weather-proof outdoor covers. Regular cleaning and covering during the summer off-season preserves the premium finish for years."
+          ]
+        }
+      ]
+    }
   }
 ];
