@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Mail, Phone, MapPin, Send, MessageCircle, CheckCircle2, Clock, Shield } from 'lucide-react';
+import emailjs from '@emailjs/browser';
 
 export default function ContactPage() {
   const [name, setName] = useState('');
@@ -37,36 +38,23 @@ export default function ContactPage() {
       interest === 'indoor-ethanol' ? 'Indoor Bio Ethanol Fireplace' :
       interest === 'outdoor-features' ? 'Outdoor Fire Features' : 'General Enquiry';
 
-    const data = {
-      name,
-      email,
-      phone,
-      product,
-      message,
-    };
-
     try {
-      await fetch(
-        "https://script.google.com/macros/s/AKfycbx00KvOAXDs4koVUiIwjRBR6UaazKIqRxVNpMH2nOK2qSmuhG1RkaGNyO3h9aCwhgIL/exec",
+      await emailjs.send(
+        'service_dzl8p0h',
+        'template_ch21qi2',
         {
-          method: "POST",
-          mode: "no-cors",
-          headers: {
-            "Content-Type": "text/plain;charset=UTF-8"
-          },
-          body: JSON.stringify({
-            name,
-            email,
-            phone,
-            product,
-            message,
-          }),
-        }
+          name,
+          email,
+          phone,
+          product,
+          message,
+        },
+        'gmX3idNk9LXpymr6p'
       );
       setIsSubmitted(true);
     } catch (error) {
       console.error(error);
-      setIsSubmitted(true);
+      setErrorMsg('Failed to send message. Please try again or contact us directly via WhatsApp.');
     } finally {
       setIsSubmitting(false);
     }
