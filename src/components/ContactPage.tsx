@@ -49,7 +49,7 @@ export default function ContactPage() {
       // Send POST request as text/plain to avoid CORS preflight options check.
       // Google Sheets Apps Script Web Apps will receive this text and parse it via e.postData.contents.
       await fetch(
-        "https://script.google.com/macros/s/AKfycbx00KvOAXDs4koVUilwjRBR6UaazKlqRxVNpMH2nOK2qSmuhG1RkaGNyO3h9aCwhgIL/exec",
+        "https://script.google.com/macros/s/AKfycbx00KvOAXDs4koVUiIwjRBR6UaazKIqRxVNpMH2nOK2qSmuhG1RkaGNyO3h9aCwhgIL/exec",
         {
           method: "POST",
           headers: {
