@@ -143,25 +143,39 @@ export default function WhyChoosePage() {
             <h3 className="font-sans text-xl font-semibold text-white">Ethanol vs Traditional Firepoints</h3>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full text-left table-auto">
-              <thead>
-                <tr className="text-xs text-neutral-400 uppercase border-b border-neutral-800">
-                  <th className="py-3 pl-3">Metric</th>
-                  <th className="py-3">Ethanol</th>
-                  <th className="py-3">Traditional</th>
-                </tr>
-              </thead>
-              <tbody>
-                {comparisonData.map((m, idx) => (
-                  <tr key={idx} className="align-top border-b border-neutral-800">
-                    <td className="py-4 pl-3 text-sm font-semibold text-white">{m.label}</td>
-                    <td className="py-4 text-sm text-neutral-350">{m.ethanol}</td>
-                    <td className="py-4 text-sm text-neutral-350">{m.traditional}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="space-y-2">
+            {/* Header row (hidden on mobile) */}
+            <div className="hidden md:grid grid-cols-12 gap-6 text-[10px] text-neutral-400 uppercase font-mono font-bold border-b border-neutral-800 pb-3 pl-3">
+              <div className="col-span-2">Metric</div>
+              <div className="col-span-5">Ethanol Fireplace</div>
+              <div className="col-span-5">Traditional Firepoints</div>
+            </div>
+
+            {/* Matrix rows */}
+            {comparisonData.map((m, idx) => (
+              <div 
+                key={idx} 
+                className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6 py-5 border-b border-neutral-800 last:border-b-0 pl-3 align-top"
+              >
+                {/* Metric Title */}
+                <div className="col-span-1 md:col-span-2">
+                  <span className="text-[9px] font-mono font-bold text-orange-400 uppercase tracking-wider block md:hidden mb-1">Metric</span>
+                  <h4 className="text-sm font-semibold text-white">{m.label}</h4>
+                </div>
+
+                {/* Ethanol */}
+                <div className="col-span-1 md:col-span-5 space-y-1">
+                  <span className="text-[9px] font-mono font-bold text-neutral-400 uppercase tracking-wider block md:hidden">Ethanol Fireplace</span>
+                  <p className="text-xs sm:text-sm text-neutral-300 leading-relaxed">{m.ethanol}</p>
+                </div>
+
+                {/* Traditional */}
+                <div className="col-span-1 md:col-span-5 space-y-1 pt-3 md:pt-0 border-t border-neutral-800/60 md:border-t-0">
+                  <span className="text-[9px] font-mono font-bold text-neutral-500 uppercase tracking-wider block md:hidden">Traditional Firepoints</span>
+                  <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">{m.traditional}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
