@@ -27,10 +27,9 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
   const navItems: { label: string; value: ActiveSection }[] = [
     { label: 'Home', value: 'home' },
     { label: 'About Us', value: 'about' },
-    { label: 'Services', value: 'services' },
+    { label: 'Products', value: 'services' },
     { label: 'Portfolio', value: 'portfolio' },
     { label: 'Why Choose Us', value: 'why-choose' },
-    { label: 'FAQs', value: 'faq' },
     { label: 'Blog', value: 'blog' },
   ];
 

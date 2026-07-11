@@ -13,7 +13,7 @@ export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setErrorMsg('');
 
@@ -33,11 +33,35 @@ export default function ContactPage() {
 
     setIsSubmitting(true);
 
-    // Simulate submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    const product = 
+      interest === 'indoor-ethanol' ? 'Indoor Bio Ethanol Fireplace' :
+      interest === 'outdoor-features' ? 'Outdoor Fire Features' : 'General Enquiry';
+
+    const data = {
+      name,
+      email,
+      phone,
+      product,
+      message,
+    };
+
+    try {
+      // Submit to Google Sheets Macro. We use 'no-cors' to safely submit data and bypass CORS preflight redirect blocks.
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbx00KvOAXDs4koVUilwjRBR6UaazKlqRxVNpMH2nOK2qSmuhG1RkaGNyO3h9aCwhgIL/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(data),
+          mode: "no-cors"
+        }
+      );
       setIsSubmitted(true);
-    }, 1200);
+    } catch (error) {
+      console.error(error);
+      setErrorMsg('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const generateWhatsAppLink = () => {
@@ -237,7 +261,9 @@ export default function ContactPage() {
                     rel="noopener noreferrer"
                     className="flex-1 py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-sans text-xs font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer shadow-md shadow-emerald-500/10"
                   >
-                    <MessageCircle className="w-4.5 h-4.5 fill-current" />
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-4.5 h-4.5 fill-current">
+                      <path d="M12.004 2C6.48 2 2 6.48 2 12.004c0 1.907.533 3.698 1.464 5.23L2 22l4.912-1.39A9.972 9.972 0 0012.004 22c5.523 0 10.003-4.48 10.003-10.004C22.007 6.48 17.527 2 12.004 2zm5.787 14.156c-.244.69-1.42 1.265-1.968 1.348-.5.076-1.15.114-1.834-.103-.437-.14-1.002-.323-1.63-.585-2.73-1.14-4.5-3.896-4.636-4.08-.137-.181-1.107-1.472-1.107-2.81 0-1.336.685-1.992.93-2.253.244-.26.533-.327.712-.327.178 0 .356 0 .512.007.163.007.382-.062.597.456.223.533.763 1.86.83 1.996.067.137.112.297.022.477-.09.18-.135.297-.268.452-.133.155-.282.346-.402.465-.133.132-.274.275-.118.543.155.267.69.1.802 1.13 1.488.99 2.5 1.543 2.857 1.764.356.22 1.14.73 1.22.427.08-.303.427-.478.472-.614.045-.136.09-.272.268-.362.178-.09 1.127-.53 1.438-.682.312-.153.512-.227.712-.046.2.181 1.002 1.002 1.128 1.127.127.126.244.227.022.614z" />
+                    </svg>
                     Chat on WhatsApp Now
                   </a>
 

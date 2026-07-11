@@ -51,7 +51,7 @@ export default function Footer({ onNavigate }: FooterProps) {
                   onClick={(e) => { e.preventDefault(); onNavigate('services'); }}
                   className="hover:text-white transition cursor-pointer text-orange-400 font-medium"
                 >
-                  Engineering &amp; Services
+                  Our Products
                 </a>
               </li>
               <li>

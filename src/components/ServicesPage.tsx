@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Flame, Droplets, Compass, ArrowRight } from 'lucide-react';
+import { Compass, ArrowRight, Flame, Droplets } from 'lucide-react';
 import { SERVICES } from '../data';
 import { ActiveSection } from '../types';
 import ServiceCard from './ServiceCard';
@@ -25,11 +25,9 @@ interface ServicesPageProps {
 }
 
 export default function ServicesPage({ onNavigate }: ServicesPageProps) {
-  const [activeTab, setActiveTab] = useState<'all' | 'indoor' | 'outdoor'>('all');
+  const [activeTab, setActiveTab] = useState<'indoor' | 'outdoor'>('indoor');
 
-  const filteredServices = activeTab === 'all' 
-    ? EXTENDED_SERVICES
-    : EXTENDED_SERVICES.filter(s => s.category === activeTab);
+  const filteredServices = EXTENDED_SERVICES.filter(s => s.category === activeTab);
 
   return (
     <div id="services-page" className="min-h-screen bg-[#0b0b0b] text-neutral-350 pb-28 selection:bg-orange-500 selection:text-white">
@@ -41,7 +39,7 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
           className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-500/10 text-orange-400 font-sans text-xs font-semibold uppercase tracking-wider mb-5"
         >
           <Compass className="w-3.5 h-3.5" />
-          Our Professional Solutions
+          Our Premium Products
         </motion.div>
         
         <motion.h1
@@ -50,7 +48,7 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
           transition={{ delay: 0.1 }}
           className="font-sans font-semibold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-tight max-w-4xl mx-auto"
         >
-          Best Fireplace Services in Dubai by Flames Fireplace
+          Best Fireplace Products in Dubai by Flames Fireplace
         </motion.h1>
         
         <motion.p
@@ -59,7 +57,7 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
           transition={{ delay: 0.2 }}
           className="font-sans text-sm text-neutral-400 max-w-2xl mx-auto mt-4 leading-relaxed font-light"
         >
-          Discover safe indoor fireplaces and weather-proof outdoor kitchens built for UAE environments.
+          Discover safe indoor fireplaces, modern fire pits, and weather-proof outdoor kitchens built for UAE environments.
         </motion.p>
       </section>
 
@@ -67,17 +65,6 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-16">
         <div className="flex justify-center">
           <div className="bg-[#121212] p-1.5 rounded-2xl inline-flex items-center gap-1 border border-neutral-800">
-            <button
-              id="btn-filter-all"
-              onClick={() => setActiveTab('all')}
-              className={`px-5 py-2.5 rounded-xl font-sans text-xs font-medium transition-all duration-300 cursor-pointer ${
-                activeTab === 'all'
-                  ? 'bg-orange-600 text-white shadow-sm'
-                  : 'text-neutral-400 hover:text-white hover:bg-neutral-800/40'
-              }`}
-            >
-              All Services ({EXTENDED_SERVICES.length})
-            </button>
             <button
               id="btn-filter-indoor"
               onClick={() => setActiveTab('indoor')}
@@ -106,7 +93,7 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
         </div>
       </section>
 
-      {/* Service Blocks Section */}
+      {/* Product Blocks Section */}
       <section className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((srv) => (
