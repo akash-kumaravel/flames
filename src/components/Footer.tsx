@@ -29,7 +29,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               />
             </div>
             
-            <p className="text-sm font-medium text-neutral-300 italic">
+            <p className="text-sm font-normal text-neutral-300">
               {TAGLINE}
             </p>
             

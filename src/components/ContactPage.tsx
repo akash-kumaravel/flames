@@ -78,20 +78,20 @@ export default function ContactPage() {
   return (
     <div id="contact-us-page-wrapper" className="min-h-screen bg-[#0b0b0b] text-neutral-350 pb-28 selection:bg-orange-500 selection:text-white">
       {/* Top Header Block */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-8 pb-12 text-center">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-2 pb-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="space-y-4"
+          className="flex flex-col items-center gap-2.5"
         >
-          <span className="px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-[10px] font-bold uppercase tracking-widest font-mono">
+          <span className="inline-block px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-[10px] font-bold uppercase tracking-widest font-mono">
             Get In Touch
           </span>
-          <h1 className="font-sans font-medium text-3xl md:text-5xl text-white tracking-tight max-w-2xl mx-auto leading-none">
+          <h1 className="font-sans font-medium text-3xl md:text-5xl text-white tracking-tight max-w-2xl mx-auto leading-tight">
             Contact Flames Fireplace — Best Fireplace in Dubai
           </h1>
-          <p className="font-sans text-xs md:text-sm text-neutral-400 max-w-xl mx-auto leading-relaxed">
+          <p className="font-sans text-xs md:text-sm text-neutral-400 max-w-xl mx-auto leading-relaxed mt-1">
             Have a project in mind? Fill out the contact form below, and our engineering advisory group will reach out within 1 business day to coordinate specifications.
           </p>
         </motion.div>
