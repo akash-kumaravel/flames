@@ -5,15 +5,16 @@ export const TAGLINE = "Indoor & Outdoor Fire Features in Dubai & UAE";
 
 export const META_SUMMARY = {
   home: {
-    title: "Best Fireplace in Dubai | Flames Fireplace UAE Setup",
-    description: "Looking for the best fireplace in Dubai? Flames Fireplace designs and installs premium bio ethanol fireplaces, 3D water vapor mist burners, and fire pits.",
-    primaryKW: "Flames fireplace, best fireplace Dubai, bio ethanol fireplace Dubai",
-    secondaryKW: "fireplace Dubai, outdoor fire pits Dubai, luxury fireplace UAE"
+    title: "FlamesFireplace | Best Fireplace in Dubai & UAE",
+    description: "Looking for FlamesFireplace? Flames Fireplace designs and installs premium bio ethanol fireplaces, 3D water vapor mist burners, fire pits, outdoor kitchens, and built-in BBQs across Dubai and the UAE.",
+    primaryKW: "FlamesFireplace, Flames Fireplace, best fireplace Dubai",
+    secondaryKW: "fireplace Dubai, bio ethanol fireplace Dubai, luxury fireplace UAE"
   },
   about: {
-    title: "About Flames Fireplace | Best Fireplace in Dubai, UAE",
-    description: "Learn about Flames Fireplace, Dubai's leading supplier of the best fireplace options. We specialize in custom bio ethanol fireplaces and outdoor living.",
-    primaryKW: "about Flames Fireplace, bio ethanol fireplace supplier UAE"
+    title: "About FlamesFireplace | Best Fireplace in Dubai, UAE",
+    description: "Learn about Flames Fireplace, Dubai's leading supplier of premium fireplaces and outdoor living solutions. We specialize in custom bio ethanol fireplaces, fire pits, and luxury fire features.",
+    primaryKW: "about FlamesFireplace, Flames Fireplace Dubai",
+    secondaryKW: "about us Dubai, luxury fireplace UAE"
   },
   indoor: {
     title: "Indoor Bio Ethanol Fireplace | Flames Fireplace Dubai",
@@ -28,19 +29,21 @@ export const META_SUMMARY = {
     secondaryKW: "outdoor fire features Dubai, pool deck fireplace, terrace fire feature"
   },
   faq: {
-    title: "Flames Fireplace FAQs | Best Fireplace in Dubai Guide",
-    description: "Expert answers to common questions about safety, fuel, and custom media wall casing designs for the best fireplace in Dubai from Flames Fireplace.",
-    primaryKW: "bio ethanol fireplace FAQ"
+    title: "FlamesFireplace FAQs | Best Fireplace in Dubai Guide",
+    description: "Expert answers to common questions about safety, fuel, and custom media wall casing designs for Flames Fireplace in Dubai and the UAE.",
+    primaryKW: "FlamesFireplace FAQ",
+    secondaryKW: "fireplace safety Dubai, bio ethanol fireplace FAQ"
   },
   contact: {
-    title: "Contact Flames Fireplace | Best Fireplace in Dubai UAE",
-    description: "Get a quote from Flames Fireplace for the best fireplace in Dubai. Contact our engineering team for custom bio ethanol and water vapor installations.",
-    primaryKW: "contact Flames Fireplace, buy bio ethanol fireplace UAE, fireplace quote"
+    title: "Contact FlamesFireplace | Best Fireplace in Dubai UAE",
+    description: "Get a quote from Flames Fireplace for premium fireplaces in Dubai. Contact our engineering team for custom bio ethanol and water vapor installations, outdoor kitchens, and BBQs.",
+    primaryKW: "contact FlamesFireplace, fireplace quote Dubai",
+    secondaryKW: "fireplace contact UAE, custom fireplace quote"
   },
   'why-choose': {
-    title: "Why Choose Flames Fireplace | Best Fireplace in Dubai",
-    description: "Discover why Flames Fireplace is the top choice for the best fireplace in Dubai. Learn about our safety standards, marine-grade steel, and pricing.",
-    primaryKW: "why choose Flames Fireplace, bio ethanol fireplaces",
+    title: "Why Choose FlamesFireplace | Best Fireplace in Dubai",
+    description: "Discover why Flames Fireplace is the top choice for luxury fire features in Dubai. Learn about our safety standards, premium materials, and customer support.",
+    primaryKW: "why choose FlamesFireplace, Flames Fireplace",
     secondaryKW: "certified ventless fireplace, fireplace safety UAE"
   },
   'outdoor-features': {
@@ -50,29 +53,30 @@ export const META_SUMMARY = {
     secondaryKW: "fire pit products Dubai, BBQ grill Dubai, outdoor fireplace UAE"
   },
   'best-fireplace-dubai': {
-    title: "Best Fireplace in Dubai | Flames Fireplace UAE Guide",
-    description: "Find the best fireplace in Dubai with Flames Fireplace. We offer bespoke bio ethanol fireplaces, water-vapor cassettes, custom fire pits, and barbecues.",
-    primaryKW: "best fireplace Dubai, Flames fireplace, fireplace Dubai",
+    title: "Best Fireplace in Dubai | FlamesFireplace UAE Guide",
+    description: "Find the best fireplace in Dubai with Flames Fireplace. We offer bespoke bio ethanol fireplaces, water-vapor cassettes, custom fire pits, and barbecues across the UAE.",
+    primaryKW: "best fireplace Dubai, FlamesFireplace, fireplace Dubai",
     secondaryKW: "bio ethanol fireplace Dubai, best fireplace UAE, fireplace install Dubai"
   },
   services: {
-    title: "Best Fireplace Services in Dubai | Flames Fireplace UAE",
-    description: "Flames Fireplace offers professional fireplace installation, CAD blocks casing design, and safety inspections for the best fireplace solutions in Dubai.",
-    primaryKW: "fireplace installation Dubai, outdoor kitchen design UAE",
+    title: "Best Fireplace Services in Dubai | FlamesFireplace UAE",
+    description: "Flames Fireplace offers professional fireplace installation, CAD block design, and safety inspections for premium fireplace solutions in Dubai and the UAE.",
+    primaryKW: "fireplace installation Dubai, FlamesFireplace",
     secondaryKW: "architectural fireplace services, technical site inspection UAE"
   },
   portfolio: {
-    title: "Flames Fireplace Portfolio | Best Fireplaces in Dubai",
-    description: "Explore luxury installations by Flames Fireplace. View our portfolio of the best fireplace projects in Dubai, including bio-ethanol and water vapor.",
-    primaryKW: "fireplace portfolio Dubai, custom outdoor kitchen gallery UAE",
+    title: "FlamesFireplace Portfolio | Best Fireplaces in Dubai",
+    description: "Explore luxury installations by Flames Fireplace. View our portfolio of fireplace projects in Dubai, including bio-ethanol and water vapor solutions.",
+    primaryKW: "FlamesFireplace portfolio Dubai",
     secondaryKW: "bespoke fire pit installation, luxury garden barbecue setups"
   },
   blog: {
-    title: "Flames Fireplace Blog | Best Fireplace Design & Tech",
-    description: "Read the latest design guides and technology reviews by Flames Fireplace. Learn about the best fireplace options, safety tips, and outdoor living ideas.",
-    primaryKW: "Flames fireplace blog, fireplace design Dubai",
+    title: "FlamesFireplace Blog | Best Fireplace Design & Tech",
+    description: "Read the latest design guides and technology reviews by Flames Fireplace. Learn about fireplace options, safety tips, and outdoor living ideas in Dubai.",
+    primaryKW: "FlamesFireplace blog, fireplace design Dubai",
     secondaryKW: "luxury fire features UAE, water vapor fireplace trends"
   }
+
 };
 
 export const TRUST_BAR = [

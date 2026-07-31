@@ -67,7 +67,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             transition={{ duration: 1, delay: 0.1 }}
             className="font-sans font-semibold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight leading-tight max-w-4xl"
           >
-            {BRAND} — Where <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 to-amber-400">Fire Meets Design</span>
+            Flames Fireplace Dubai — Luxury Fire Features by FlamesFireplace
           </motion.h1>
 
           <motion.p
@@ -77,7 +77,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             transition={{ duration: 1, delay: 0.2 }}
             className="font-sans text-lg md:text-xl text-neutral-300 max-w-2xl mt-6 leading-relaxed"
           >
-            Looking for the best fireplace in Dubai? Flames Fireplace offers premium bio ethanol fireplaces, 3D water vapor mist systems, custom fire pits, and outdoor kitchens. Smokeless. Safe. Timeless.
+            Looking for FlamesFireplace in Dubai? Flames Fireplace offers premium bio ethanol fireplaces, 3D water vapor mist systems, custom fire pits, and outdoor kitchens across the UAE. Smokeless. Safe. Timeless.
           </motion.p>
 
           <motion.div
@@ -248,7 +248,9 @@ export default function Hero({ onNavigate }: HeroProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {SERVICES.filter((service) => service.id !== 'outdoor-kitchens').map((service) => (
-            <ServiceCard key={service.id} service={service} onNavigate={onNavigate} />
+            <div key={service.id}>
+              <ServiceCard service={service} onNavigate={onNavigate} />
+            </div>
           ))}
         </div>
       </section>

@@ -319,6 +319,7 @@ export default function App() {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: 'Flames Fireplace',
+      alternateName: 'FlamesFireplace',
       url: origin,
       potentialAction: {
         '@type': 'SearchAction',
@@ -327,14 +328,16 @@ export default function App() {
       }
     };
 
+
     const localBusinessSchema = {
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
       name: 'Flames Fireplace',
+      alternateName: 'FlamesFireplace',
       image: `${origin}/assets/Bio-Ethanol%20Fireplace%20_%20Product%20Close-up.png`,
       '@id': `${origin}/#localbusiness`,
       url: origin,
-      telephone: '+971542112891',
+      telephone: '+971****2891',
       priceRange: '$$$',
       openingHours: 'Mo-Su 08:00-20:00',
       paymentAccepted: 'Cash, Credit Card, Bank Transfer',
@@ -355,6 +358,7 @@ export default function App() {
       },
       description: currentMeta.description
     };
+
 
     const breadcrumbSchema = {
       '@context': 'https://schema.org',

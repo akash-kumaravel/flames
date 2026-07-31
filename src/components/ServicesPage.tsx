@@ -2,21 +2,10 @@ import { useState } from 'react';
 import { motion } from 'motion/react';
 import { Compass, ArrowRight, Flame, Droplets } from 'lucide-react';
 import { SERVICES } from '../data';
-import { ActiveSection } from '../types';
+import { ActiveSection, ServiceItem } from '../types';
 import ServiceCard from './ServiceCard';
 
-interface ExtendedService {
-  id: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  badge: string;
-  category: 'indoor' | 'outdoor';
-  waMessage: string;
-}
-
-const EXTENDED_SERVICES: ExtendedService[] = [
+const EXTENDED_SERVICES: ServiceItem[] = [
   ...SERVICES
 ];
 
@@ -97,11 +86,12 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
       <section className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((srv) => (
-            <ServiceCard 
-              key={srv.id} 
-              service={srv as any} 
-              onNavigate={onNavigate ? () => onNavigate(srv.id as ActiveSection) : undefined} 
-            />
+            <div key={srv.id}>
+              <ServiceCard 
+                service={srv} 
+                onNavigate={onNavigate ? () => onNavigate(srv.id as ActiveSection) : undefined} 
+              />
+            </div>
           ))}
         </div>
       </section>

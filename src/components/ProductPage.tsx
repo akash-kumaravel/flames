@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Check, Shield, ArrowRight, MessageCircle, ChevronDown } from 'lucide-react';
+import { ActiveSection } from '../types';
 
 interface ProductPageProps {
   productId: string;
@@ -13,7 +14,7 @@ interface ProductPageProps {
   howItWorks: string[];
   faqs: { question: string; answer: string }[];
   bgGradient: string;
-  onNavigate: (section: 'contact') => void;
+  onNavigate: (section: ActiveSection) => void;
 }
 
 export default function ProductPage({
