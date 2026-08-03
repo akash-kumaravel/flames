@@ -337,7 +337,7 @@ export default function App() {
       image: `${origin}/assets/Bio-Ethanol%20Fireplace%20_%20Product%20Close-up.png`,
       '@id': `${origin}/#localbusiness`,
       url: origin,
-      telephone: '+971****2891',
+      telephone: '+971542112891',
       priceRange: '$$$',
       openingHours: 'Mo-Su 08:00-20:00',
       paymentAccepted: 'Cash, Credit Card, Bank Transfer',
