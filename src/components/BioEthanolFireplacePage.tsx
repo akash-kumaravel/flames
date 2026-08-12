@@ -12,11 +12,12 @@ export default function BioEthanolFireplacePage({ onNavigate }: BioEthanolProps)
   return (
     <ProductPage
       productId="bio-ethanol-fireplace"
-      title="Bio Ethanol Fireplaces"
-      tagline="Ventless, Eco-Friendly Real Flame for Modern Homes"
-      description="Experience authentic flame without a chimney. Our bio ethanol fireplaces deliver real warmth and ambiance with zero smoke, ash, or installation hassle."
-      detailedDescription="Bio ethanol fireplaces offer the elegance of a real fire with unprecedented flexibility. No venting, no gas lines, no complex installations. Simply add clean-burning bioethanol fuel and enjoy instant warmth, real flames, and the ambiance of traditional fireplaces. Perfect for apartments, modern homes, and commercial spaces."
+      title="Manual Ethanol Fire Place"
+      tagline="Ventless Real Flame for Modern Homes"
+      description="Experience authentic flame without a chimney. Our manual ethanol fire places deliver real warmth and ambiance with zero smoke, ash, or installation hassle."
+      detailedDescription="Manual ethanol fire places offer the elegance of a real fire with unprecedented flexibility. No venting, no gas lines, no complex installations. Simply add clean-burning ethanol fuel and enjoy instant warmth, real flames, and the ambiance of traditional fireplaces. Perfect for apartments, modern homes, and commercial spaces."
       imageUrl={svc?.image || "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200"}
+
       features={[
         "Real Flames & Authentic Heat - Burn renewable bioethanol fuel for genuine warmth and flickering golden flames",
         "100% Ventless Installation - No chimney, flue, or gas connection required",

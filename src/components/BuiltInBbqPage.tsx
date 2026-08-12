@@ -12,11 +12,12 @@ export default function BuiltInBbqPage({ onNavigate }: BuiltInBbqProps) {
   return (
     <ProductPage
       productId="built-in-bbq"
-      title="Built-In BBQs"
-      tagline="Outdoor Cooking Spaces Designed for Hosting"
-      description="Create a refined outdoor entertaining area with a custom built-in BBQ tailored for Dubai homes and hospitality projects."
-      detailedDescription="Built-in BBQs bring together performance, durability, and design in one seamless outdoor feature. We create cooking stations with premium materials, weather-resistant finishes, and practical layouts that suit everyday use as well as weekend entertaining."
+      title="Customized Fire Table with Fire Unit"
+      tagline="Bespoke Outdoor Fire Feature for High-End Spaces"
+      description="Custom fire tables with integrated fire units, built for private villas, hospitality terraces, and premium outdoor lounges."
+      detailedDescription="Customized fire tables with fire units combine premium materials, clean lines, and practical outdoor functionality. Designed for the UAE climate, these bespoke installations can include remote control, push-and-turn ignition, or key valve fire places for a refined outdoor experience."
       imageUrl={svc?.image || "/assets/Built-In BBQ _ Flames Close-up.png"}
+
       features={[
         "Custom layouts built for your patio, garden, or terrace",
         "Weather-resistant materials suitable for UAE climates",

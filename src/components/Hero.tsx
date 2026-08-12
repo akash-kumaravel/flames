@@ -67,7 +67,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             transition={{ duration: 1, delay: 0.1 }}
             className="font-sans font-semibold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight leading-tight max-w-4xl"
           >
-            Flames Fireplace Dubai — Luxury Fire Features by FlamesFireplace
+            Flames Fireplace Dubai — Premium Indoor & Outdoor Fire Units
           </motion.h1>
 
           <motion.p
@@ -77,7 +77,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             transition={{ duration: 1, delay: 0.2 }}
             className="font-sans text-lg md:text-xl text-neutral-300 max-w-2xl mt-6 leading-relaxed"
           >
-            Looking for FlamesFireplace in Dubai? Flames Fireplace offers premium bio ethanol fireplaces, 3D water vapor mist systems, custom fire pits, and outdoor kitchens across the UAE. Smokeless. Safe. Timeless.
+            Looking for Flames Fireplace in Dubai? Flames Fireplace offers premium indoor and outdoor fire units, including manual ethanol fire places, 3D water vapor fire places, custom fire pots, and fire tables across the UAE. Smokeless. Safe. Timeless.
           </motion.p>
 
           <motion.div

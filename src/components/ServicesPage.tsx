@@ -46,7 +46,7 @@ export default function ServicesPage({ onNavigate }: ServicesPageProps) {
           transition={{ delay: 0.2 }}
           className="font-sans text-sm text-neutral-400 max-w-2xl mx-auto mt-4 leading-relaxed font-light"
         >
-          Discover safe indoor fireplaces, modern fire pits, and weather-proof outdoor kitchens built for UAE environments.
+          Discover manual ethanol fire places, 3D water vapor fire places, outdoor gas fire places, fire pots, fire tables, and custom integrated fire units built for UAE environments.
         </motion.p>
       </section>
 

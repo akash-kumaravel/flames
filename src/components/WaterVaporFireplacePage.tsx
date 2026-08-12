@@ -12,11 +12,12 @@ export default function WaterVaporFireplacePage({ onNavigate }: WaterVaporProps)
   return (
     <ProductPage
       productId="water-vapor-fireplace"
-      title="3D Water Vapor Fireplaces"
-      tagline="Realistic Flames with No Heat - Perfect for Any Room"
-      description="Experience the beauty of 3D realistic flames using ultrasonic water mist technology. Safe, cool-to-touch, and stunning visual effects for modern homes."
-      detailedDescription="Water vapor fireplaces create mesmerizing 3D flame effects using ultrasonic water mist combined with LED lighting. The technology produces realistic, deep flames that look like traditional fireplaces but with zero heat production. Cool-to-touch and 100% safe, making them ideal for family homes, offices, and spaces where traditional fireplaces aren't practical."
+      title="3D Water Vapor Fire Place"
+      tagline="Cool-To-Touch Visual Flames for Modern Interiors"
+      description="Experience the beauty of 3D realistic flames using ultrasonic water mist technology. Safe, cool-to-touch, and ideal for luxury media walls and family homes."
+      detailedDescription="Water vapor fire places create mesmerizing 3D flame effects using ultrasonic water mist combined with LED lighting. The technology produces realistic, deep flames that look like traditional fireplaces but with zero heat production. Cool-to-touch and 100% safe, making them ideal for family homes, offices, and spaces where traditional fireplaces aren't practical."
       imageUrl={svc?.image || "https://images.unsplash.com/photo-1600210494033-b55f6b9f6a14?auto=format&fit=crop&q=80&w=1200"}
+
       features={[
         "3D Flame Effect - Ultrasonic mist creates incredibly realistic layered flames",
         "Cool-to-Touch Technology - Completely safe for children and pets",

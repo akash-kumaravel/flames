@@ -10,7 +10,7 @@ export default function BestFireplaceLanding({ onNavigate }: Props) {
         {/* Intro Section */}
         <div className="space-y-4">
           <h1 className="text-4xl md:text-5xl font-semibold text-white tracking-tight leading-tight">
-            Best Fireplace in Dubai — Premium Solutions by Flames Fireplace
+            Best Fireplace in Dubai — Premium Indoor & Outdoor Fire Units
           </h1>
           <p className="text-neutral-300 text-base md:text-lg leading-relaxed max-w-4xl">
             Flames Fireplace designs, manufactures, and installs premium architectural fire features across Dubai, Abu Dhabi, and the Northern Emirates. We combine safety-first engineering with sculptural finishes to deliver the best fireplace solutions for luxury villas, penthouses, commercial lobbies, and five-star hospitality projects.

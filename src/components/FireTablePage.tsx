@@ -12,11 +12,12 @@ export default function FireTablePage({ onNavigate }: FireTableProps) {
   return (
     <ProductPage
       productId="fire-table"
-      title="Fire Tables & Coffee Tables"
-      tagline="Functional Furniture with Flames - Elegance Meets Practicality"
-      description="Combine outdoor furniture functionality with mesmerizing flames. Our fire tables serve as stunning centerpieces while providing warmth and ambiance."
-      detailedDescription="Fire tables revolutionize outdoor furniture by integrating flames directly into a functional table design. Perfect for small patios, decks, and intimate gathering spaces, these tables provide seating height flame experience without requiring dedicated floor space. Modern, sophisticated, and engineered for durability in the Gulf climate."
+      title="Customized Fire Table with Fire Unit"
+      tagline="Integrated Outdoor Fire Feature for Luxury Entertaining"
+      description="Custom fire tables with integrated fire units, built for private villas, hospitality terraces, and modern outdoor spaces."
+      detailedDescription="Customized fire tables with fire units combine premium materials, clean lines, and practical outdoor functionality. Designed for the UAE climate, these bespoke installations can include remote control, push-and-turn ignition, or key valve fire places for a refined outdoor experience."
       imageUrl={svc?.image || "https://images.unsplash.com/photo-1566558236202-ad0e17c20d85?auto=format&fit=crop&q=80&w=1200"}
+
       features={[
         "Integrated Design - Compact fire feature built into table surface",
         "Seating Height Flames - Enjoy flames while seated comfortably",

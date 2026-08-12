@@ -12,11 +12,12 @@ export default function OutdoorFireplacePage({ onNavigate }: OutdoorFireplacePro
   return (
     <ProductPage
       productId="outdoor-fireplace"
-      title="Outdoor Fireplaces"
-      tagline="Architectural Fire Features for Your Patio & Garden"
-      description="Create stunning outdoor living spaces with durable, weather-resistant outdoor fireplaces. Perfect for entertaining in Dubai's year-round climate."
-      detailedDescription="Our outdoor fireplaces are architectural statements designed specifically for the UAE climate. Built from high-grade concrete, steel, and weather-resistant materials, they withstand extreme heat and salt-laden air. Available as bioethanol-fired units or traditional wood-burning designs, each fireplace creates an inviting focal point for entertaining and relaxation."
+      title="Outdoor Fire Unit"
+      tagline="Home Automated On & Off Fireplace Control"
+      description="Create a premium outdoor fire unit with gas, ethanol, or wood fuel options, built for Dubai gardens, terraces, and hospitality spaces."
+      detailedDescription="Our outdoor fire unit collection is designed for versatile outdoor living. Choose from home automated on and off fire places, high and low flame fire places, remote operated fire places, push and turn fire places, and key valve fire places. We also design fire pots, fire tables, and custom integrated fire solutions for modern UAE properties."
       imageUrl={svc?.image || "https://images.unsplash.com/photo-1585761214872-f76baf5b9900?auto=format&fit=crop&q=80&w=1200"}
+
       features={[
         "Climate-Resistant Construction - Engineered for Dubai's intense sun and humidity",
         "Durable Materials - High-grade concrete, stainless steel, and powder-coated finishes",

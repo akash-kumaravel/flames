@@ -341,7 +341,7 @@ export default function App() {
       priceRange: '$$$',
       openingHours: 'Mo-Su 08:00-20:00',
       paymentAccepted: 'Cash, Credit Card, Bank Transfer',
-      serviceType: ['Bio Ethanol Fireplaces', 'Outdoor Fire Features', 'Outdoor Kitchens', 'Built-In BBQs'],
+      serviceType: ['Outdoor Gas Fire Places', 'Manual Ethanol Fire Places', '3D Water Vapor Fire Places', 'Fire Pots', 'Fire Tables', 'Indoor Fire Places'],
       areaServed: ['Dubai', 'Abu Dhabi', 'Sharjah', 'Ajman', 'Umm Al Quwain', 'Ras Al Khaimah', 'Fujairah', 'UAE'],
       address: {
         '@type': 'PostalAddress',

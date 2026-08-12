@@ -5,76 +5,76 @@ export const TAGLINE = "Indoor & Outdoor Fire Features in Dubai & UAE";
 
 export const META_SUMMARY = {
   home: {
-    title: "FlamesFireplace | Best Fireplace in Dubai & UAE",
-    description: "Looking for FlamesFireplace? Flames Fireplace designs and installs premium bio ethanol fireplaces, 3D water vapor mist burners, fire pits, outdoor kitchens, and built-in BBQs across Dubai and the UAE.",
-    primaryKW: "FlamesFireplace, Flames Fireplace, best fireplace Dubai",
-    secondaryKW: "fireplace Dubai, bio ethanol fireplace Dubai, luxury fireplace UAE"
+    title: "Best Fireplace in Dubai | Flames Fireplace UAE",
+    description: "Flames Fireplace designs and installs premium indoor and outdoor fire features in Dubai and the UAE, including outdoor gas fire places, manual ethanol fire places, 3D water vapor fire places, fire pots, and custom fire tables.",
+    primaryKW: "best fireplace in Dubai, Flames Fireplace, fireplace UAE",
+    secondaryKW: "outdoor gas fire place, indoor fire place, ethanol fireplace Dubai"
   },
   about: {
-    title: "About FlamesFireplace | Best Fireplace in Dubai, UAE",
-    description: "Learn about Flames Fireplace, Dubai's leading supplier of premium fireplaces and outdoor living solutions. We specialize in custom bio ethanol fireplaces, fire pits, and luxury fire features.",
-    primaryKW: "about FlamesFireplace, Flames Fireplace Dubai",
-    secondaryKW: "about us Dubai, luxury fireplace UAE"
+    title: "About Flames Fireplace | Dubai Fireplace Experts",
+    description: "Learn about Flames Fireplace, a Dubai supplier of premium indoor and outdoor fire units, custom fire tables, and modern fireplace solutions for homes and hospitality spaces.",
+    primaryKW: "about Flames Fireplace Dubai, fireplace experts UAE",
+    secondaryKW: "custom fire unit, luxury fire features"
   },
   indoor: {
-    title: "Indoor Bio Ethanol Fireplace | Flames Fireplace Dubai",
-    description: "Clean-burning ventless bio ethanol fireplaces for indoor layouts in Dubai. Real flame warmth with no chimneys, gas lines, or smoke. Certified safety.",
-    primaryKW: "indoor bio ethanol fireplace, ventless fireplace",
-    secondaryKW: "bioethanol fireplace UAE, wall mounted fireplace, no chimney fireplace"
+    title: "Indoor Fire Place Dubai | Ethanol, Water Vapor & 3D Artificial Fireplaces",
+    description: "Discover indoor fire places for Dubai homes, including manual ethanol fire places, 3D water vapor fire places, and 3D artificial fire places with clean modern styling.",
+    primaryKW: "indoor fire place Dubai, ethanol fireplace, water vapor fireplace",
+    secondaryKW: "3D artificial fire place, wall fire place, ventless fireplace"
   },
   outdoor: {
-    title: "Outdoor Fire Features & Pits | Flames Fireplace Dubai",
-    description: "Create a gorgeous outdoor patio lounge with custom bio ethanol fireplaces, gas fire tables, and weather-proof fire pit designs by Flames Fireplace.",
-    primaryKW: "outdoor bio ethanol fireplace, patio fireplace UAE",
-    secondaryKW: "outdoor fire features Dubai, pool deck fireplace, terrace fire feature"
+    title: "Outdoor Fire Unit Dubai | Gas Fire Place, Fire Pits & Fire Tables",
+    description: "Build a premium outdoor fire unit with home automation on/off control, high and low flame settings, remote operation, push-and-turn ignition, key valve fire places, fire pits, and custom fire tables.",
+    primaryKW: "outdoor fire unit Dubai, outdoor gas fire place, fire table UAE",
+    secondaryKW: "remote operated fire place, key valve fire place, fire pot Dubai"
   },
   faq: {
-    title: "FlamesFireplace FAQs | Best Fireplace in Dubai Guide",
-    description: "Expert answers to common questions about safety, fuel, and custom media wall casing designs for Flames Fireplace in Dubai and the UAE.",
-    primaryKW: "FlamesFireplace FAQ",
-    secondaryKW: "fireplace safety Dubai, bio ethanol fireplace FAQ"
+    title: "Flames Fireplace FAQs | Dubai Fireplace Guide",
+    description: "Expert answers about safety, fuel types, installation, and custom fireplace products for indoor and outdoor fire units in Dubai and the UAE.",
+    primaryKW: "Flames Fireplace FAQ, fireplace safety Dubai",
+    secondaryKW: "fuel options, fireplace installation UAE"
   },
   contact: {
-    title: "Contact FlamesFireplace | Best Fireplace in Dubai UAE",
-    description: "Get a quote from Flames Fireplace for premium fireplaces in Dubai. Contact our engineering team for custom bio ethanol and water vapor installations, outdoor kitchens, and BBQs.",
-    primaryKW: "contact FlamesFireplace, fireplace quote Dubai",
-    secondaryKW: "fireplace contact UAE, custom fireplace quote"
+    title: "Contact Flames Fireplace | Get a Quote in Dubai",
+    description: "Request a quote for custom fireplaces in Dubai, including outdoor gas fire places, manual ethanol fire places, 3D water vapor fire places, and bespoke fire tables.",
+    primaryKW: "contact Flames Fireplace, fireplace quote Dubai",
+    secondaryKW: "custom fire table, indoor fireplace quote"
   },
   'why-choose': {
-    title: "Why Choose FlamesFireplace | Best Fireplace in Dubai",
-    description: "Discover why Flames Fireplace is the top choice for luxury fire features in Dubai. Learn about our safety standards, premium materials, and customer support.",
-    primaryKW: "why choose FlamesFireplace, Flames Fireplace",
-    secondaryKW: "certified ventless fireplace, fireplace safety UAE"
+    title: "Why Choose Flames Fireplace | Premium Fireplaces in Dubai",
+    description: "Discover why Flames Fireplace is a trusted choice for indoor and outdoor fire units, custom fire tables, and modern fire place solutions built for UAE homes.",
+    primaryKW: "why choose Flames Fireplace, premium fireplace Dubai",
+    secondaryKW: "custom fire unit, luxury fireplace UAE"
   },
   'outdoor-features': {
-    title: "Outdoor Kitchens & BBQs Dubai | Flames Fireplace UAE",
-    description: "Elevate your outdoor space with custom modern outdoor kitchen layouts and heavy-duty built-in BBQ grills designed for GCC humidity by Flames Fireplace.",
-    primaryKW: "outdoor fire features Dubai, outdoor kitchen Dubai",
-    secondaryKW: "fire pit products Dubai, BBQ grill Dubai, outdoor fireplace UAE"
+    title: "Outdoor Fire Features Dubai | Gas Fire Place & Fire Tables",
+    description: "Design a complete outdoor fire feature setup with gas fire places, fire pots, lava rock, pebbles, artificial stone, and customized fire tables with integrated fire units.",
+    primaryKW: "outdoor fire features Dubai, gas fire place UAE",
+    secondaryKW: "fire pot, fire table, lava rock"
   },
   'best-fireplace-dubai': {
-    title: "Best Fireplace in Dubai | FlamesFireplace UAE Guide",
-    description: "Find the best fireplace in Dubai with Flames Fireplace. We offer bespoke bio ethanol fireplaces, water-vapor cassettes, custom fire pits, and barbecues across the UAE.",
-    primaryKW: "best fireplace Dubai, FlamesFireplace, fireplace Dubai",
-    secondaryKW: "bio ethanol fireplace Dubai, best fireplace UAE, fireplace install Dubai"
+    title: "Best Fireplace in Dubai | Flames Fireplace Guide",
+    description: "Find the best fireplace in Dubai with Flames Fireplace. Explore outdoor gas fire places, manual ethanol fire places, fire pots, fire tables, and indoor 3D flame options.",
+    primaryKW: "best fireplace Dubai, Flames Fireplace UAE",
+    secondaryKW: "outdoor gas fireplace, indoor fire place Dubai"
   },
   services: {
-    title: "Best Fireplace Services in Dubai | FlamesFireplace UAE",
-    description: "Flames Fireplace offers professional fireplace installation, CAD block design, and safety inspections for premium fireplace solutions in Dubai and the UAE.",
-    primaryKW: "fireplace installation Dubai, FlamesFireplace",
-    secondaryKW: "architectural fireplace services, technical site inspection UAE"
+    title: "Fireplace Products in Dubai | Flames Fireplace UAE",
+    description: "Explore Flames Fireplace products in Dubai: outdoor gas fire places, manual ethanol fire places, wood fire places, fire pots, fire tables, custom fire units, and indoor fire places.",
+    primaryKW: "fireplace products Dubai, flames fireplace products",
+    secondaryKW: "outdoor fire unit, indoor fire place, custom fire table"
   },
   portfolio: {
-    title: "FlamesFireplace Portfolio | Best Fireplaces in Dubai",
-    description: "Explore luxury installations by Flames Fireplace. View our portfolio of fireplace projects in Dubai, including bio-ethanol and water vapor solutions.",
-    primaryKW: "FlamesFireplace portfolio Dubai",
-    secondaryKW: "bespoke fire pit installation, luxury garden barbecue setups"
+    title: "Flames Fireplace Portfolio | Dubai Installations",
+    description: "Explore luxury fireplace installations by Flames Fireplace in Dubai, including indoor fire places, outdoor fire units, and custom fire tables.",
+    primaryKW: "Flames Fireplace portfolio Dubai",
+    secondaryKW: "fireplace installations, custom fire unit"
   },
   blog: {
-    title: "FlamesFireplace Blog | Best Fireplace Design & Tech",
-    description: "Read the latest design guides and technology reviews by Flames Fireplace. Learn about fireplace options, safety tips, and outdoor living ideas in Dubai.",
-    primaryKW: "FlamesFireplace blog, fireplace design Dubai",
-    secondaryKW: "luxury fire features UAE, water vapor fireplace trends"
+    title: "Flames Fireplace Blog | Fireplace Design & Product Guides",
+    description: "Read the latest fireplace design and product guides from Flames Fireplace. Learn about indoor fire places, outdoor gas fire places, and custom fire unit trends in Dubai.",
+    primaryKW: "Flames Fireplace blog, fireplace design Dubai",
+    secondaryKW: "fire place guide, fire unit trends"
   }
 
 };
@@ -91,66 +91,66 @@ export const TRUST_BAR = [
 export const SERVICES: ServiceItem[] = [
   {
     id: "water-vapor-fireplace",
-    title: "3D Water Vapor Fireplaces",
-    subtitle: "Eco-Safe Mist Technology",
-    description: "Realistic clean flames using ultrasonic water mist and colored LEDs. 100% cool-to-touch and safe beneath smart TV media centers.",
+    title: "3D Water Vapor Fire Place",
+    subtitle: "Cool-To-Touch Indoor Flame Effect",
+    description: "Realistic 3D flame visuals created with ultrasonic water mist and LED light — perfect for media walls, luxury apartments, and child-safe interiors.",
     image: "/assets/Water Vapor Fireplace _ Wall Feature.png",
-    badge: "3D WATER MIST",
+    badge: "3D WATER VAPOR",
     category: "indoor",
-    waMessage: "Inquiry regarding Indoor 3D Water Vapor Fireplaces",
-    seoTitle: "3D Water Vapor Fireplace Dubai | Flames Fireplace",
-    seoDescription: "Flames Fireplace designs safe 3D water vapor fireplaces in Dubai. Ultrasonic mist technology offers realistic flames completely safe beneath smart TVs.",
+    waMessage: "Inquiry regarding 3D Water Vapor Fire Place",
+    seoTitle: "3D Water Vapor Fire Place Dubai | Flames Fireplace",
+    seoDescription: "Flames Fireplace designs 3D water vapor fire places in Dubai with cool-to-touch mist flames, ideal beneath TVs and inside modern living spaces.",
     faqs: [
-      { question: "Are water vapor fireplaces safe around TVs?", answer: "Yes — they produce a cool mist and no heat, safe beneath AV units when installed correctly." },
+      { question: "Are water vapor fireplaces safe around TVs?", answer: "Yes — they produce a cool mist and no heat, so they are ideal beneath AV units when installed correctly." },
       { question: "Do they need maintenance?", answer: "Occasional tank refills and periodic descaling of the ultrasonic nebulizer keep performance optimal." }
     ]
   },
   {
     id: "bio-ethanol-fireplace",
-    title: "Bio-Ethanol Fireplaces",
-    subtitle: "Ventless Living Flames Fireplace",
-    description: "Authentic physical heat and beautiful golden flames burning clean renewable liquid fuel with zero smoke, ash, or soot.",
+    title: "Manual Ethanol Fire Place",
+    subtitle: "Clean Real Flame for Indoor Spaces",
+    description: "Authentic physical heat and beautiful golden flames powered by clean liquid ethanol fuel with zero smoke, ash, or soot.",
     image: "/assets/Bio-Ethanol Fireplace _ Product Close-up.png",
-    badge: "BIO-ETHANOL FLAMES FIREPLACE",
+    badge: "ETHANOL FIRE PLACE",
     category: "indoor",
-    waMessage: "Inquiry regarding bespoke Indoor Bio-Ethanol Fireplaces",
-    seoTitle: "Bio Ethanol Fireplace Dubai | Flames Fireplace UAE",
-    seoDescription: "Purchase premium bio ethanol fireplaces in Dubai from Flames Fireplace. Ventless clean combustion with real heat, golden flames, and certified safety.",
+    waMessage: "Inquiry regarding Manual Ethanol Fire Place",
+    seoTitle: "Manual Ethanol Fire Place Dubai | Flames Fireplace UAE",
+    seoDescription: "Purchase manual ethanol fire places in Dubai from Flames Fireplace. Clean-burning real flame, ventless styling, and premium indoor design.",
     faqs: [
-      { question: "Do bio-ethanol fireplaces produce smoke?", answer: "No — high-quality bio-ethanol burns cleanly without smoke or soot." },
+      { question: "Do ethanol fire places produce smoke?", answer: "No — high-quality ethanol burns cleanly without smoke or soot." },
       { question: "Is ventilation required?", answer: "Normal room ventilation is sufficient; avoid completely sealed rooms when running large burners." }
     ]
   },
   {
     id: "fire-pit",
-    title: "Fire Pits & Tables",
-    subtitle: "Architectural Fire Features",
-    description: "Durable concrete fire tables and fire bowls running on clean bioethanol or gas, completed with tempered wind safety guards.",
+    title: "Fire Pot & Fire Tables",
+    subtitle: "Concrete, Metal Powder-Coated & GRC Fire Bowls",
+    description: "Durable fire pots, fire bowls, and fire tables in concrete, metal powder-coated, and GRC finishes — built for elegant outdoor entertaining.",
     image: "/assets/Fire Pit _ Product Close-up.png",
-    badge: "FIRE PITS & BOWLS",
+    badge: "FIRE POTS & TABLES",
     category: "outdoor",
-    waMessage: "Inquiry regarding custom Outdoor Fire Pits & Fire Tables",
-    seoTitle: "Outdoor Fire Pits & Tables Dubai | Flames Fireplace",
-    seoDescription: "Discover architectural outdoor fire pits and concrete fire tables in Dubai. Weather-resistant marine grade structures with safety-first wind guards.",
+    waMessage: "Inquiry regarding Fire Pot & Fire Tables",
+    seoTitle: "Fire Pot & Fire Tables Dubai | Flames Fireplace",
+    seoDescription: "Discover concrete fire pots, metal powder-coated fire bowls, GRC fire bowls, and custom fire tables in Dubai from Flames Fireplace.",
     faqs: [
-      { question: "Can I use fire pits near pools?", answer: "Yes — we design materials and finishes that resist pool-side corrosion and splash exposure." },
+      { question: "Can I use fire pots near pools?", answer: "Yes — we design materials and finishes that resist pool-side corrosion and splash exposure." },
       { question: "What fuels can be used?", answer: "We support bioethanol, wood, and gas options depending on model and site needs." }
     ]
   },
   {
     id: "built-in-bbq",
-    title: "Built-In BBQs",
-    subtitle: "Outdoor Cooking Spaces",
-    description: "Tailored built-in BBQ stations with durable finishes and functional layouts for modern outdoor entertaining.",
+    title: "Customized Fire Table with Fire Unit",
+    subtitle: "Integrated Outdoor Fire Feature",
+    description: "Custom fire tables with integrated fire units, made for private villas, hospitality terraces, and high-end outdoor spaces.",
     image: "/assets/Built-In BBQ _ Flames Close-up.png",
-    badge: "OUTDOOR COOKING",
+    badge: "CUSTOM FIRE TABLE",
     category: "outdoor",
-    waMessage: "Inquiry regarding Built-In BBQs in Dubai",
-    seoTitle: "Built-In BBQs & Outdoor Kitchens Dubai | Flames UAE",
-    seoDescription: "Design custom built-in BBQs and outdoor kitchens in Dubai. Weather-resistant materials engineered for GCC heat and humidity by Flames Fireplace.",
+    waMessage: "Inquiry regarding Customized Fire Table with Fire Unit",
+    seoTitle: "Customized Fire Table with Fire Unit Dubai | Flames Fireplace",
+    seoDescription: "Design customized fire tables with fire units in Dubai. Clean detailing, weather-resistant materials, and bespoke outdoor fire feature integration.",
     faqs: [
-      { question: "Do you install gas connections?", answer: "Yes — we coordinate with certified gas installers and provide technical schematics for plumbing connections." },
-      { question: "Can we add refrigeration drawers?", answer: "Absolutely — our custom islands can include fridges, drawers, and integrated waste systems." }
+      { question: "Can you build custom fire tables with integrated burners?", answer: "Yes — we create customized fire tables with built-in fire units for residential and hospitality projects." },
+      { question: "Can the unit be adapted for remote operation?", answer: "Yes — many custom fire unit builds can include remote control, push-and-turn ignition, or key valve operation." }
     ]
   }
 ];

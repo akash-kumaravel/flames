@@ -12,11 +12,12 @@ export default function FirePitPage({ onNavigate }: FirePitProps) {
   return (
     <ProductPage
       productId="fire-pit"
-      title="Fire Pits"
-      tagline="Gather Around Real Flames - The Heart of Your Outdoor Space"
-      description="Create unforgettable outdoor experiences with our architectural fire pits. Built tough for Dubai's climate, designed for entertaining and relaxation."
-      detailedDescription="Fire pits are the perfect centerpiece for outdoor gatherings. Our collection features concrete and steel construction specifically engineered for extreme heat and humidity. Choose from bioethanol-powered instant-flame models or traditional wood-burning pits. Each design combines functionality with sophisticated aesthetics."
+      title="Fire Pot & Fire Tables"
+      tagline="Concrete, Metal Powder-Coated & GRC Fire Bowls for Outdoor Living"
+      description="Create unforgettable outdoor experiences with our architectural fire pots and fire tables. Built tough for Dubai's climate, designed for entertaining and relaxation."
+      detailedDescription="Fire pots and fire tables are the perfect centerpiece for outdoor gatherings. Our collection features concrete, metal powder-coated, and GRC construction specifically engineered for extreme heat and humidity. Choose from bioethanol-powered instant-flame models or traditional wood-burning pits. Each design combines functionality with sophisticated aesthetics."
       imageUrl={svc?.image || "https://images.unsplash.com/photo-1578270842512-b6c5f1f14dbb?auto=format&fit=crop&q=80&w=1200"}
+
       features={[
         "Heavy-Duty Construction - Reinforced concrete and marine-grade stainless steel",
         "Fuel Flexibility - Bioethanol, wood-burning, or gas options",

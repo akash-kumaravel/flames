@@ -12,11 +12,12 @@ export default function IndoorFireplacePage({ onNavigate }: IndoorFireplaceProps
   return (
     <ProductPage
       productId="indoor-fireplace"
-      title="Indoor Fireplaces"
-      tagline="Elegant Heat and Ambiance for Modern Living Spaces"
-      description="Transform your interior with indoor fireplaces. Choose from water vapor, bioethanol, or electric models that provide warmth, style, and atmosphere."
-      detailedDescription="Our indoor fireplace collection brings together cutting-edge technology and stunning design. Whether you prefer the realistic flames of bioethanol, the visual magic of water vapor, or the convenience of electric units, we have the perfect solution. Each model is carefully selected for safety, efficiency, and aesthetic appeal in contemporary Dubai homes."
+      title="Indoor Fire Place"
+      tagline="Ethanol, 3D Water Vapor & 3D Artificial Fireplaces"
+      description="Transform your interior with indoor fire places. Choose from manual ethanol fire places, 3D water vapor fire places, or 3D artificial fire places that provide warmth, style, and atmosphere."
+      detailedDescription="Our indoor fire place collection brings together cutting-edge technology and stunning design. Whether you prefer the realistic flames of ethanol, the visual magic of water vapor, or the convenience of 3D artificial fire places, we have the perfect solution. Each model is carefully selected for safety, efficiency, and aesthetic appeal in contemporary Dubai homes."
       imageUrl={svc?.image || "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&q=80&w=1200"}
+
       features={[
         "Ventless Technology - No chimney or flue installation required",
         "Wall-Mounted or Recessed Options - Fits seamlessly into modern interiors",

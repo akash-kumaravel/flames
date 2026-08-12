@@ -11,11 +11,12 @@ export default function EthanolBurnerPage({ onNavigate }: EthanolBurnerProps) {
   return (
     <ProductPage
       productId="ethanol-burner"
-      title="Ethanol Burners"
-      tagline="The Heart of Every Bioethanol Fireplace - Pure Burning Performance"
-      description="High-quality ethanol burners that deliver clean, consistent flames. Perfect for custom fireplace projects and replacement needs."
-      detailedDescription="The burner is the heart of any bioethanol fireplace. Our ethanol burners are engineered for safety, efficiency, and flame quality. Whether you're building a custom project, upgrading an existing fireplace, or replacing a worn component, our burners deliver clean, reliable performance. Each unit is tested for fuel efficiency and flame consistency."
+      title="Manual Ethanol Fire Place"
+      tagline="The Heart of Every Custom Fire Feature - Pure Burning Performance"
+      description="High-quality ethanol fire places that deliver clean, consistent flames. Perfect for custom fireplace projects and replacement needs."
+      detailedDescription="The burner is the heart of any ethanol fire place. Our ethanol burners are engineered for safety, efficiency, and flame quality. Whether you're building a custom project, upgrading an existing fireplace, or replacing a worn component, our burners deliver clean, reliable performance. Each unit is tested for fuel efficiency and flame consistency."
       imageUrl={svc?.image || "https://images.unsplash.com/photo-1600210454835-a3b4e3b7c3b2?auto=format&fit=crop&q=80&w=1200"}
+
       features={[
         "Precision Engineering - Optimized combustion chamber design for clean burning",
         "Multiple Sizes - Available in various capacities (0.5L to 3L)",

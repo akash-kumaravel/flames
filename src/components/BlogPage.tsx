@@ -24,7 +24,7 @@ export default function BlogPage({ onNavigateContact, onNavigate, selectedArticl
                 Blog
               </span>
               <h1 className="font-sans font-semibold text-3xl md:text-5xl text-white tracking-tight mt-4 mb-3">
-                Flames Fireplace Blog — Design &amp; Technology Articles
+                Flames Fireplace Blog — Fire Place & Product Guides
               </h1>
               <p className="font-sans text-sm text-neutral-400 leading-relaxed">
                 Expert insights, detailed comparisons, performance reviews, and safety rules directly from the Flames Fireplace technical validation group.
