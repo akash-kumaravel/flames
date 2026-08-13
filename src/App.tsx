@@ -32,8 +32,14 @@ import OutdoorKitchenPage from './components/OutdoorKitchenPage';
 import BuiltInBbqPage from './components/BuiltInBbqPage';
 import FireplaceDubaiPage from './components/FireplaceDubaiPage';
 import EthanolBurnerPage from './components/EthanolBurnerPage';
+import OutdoorGasFireplacePage from './components/OutdoorGasFireplacePage';
+import WoodFireplacePage from './components/WoodFireplacePage';
+import RocksPage from './components/RocksPage';
+import FirePotTablesPage from './components/FirePotTablesPage';
+import CustomFireTablesPage from './components/CustomFireTablesPage';
 import BestFireplaceLanding from './components/BestFireplaceLanding';
 import Breadcrumbs, { BreadcrumbStep } from './components/Breadcrumbs';
+import Artificial3DFireplacePage from './components/Artificial3DFireplacePage';
 
 const sectionToPath: Record<ActiveSection, string> = {
   'home': '/',
@@ -46,6 +52,14 @@ const sectionToPath: Record<ActiveSection, string> = {
   'blog': '/blog',
   'bio-ethanol-fireplace': '/services/bio-ethanol-fireplace',
   'water-vapor-fireplace': '/services/water-vapor-fireplace',
+  'outdoor-gas-fireplace': '/services/outdoor-gas-fireplace',
+  'ethanol-fireplace': '/services/ethanol-fireplace',
+  'wood-fireplace': '/services/wood-fireplace',
+  'rocks-media': '/services/rocks-media',
+  'fire-pot-tables': '/services/fire-pot-tables',
+  'custom-fire-tables': '/services/custom-fire-tables',
+  'custom-fire-table': '/services/custom-fire-table',
+  'artificial-3d-fireplace': '/services/artificial-3d-fireplace',
   'outdoor-fireplace': '/services/outdoor-fireplace',
   'indoor-fireplace': '/services/indoor-fireplace',
   'fire-pit': '/services/fire-pit',
@@ -63,6 +77,14 @@ const getSectionFromPath = (): ActiveSection => {
     // by the generic '/services' check below.
     if (path.includes('/services/bio-ethanol-fireplace')) return 'bio-ethanol-fireplace';
     if (path.includes('/services/water-vapor-fireplace')) return 'water-vapor-fireplace';
+    if (path.includes('/services/outdoor-gas-fireplace')) return 'outdoor-gas-fireplace';
+    if (path.includes('/services/ethanol-fireplace')) return 'ethanol-fireplace';
+    if (path.includes('/services/wood-fireplace')) return 'wood-fireplace';
+    if (path.includes('/services/rocks-media')) return 'rocks-media';
+    if (path.includes('/services/fire-pot-tables')) return 'fire-pot-tables';
+    if (path.includes('/services/custom-fire-tables')) return 'custom-fire-tables';
+    if (path.includes('/services/custom-fire-table')) return 'custom-fire-table';
+    if (path.includes('/services/artificial-3d-fireplace')) return 'artificial-3d-fireplace';
     if (path.includes('/services/outdoor-fireplace')) return 'outdoor-fireplace';
     if (path.includes('/services/indoor-fireplace')) return 'indoor-fireplace';
     if (path.includes('/services/fire-pit')) return 'fire-pit';
@@ -677,6 +699,32 @@ export default function App() {
             {/* ──── ROUTE: DESIGN & INSTALLATION SERVICES ──── */}
             {activeSection === 'services' && (
               <ServicesPage onNavigate={handleNavigation} />
+            )}
+
+            {/* ──── ROUTE: NEW DETAILED SERVICE PAGES ──── */}
+            {activeSection === 'outdoor-gas-fireplace' && (
+              <OutdoorGasFireplacePage onNavigate={handleNavigation} />
+            )}
+            {activeSection === 'ethanol-fireplace' && (
+              <BioEthanolFireplacePage onNavigate={handleNavigation} />
+            )}
+            {activeSection === 'wood-fireplace' && (
+              <WoodFireplacePage onNavigate={handleNavigation} />
+            )}
+            {activeSection === 'rocks-media' && (
+              <RocksPage onNavigate={handleNavigation} />
+            )}
+            {activeSection === 'fire-pot-tables' && (
+              <FirePotTablesPage onNavigate={handleNavigation} />
+            )}
+            {activeSection === 'custom-fire-tables' && (
+              <CustomFireTablesPage onNavigate={handleNavigation} />
+            )}
+            {activeSection === 'custom-fire-table' && (
+              <CustomFireTablesPage onNavigate={handleNavigation} />
+            )}
+            {activeSection === 'artificial-3d-fireplace' && (
+              <Artificial3DFireplacePage onNavigate={handleNavigation} />
             )}
 
             {/* ──── ROUTE: PROJECT PORTFOLIO ──── */}

@@ -8,7 +8,7 @@ interface BioEthanolProps {
 }
 
 export default function BioEthanolFireplacePage({ onNavigate }: BioEthanolProps) {
-  const svc = SERVICES.find(s => s.id === 'bio-ethanol-fireplace');
+  const svc = SERVICES.find(s => s.id === 'ethanol-fireplace' || s.id === 'bio-ethanol-fireplace');
   return (
     <ProductPage
       productId="bio-ethanol-fireplace"
