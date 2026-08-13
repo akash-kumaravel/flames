@@ -129,7 +129,7 @@ export default function ProductPage({
           <aside className="space-y-6">
             <div className="rounded-[2rem] border border-neutral-800 bg-neutral-950/95 p-8 text-white shadow-2xl shadow-orange-500/10">
               <span className="text-xs uppercase tracking-[0.3em] text-orange-300 font-semibold">Need help choosing?</span>
-              <h3 className="mt-4 text-2xl font-semibold">Talk to our UAE fireplace experts</h3>
+              <h3 className="mt-4 text-2xl font-semibold">Talk to Flames Fireplace</h3>
               <p className="mt-4 text-neutral-300 leading-relaxed">
                 We help you pick the best fireplace option for your space, whether you want indoor ambience, outdoor drama, or a modern media wall feature.
               </p>

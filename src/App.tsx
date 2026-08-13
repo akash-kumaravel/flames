@@ -38,7 +38,6 @@ import RocksPage from './components/RocksPage';
 import FirePotTablesPage from './components/FirePotTablesPage';
 import CustomFireTablesPage from './components/CustomFireTablesPage';
 import BestFireplaceLanding from './components/BestFireplaceLanding';
-import Breadcrumbs, { BreadcrumbStep } from './components/Breadcrumbs';
 import Artificial3DFireplacePage from './components/Artificial3DFireplacePage';
 
 const sectionToPath: Record<ActiveSection, string> = {
@@ -535,9 +534,6 @@ export default function App() {
       
       {/* 1. Global Navigation header bar */}
       <Header activeSection={activeSection} onNavigate={handleNavigation} />
-      {activeSection !== 'home' && (
-        <Breadcrumbs steps={getBreadcrumbsSteps()} onNavigate={handleNavigation} onSelectArticle={handleSelectArticle} />
-      )}
       {/* debug banner removed */}
 
       {/* 2. Main content switchboard wrapper */}

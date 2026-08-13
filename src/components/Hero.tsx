@@ -15,50 +15,35 @@ export default function Hero({ onNavigate }: HeroProps) {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   useEffect(() => {
-    const interval = window.setInterval(() => {
-      setActiveSlideIndex((prev) => (prev + 1) % heroSlides.length);
-    }, 4500);
-
-    return () => window.clearInterval(interval);
-  }, [heroSlides.length]);
-
-  useEffect(() => {
-    const nextIndex = (activeSlideIndex + 1) % heroSlides.length;
     const nextImage = new Image();
-    nextImage.src = heroSlides[nextIndex].image;
+    nextImage.src = heroSlides[activeSlideIndex].image;
   }, [activeSlideIndex, heroSlides]);
 
   return (
-    <div id="hero-landing-page" className="pb-20 px-6 md:px-12 bg-[#0b0b0b]">
+    <div id="hero-landing-page" className="px-6 md:px-12 bg-[#0b0b0b]">
       {/* 1. Hero Content & Tagline Section */}
       <section className="relative min-h-screen overflow-hidden shadow-2xl border border-neutral-200/20 rounded-none w-screen max-w-none ml-[calc(50%-50vw)]">
         <div className="absolute inset-0 z-0">
-          <img
-            key={heroSlides[activeSlideIndex].image}
-            src={heroSlides[activeSlideIndex].image}
-            alt={`Luxury ${heroSlides[activeSlideIndex].title} design and installation by Flames Fireplace in Dubai UAE`}
-            width={1920}
-            height={1080}
-            loading="eager"
-            fetchpriority="high"
-            referrerPolicy="no-referrer"
+          <video
+            src="/assets/hero%201.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
             className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-neutral-950/80 via-neutral-900/45 to-neutral-900/20" />
         </div>
 
-        <div className="relative z-10 min-h-screen flex items-center justify-center px-6 md:px-12">
-          <div className="text-center flex flex-col items-center max-w-5xl py-20">
+        <div className="relative z-10 min-h-screen flex items-center justify-center px-6 md:px-12 pt-20 pb-10">
+          <div className="text-center flex flex-col items-center max-w-5xl my-auto">
           <motion.div
             id="hero-tagline-badge"
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-500/15 text-orange-300 font-sans text-xs font-semibold uppercase tracking-wider mb-6"
-          >
-            <Flame className="w-3.5 h-3.5 fill-orange-600 text-orange-600" />
-            Flames Fireplace Dubai & UAE
-          </motion.div>
+            className="hidden"
+          />
 
           <motion.h1
             id="hero-headline"
@@ -67,7 +52,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             transition={{ duration: 1, delay: 0.1 }}
             className="font-sans font-semibold text-4xl sm:text-5xl md:text-6xl text-white tracking-tight leading-tight max-w-4xl"
           >
-            Flames Fireplace Dubai — Premium Indoor & Outdoor Fire Units
+            Flames Fireplace Dubai Premium Indoor & Outdoor Fire Units
           </motion.h1>
 
           <motion.p
@@ -77,7 +62,11 @@ export default function Hero({ onNavigate }: HeroProps) {
             transition={{ duration: 1, delay: 0.2 }}
             className="font-sans text-lg md:text-xl text-neutral-300 max-w-2xl mt-6 leading-relaxed"
           >
-            Looking for Flames Fireplace in Dubai? Flames Fireplace offers premium indoor and outdoor fire units, including manual ethanol fire places, 3D water vapor fire places, custom fire pots, and fire tables across the UAE. Smokeless. Safe. Timeless.
+            <span className="text-white font-semibold">Looking for Flames Fireplace in Dubai?</span>{' '}
+            <span className="text-orange-200 font-medium">Flames Fireplace</span> offers premium indoor and outdoor fire units, including manual ethanol fireplaces, 3D water vapor fireplaces, custom fire pots, and fire tables across the UAE.{' '}
+            <span className="text-white font-semibold">Smokeless.</span>{' '}
+            <span className="text-orange-200 font-semibold">Safe.</span>{' '}
+            <span className="text-white font-semibold">Timeless.</span>
           </motion.p>
 
           <motion.div
@@ -113,83 +102,6 @@ export default function Hero({ onNavigate }: HeroProps) {
             </button>
           </motion.div>
 
-          <motion.div
-            className="mt-12 w-full max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.35 }}
-          >
-            <div
-              role="button"
-              onClick={() => onNavigate(heroSlides[activeSlideIndex].id as unknown as ActiveSection)}
-              className="group cursor-pointer rounded-3xl border border-white/15 bg-white/10 backdrop-blur-xl p-6 md:p-8 hover:border-orange-300/50 hover:bg-white/15 transition-all duration-300"
-            >
-              <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                <div className="space-y-3 text-left md:max-w-2xl">
-                  <span className="text-xs uppercase tracking-[0.3em] text-orange-200 font-semibold">Featured Fireplace</span>
-                  <h2 className="font-sans text-2xl md:text-3xl font-semibold text-white tracking-tight">
-                    {heroSlides[activeSlideIndex].title}
-                  </h2>
-                  <p className="text-sm md:text-base text-neutral-100/90 leading-relaxed max-w-3xl">
-                    {heroSlides[activeSlideIndex].subtitle || heroSlides[activeSlideIndex].description}
-                  </p>
-                </div>
-
-                <button
-                  type="button"
-                  onClick={(event) => {
-                    event.stopPropagation();
-                    onNavigate(heroSlides[activeSlideIndex].id as unknown as ActiveSection);
-                  }}
-                  className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-5 py-3 text-sm font-semibold text-white shadow-xl shadow-orange-500/20 hover:bg-orange-700 transition-all duration-300"
-                >
-                  Explore {heroSlides[activeSlideIndex].title}
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
-
-              <div className="mt-6 flex items-center justify-between gap-4">
-                <button
-                  type="button"
-                  onClick={(event) => {
-                    event.stopPropagation();
-                    setActiveSlideIndex((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
-                  }}
-                  className="inline-flex items-center justify-center h-11 w-11 rounded-full border border-white/20 bg-black/20 text-white transition-colors duration-300 hover:border-orange-300/80 hover:bg-orange-500/20"
-                  aria-label="Previous slide"
-                >
-                  <ArrowLeft className="w-4 h-4" />
-                </button>
-
-                <div className="flex items-center gap-2">
-                  {heroSlides.map((slide, index) => (
-                    <button
-                      key={slide.id}
-                      type="button"
-                      onClick={(event) => {
-                        event.stopPropagation();
-                        setActiveSlideIndex(index);
-                      }}
-                      className={`h-3 w-3 rounded-full transition-all duration-200 ${index === activeSlideIndex ? 'bg-orange-500 scale-110' : 'bg-white/40 hover:bg-white/70'}`}
-                      aria-label={`View ${slide.title}`}
-                    />
-                  ))}
-                </div>
-
-                <button
-                  type="button"
-                  onClick={(event) => {
-                    event.stopPropagation();
-                    setActiveSlideIndex((prev) => (prev + 1) % heroSlides.length);
-                  }}
-                  className="inline-flex items-center justify-center h-11 w-11 rounded-full border border-white/20 bg-black/20 text-white transition-colors duration-300 hover:border-orange-300/80 hover:bg-orange-500/20"
-                  aria-label="Next slide"
-                >
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-          </motion.div>
           </div>
         </div>
       </section>
