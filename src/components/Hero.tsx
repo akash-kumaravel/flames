@@ -57,7 +57,6 @@ export default function Hero({ onNavigate }: HeroProps) {
             className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-500/15 text-orange-300 font-sans text-xs font-semibold uppercase tracking-wider mb-6"
           >
             <Flame className="w-3.5 h-3.5 fill-orange-600 text-orange-600" />
-            Flames Fireplace Dubai & UAE
           </motion.div>
 
           <motion.h1
@@ -77,7 +76,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             transition={{ duration: 1, delay: 0.2 }}
             className="font-sans text-lg md:text-xl text-neutral-300 max-w-2xl mt-6 leading-relaxed"
           >
-            Looking for Flames Fireplace in Dubai? Flames Fireplace offers premium indoor and outdoor fire units, including manual ethanol fire places, 3D water vapor fire places, custom fire pots, and fire tables across the UAE. Smokeless. Safe. Timeless.
+            Looking for Flames Fireplace in Dubai? Flames Fireplace offers premium indoor and outdoor fire units, including manual ethanol fire places, 3D water vapor fire places, custom fire pots[...]
           </motion.p>
 
           <motion.div
@@ -90,7 +89,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             <button
               id="hero-explore-services-btn"
               onClick={() => onNavigate('services')}
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-orange-700 hover:bg-orange-800 text-white font-sans text-sm font-semibold hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-orange-700 hover:bg-orange-800 text-white font-sans text-sm font-semibold hover:shadow-xl hover:shadow-orange-500/10 transition-[...]
               aria-label="Explore our services"
             >
               Explore Our Services
@@ -99,7 +98,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             <button
               id="hero-view-portfolio-btn"
               onClick={() => onNavigate('portfolio')}
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-neutral-900/80 hover:bg-orange-500 text-white font-sans text-sm font-semibold hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-neutral-900/80 hover:bg-orange-500 text-white font-sans text-sm font-semibold hover:shadow-xl hover:shadow-orange-500/10 transi[...]
             >
               View Portfolio
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -107,7 +106,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             <button
               id="hero-quote-btn"
               onClick={() => onNavigate('contact')}
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/15 text-white font-sans text-sm font-semibold border border-white/15 shadow-xs transition-colors cursor-pointer"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/15 text-white font-sans text-sm font-semibold border border-white/15 shadow-xs transition-colors cursor[...]
             >
               Get a Free Quote
             </button>
@@ -141,7 +140,7 @@ export default function Hero({ onNavigate }: HeroProps) {
                     event.stopPropagation();
                     onNavigate(heroSlides[activeSlideIndex].id as unknown as ActiveSection);
                   }}
-                  className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-5 py-3 text-sm font-semibold text-white shadow-xl shadow-orange-500/20 hover:bg-orange-700 transition-all duration-300"
+                  className="inline-flex items-center gap-2 rounded-full bg-orange-600 px-5 py-3 text-sm font-semibold text-white shadow-xl shadow-orange-500/20 hover:bg-orange-700 transition-all[...]
                 >
                   Explore {heroSlides[activeSlideIndex].title}
                   <ArrowRight className="w-4 h-4" />
@@ -155,7 +154,7 @@ export default function Hero({ onNavigate }: HeroProps) {
                     event.stopPropagation();
                     setActiveSlideIndex((prev) => (prev - 1 + heroSlides.length) % heroSlides.length);
                   }}
-                  className="inline-flex items-center justify-center h-11 w-11 rounded-full border border-white/20 bg-black/20 text-white transition-colors duration-300 hover:border-orange-300/80 hover:bg-orange-500/20"
+                  className="inline-flex items-center justify-center h-11 w-11 rounded-full border border-white/20 bg-black/20 text-white transition-colors duration-300 hover:border-orange-300/80[...]
                   aria-label="Previous slide"
                 >
                   <ArrowLeft className="w-4 h-4" />
@@ -182,7 +181,7 @@ export default function Hero({ onNavigate }: HeroProps) {
                     event.stopPropagation();
                     setActiveSlideIndex((prev) => (prev + 1) % heroSlides.length);
                   }}
-                  className="inline-flex items-center justify-center h-11 w-11 rounded-full border border-white/20 bg-black/20 text-white transition-colors duration-300 hover:border-orange-300/80 hover:bg-orange-500/20"
+                  className="inline-flex items-center justify-center h-11 w-11 rounded-full border border-white/20 bg-black/20 text-white transition-colors duration-300 hover:border-orange-300/80[...]
                   aria-label="Next slide"
                 >
                   <ArrowRight className="w-4 h-4" />
@@ -210,13 +209,13 @@ export default function Hero({ onNavigate }: HeroProps) {
             Our premium flueless units offer real heat and beautiful golden flames without the need for traditional chimneys, flues, or gas connections.
           </p>
           <p>
-            From modern city apartments to expansive seaside pool gardens, our smokeless fire solutions are trusted by luxury homeowners, interior designers, architects, and hospitality specialists across the UAE.
+            From modern city apartments to expansive seaside pool gardens, our smokeless fire solutions are trusted by luxury homeowners, interior designers, architects, and hospitality specialis[...]
             We supply the best fireplace systems in Dubai, including built-in bioethanol cassette inserts, freestanding fire columns, and water-vapor cassettes.
-            Our team works closely with developers in Dubai Marina, Palm Jumeirah, Emirates Hills, and Business Bay to design custom media walls and outdoor kitchens that elevate lifestyle experiences.
+            Our team works closely with developers in Dubai Marina, Palm Jumeirah, Emirates Hills, and Business Bay to design custom media walls and outdoor kitchens that elevate lifestyle experi[...]
           </p>
           <p>
             Our bio-ethanol burners utilize high-grade, clean-burning liquid bioethanol to produce a warm golden flame with zero soot, ash, or smoke.
-            For commercial lobbies or spaces where cool-to-touch safety is required, our 3D water vapor fireplaces combine ultrasonic water mist with colored LED lights to produce highly realistic flames that are completely safe around children and pets.
+            For commercial lobbies or spaces where cool-to-touch safety is required, our 3D water vapor fireplaces combine ultrasonic water mist with colored LED lights to produce highly realisti[...]
           </p>
         </div>
       </section>
@@ -242,7 +241,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           <span className="text-xs font-bold uppercase tracking-widest text-orange-400 block mb-2">Our Professional Services</span>
           <h2 className="font-sans text-3xl font-semibold text-white tracking-tight">Outdoor Fire Features &amp; Kitchens in Dubai, Abu Dhabi &amp; Sharjah</h2>
           <p className="font-sans text-sm text-neutral-400 max-w-2xl mx-auto mt-3">
-            Transforming luxury villas, pool decks, and gardens with weather-resistant fire features, custom kitchens, and barbecue installations across Dubai, Abu Dhabi, Sharjah, and the wider UAE.
+            Transforming luxury villas, pool decks, and gardens with weather-resistant fire features, custom kitchens, and barbecue installations across Dubai, Abu Dhabi, Sharjah, and the wider U[...]
           </p>
         </div>
 
