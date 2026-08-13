@@ -90,11 +90,101 @@ export const TRUST_BAR = [
 
 export const SERVICES: ServiceItem[] = [
   {
+    id: "outdoor-gas-fireplace",
+    title: "Outdoor Gas Fire Place",
+    subtitle: "Automated Gas Burners & Controls",
+    description: "Outdoor gas fireplaces. Features: Home automated on &off fire place; High and low flame fire Place; On and Off remote operated fire place; Push & turn fire place; Key valve Fire place.",
+    image: "/assets/OutdoorGasFireplac.jpeg",
+    badge: "GAS FIREPLACE",
+    category: "outdoor",
+    waMessage: "Inquiry regarding Outdoor Gas Fire Place",
+    seoTitle: "Outdoor Gas Fire Place Dubai | Flames Fireplace",
+    seoDescription: "High-performance outdoor gas fireplaces with automation, remote ignition, and durable weatherproof housings.",
+    faqs: [
+      { question: "Can gas units be automated?", answer: "Yes — we can integrate gas burners with smart home controllers and safety interlocks." }
+    ]
+  },
+  {
+    id: "ethanol-fireplace",
+    title: "Ethanol Fire Place",
+    subtitle: "Manual & Automated Ethanol Burners",
+    description: "Manual ethanol fire place. Ethanol.",
+    image: "/assets/Bio-Ethanol Fireplace _ Product Close-up.png",
+    badge: "ETHANOL FIRE PLACE",
+    category: "outdoor",
+    waMessage: "Inquiry regarding Ethanol Fire Place",
+    seoTitle: "Ethanol Fire Place Dubai | Flames Fireplace",
+    seoDescription: "Manual and automated ethanol fireplaces for indoor and sheltered outdoor settings — clean burning and flexible styling.",
+    faqs: [
+      { question: "Are ethanol burners ventless?", answer: "Yes — ethanol burns cleanly without smoke or soot, but ensure reasonable room ventilation for large burns." }
+    ]
+  },
+  {
+    id: "wood-fireplace",
+    title: "Wood Fire Place",
+    subtitle: "Traditional Wood-Burning Options",
+    description: "Classic wood-fired solutions for outdoor settings and designated hearth areas, with ember control and safety options.",
+    image: "/assets/WOOD FIRE PLACE.jpeg",
+    badge: "WOOD FIRE PLACE",
+    category: "outdoor",
+    waMessage: "Inquiry regarding Wood Fire Place",
+    seoTitle: "Wood Fire Place Dubai | Flames Fireplace",
+    seoDescription: "Traditional wood fireplaces and engineered wood fire features for outdoor entertaining and hearth installations.",
+    faqs: [
+      { question: "Can wood fires be used near leisure areas?", answer: "Yes — with appropriate spark guards and placement; we advise on safe distances and materials." }
+    ]
+  },
+  {
+    id: "rocks-media",
+    title: "Rocks",
+    subtitle: "Lava Rock, Pebbles & Artificial Stone",
+    description: "Supply of lava rock, decorative pebbles, and architectural artificial stone media for styling fire beds and pots.",
+    image: "/assets/Rocks_StoneonHous.jpeg",
+    badge: "FIRE MEDIA",
+    category: "outdoor",
+    waMessage: "Inquiry regarding Rocks",
+    seoTitle: "Lava Rock & Pebbles Dubai | Flames Fireplace",
+    seoDescription: "High-quality lava rock, pebbles and artificial stone for fire pits, bowls and linear burners.",
+    faqs: [
+      { question: "Which media is suitable for poolside use?", answer: "Artificial stone and marine-grade aggregates are recommended for coastal and poolside installations." }
+    ]
+  },
+  {
+    id: "fire-pot-tables",
+    title: "Fire Pot & Fire Tables",
+    subtitle: "Concrete, Metal & GRC Bowls and Tables",
+    description: "Concrete fire pots, powder-coated metal bowls, GRC fire bowls and bespoke fire tables with integrated burners and finishes.",
+    image: "/assets/FireTable_FirePotShowcas.jpeg",
+    badge: "FIRE POTS & TABLES",
+    category: "outdoor",
+    waMessage: "Inquiry regarding Fire Pot & Fire Tables",
+    seoTitle: "Fire Pot & Fire Tables Dubai | Flames Fireplace",
+    seoDescription: "Range of fire pots and fire tables in concrete, powder-coated metal and GRC with custom sizing and finishes.",
+    faqs: [
+      { question: "Can tables be customized?", answer: "Yes — custom sizes, finishes and integrated burner options are available." }
+    ]
+  },
+  {
+    id: "custom-fire-table",
+    title: "Customized Fire Table with Fire Unit",
+    subtitle: "Bespoke Tables with Integrated Burners",
+    description: "Custom-designed fire tables with integrated burners, tailored to site needs and available with remote or automated control options.",
+    image: "/assets/CustomizedFireTabl.jpeg",
+    badge: "CUSTOM FIRE TABLE",
+    category: "outdoor",
+    waMessage: "Inquiry regarding Customized Fire Table",
+    seoTitle: "Customized Fire Table Dubai | Flames Fireplace",
+    seoDescription: "Bespoke fire tables with integrated fire units, designed for villas, restaurants and hospitality terraces.",
+    faqs: [
+      { question: "Can the table include remote operation?", answer: "Yes — remote control and keyed-valve options are available per specification." }
+    ]
+  },
+  {
     id: "water-vapor-fireplace",
     title: "3D Water Vapor Fire Place",
     subtitle: "Cool-To-Touch Indoor Flame Effect",
     description: "Realistic 3D flame visuals created with ultrasonic water mist and LED light — perfect for media walls, luxury apartments, and child-safe interiors.",
-    image: "/assets/Water Vapor Fireplace _ Wall Feature.png",
+    image: "/assets/3DWaterVaporFireplac.jpeg",
     badge: "3D WATER VAPOR",
     category: "indoor",
     waMessage: "Inquiry regarding 3D Water Vapor Fire Place",
@@ -106,51 +196,18 @@ export const SERVICES: ServiceItem[] = [
     ]
   },
   {
-    id: "bio-ethanol-fireplace",
-    title: "Manual Ethanol Fire Place",
-    subtitle: "Clean Real Flame for Indoor Spaces",
-    description: "Authentic physical heat and beautiful golden flames powered by clean liquid ethanol fuel with zero smoke, ash, or soot.",
-    image: "/assets/Bio-Ethanol Fireplace _ Product Close-up.png",
-    badge: "ETHANOL FIRE PLACE",
+    id: "artificial-3d-fireplace",
+    title: "3D Artificial Fire Place",
+    subtitle: "Realistic Non-Combustion Flame Systems",
+    description: "Advanced artificial flame systems that emulate flame dynamics for striking visual effect without any combustion or heat.",
+    image: "/assets/3DArtificialFireplace.jpeg",
+    badge: "3D ARTIFICIAL FIRE",
     category: "indoor",
-    waMessage: "Inquiry regarding Manual Ethanol Fire Place",
-    seoTitle: "Manual Ethanol Fire Place Dubai | Flames Fireplace UAE",
-    seoDescription: "Purchase manual ethanol fire places in Dubai from Flames Fireplace. Clean-burning real flame, ventless styling, and premium indoor design.",
+    waMessage: "Inquiry regarding 3D Artificial Fire Place",
+    seoTitle: "3D Artificial Fire Place Dubai | Flames Fireplace",
+    seoDescription: "High-fidelity artificial flame systems for safe indoor visual effects with minimal running cost.",
     faqs: [
-      { question: "Do ethanol fire places produce smoke?", answer: "No — high-quality ethanol burns cleanly without smoke or soot." },
-      { question: "Is ventilation required?", answer: "Normal room ventilation is sufficient; avoid completely sealed rooms when running large burners." }
-    ]
-  },
-  {
-    id: "fire-pit",
-    title: "Fire Pot & Fire Tables",
-    subtitle: "Concrete, Metal Powder-Coated & GRC Fire Bowls",
-    description: "Durable fire pots, fire bowls, and fire tables in concrete, metal powder-coated, and GRC finishes — built for elegant outdoor entertaining.",
-    image: "/assets/Fire Pit _ Product Close-up.png",
-    badge: "FIRE POTS & TABLES",
-    category: "outdoor",
-    waMessage: "Inquiry regarding Fire Pot & Fire Tables",
-    seoTitle: "Fire Pot & Fire Tables Dubai | Flames Fireplace",
-    seoDescription: "Discover concrete fire pots, metal powder-coated fire bowls, GRC fire bowls, and custom fire tables in Dubai from Flames Fireplace.",
-    faqs: [
-      { question: "Can I use fire pots near pools?", answer: "Yes — we design materials and finishes that resist pool-side corrosion and splash exposure." },
-      { question: "What fuels can be used?", answer: "We support bioethanol, wood, and gas options depending on model and site needs." }
-    ]
-  },
-  {
-    id: "built-in-bbq",
-    title: "Customized Fire Table with Fire Unit",
-    subtitle: "Integrated Outdoor Fire Feature",
-    description: "Custom fire tables with integrated fire units, made for private villas, hospitality terraces, and high-end outdoor spaces.",
-    image: "/assets/Built-In BBQ _ Flames Close-up.png",
-    badge: "CUSTOM FIRE TABLE",
-    category: "outdoor",
-    waMessage: "Inquiry regarding Customized Fire Table with Fire Unit",
-    seoTitle: "Customized Fire Table with Fire Unit Dubai | Flames Fireplace",
-    seoDescription: "Design customized fire tables with fire units in Dubai. Clean detailing, weather-resistant materials, and bespoke outdoor fire feature integration.",
-    faqs: [
-      { question: "Can you build custom fire tables with integrated burners?", answer: "Yes — we create customized fire tables with built-in fire units for residential and hospitality projects." },
-      { question: "Can the unit be adapted for remote operation?", answer: "Yes — many custom fire unit builds can include remote control, push-and-turn ignition, or key valve operation." }
+      { question: "Do these produce heat?", answer: "No — they are visual-only systems and generate negligible heat." }
     ]
   }
 ];
@@ -164,78 +221,98 @@ export const GENERAL_STATS = [
 
 export const PRODUCTS: ProductDetails[] = [
   {
-    id: "indoor-ethanol",
-    name: "Indoor Bio Ethanol Fireplace",
-    tagline: "Ventless, Eco-Friendly Real Flame — Flames Fireplace",
-    description: "Bring the warmth and elegance of a real flame into your indoor living spaces without the need for a chimney, flue, or gas connection. Flames Fireplace offers a curated range of bio ethanol fireplaces, from sleek tabletop models to statement wall-mounted units and custom inserts.",
-    detailedDescription: "Bring the warmth and elegance of a real flame into your indoor living spaces without the need for a chimney, flue, or gas connection. Flames Fireplace offers a curated range of bio ethanol fireplaces, from sleek tabletop models to statement wall-mounted units and custom inserts. With a flueless fireplace, 100% of the heat generated stays inside your home instead of escaping up a chimney. It is a highly efficient, clean-burning solution that adds both ambiance and supplementary warmth to any room.",
-    imageUrl: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=1200", // Luxurious modern salon
-    bgGradient: "from-orange-50 to-orange-100",
+    id: "outdoor-gas-fireplace",
+    name: "Outdoor Gas Fire Place",
+    tagline: "Home automated on &off fire place — high & low flame control",
+    description: "Outdoor gas fireplaces: Home automated on &off fire place, High and low flame fire Place, On and Off remote operated fire place, Push & turn fire place, Key valve Fire place.",
+    detailedDescription: "Engineered outdoor gas burners offering instant ignition, adjustable flame heights, remote operation and multiple safety interlocks (push-&-turn, keyed valve). Suitable for terraces and poolside installs.",
+    imageUrl: "/assets/OutdoorGasFireplac.jpeg",
+    bgGradient: "from-amber-100 to-orange-100",
     features: [
-      "No Chimney Needed — burns cleanly with zero smoke, ash, or soot, making it 100% ventless",
-      "Real Flame & Warmth — provides authentic radiant heat and a beautiful golden flicker",
-      "Easy Installation — freestanding and tabletop models are ready to go; recessed units fit into standard drywall",
-      "Eco-Friendly Fuel — powered by renewable, plant-derived bio ethanol liquid"
+      "Home automated on &off fire place",
+      "High and low flame fire Place",
+      "On and Off remote operated fire place",
+      "Push & turn fire place",
+      "Key valve Fire place"
     ],
     benefits: [
-      "No Chimney Needed — burns cleanly with zero smoke, ash, or soot, making it 100% ventless",
-      "Real Flame & Warmth — provides authentic radiant heat and a beautiful golden flicker",
-      "Easy Installation — freestanding and tabletop models are ready to go; recessed units fit into standard drywall",
-      "Eco-Friendly Fuel — powered by renewable, plant-derived bio ethanol liquid"
+      "Full automation and remote convenience",
+      "Precise flame control for ambiance or heat",
+      "Industry-standard safety interlocks"
     ],
     howItWorks: [
-      "Pour clean liquid bioethanol fuel into the safety steel burner tank.",
-      "Ignite the fuel vapors using an extended lighter safely.",
-      "The fuel burns cleanly, producing comfortable physical heat and a gorgeous golden fire.",
-      "To extinguish, simply slide the damper plate over the opening to snuff out the oxygen supply."
+      "Connect to certified gas supply and commission by licensed installer.",
+      "Configure remote or home-automation controller during setup.",
+      "Use push-&-turn or keyed valve for secure ignition and shutdown."
     ],
     faqs: [
-      {
-        question: "Does it require ventilation?",
-        answer: "A standard chimney is not needed because it burns cleanly without smoke or soot. However, because it burns oxygen, it should be placed in rooms with normal air circulation or a partially cracked window."
-      },
-      {
-        question: "Where does the heat go?",
-        answer: "Because there is no chimney, 100% of the generated heat remains in the room, making it an incredibly efficient heating solution."
-      }
+      { question: "Can these be automated?", answer: "Yes — on/off automation and remote control are supported with proper installation." }
     ]
   },
   {
-    id: "outdoor-ethanol",
-    name: "Outdoor Fire Features",
-    tagline: "Outdoor Fire Features | Fire Pits & Fireplaces | Flames Fireplace",
-    description: "Create an inviting outdoor retreat with our range of outdoor fire features. Engineered to withstand the elements while providing a stunning visual anchor, our collection ranges from contemporary bio ethanol burners to sculptural gas-powered installations.",
-    detailedDescription: "Create an inviting outdoor retreat with our range of outdoor fire features. Engineered to withstand the elements while providing a stunning visual anchor, our collection ranges from contemporary bio ethanol burners to sculptural gas-powered installations.",
-    imageUrl: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=1200", // Luxury terrace and pool
-    bgGradient: "from-orange-100 to-amber-100",
-    features: [
-      "Bio Ethanol Fireplaces — clean-burning and ventless, perfect for custom outdoor enclosures, patios, and decks",
-      "Fire Bowls & Fire Pits — durable concrete and steel fire bowls that create a warm, natural gathering spot",
-      "Gas Fire Features — convenient, high-performance gas fire burners that deliver instant fire at the touch of a button",
-      "Custom Outdoor Fire Installations — bespoke fire features designed and fitted to match your unique outdoor living space"
-    ],
-    benefits: [
-      "Bio Ethanol Fireplaces — clean-burning and ventless, perfect for custom outdoor enclosures, patios, and decks",
-      "Fire Bowls & Fire Pits — durable concrete and steel fire bowls that create a warm, natural gathering spot",
-      "Gas Fire Features — convenient, high-performance gas fire burners that deliver instant fire at the touch of a button",
-      "Custom Outdoor Fire Installations — bespoke fire features designed and fitted to match your unique outdoor living space"
-    ],
-    howItWorks: [
-      "Position the weather-proof fire pit or fireplace in your desired terrace, pool, or garden layout.",
-      "Refill the clean burner using liquid fuel or hook up your gas-powered line.",
-      "Ignite using the safe integrated valve control or a remote trigger.",
-      "Enjoy a beautiful, wind-resistant visual centerpiece that keeps your guests warm and cozy."
-    ],
-    faqs: [
-      {
-        question: "What categories of outdoor fire features do you provide?",
-        answer: "We offer Bio Ethanol Fireplaces, concrete and steel Fire Bowls & Fire Pits, high-performance Gas Fire Features, and completely bespoke Custom Outdoor Fire Installations."
-      },
-      {
-        question: "Are they weather-resistant for UAE summers?",
-        answer: "Yes. All of our outdoor features are engineered from double-walled metals and concrete resins to resist heavy coastal air, high temperatures, and dust."
-      }
-    ]
+    id: "ethanol-fireplace",
+    name: "Ethanol Fire Place",
+    tagline: "Manual ethanol fireplaces — clean real flame",
+    description: "Manual ethanol fireplaces and burners for outdoor and sheltered settings; simple refill operation using high-quality ethanol fuel.",
+    detailedDescription: "A straightforward ethanol burner range for terraces and outdoor seating — manual refills, low maintenance, and available in multiple finishes.",
+    imageUrl: "/assets/Bio-Ethanol Fireplace _ Product Close-up.png",
+    bgGradient: "from-orange-50 to-orange-100",
+    features: ["Manual ethanol fire place", "Uses high-quality ethanol fuel"],
+    benefits: ["Clean-burning real flame", "No gas line required"],
+    howItWorks: ["Fill burner reservoir with ethanol and ignite per safety instructions."],
+    faqs: [ { question: "Do ethanol burners need fuel lines?", answer: "No — they use liquid fuel reservoirs or refillable canisters." } ]
+  },
+  {
+    id: "wood-fireplace",
+    name: "Wood Fire Place",
+    tagline: "Classic wood-fire for outdoor areas",
+    description: "Traditional wood-burning fireplaces and fire pits designed for outdoor use with ember control and durable finishes.",
+    detailedDescription: "Wood-fire solutions including chimeneas, built-in hearths and engineered pits — specify ember guards and finishes suitable for terraces and gardens.",
+    imageUrl: "/assets/WOOD FIRE PLACE.jpeg",
+    bgGradient: "from-neutral-50 to-orange-50",
+    features: ["Natural wood combustion", "Ember containment options"],
+    benefits: ["Authentic campfire ambiance", "Robust outdoor performance"],
+    howItWorks: ["Use seasoned hardwood and follow local open-burning regulations."],
+    faqs: [ { question: "Can wood fires be used near leisure areas?", answer: "Yes — with spark guards and correct placement as advised by our team." } ]
+  },
+  {
+    id: "rocks-media",
+    name: "Rocks",
+    tagline: "Lava Rock, Pebbles, Artificial Stone",
+    description: "Decorative and functional media for fire beds: lava rock, pebbles and artificial stone selections for pots, bowls and linear burners.",
+    detailedDescription: "Choose from graded lava rock, decorative pebbles and engineered artificial stone to style and protect your burner area. Suitable for poolside and high-moisture environments when specified correctly.",
+    imageUrl: "/assets/Rocks_StoneonHous.jpeg",
+    bgGradient: "from-neutral-50 to-neutral-100",
+    features: ["Lava rock", "Pebbles", "Artificial stone"],
+    benefits: ["Improved flame aesthetics", "Durable under heat", "Multiple textures and colours"],
+    howItWorks: ["Spread media to recommended depth and rinse pebbles before use."],
+    faqs: [ { question: "Which media is best for coastal use?", answer: "Artificial stone or marine-grade aggregates are best for salty coastal exposure." } ]
+  },
+  {
+    id: "fire-pot-tables",
+    name: "Fire Pot & Fire Tables",
+    tagline: "Concrete, metal powder-coated and GRC fire bowls and tables",
+    description: "Concrete fire pots, powder-coated metal bowls, GRC fire bowls and low-rise fire tables built for outdoor entertaining.",
+    detailedDescription: "Durable fire pots and tables in a variety of materials and finishes. Options include integrated burners, powder-coated metals and lightweight GFRC constructions for rooftop use.",
+    imageUrl: "/assets/FireTable_FirePotShowcas.jpeg",
+    bgGradient: "from-orange-50 to-neutral-50",
+    features: ["Concrete fire pot", "Metal powder coated pot", "GRC fire bowls"],
+    benefits: ["Multiple material options", "Custom finishes available"],
+    howItWorks: ["Select material and burner type; commission with protective covers and maintenance guidance."],
+    faqs: [ { question: "Can tables be customized?", answer: "Yes — we fabricate custom sizes and integrate burners on request." } ]
+  },
+  {
+    id: "custom-fire-tables",
+    name: "Customized Fire Tables",
+    tagline: "Customized fire tables and bespoke integrated units",
+    description: "Full custom fire table fabrication and integration with optional fire unit installations per client specification.",
+    detailedDescription: "Bespoke design and fabrication of fire tables with integrated burners, controls and finishing — ideal for villas, restaurants and hospitality terraces.",
+    imageUrl: "/assets/CustomizedFireTabl.jpeg",
+    bgGradient: "from-amber-100 to-orange-100",
+    features: ["Custom sizes and finishes", "Integration with fire unit optional"],
+    benefits: ["Tailored aesthetics", "Full installation and commissioning available"],
+    howItWorks: ["Request a site survey, approve materials, and we fabricate and install."],
+    faqs: [ { question: "Can these include integrated fire units?", answer: "Yes — specify integrated burners and control options during quoting." } ]
   }
 ];
 

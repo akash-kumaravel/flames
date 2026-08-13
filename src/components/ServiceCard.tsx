@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { ActiveSection, ServiceItem } from '../types';
+import { PRODUCTS } from '../data';
 
 interface ServiceCardProps {
   service: ServiceItem;
@@ -51,6 +52,24 @@ export default function ServiceCard({ service, onNavigate }: ServiceCardProps) {
           <p className="font-sans text-xs text-neutral-400 leading-relaxed font-light">
             {service.description}
           </p>
+
+          {/* If matching product features exist, render them as bullet points */}
+          {(() => {
+            const prod = PRODUCTS.find(p => p.id === service.id || p.id.includes(service.id) || service.id.includes(p.id));
+            if (prod && prod.features && prod.features.length > 0) {
+              return (
+                <ul className="mt-3 space-y-2">
+                  {prod.features.map((f, i) => (
+                    <li key={i} className="text-xs text-neutral-300 flex items-start gap-2">
+                      <span className="w-2 h-2 mt-2 rounded-full bg-orange-500 shrink-0" />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              );
+            }
+            return null;
+          })()}
         </div>
 
         <div className="pt-4 border-t border-neutral-800 flex justify-center">

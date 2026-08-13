@@ -240,16 +240,16 @@ export default function ProductsOverview({ products, onSelectProduct, onNavigate
                       </div>
                     </div>
 
-                    {/* Interactive Highlights / Key features list */}
+                    {/* Interactive Highlights / Key features list (show product.features as bullets) */}
                     <div className="pt-4 space-y-2">
                       <span className="text-[10px] font-mono text-neutral-400 uppercase tracking-widest block font-bold">
-                        Architectural Advantages:
+                        Key Features:
                       </span>
                       <ul className="space-y-1.5">
-                        {prod.benefits.slice(0, 2).map((b, bIdx) => (
-                           <li key={bIdx} className="text-xs text-neutral-600 font-sans flex items-start gap-2">
+                        {prod.features.map((f, fIdx) => (
+                           <li key={fIdx} className="text-xs text-neutral-600 font-sans flex items-start gap-2">
                             <CheckCircle2 className="w-3.5 h-3.5 text-orange-500 shrink-0 mt-0.5" />
-                            <span>{b}</span>
+                            <span>{f}</span>
                           </li>
                         ))}
                       </ul>
