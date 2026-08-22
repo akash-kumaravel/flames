@@ -148,7 +148,7 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
             >
               <div className="aspect-[4/3] w-full overflow-hidden">
                 <img
-                  src="/assets/CustomizedFireTabl.jpeg"
+                  src="/assets/CustomizedFireTabl.webp"
                   alt="Customized Fire Table with Integrated Burner Unit Dubai Showroom"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="eager"

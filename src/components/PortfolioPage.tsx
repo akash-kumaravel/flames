@@ -11,7 +11,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     categoryLabel: "Indoor Fireplace",
     location: "Emirates Hills, Dubai",
     description: "A stunning dual-aspect flueless installation separating the primary salon from the formal dining room. Featuring a custom black powder-coated structural frame, integrated automatic water supply feed, and high-intensity LED projection to simulate deep golden flame plumes.",
-    image: "/assets/project 1.png",
+    image: "/assets/project 1.webp",
     specs: [
       "No chimney, zero heat, perfectly safe next to delicate artwork",
       "Ultrasonic cool mist technology with gentle humidification",
@@ -26,7 +26,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     categoryLabel: "Indoor Fireplace",
     location: "Jumeirah Golf Estates, Dubai",
     description: "A contemporary living room media hub featuring an extra-wide flueless bioethanol burner. Built into a floating marble-clad drywall structure with specialized thermal ceramic isolation shields beneath a large ultra-HD television screen.",
-    image: "/assets/project 2.png",
+    image: "/assets/project 2.webp",
     specs: [
       "Golden ventless real-fire flame with warm radiant heat",
       "Comprehensive heat isolation barrier protection framework",
@@ -41,7 +41,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     categoryLabel: "Fire Pit & Table",
     location: "Yas Island, Abu Dhabi",
     description: "A gorgeous sunken seating garden pavilion designed for late-night family gatherings. Centered by a bespoke concrete fire table operating on a concealed LPG supply with tempered fire glass beads and a wind-guard shroud.",
-    image: "/assets/project 3.png",
+    image: "/assets/project 3.webp",
     specs: [
       "Custom hand-cast volcanic basalt concrete tabletop housing",
       "Rust-proof aluminum tray with electronic flame monitoring",
@@ -56,7 +56,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     categoryLabel: "Fire Pit & Table",
     location: "Downtown Dubai Penthouse",
     description: "An elegant rooftop penthouse installation with a striking geometric spherical bioethanol burner. Elevated on a highly polished chrome plinth to produce mesmerizing fire reflections against the backdrop of the iconic Burj Khalifa skyline.",
-    image: "/assets/project 4.png",
+    image: "/assets/project 4.webp",
     specs: [
       "Fully portable freestanding design, ideal for luxury balconies",
       "High-grade stainless steel fuel tank with easy-pour port",
@@ -71,7 +71,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     categoryLabel: "Indoor Fireplace",
     location: "Arabian Ranches, Dubai",
     description: "A glass-framed flueless divider between a cozy family lounge and private study. Utilizing two glass security side-panels to isolate the flame while providing deep room-to-room visibility.",
-    image: "/assets/project 5.png",
+    image: "/assets/project 5.webp",
     specs: [
       "Full 360-degree visibility of safe, glowing amber fire",
       "Tempered safety-rated glass side panels",

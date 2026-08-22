@@ -16,7 +16,7 @@ export default function Artificial3DFireplacePage({ onNavigate }: Artificial3DPr
       tagline="Realistic non-combustion flame systems"
       description="Advanced artificial flame systems that emulate flame dynamics for striking visual effect without combustion or heat. Ideal for safe indoor installations."
       detailedDescription="High-fidelity artificial flame systems reproduce realistic flame motion and depth using fans, fabric, and LED lighting. They provide dramatic visuals without heat or combustion, perfect for retail, hospitality, and modern homes where safety or ventilation is a concern."
-      imageUrl={svc?.image || "/assets/3DArtificialFireplace.jpeg"}
+      imageUrl={svc?.image || "/assets/3DArtificialFireplace.webp"}
 
       features={[
         "Realistic flame dynamics without combustion",
