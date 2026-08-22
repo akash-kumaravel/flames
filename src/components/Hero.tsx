@@ -21,13 +21,13 @@ export default function Hero({ onNavigate }: HeroProps) {
             muted
             loop
             playsInline
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-90"
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100"
             onError={(e) => {
               // Hide video element gracefully if video asset is not uploaded
               (e.currentTarget as HTMLElement).style.display = 'none';
             }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-neutral-950/85 via-neutral-900/60 to-neutral-900/40" />
+          <div className="absolute inset-0 bg-gradient-to-br from-neutral-950/50 via-neutral-900/25 to-transparent" />
         </div>
 
         <div className="relative z-10 min-h-screen flex items-center justify-center px-6 md:px-12 pt-20 pb-10">
