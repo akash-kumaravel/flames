@@ -14,7 +14,7 @@ export default function BlogPage({ onNavigateContact, onNavigate, selectedArticl
 
   return (
     <div id="blog-catalog-page" className="min-h-screen bg-[#0b0b0b] text-neutral-350 pb-28 selection:bg-orange-500 selection:text-white">
-      <div className="max-w-7xl mx-auto pt-8 px-6 md:px-12">
+      <div className="max-w-7xl mx-auto pt-28 sm:pt-36 px-6 md:px-12">
         
         {!selectedArticleId ? (
           /* SECTION 1: BLOG DIRECTORY OVERVIEW */

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight, ChevronRight } from 'lucide-react';
+import { Menu, X, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ActiveSection } from '../types';
 
@@ -28,9 +28,9 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
     { label: 'Home', value: 'home' },
     { label: 'About Us', value: 'about' },
     { label: 'Products', value: 'services' },
-    { label: 'Portfolio', value: 'portfolio' },
-    { label: 'Why Choose Us', value: 'why-choose' },
+    { label: 'Our Works', value: 'portfolio' },
     { label: 'Blog', value: 'blog' },
+    { label: 'Contact Us', value: 'contact' },
   ];
 
   return (
@@ -42,7 +42,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
           : 'bg-[#111]/80 backdrop-blur-xs py-3.5 sm:py-5 border-b border-neutral-800/70'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between relative">
         {/* Brand Logo */}
         <button
           id="logo-btn"
@@ -50,7 +50,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
             onNavigate('home');
             window.scrollTo(0, 0);
           }}
-          className="flex items-center gap-2 group cursor-pointer"
+          className="flex items-center gap-2 group cursor-pointer z-10"
         >
           <img
             src="/assets/flames%20logo.svg"
@@ -61,8 +61,8 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
           />
         </button>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
+        {/* Desktop Navigation - Centered */}
+        <nav className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
           {navItems.map((item) => {
             const isActive = item.value === activeSection;
 
@@ -84,27 +84,14 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
               </button>
             );
           })}
-
         </nav>
-
-        {/* CTA Button */}
-        <div className="hidden lg:block">
-          <button
-            id="header-cta-btn"
-            onClick={() => onNavigate('contact')}
-            className="flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-neutral-900 text-white font-sans text-xs font-semibold hover:bg-orange-500 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 cursor-pointer"
-          >
-            Contact Us
-            <ArrowUpRight className="w-3.5 h-3.5" />
-          </button>
-        </div>
 
         {/* Mobile Control */}
         <button
           id="mobile-menu-toggle"
           aria-label={mobileMenuOpen ? 'Close navigation menu' : 'Open navigation menu'}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="lg:hidden p-2 rounded-full text-neutral-400 hover:bg-neutral-800 transition-colors cursor-pointer"
+          className="lg:hidden p-2 rounded-full text-neutral-400 hover:bg-neutral-800 transition-colors cursor-pointer z-10"
         >
           {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -156,21 +143,6 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
                     </button>
                   );
                 })}
-
-              </div>
-
-              <div className="pt-2.5 border-t border-neutral-800 mt-1">
-                <button
-                  id="mobile-cta-btn"
-                  onClick={() => {
-                     onNavigate('contact');
-                     setMobileMenuOpen(false);
-                  }}
-                  className="w-full text-center py-2.5 rounded-lg bg-neutral-900 text-white font-sans text-xs font-semibold hover:bg-orange-600 active:scale-[0.98] transition-all cursor-pointer shadow-xs flex items-center justify-center gap-1"
-                >
-                  <span>Contact Us</span>
-                  <ArrowUpRight className="w-3.5 h-3.5 text-orange-400" />
-                </button>
               </div>
             </motion.div>
           </>

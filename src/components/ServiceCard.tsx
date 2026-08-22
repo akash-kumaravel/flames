@@ -1,9 +1,20 @@
-import { ArrowRight } from 'lucide-react';
-import { ActiveSection, ServiceItem } from '../types';
-import { PRODUCTS } from '../data';
+import { ActiveSection, ServiceItem, OutdoorFireUnitVariant } from '../types';
+
+export type ProductCardData = ServiceItem | OutdoorFireUnitVariant | {
+  id: string;
+  title: string;
+  subtitle?: string;
+  tagline?: string;
+  badge?: string;
+  category?: string;
+  categoryTitle?: string;
+  description: string;
+  image: string;
+  waMessage?: string;
+};
 
 interface ServiceCardProps {
-  service: ServiceItem;
+  service: ProductCardData;
   onNavigate?: (section: ActiveSection) => void;
 }
 
@@ -13,6 +24,19 @@ export default function ServiceCard({ service, onNavigate }: ServiceCardProps) {
       onNavigate(service.id as unknown as ActiveSection);
     }
   };
+
+  const categoryLabel = 
+    ('category' in service && service.category) || 
+    ('categoryTitle' in service && service.categoryTitle) || 
+    'Outdoor';
+
+  const subtitleText = 
+    ('subtitle' in service && service.subtitle) || 
+    ('tagline' in service && service.tagline) || 
+    '';
+
+  const badgeText = service.badge || 'Premium';
+  const waText = service.waMessage || `Hi Flames Fireplace, I'm inquiring about ${service.title}`;
 
   return (
     <div 
@@ -31,7 +55,7 @@ export default function ServiceCard({ service, onNavigate }: ServiceCardProps) {
           className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-103"
         />
         <div className="absolute top-4 left-4 bg-black/70 backdrop-blur-md border border-neutral-700/80 px-3 py-1 rounded-full text-[9px] font-bold text-neutral-200 tracking-wider uppercase font-mono">
-          {service.category}
+          {categoryLabel}
         </div>
       </div>
 
@@ -39,43 +63,27 @@ export default function ServiceCard({ service, onNavigate }: ServiceCardProps) {
         <div className="space-y-3">
           <div className="space-y-1">
             <span className="text-[10px] font-bold uppercase tracking-wider text-orange-400 font-mono">
-              {service.badge}
+              {badgeText}
             </span>
             <h3 className="font-sans text-lg font-semibold text-white tracking-tight leading-snug group-hover:text-orange-400 transition-colors">
               {service.title}
             </h3>
-            <p className="font-sans text-[11px] font-medium text-neutral-400 italic">
-              {service.subtitle}
-            </p>
+            {subtitleText && (
+              <p className="font-sans text-[11px] font-medium text-neutral-400 italic">
+                {subtitleText}
+              </p>
+            )}
           </div>
 
-          <p className="font-sans text-xs text-neutral-400 leading-relaxed font-light">
+          <p className="font-sans text-xs text-neutral-400 leading-relaxed font-light line-clamp-3">
             {service.description}
           </p>
-
-          {/* If matching product features exist, render them as bullet points */}
-          {(() => {
-            const prod = PRODUCTS.find(p => p.id === service.id || p.id.includes(service.id) || service.id.includes(p.id));
-            if (prod && prod.features && prod.features.length > 0) {
-              return (
-                <ul className="mt-3 space-y-2">
-                  {prod.features.map((f, i) => (
-                    <li key={i} className="text-xs text-neutral-300 flex items-start gap-2">
-                      <span className="w-2 h-2 mt-2 rounded-full bg-orange-500 shrink-0" />
-                      <span>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-              );
-            }
-            return null;
-          })()}
         </div>
 
         <div className="pt-4 border-t border-neutral-800 flex justify-center">
           <a
             id={`wa-cta-service-${service.id}`}
-            href={`https://wa.me/971542112891?text=${encodeURIComponent(service.waMessage)}`}
+            href={`https://wa.me/971542112891?text=${encodeURIComponent(waText)}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}

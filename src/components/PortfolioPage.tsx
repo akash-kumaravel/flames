@@ -92,23 +92,14 @@ export default function PortfolioPage() {
   return (
     <div id="portfolio-page" className="min-h-screen bg-[#0b0b0b] text-neutral-350 pb-28 selection:bg-orange-500 selection:text-white">
       {/* Header section */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-8 pb-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-orange-500/10 text-orange-400 font-sans text-xs font-semibold uppercase tracking-wider mb-5"
-        >
-          <Compass className="w-3.5 h-3.5" />
-          The Gallery of Fire &amp; Craft
-        </motion.div>
-        
+      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-28 sm:pt-36 pb-8 text-center">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           className="font-sans font-semibold text-3xl sm:text-4xl md:text-5xl text-white tracking-tight leading-tight max-w-4xl mx-auto"
         >
-          Flames Fireplace Project Portfolio &amp; Installations
+          Our Works — Flames Fireplace Installations
         </motion.h1>
         
         <motion.p

@@ -47,7 +47,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <a
                   id="footer-nav-services"
-                  href="https://www.flamesfireplace.com/services"
+                  href="/services"
                   onClick={(e) => { e.preventDefault(); onNavigate('services'); }}
                   className="hover:text-white transition cursor-pointer text-orange-400 font-medium"
                 >
@@ -57,17 +57,17 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <a
                   id="footer-nav-portfolio"
-                  href="https://www.flamesfireplace.com/portfolio"
+                  href="/portfolio"
                   onClick={(e) => { e.preventDefault(); onNavigate('portfolio'); }}
                   className="hover:text-white transition cursor-pointer text-orange-400 font-medium"
                 >
-                  Project Portfolio
+                  Our Works
                 </a>
               </li>
               <li>
                 <a
                   id="footer-nav-contact"
-                  href="https://www.flamesfireplace.com/contact"
+                  href="/contact"
                   onClick={(e) => { e.preventDefault(); onNavigate('contact'); }}
                   className="hover:text-white transition cursor-pointer text-orange-400 font-medium"
                 >
@@ -86,7 +86,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <a
                   id="footer-nav-about"
-                  href="https://www.flamesfireplace.com/about"
+                  href="/about"
                   onClick={(e) => { e.preventDefault(); onNavigate('about'); }}
                   className="hover:text-white transition cursor-pointer block"
                 >
@@ -95,18 +95,8 @@ export default function Footer({ onNavigate }: FooterProps) {
               </li>
               <li>
                 <a
-                  id="footer-nav-why-choose"
-                  href="https://www.flamesfireplace.com/why-choose"
-                  onClick={(e) => { e.preventDefault(); onNavigate('why-choose'); }}
-                  className="hover:text-white transition cursor-pointer block"
-                >
-                  Why Choose Us
-                </a>
-              </li>
-              <li>
-                <a
                   id="footer-nav-faq"
-                  href="https://www.flamesfireplace.com/faq"
+                  href="/faq"
                   onClick={(e) => { e.preventDefault(); onNavigate('faq'); }}
                   className="hover:text-white transition cursor-pointer block"
                 >
@@ -116,7 +106,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <a
                   id="footer-nav-blog"
-                  href="https://www.flamesfireplace.com/blog"
+                  href="/blog"
                   onClick={(e) => { e.preventDefault(); onNavigate('blog'); }}
                   className="hover:text-white transition cursor-pointer block"
                 >
@@ -126,7 +116,7 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li>
                 <a
                   id="footer-nav-best-fireplace"
-                  href="https://www.flamesfireplace.com/best-fireplace-dubai"
+                  href="/best-fireplace-dubai"
                   onClick={(e) => { e.preventDefault(); onNavigate('best-fireplace-dubai'); }}
                   className="hover:text-white transition cursor-pointer text-orange-400 font-semibold block"
                 >

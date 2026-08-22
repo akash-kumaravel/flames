@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 import { 
-  Flame, Info, ShieldCheck, Check, Search, ArrowRight, MessageCircle
+  Flame, Info, ShieldCheck, Check, Search, ArrowRight, MessageCircle, ArrowUp
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 // Shared types and rich database
-import { ActiveSection, FAQItem } from './types';
+import { ActiveSection, FAQItem, BreadcrumbStep } from './types';
 import { 
   BRAND, PRODUCTS, TRUST_BAR, GENERAL_STATS, 
   COMMON_FAQS, META_SUMMARY, WHY_CHOOSE_EXTRA,
-  BLOG_ARTICLES
+  BLOG_ARTICLES, OUTDOOR_GAS_VARIANTS
 } from './data';
 import { SERVICES } from './data';
 
@@ -19,7 +19,6 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import BlogPage from './components/BlogPage';
 import ContactPage from './components/ContactPage';
-import WhyChoosePage from './components/WhyChoosePage';
 import ServicesPage from './components/ServicesPage';
 import PortfolioPage from './components/PortfolioPage';
 import BioEthanolFireplacePage from './components/BioEthanolFireplacePage';
@@ -33,10 +32,13 @@ import BuiltInBbqPage from './components/BuiltInBbqPage';
 import FireplaceDubaiPage from './components/FireplaceDubaiPage';
 import EthanolBurnerPage from './components/EthanolBurnerPage';
 import OutdoorGasFireplacePage from './components/OutdoorGasFireplacePage';
-import WoodFireplacePage from './components/WoodFireplacePage';
-import RocksPage from './components/RocksPage';
-import FirePotTablesPage from './components/FirePotTablesPage';
-import CustomFireTablesPage from './components/CustomFireTablesPage';
+import GasFireplaceVariantPage from './components/GasFireplaceVariantPage';
+import OutdoorFireUnitDetailPage from './components/OutdoorFireUnitDetailPage';
+import EthanolFireplaceHubPage from './components/EthanolFireplaceHubPage';
+import WoodFireplaceHubPage from './components/WoodFireplaceHubPage';
+import RocksMediaHubPage from './components/RocksMediaHubPage';
+import FirePotTablesHubPage from './components/FirePotTablesHubPage';
+import CustomFireTableWithUnitPage from './components/CustomFireTableWithUnitPage';
 import BestFireplaceLanding from './components/BestFireplaceLanding';
 import Artificial3DFireplacePage from './components/Artificial3DFireplacePage';
 
@@ -52,12 +54,28 @@ const sectionToPath: Record<ActiveSection, string> = {
   'bio-ethanol-fireplace': '/services/bio-ethanol-fireplace',
   'water-vapor-fireplace': '/services/water-vapor-fireplace',
   'outdoor-gas-fireplace': '/services/outdoor-gas-fireplace',
+  'home-automated-gas-fireplace': '/services/outdoor-gas-fireplace/home-automated',
+  'high-low-flame-gas-fireplace': '/services/outdoor-gas-fireplace/high-low-flame',
+  'remote-operated-gas-fireplace': '/services/outdoor-gas-fireplace/remote-operated',
+  'push-and-turn-gas-fireplace': '/services/outdoor-gas-fireplace/push-and-turn',
+  'key-valve-gas-fireplace': '/services/outdoor-gas-fireplace/key-valve',
   'ethanol-fireplace': '/services/ethanol-fireplace',
+  'manual-ethanol-fireplace': '/services/ethanol-fireplace/manual-ethanol',
+  'ethanol-fuel-fireplace': '/services/ethanol-fireplace/ethanol-fuel',
   'wood-fireplace': '/services/wood-fireplace',
+  'outdoor-woodfire-place': '/services/wood-fireplace/outdoor-woodfire-place',
   'rocks-media': '/services/rocks-media',
+  'lava-rock-media': '/services/rocks-media/lava-rock',
+  'pebbles-media': '/services/rocks-media/pebbles',
+  'artificial-stone-media': '/services/rocks-media/artificial-stone',
   'fire-pot-tables': '/services/fire-pot-tables',
+  'concrete-fire-pot': '/services/fire-pot-tables/concrete-fire-pot',
+  'metal-powder-coated-pot': '/services/fire-pot-tables/metal-powder-coated-pot',
+  'grc-fire-bowls': '/services/fire-pot-tables/grc-fire-bowls',
+  'customized-fire-tables-general': '/services/fire-pot-tables/customized-fire-tables',
   'custom-fire-tables': '/services/custom-fire-tables',
   'custom-fire-table': '/services/custom-fire-table',
+  'custom-fire-table-with-fire-unit': '/services/custom-fire-table-with-fire-unit',
   'artificial-3d-fireplace': '/services/artificial-3d-fireplace',
   'outdoor-fireplace': '/services/outdoor-fireplace',
   'indoor-fireplace': '/services/indoor-fireplace',
@@ -72,6 +90,31 @@ const sectionToPath: Record<ActiveSection, string> = {
 
 const getSectionFromPath = (): ActiveSection => {
   const path = window.location.pathname;
+    // Check specific gas fireplace sub-routes first
+    if (path.includes('/services/outdoor-gas-fireplace/home-automated') || path.includes('/services/home-automated-gas-fireplace')) return 'home-automated-gas-fireplace';
+    if (path.includes('/services/outdoor-gas-fireplace/high-low-flame') || path.includes('/services/high-low-flame-gas-fireplace')) return 'high-low-flame-gas-fireplace';
+    if (path.includes('/services/outdoor-gas-fireplace/remote-operated') || path.includes('/services/remote-operated-gas-fireplace')) return 'remote-operated-gas-fireplace';
+    if (path.includes('/services/outdoor-gas-fireplace/push-and-turn') || path.includes('/services/push-and-turn-gas-fireplace')) return 'push-and-turn-gas-fireplace';
+    if (path.includes('/services/outdoor-gas-fireplace/key-valve') || path.includes('/services/key-valve-gas-fireplace')) return 'key-valve-gas-fireplace';
+
+    // Check ethanol fireplace sub-routes
+    if (path.includes('/services/ethanol-fireplace/manual-ethanol') || path.includes('/services/manual-ethanol-fireplace')) return 'manual-ethanol-fireplace';
+    if (path.includes('/services/ethanol-fireplace/ethanol-fuel') || path.includes('/services/ethanol-fuel-fireplace')) return 'ethanol-fuel-fireplace';
+
+    // Check wood fireplace sub-routes
+    if (path.includes('/services/wood-fireplace/outdoor-woodfire-place') || path.includes('/services/outdoor-woodfire-place')) return 'outdoor-woodfire-place';
+
+    // Check rocks media sub-routes
+    if (path.includes('/services/rocks-media/lava-rock') || path.includes('/services/lava-rock-media')) return 'lava-rock-media';
+    if (path.includes('/services/rocks-media/pebbles') || path.includes('/services/pebbles-media')) return 'pebbles-media';
+    if (path.includes('/services/rocks-media/artificial-stone') || path.includes('/services/artificial-stone-media')) return 'artificial-stone-media';
+
+    // Check fire pot & tables sub-routes
+    if (path.includes('/services/fire-pot-tables/concrete-fire-pot') || path.includes('/services/concrete-fire-pot')) return 'concrete-fire-pot';
+    if (path.includes('/services/fire-pot-tables/metal-powder-coated-pot') || path.includes('/services/metal-powder-coated-pot')) return 'metal-powder-coated-pot';
+    if (path.includes('/services/fire-pot-tables/grc-fire-bowls') || path.includes('/services/grc-fire-bowls')) return 'grc-fire-bowls';
+    if (path.includes('/services/fire-pot-tables/customized-fire-tables') || path.includes('/services/customized-fire-tables-general')) return 'customized-fire-tables-general';
+
     // Check specific service detail routes first so they don't get captured
     // by the generic '/services' check below.
     if (path.includes('/services/bio-ethanol-fireplace')) return 'bio-ethanol-fireplace';
@@ -82,6 +125,7 @@ const getSectionFromPath = (): ActiveSection => {
     if (path.includes('/services/rocks-media')) return 'rocks-media';
     if (path.includes('/services/fire-pot-tables')) return 'fire-pot-tables';
     if (path.includes('/services/custom-fire-tables')) return 'custom-fire-tables';
+    if (path.includes('/services/custom-fire-table-with-fire-unit')) return 'custom-fire-table-with-fire-unit';
     if (path.includes('/services/custom-fire-table')) return 'custom-fire-table';
     if (path.includes('/services/artificial-3d-fireplace')) return 'artificial-3d-fireplace';
     if (path.includes('/services/outdoor-fireplace')) return 'outdoor-fireplace';
@@ -120,6 +164,26 @@ export default function App() {
   });
   const [searchQuery, setSearchQuery] = useState('');
   const [faqCategory, setFaqCategory] = useState<'all' | 'general' | 'safety' | 'fuel'>('all');
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleWindowScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollTop(true);
+      } else {
+        setShowScrollTop(false);
+      }
+    };
+    window.addEventListener('scroll', handleWindowScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleWindowScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
   // Sync state back to the URL Path on navigate, tracking history block
   const handleNavigation = (section: ActiveSection, updateHistory = true) => {
@@ -155,7 +219,7 @@ export default function App() {
     } else if (activeSection === 'services') {
       steps.push({ label: 'Services', section: 'services' });
     } else if (activeSection === 'portfolio') {
-      steps.push({ label: 'Portfolio', section: 'portfolio' });
+      steps.push({ label: 'Our Works', section: 'portfolio' });
     } else if (activeSection === 'why-choose') {
       steps.push({ label: 'Why Choose Us', section: 'why-choose' });
     } else if (activeSection === 'faq') {
@@ -190,6 +254,23 @@ export default function App() {
       steps.push({ label: 'Fireplaces for Dubai', section: 'fireplace-dubai' });
     } else if (activeSection === 'best-fireplace-dubai') {
       steps.push({ label: 'Best Fireplaces in Dubai', section: 'best-fireplace-dubai' });
+    } else if (activeSection === 'outdoor-gas-fireplace') {
+      steps.push({ label: 'Outdoor Gas Fireplaces', section: 'outdoor-gas-fireplace' });
+    } else if (activeSection === 'home-automated-gas-fireplace') {
+      steps.push({ label: 'Outdoor Gas Fireplaces', section: 'outdoor-gas-fireplace' });
+      steps.push({ label: 'Home Automated On & Off', section: 'home-automated-gas-fireplace' });
+    } else if (activeSection === 'high-low-flame-gas-fireplace') {
+      steps.push({ label: 'Outdoor Gas Fireplaces', section: 'outdoor-gas-fireplace' });
+      steps.push({ label: 'High and Low Flame', section: 'high-low-flame-gas-fireplace' });
+    } else if (activeSection === 'remote-operated-gas-fireplace') {
+      steps.push({ label: 'Outdoor Gas Fireplaces', section: 'outdoor-gas-fireplace' });
+      steps.push({ label: 'Remote Operated', section: 'remote-operated-gas-fireplace' });
+    } else if (activeSection === 'push-and-turn-gas-fireplace') {
+      steps.push({ label: 'Outdoor Gas Fireplaces', section: 'outdoor-gas-fireplace' });
+      steps.push({ label: 'Push & Turn', section: 'push-and-turn-gas-fireplace' });
+    } else if (activeSection === 'key-valve-gas-fireplace') {
+      steps.push({ label: 'Outdoor Gas Fireplaces', section: 'outdoor-gas-fireplace' });
+      steps.push({ label: 'Key Valve', section: 'key-valve-gas-fireplace' });
     } else if (activeSection === 'ethanol-burner') {
       steps.push({ label: 'Ethanol Burners', section: 'ethanol-burner' });
     }
@@ -224,6 +305,14 @@ export default function App() {
     if (activeSection === 'blog') return 'blog';
     if (activeSection === 'best-fireplace-dubai') return 'best-fireplace-dubai';
     if (
+      activeSection === 'outdoor-gas-fireplace' ||
+      activeSection === 'home-automated-gas-fireplace' ||
+      activeSection === 'high-low-flame-gas-fireplace' ||
+      activeSection === 'remote-operated-gas-fireplace' ||
+      activeSection === 'push-and-turn-gas-fireplace' ||
+      activeSection === 'key-valve-gas-fireplace'
+    ) return activeSection;
+    if (
       activeSection === 'bio-ethanol-fireplace' ||
       activeSection === 'water-vapor-fireplace' ||
       activeSection === 'outdoor-fireplace' ||
@@ -246,6 +335,15 @@ export default function App() {
     primaryKW: activeArticleObj.targetKeyword,
     secondaryKW: activeArticleObj.content.category
   } : (() => {
+    const gasVariant = OUTDOOR_GAS_VARIANTS.find(v => v.id === activeSection);
+    if (gasVariant) {
+      return {
+        title: gasVariant.seoTitle,
+        description: gasVariant.seoDescription,
+        primaryKW: gasVariant.title,
+        secondaryKW: gasVariant.badge
+      };
+    }
     const svc = SERVICES.find(s => s.id === activeSection);
     if (svc) {
       return {
@@ -606,7 +704,7 @@ export default function App() {
 
             {/* ──── ROUTE: ABOUT US ──── */}
             {activeSection === 'about' && (
-              <div id="section-about" className="pt-14 md:pt-16 pb-20 px-6 md:px-12">
+              <div id="section-about" className="pt-28 sm:pt-36 pb-20 px-6 md:px-12">
                 <div className="max-w-7xl mx-auto">
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-24">
                     <div className="lg:col-span-6 space-y-6">
@@ -697,27 +795,41 @@ export default function App() {
               <ServicesPage onNavigate={handleNavigation} />
             )}
 
-            {/* ──── ROUTE: NEW DETAILED SERVICE PAGES ──── */}
+            {/* ──── ROUTE: OUTDOOR FIRE UNIT CATEGORIES & INSIDE DETAIL PAGES ──── */}
             {activeSection === 'outdoor-gas-fireplace' && (
               <OutdoorGasFireplacePage onNavigate={handleNavigation} />
             )}
+            {(activeSection === 'home-automated-gas-fireplace' ||
+              activeSection === 'high-low-flame-gas-fireplace' ||
+              activeSection === 'remote-operated-gas-fireplace' ||
+              activeSection === 'push-and-turn-gas-fireplace' ||
+              activeSection === 'key-valve-gas-fireplace' ||
+              activeSection === 'manual-ethanol-fireplace' ||
+              activeSection === 'ethanol-fuel-fireplace' ||
+              activeSection === 'outdoor-woodfire-place' ||
+              activeSection === 'lava-rock-media' ||
+              activeSection === 'pebbles-media' ||
+              activeSection === 'artificial-stone-media' ||
+              activeSection === 'concrete-fire-pot' ||
+              activeSection === 'metal-powder-coated-pot' ||
+              activeSection === 'grc-fire-bowls' ||
+              activeSection === 'customized-fire-tables-general') && (
+              <OutdoorFireUnitDetailPage variantId={activeSection} onNavigate={handleNavigation} />
+            )}
             {activeSection === 'ethanol-fireplace' && (
-              <BioEthanolFireplacePage onNavigate={handleNavigation} />
+              <EthanolFireplaceHubPage onNavigate={handleNavigation} />
             )}
             {activeSection === 'wood-fireplace' && (
-              <WoodFireplacePage onNavigate={handleNavigation} />
+              <WoodFireplaceHubPage onNavigate={handleNavigation} />
             )}
             {activeSection === 'rocks-media' && (
-              <RocksPage onNavigate={handleNavigation} />
+              <RocksMediaHubPage onNavigate={handleNavigation} />
             )}
             {activeSection === 'fire-pot-tables' && (
-              <FirePotTablesPage onNavigate={handleNavigation} />
+              <FirePotTablesHubPage onNavigate={handleNavigation} />
             )}
-            {activeSection === 'custom-fire-tables' && (
-              <CustomFireTablesPage onNavigate={handleNavigation} />
-            )}
-            {activeSection === 'custom-fire-table' && (
-              <CustomFireTablesPage onNavigate={handleNavigation} />
+            {(activeSection === 'custom-fire-tables' || activeSection === 'custom-fire-table' || activeSection === 'custom-fire-table-with-fire-unit') && (
+              <CustomFireTableWithUnitPage onNavigate={handleNavigation} />
             )}
             {activeSection === 'artificial-3d-fireplace' && (
               <Artificial3DFireplacePage onNavigate={handleNavigation} />
@@ -728,15 +840,10 @@ export default function App() {
               <PortfolioPage />
             )}
 
-            {/* ──── ROUTE: WHY CHOOSE US ──── */}
-            {activeSection === 'why-choose' && (
-              <WhyChoosePage />
-            )}
-
             {/* ──── ROUTE: GENERAL FAQ PAGE ──── */}
             {activeSection === 'faq' && (
               <div id="section-faq" className="min-h-screen bg-[#0b0b0b] text-neutral-350 pb-28 selection:bg-orange-500 selection:text-white">
-                <div className="max-w-4xl mx-auto pt-8 px-6 md:px-12">
+                <div className="max-w-4xl mx-auto pt-28 sm:pt-36 px-6 md:px-12">
                   <div className="text-center mb-12">
                     <span className="px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-widest font-sans inline-block">
                       Common Questions
@@ -888,34 +995,56 @@ export default function App() {
       {/* 3. Global structural brand footer */}
       <Footer onNavigate={handleNavigation} />
 
-      {/* 4. Floating Sticky WhatsApp Assistance Button */}
-      <a
-        id="floating-whatsapp-btn"
-        href="https://wa.me/971542112891"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Open WhatsApp chat"
-        className="fixed bottom-6 right-6 z-40 group flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-3 rounded-full shadow-2xl transition-all duration-300 hover:scale-[1.03] cursor-pointer font-sans"
-        title="WhatsApp"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552" className="w-5 h-5 shrink-0 select-none">
-          <defs>
-            <linearGradient id="b-wa" x1="85.915" x2="86.535" y1="32.567" y2="137.092" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stopColor="#57d163"/>
-              <stop offset="1" stopColor="#23b33a"/>
-            </linearGradient>
-            <filter id="a-wa" width="1.115" height="1.114" x="-.057" y="-.057" colorInterpolationFilters="sRGB">
-              <feGaussianBlur stdDeviation="3.531"/>
-            </filter>
-          </defs>
-          <path fill="#b3b3b3" d="m54.532 138.45 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.523h.023c33.707 0 61.139-27.426 61.153-61.135.006-16.335-6.349-31.696-17.895-43.251A60.75 60.75 0 0 0 87.94 25.983c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.558zm-40.811 23.544L24.16 123.88c-6.438-11.154-9.825-23.808-9.821-36.772.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954zm0 0" filter="url(#a-wa)"/>
-          <path fill="#fff" d="m12.966 161.238 10.439-38.114a73.42 73.42 0 0 1-9.821-36.772c.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954z"/>
-          <path fill="url(#b-wa)" d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.559 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.524h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.929z"/>
-          <path fill="url(#b-wa)" d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.313-6.179 22.558 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.517 31.126 8.523h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.928z"/>
-          <path fill="#fff" fillRule="evenodd" d="M68.772 55.603c-1.378-3.061-2.828-3.123-4.137-3.176l-3.524-.043c-1.226 0-3.218.46-4.902 2.3s-6.435 6.287-6.435 15.332 6.588 17.785 7.506 19.013 12.718 20.381 31.405 27.75c15.529 6.124 18.689 4.906 22.061 4.6s10.877-4.447 12.408-8.74 1.532-7.971 1.073-8.74-1.685-1.226-3.525-2.146-10.877-5.367-12.562-5.981-2.91-.919-4.137.921-4.746 5.979-5.819 7.206-2.144 1.381-3.984.462-7.76-2.861-14.784-9.124c-5.465-4.873-9.154-10.891-10.228-12.73s-.114-2.835.808-3.751c.825-.824 1.838-2.147 2.759-3.22s1.224-1.84 1.836-3.065.307-2.301-.153-3.22-4.032-10.011-5.666-13.647"/>
-        </svg>
-        <span className="text-xs font-bold leading-none">WhatsApp</span>
-      </a>
+      {/* 4. Floating Action Group (Scroll to Top & Sticky WhatsApp) */}
+      <div className="fixed bottom-6 right-6 z-40 flex flex-col items-end gap-3 pointer-events-none">
+        {/* Scroll to Top Button */}
+        <AnimatePresence>
+          {showScrollTop && (
+            <motion.button
+              id="scroll-to-top-btn"
+              initial={{ opacity: 0, scale: 0.8, y: 10 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.8, y: 10 }}
+              transition={{ duration: 0.2 }}
+              onClick={scrollToTop}
+              aria-label="Scroll to top of page"
+              title="Scroll to top"
+              className="pointer-events-auto p-3.5 rounded-full bg-[#161616]/95 hover:bg-orange-500 text-neutral-300 hover:text-white border border-neutral-700/80 shadow-2xl backdrop-blur-md transition-all duration-300 hover:scale-105 cursor-pointer flex items-center justify-center group"
+            >
+              <ArrowUp className="w-5 h-5 group-hover:-translate-y-0.5 transition-transform" />
+            </motion.button>
+          )}
+        </AnimatePresence>
+
+        {/* Floating Sticky WhatsApp Assistance Button */}
+        <a
+          id="floating-whatsapp-btn"
+          href="https://wa.me/971542112891"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open WhatsApp chat"
+          className="pointer-events-auto group flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-3 rounded-full shadow-2xl transition-all duration-300 hover:scale-[1.03] cursor-pointer font-sans"
+          title="WhatsApp"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552" className="w-5 h-5 shrink-0 select-none">
+            <defs>
+              <linearGradient id="b-wa" x1="85.915" x2="86.535" y1="32.567" y2="137.092" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stopColor="#57d163"/>
+                <stop offset="1" stopColor="#23b33a"/>
+              </linearGradient>
+              <filter id="a-wa" width="1.115" height="1.114" x="-.057" y="-.057" colorInterpolationFilters="sRGB">
+                <feGaussianBlur stdDeviation="3.531"/>
+              </filter>
+            </defs>
+            <path fill="#b3b3b3" d="m54.532 138.45 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.523h.023c33.707 0 61.139-27.426 61.153-61.135.006-16.335-6.349-31.696-17.895-43.251A60.75 60.75 0 0 0 87.94 25.983c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.558zm-40.811 23.544L24.16 123.88c-6.438-11.154-9.825-23.808-9.821-36.772.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954zm0 0" filter="url(#a-wa)"/>
+            <path fill="#fff" d="m12.966 161.238 10.439-38.114a73.42 73.42 0 0 1-9.821-36.772c.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954z"/>
+            <path fill="url(#b-wa)" d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.559 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.524h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.929z"/>
+            <path fill="url(#b-wa)" d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.313-6.179 22.558 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.517 31.126 8.523h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.928z"/>
+            <path fill="#fff" fillRule="evenodd" d="M68.772 55.603c-1.378-3.061-2.828-3.123-4.137-3.176l-3.524-.043c-1.226 0-3.218.46-4.902 2.3s-6.435 6.287-6.435 15.332 6.588 17.785 7.506 19.013 12.718 20.381 31.405 27.75c15.529 6.124 18.689 4.906 22.061 4.6s10.877-4.447 12.408-8.74 1.532-7.971 1.073-8.74-1.685-1.226-3.525-2.146-10.877-5.367-12.562-5.981-2.91-.919-4.137.921-4.746 5.979-5.819 7.206-2.144 1.381-3.984.462-7.76-2.861-14.784-9.124c-5.465-4.873-9.154-10.891-10.228-12.73s-.114-2.835.808-3.751c.825-.824 1.838-2.147 2.759-3.22s1.224-1.84 1.836-3.065.307-2.301-.153-3.22-4.032-10.011-5.666-13.647"/>
+          </svg>
+          <span className="text-xs font-bold leading-none">WhatsApp</span>
+        </a>
+      </div>
 
     </div>
   );

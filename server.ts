@@ -1,57 +1,42 @@
 import express from "express";
 import path from "path";
 import fs from "fs";
+import { createServer as createViteServer } from "vite";
 
 async function startServer() {
   const app = express();
   const PORT = 3000;
 
-  // Redirect HTTP -> HTTPS and non-www -> www in production
+  // Prevent stale cache issues in dev / preview
   app.use((req, res, next) => {
-    const host = req.headers.host || "";
-    const isHttp = req.headers["x-forwarded-proto"] === "http";
-    const isNonWww = !host.startsWith("www.") && !host.includes("localhost") && !host.includes("127.0.0.1");
-
-    if (isHttp || isNonWww) {
-      const secureHost = host.startsWith("www.") ? host : `www.${host}`;
-      return res.redirect(301, `https://${secureHost}${req.originalUrl}`);
-    }
+    res.setHeader("Cache-Control", "no-cache, no-store, must-revalidate");
     next();
   });
 
-  // Add a simple API health check endpoint if needed
-  app.get("/api/health", (req, res) => {
+  // API health check endpoint
+  app.get("/api/health", (_req, res) => {
     res.json({ status: "ok" });
   });
 
-  // Safe check if we are in production
-  // - Either NODE_ENV is set to production
-  // - Or we are executing from the compiled CJS server file
-  const isProd = process.env.NODE_ENV === "production" || 
-                 (typeof __filename !== "undefined" && __filename.includes("server.cjs")) ||
-                 process.argv[1]?.includes("server.cjs");
-
-  if (!isProd) {
-    console.log("Starting server in DEVELOPMENT mode with Vite live preview...");
-    // Dynamic import to prevent Node from resolving or crashing on production startup
-    const { createServer: createViteServer } = await import("vite");
+  // Vite middleware for development
+  if (process.env.NODE_ENV !== "production") {
+    console.log("Starting server in DEVELOPMENT mode with Vite...");
     const vite = await createViteServer({
       server: { middlewareMode: true },
-      appType: "spa",
+      appType: "custom",
     });
     app.use(vite.middlewares);
 
-    // Dynamic routing fallback in development to support refreshes on clean URLs
-    app.get("*", async (req, res, next) => {
+    // Dynamic routing fallback in development for all SPA routes
+    app.use("*", async (req, res, next) => {
       const url = req.originalUrl;
-      // Skip static files with extensions or API routes
-      if (url.startsWith("/api/") || url.includes(".")) {
+      // Skip API routes or static asset requests with file extensions
+      if (url.startsWith("/api/") || (url.includes(".") && !url.endsWith(".html"))) {
         return next();
       }
       try {
-        const templatePath = path.resolve(process.cwd(), "index.html");
-        let template = fs.readFileSync(templatePath, "utf-8");
-        // Apply Vite HTML transformation to inject HMR and build dependencies
+        const indexPath = path.resolve(process.cwd(), "index.html");
+        let template = fs.readFileSync(indexPath, "utf-8");
         template = await vite.transformIndexHtml(url, template);
         res.status(200).set({ "Content-Type": "text/html" }).end(template);
       } catch (e) {
@@ -61,12 +46,10 @@ async function startServer() {
     });
   } else {
     console.log("Starting server in PRODUCTION mode...");
-    const distPath = path.join(process.cwd(), 'dist');
-    // Serve static assets out of the distribution folder
+    const distPath = path.join(process.cwd(), "dist");
     app.use(express.static(distPath));
-    // Fallback all incoming requests back to index.html so the client router handles them
-    app.get('*', (req, res) => {
-      res.sendFile(path.join(distPath, 'index.html'));
+    app.get("*", (_req, res) => {
+      res.sendFile(path.join(distPath, "index.html"));
     });
   }
 

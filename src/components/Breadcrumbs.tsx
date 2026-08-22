@@ -1,11 +1,7 @@
 import { Home, ChevronRight } from 'lucide-react';
-import { ActiveSection } from '../types';
+import { ActiveSection, BreadcrumbStep } from '../types';
 
-export interface BreadcrumbStep {
-  label: string;
-  section?: ActiveSection;
-  articleId?: string | null;
-}
+export type { BreadcrumbStep };
 
 interface BreadcrumbsProps {
   steps: BreadcrumbStep[];

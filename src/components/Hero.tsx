@@ -24,15 +24,24 @@ export default function Hero({ onNavigate }: HeroProps) {
       {/* 1. Hero Content & Tagline Section */}
       <section className="relative min-h-screen overflow-hidden shadow-2xl border border-neutral-200/20 rounded-none w-screen max-w-none ml-[calc(50%-50vw)]">
         <div className="absolute inset-0 z-0">
+          <img
+            src="/assets/Fireplace%20_%20Wall%20Feature.png"
+            alt="Flames Fireplace luxury installation in Dubai"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
           <video
             src="/assets/hero%201.mp4"
             autoPlay
             muted
             loop
             playsInline
-            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-100"
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-700 opacity-90"
+            onError={(e) => {
+              // Hide video element gracefully if video asset is not uploaded
+              (e.currentTarget as HTMLElement).style.display = 'none';
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-br from-neutral-950/80 via-neutral-900/45 to-neutral-900/20" />
+          <div className="absolute inset-0 bg-gradient-to-br from-neutral-950/85 via-neutral-900/60 to-neutral-900/40" />
         </div>
 
         <div className="relative z-10 min-h-screen flex items-center justify-center px-6 md:px-12 pt-20 pb-10">
@@ -90,7 +99,7 @@ export default function Hero({ onNavigate }: HeroProps) {
               onClick={() => onNavigate('portfolio')}
               className="w-full sm:w-auto px-8 py-4 rounded-full bg-neutral-900/80 hover:bg-orange-500 text-white font-sans text-sm font-semibold hover:shadow-xl hover:shadow-orange-500/10 transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 group"
             >
-              View Portfolio
+              Our Works
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </button>
             <button

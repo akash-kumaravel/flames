@@ -17,7 +17,37 @@ export type ActiveSection =
   | 'built-in-bbq'
   | 'fireplace-dubai'
   | 'ethanol-burner'
-  | 'best-fireplace-dubai';
+  | 'best-fireplace-dubai'
+  | 'outdoor-gas-fireplace'
+  | 'home-automated-gas-fireplace'
+  | 'high-low-flame-gas-fireplace'
+  | 'remote-operated-gas-fireplace'
+  | 'push-and-turn-gas-fireplace'
+  | 'key-valve-gas-fireplace'
+  | 'ethanol-fireplace'
+  | 'manual-ethanol-fireplace'
+  | 'ethanol-fuel-fireplace'
+  | 'wood-fireplace'
+  | 'outdoor-woodfire-place'
+  | 'rocks-media'
+  | 'lava-rock-media'
+  | 'pebbles-media'
+  | 'artificial-stone-media'
+  | 'fire-pot-tables'
+  | 'concrete-fire-pot'
+  | 'metal-powder-coated-pot'
+  | 'grc-fire-bowls'
+  | 'customized-fire-tables-general'
+  | 'custom-fire-tables'
+  | 'custom-fire-table'
+  | 'custom-fire-table-with-fire-unit'
+  | 'artificial-3d-fireplace';
+
+export interface BreadcrumbStep {
+  label: string;
+  section?: ActiveSection;
+  articleId?: string | null;
+}
 
 export interface FAQItem {
   question: string;
@@ -89,4 +119,44 @@ export interface ServiceItem {
   faqs?: FAQItem[];
   seoTitle?: string;
   seoDescription?: string;
+}
+
+export interface GasFireplaceVariant {
+  id: 'home-automated-gas-fireplace' | 'high-low-flame-gas-fireplace' | 'remote-operated-gas-fireplace' | 'push-and-turn-gas-fireplace' | 'key-valve-gas-fireplace';
+  title: string;
+  shortTitle: string;
+  tagline: string;
+  description: string;
+  detailedDescription: string;
+  image: string;
+  badge: string;
+  features: string[];
+  benefits: string[];
+  howItWorks: string[];
+  specs: { label: string; value: string }[];
+  faqs: FAQItem[];
+  waMessage: string;
+  seoTitle: string;
+  seoDescription: string;
+}
+
+export interface OutdoorFireUnitVariant {
+  id: ActiveSection;
+  categoryId: 'outdoor-gas-fireplace' | 'ethanol-fireplace' | 'wood-fireplace' | 'rocks-media' | 'fire-pot-tables' | 'custom-fire-table';
+  categoryTitle: string;
+  title: string;
+  shortTitle: string;
+  tagline: string;
+  description: string;
+  detailedDescription: string;
+  image: string;
+  badge: string;
+  features?: string[];
+  benefits: string[];
+  howItWorks: string[];
+  specs: { label: string; value: string }[];
+  faqs: FAQItem[];
+  waMessage: string;
+  seoTitle: string;
+  seoDescription: string;
 }

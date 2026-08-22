@@ -5,7 +5,7 @@ interface Props { onNavigate: (section: ActiveSection) => void }
 export default function BestFireplaceLanding({ onNavigate }: Props) {
   return (
     <div className="min-h-screen bg-[#0b0b0b] text-neutral-350 pb-28 selection:bg-orange-500 selection:text-white">
-      <section className="max-w-5xl mx-auto pt-8 px-6 md:px-12 py-20 space-y-16">
+      <section className="max-w-5xl mx-auto pt-28 sm:pt-36 px-6 md:px-12 pb-20 space-y-16">
         
         {/* Intro Section */}
         <div className="space-y-4">

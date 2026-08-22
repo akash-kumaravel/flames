@@ -78,7 +78,7 @@ export default function ContactPage() {
   return (
     <div id="contact-us-page-wrapper" className="min-h-screen bg-[#0b0b0b] text-neutral-350 pb-28 selection:bg-orange-500 selection:text-white">
       {/* Top Header Block */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-2 pb-6 text-center">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-28 sm:pt-36 pb-8 text-center">
         <motion.div
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}

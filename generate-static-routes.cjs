@@ -36,11 +36,22 @@ function extractBlogSlugs(src) {
   return slugs;
 }
 
-const staticPages = ['','about','services','portfolio','why-choose','faq','contact','blog','best-fireplace-dubai'];
+// Helper: extract OUTDOOR_GAS_VARIANTS ids
+function extractGasVariantIds(src) {
+  const match = src.match(/export const OUTDOOR_GAS_VARIANTS[\s\S]*?=\s*\[([\s\S]*?)\];/m);
+  if (!match) return [];
+  const block = match[1];
+  const ids = Array.from(block.matchAll(/id:\s*"([^"]+)"/g)).map(m => m[1]);
+  return ids;
+}
+
+const staticPages = ['','about','services','portfolio','faq','contact','blog','best-fireplace-dubai'];
 const serviceIds = extractServiceIds(dataRaw).map(id => `services/${id}`);
+const gasVariantIds = extractGasVariantIds(dataRaw).map(id => `services/outdoor-gas-fireplace/${id.replace('-gas-fireplace', '')}`);
+const gasVariantAltIds = extractGasVariantIds(dataRaw).map(id => `services/${id}`);
 const blogSlugs = extractBlogSlugs(dataRaw);
 
-const routes = [...staticPages, ...blogSlugs, ...serviceIds];
+const routes = [...staticPages, ...blogSlugs, ...serviceIds, ...gasVariantIds, ...gasVariantAltIds];
 
 // Generate fallback 404.html for static servers
 try {
