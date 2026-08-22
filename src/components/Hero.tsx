@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, Flame, ShieldCheck } from 'lucide-react';
 import { ActiveSection } from '../types';
 import { TRUST_BAR, GENERAL_STATS, PRODUCTS, BRAND, SERVICES } from '../data';
@@ -11,24 +10,11 @@ interface HeroProps {
 }
 
 export default function Hero({ onNavigate }: HeroProps) {
-  const heroSlides = SERVICES;
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-
-  useEffect(() => {
-    const nextImage = new Image();
-    nextImage.src = heroSlides[activeSlideIndex].image;
-  }, [activeSlideIndex, heroSlides]);
-
   return (
     <div id="hero-landing-page" className="px-6 md:px-12 bg-[#0b0b0b]">
       {/* 1. Hero Content & Tagline Section */}
       <section className="relative min-h-screen overflow-hidden shadow-2xl border border-neutral-200/20 rounded-none w-screen max-w-none ml-[calc(50%-50vw)]">
         <div className="absolute inset-0 z-0">
-          <img
-            src="/assets/Fireplace%20_%20Wall%20Feature.png"
-            alt="Flames Fireplace luxury installation in Dubai"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
           <video
             src="/assets/hero%201.mp4"
             autoPlay
