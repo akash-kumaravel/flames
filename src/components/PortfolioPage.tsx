@@ -114,8 +114,7 @@ export default function PortfolioPage() {
 
       {/* Filter Navigation */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mb-16">
-        <div className="flex justify-center">
-          <div className="bg-[#121212] p-1.5 rounded-2xl inline-flex flex-wrap justify-center items-center gap-1 border border-neutral-800">
+        <div className="flex justify-center flex-wrap items-center gap-1">
             <button
               id="filter-all-btn"
               onClick={() => setFilter('all')}
@@ -151,7 +150,6 @@ export default function PortfolioPage() {
               <Compass className="w-3.5 h-3.5" />
               Fire Pits &amp; Tables
             </button>
-          </div>
         </div>
       </section>
 
