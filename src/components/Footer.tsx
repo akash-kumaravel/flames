@@ -21,7 +21,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div className="md:col-span-4 space-y-4">
             <div className="flex items-center gap-2.5">
               <img
-                src="/assets/flames%20logo.svg"
+                src="https://www.flamesfireplace.com/assets/flames%20logo.svg"
                 alt="Flames Fireplace logo"
                 width={150}
                 height={24}

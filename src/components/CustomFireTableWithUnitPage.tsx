@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Check, ArrowRight, ChevronDown, Flame, Shield, Sparkles, Sliders, MessageCircle, Layers, Zap } from 'lucide-react';
+import { Check, ArrowRight, ChevronDown, Flame, Shield, Sparkles, Sliders, Layers, Zap } from 'lucide-react';
 import { ActiveSection } from '../types';
+import WhatsAppIcon from './WhatsAppIcon';
 
 interface CustomFireTableProps {
   onNavigate: (section: ActiveSection) => void;
@@ -148,7 +149,7 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
             >
               <div className="aspect-[4/3] w-full overflow-hidden">
                 <img
-                  src="/assets/CustomizedFireTabl.webp"
+                  src="https://www.flamesfireplace.com/assets/CustomizedFireTabl.webp"
                   alt="Customized Fire Table with Integrated Burner Unit Dubai Showroom"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="eager"
@@ -275,7 +276,7 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
               rel="noreferrer noopener"
               className="inline-flex items-center gap-3 rounded-2xl bg-neutral-950 px-8 py-4 text-sm font-semibold text-white shadow-xl hover:bg-neutral-900 transition-all border border-white/10 cursor-pointer"
             >
-              <MessageCircle className="w-5 h-5 text-emerald-400" />
+              <WhatsAppIcon className="w-5 h-5" />
               Chat on WhatsApp
             </a>
             <button

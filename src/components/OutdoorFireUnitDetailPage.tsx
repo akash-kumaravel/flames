@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Check, ArrowRight, ChevronDown, Flame, Shield, Sparkles, Sliders, MessageCircle, Layers, Award, Zap } from 'lucide-react';
+import { Check, ArrowRight, ChevronDown, Flame, Shield, Sparkles, Sliders, Layers, Award, Zap } from 'lucide-react';
 import { ActiveSection, OutdoorFireUnitVariant } from '../types';
 import { ALL_OUTDOOR_VARIANTS } from '../data';
 import ServiceCard from './ServiceCard';
+import WhatsAppIcon from './WhatsAppIcon';
 
 interface OutdoorFireUnitDetailPageProps {
   variantId: ActiveSection;
@@ -268,7 +269,7 @@ export default function OutdoorFireUnitDetailPage({ variantId, onNavigate }: Out
               rel="noreferrer noopener"
               className="inline-flex items-center gap-3 rounded-2xl bg-neutral-950 px-8 py-4 text-sm font-semibold text-white shadow-xl hover:bg-neutral-900 transition-all border border-white/10 cursor-pointer"
             >
-              <MessageCircle className="w-5 h-5 text-emerald-400" />
+              <WhatsAppIcon className="w-5 h-5" />
               Chat on WhatsApp
             </a>
             <button

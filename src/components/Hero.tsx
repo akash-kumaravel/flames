@@ -16,7 +16,7 @@ export default function Hero({ onNavigate }: HeroProps) {
       <section className="relative min-h-screen overflow-hidden shadow-2xl border border-neutral-200/20 rounded-none w-screen max-w-none ml-[calc(50%-50vw)]">
         <div className="absolute inset-0 z-0">
           <video
-            src="/assets/hero%201.mp4"
+            src="https://www.flamesfireplace.com/assets/hero%201.mp4"
             autoPlay
             muted
             loop

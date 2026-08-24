@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Check, ArrowRight, ChevronDown, Flame, Shield, Sparkles, Sliders, MessageCircle, Layers, Zap } from 'lucide-react';
+import { Check, ArrowRight, ChevronDown, Flame, Shield, Sparkles, Sliders, Layers, Zap } from 'lucide-react';
 import { ActiveSection } from '../types';
+import WhatsAppIcon from './WhatsAppIcon';
 
 interface ProductPageProps {
   productId: string;
@@ -299,7 +300,7 @@ export default function ProductPage({
               rel="noreferrer noopener"
               className="inline-flex items-center gap-3 rounded-2xl bg-neutral-950 px-8 py-4 text-sm font-semibold text-white shadow-xl hover:bg-neutral-900 transition-all border border-white/10 cursor-pointer"
             >
-              <MessageCircle className="w-5 h-5 text-emerald-400" />
+              <WhatsAppIcon className="w-5 h-5" />
               Schedule on WhatsApp
             </a>
             <button

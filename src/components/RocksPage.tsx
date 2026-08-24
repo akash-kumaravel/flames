@@ -16,7 +16,7 @@ export default function RocksPage({ onNavigate }: RocksProps) {
       tagline="Lava rock, pebbles and artificial stone media"
       description="Decorative and functional media for fire beds: lava rock, pebbles and artificial stone selections for pots, bowls and linear burners."
       detailedDescription="Choose from graded lava rock, decorative pebbles and engineered artificial stone to style and protect your burner area. Suitable for poolside and high-moisture environments when specified correctly."
-      imageUrl={svc?.image || "/assets/Rocks_StoneonHous.webp"}
+      imageUrl={svc?.image || "https://www.flamesfireplace.com/assets/Rocks_StoneonHous.webp"}
 
       features={["Lava rock", "Pebbles", "Artificial stone"]}
       benefits={["Improved flame aesthetics", "Durable under heat", "Multiple textures and colours"]}

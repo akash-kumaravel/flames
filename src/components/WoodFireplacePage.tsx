@@ -16,7 +16,7 @@ export default function WoodFireplacePage({ onNavigate }: WoodFireplaceProps) {
       tagline="Classic wood-fire features for outdoor areas"
       description="Traditional wood-burning fireplaces and fire pits designed for outdoor use with ember control and durable finishes."
       detailedDescription="Wood-fire solutions including chimeneas, built-in hearths and engineered pits — specify ember guards and finishes suitable for terraces and gardens."
-      imageUrl={svc?.image || "/assets/WOOD FIRE PLACE.webp"}
+      imageUrl={svc?.image || "https://www.flamesfireplace.com/assets/WOOD%20FIRE%20PLACE.webp"}
 
       features={["Natural wood combustion", "Ember containment options"]}
       benefits={["Authentic campfire ambiance", "Robust outdoor performance"]}

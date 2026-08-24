@@ -16,7 +16,7 @@ export default function BuiltInBbqPage({ onNavigate }: BuiltInBbqProps) {
       tagline="Bespoke Outdoor Fire Feature for High-End Spaces"
       description="Custom fire tables with integrated fire units, built for private villas, hospitality terraces, and premium outdoor lounges."
       detailedDescription="Customized fire tables with fire units combine premium materials, clean lines, and practical outdoor functionality. Designed for the UAE climate, these bespoke installations can include remote control, push-and-turn ignition, or key valve fire places for a refined outdoor experience."
-      imageUrl={svc?.image || "/assets/Built-In BBQ _ Flames Close-up.webp"}
+      imageUrl={svc?.image || "https://www.flamesfireplace.com/assets/Built-In%20BBQ%20_%20Flames%20Close-up.webp"}
 
       features={[
         "Custom layouts built for your patio, garden, or terrace",
