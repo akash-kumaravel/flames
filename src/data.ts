@@ -186,7 +186,7 @@ export const META_SUMMARY = {
   },
   'custom-fire-tables': {
     title: "Custom Fire Tables Dubai | Custom Fire Table with Fire Unit",
-    description: "Customized fire tables with integrated fire units in Dubai. Turnkey design, 3D CAD modeling, and on-site commissioning.",
+    description: "Customized fire tables with integrated fire units in Dubai. Turnkey design, 3D visual modeling, and on-site commissioning.",
     primaryKW: "custom fire table Dubai, fire table with burner UAE",
     secondaryKW: "integrated fire table, outdoor fire table installation"
   },
@@ -1170,7 +1170,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
         {
           heading: "4. Installation & Aftercare",
           paragraphs: [
-            "Work with providers who offer site surveys, CAD-friendly casing diagrams, and post-installation commissioning to ensure optimal performance."
+            "Work with providers who offer site surveys, engineered casing diagrams, and post-installation commissioning to ensure optimal performance."
           ]
         }
       ],

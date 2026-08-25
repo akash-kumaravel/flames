@@ -35,7 +35,7 @@ import OutdoorGasFireplacePage from './components/OutdoorGasFireplacePage';
 import GasFireplaceVariantPage from './components/GasFireplaceVariantPage';
 import OutdoorFireUnitDetailPage from './components/OutdoorFireUnitDetailPage';
 import EthanolFireplaceHubPage from './components/EthanolFireplaceHubPage';
-import WoodFireplaceHubPage from './components/WoodFireplaceHubPage';
+import WoodFireplacePage from './components/WoodFireplacePage';
 import RocksMediaHubPage from './components/RocksMediaHubPage';
 import FirePotTablesHubPage from './components/FirePotTablesHubPage';
 import CustomFireTableWithUnitPage from './components/CustomFireTableWithUnitPage';
@@ -64,7 +64,7 @@ const sectionToPath: Record<ActiveSection, string> = {
   'manual-ethanol-fireplace': '/services/ethanol-fireplace/manual-ethanol',
   'ethanol-fuel-fireplace': '/services/ethanol-fireplace/ethanol-fuel',
   'wood-fireplace': '/services/wood-fireplace',
-  'outdoor-woodfire-place': '/services/wood-fireplace/outdoor-woodfire-place',
+  'outdoor-woodfire-place': '/services/wood-fireplace',
   'rocks-media': '/services/rocks-media',
   'lava-rock-media': '/services/rocks-media/lava-rock',
   'pebbles-media': '/services/rocks-media/pebbles',
@@ -102,8 +102,8 @@ const getSectionFromPath = (): ActiveSection => {
     if (path.includes('/services/ethanol-fireplace/manual-ethanol') || path.includes('/services/manual-ethanol-fireplace')) return 'manual-ethanol-fireplace';
     if (path.includes('/services/ethanol-fireplace/ethanol-fuel') || path.includes('/services/ethanol-fuel-fireplace')) return 'ethanol-fuel-fireplace';
 
-    // Check wood fireplace sub-routes
-    if (path.includes('/services/wood-fireplace/outdoor-woodfire-place') || path.includes('/services/outdoor-woodfire-place')) return 'outdoor-woodfire-place';
+    // Check wood fireplace routes
+    if (path.includes('/services/wood-fireplace') || path.includes('/services/outdoor-woodfire-place')) return 'wood-fireplace';
 
     // Check rocks media sub-routes
     if (path.includes('/services/rocks-media/lava-rock') || path.includes('/services/lava-rock-media')) return 'lava-rock-media';
@@ -288,6 +288,18 @@ export default function App() {
       steps.push({ label: 'Key Valve', section: 'key-valve-gas-fireplace' });
     } else if (activeSection === 'ethanol-burner') {
       steps.push({ label: 'Ethanol Burners', section: 'ethanol-burner' });
+    } else if (activeSection === 'wood-fireplace' || activeSection === 'outdoor-woodfire-place') {
+      steps.push({ label: 'Wood Fire Place', section: 'wood-fireplace' });
+    } else if (activeSection === 'ethanol-fireplace') {
+      steps.push({ label: 'Ethanol Fireplaces', section: 'ethanol-fireplace' });
+    } else if (activeSection === 'rocks-media') {
+      steps.push({ label: 'Rocks & Fire Media', section: 'rocks-media' });
+    } else if (activeSection === 'fire-pot-tables') {
+      steps.push({ label: 'Fire Pots & Tables', section: 'fire-pot-tables' });
+    } else if (activeSection === 'custom-fire-tables' || activeSection === 'custom-fire-table' || activeSection === 'custom-fire-table-with-fire-unit') {
+      steps.push({ label: 'Custom Fire Tables', section: 'custom-fire-tables' });
+    } else if (activeSection === 'artificial-3d-fireplace') {
+      steps.push({ label: '3D Water Vapor Fireplaces', section: 'artificial-3d-fireplace' });
     }
     return steps;
   };
@@ -810,7 +822,6 @@ export default function App() {
               activeSection === 'key-valve-gas-fireplace' ||
               activeSection === 'manual-ethanol-fireplace' ||
               activeSection === 'ethanol-fuel-fireplace' ||
-              activeSection === 'outdoor-woodfire-place' ||
               activeSection === 'lava-rock-media' ||
               activeSection === 'pebbles-media' ||
               activeSection === 'artificial-stone-media' ||
@@ -823,8 +834,8 @@ export default function App() {
             {activeSection === 'ethanol-fireplace' && (
               <EthanolFireplaceHubPage onNavigate={handleNavigation} />
             )}
-            {activeSection === 'wood-fireplace' && (
-              <WoodFireplaceHubPage onNavigate={handleNavigation} />
+            {(activeSection === 'wood-fireplace' || activeSection === 'outdoor-woodfire-place') && (
+              <WoodFireplacePage onNavigate={handleNavigation} />
             )}
             {activeSection === 'rocks-media' && (
               <RocksMediaHubPage onNavigate={handleNavigation} />
