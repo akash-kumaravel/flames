@@ -91,7 +91,7 @@ export default function BlogPage({ onNavigateContact, onNavigate, selectedArticl
               <div>
                 <span className="text-xs font-bold uppercase text-white tracking-wide block mb-1">Architectural Support</span>
                 <p className="text-xs text-neutral-450 leading-relaxed font-sans">
-                  Are you an interior designer, builder, or architect in the UAE? We offer specialized CAD blocks, direct DWG files, and installation manuals for our 3D Water Vapor cassettes and Bio Ethanol burners. Contact our support team on WhatsApp to access the full architect's toolkit.
+                  Are you an interior designer, builder, or architect in the UAE? We offer specialized technical drawings, dimensional cutouts, and installation manuals for our 3D Water Vapor cassettes and Bio Ethanol burners. Contact our support team on WhatsApp to access the full architect's toolkit.
                 </p>
               </div>
             </div>

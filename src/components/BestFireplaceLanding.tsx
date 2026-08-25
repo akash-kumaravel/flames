@@ -14,8 +14,8 @@ export default function BestFireplaceLanding({ onNavigate }: Props) {
       answer: "We engineer custom double-wall casings with marine-grade 316 stainless steel insulated inserts and specialized air deflection baffles. This ensures the heat is directed outward rather than upward, protecting smart TV consoles, wood paneling, and delicate marble drywall frames."
     },
     {
-      question: "Do you provide on-site measurements and custom 3D CAD planning across the UAE?",
-      answer: "Yes. Our Dubai engineering support team coordinates direct 3D CAD blocks, conducts precise site inspections, and commissions units at handover to ensure optimal safety compliance and perfect aesthetics."
+      question: "Do you provide on-site measurements and custom 3D design planning across the UAE?",
+      answer: "Yes. Our Dubai engineering support team coordinates spatial 3D plans, conducts precise site inspections, and commissions units at handover to ensure optimal safety compliance and perfect aesthetics."
     },
     {
       question: "Are your water vapor and gas fireplaces compliant with UAE Civil Defense regulations?",
@@ -43,7 +43,7 @@ export default function BestFireplaceLanding({ onNavigate }: Props) {
               Why Flames Fireplace is the Best Fireplace Choice in Dubai
             </h2>
             <p className="text-sm leading-relaxed text-neutral-400 font-light">
-              Selecting a fireplace in the UAE requires careful attention to building layout, air conditioning airflow, and physical safety constraints. At Flames Fireplace, we provide a complete engineering consult, on-site survey, and custom CAD blocks before any construction begins.
+              Selecting a fireplace in the UAE requires careful attention to building layout, air conditioning airflow, and physical safety constraints. At Flames Fireplace, we provide a complete engineering consult, on-site survey, and custom casing layouts before any construction begins.
             </p>
             <ul className="list-disc pl-5 text-neutral-350 space-y-3 text-sm">
               <li>
@@ -133,7 +133,7 @@ export default function BestFireplaceLanding({ onNavigate }: Props) {
         <FaqAccordion
           items={landingFaqs}
           title="Best Fireplace Dubai — FAQ Desk"
-          subtitle="Key advisory insights regarding ventless bioethanol technology, TV safety clearances, architectural CAD drawings, and Dubai Civil Defense compliance."
+          subtitle="Key advisory insights regarding ventless bioethanol technology, TV safety clearances, architectural schematics, and Dubai Civil Defense compliance."
           eyebrow="Advisory Guidance"
           whatsappMessage="Hi Flames Fireplace, I'm reading through the Best Fireplace Dubai guide and have a question."
           onNavigate={onNavigate}

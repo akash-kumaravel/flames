@@ -298,12 +298,12 @@ export default function PortfolioPage() {
               Have a custom residential blueprint in mind?
             </h3>
             <p className="font-sans text-xs md:text-sm text-neutral-300 leading-relaxed font-light">
-              We collaborate closely with elite developers, architectural consultants, pool contractors, and fit-out professionals. From initial hand sketches to full technical submittals and CAD files, our project engineers bring your distinct vision to life seamlessly.
+              We collaborate closely with elite developers, architectural consultants, pool contractors, and fit-out professionals. From initial hand sketches to full technical submittals and layout plans, our project engineers bring your distinct vision to life seamlessly.
             </p>
             <div className="pt-2 flex flex-wrap gap-4">
               <a
                 id="portfolio-bottom-wa-btn"
-                href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%20team%2C%20I'd%20like%20to%20send%20you%20a%20blueprint%20or%20project%20CAD%20for%20my%20upcoming%20fireplace%2Fkitchen."
+                href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%20team%2C%20I'd%20like%20to%20send%20you%20a%20blueprint%20or%20project%20plan%20for%20my%20upcoming%20fireplace%2Fkitchen."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-6 py-3.5 rounded-full bg-orange-500 hover:bg-orange-600 text-white text-xs font-semibold font-sans transition flex items-center gap-2 cursor-pointer"

@@ -231,7 +231,7 @@ export default function OutdoorFireUnitDetailPage({ variantId, onNavigate }: Out
             Ready to integrate {variant.shortTitle || variant.title} into your project?
           </h2>
           <p className="mx-auto max-w-2xl text-neutral-300 leading-relaxed text-sm sm:text-base mb-8 font-light">
-            Speak directly with our Dubai engineering team for custom dimensions, technical CAD cutouts, gas piping advice, and turnkey installation across the UAE.
+            Speak directly with our Dubai engineering team for custom dimensions, technical layout cutouts, gas piping advice, and turnkey installation across the UAE.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a

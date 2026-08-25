@@ -136,7 +136,7 @@ export default function Hero({ onNavigate }: HeroProps) {
           </h2>
           <p className="font-sans text-sm md:text-base text-neutral-350 leading-relaxed mt-4 max-w-3xl">
             From concept to installation, Flames Fireplace brings together thoughtful design, certified safety, and careful craftsmanship for every project.
-            We provide comprehensive site surveys, custom CAD casing blocks, and direct DWG diagrams for interior designers and builders.
+            We provide comprehensive site surveys, custom structural casing plans, and dimensional schematics for interior designers and builders.
             Our installers are certified specialists in heat insulation, ensuring that built-in cassettes are securely isolated using specialized thermal isolation barriers.
             This ensures that our fireplaces can be safely mounted directly beneath smart television screens, marble drywall wraps, or custom wood paneling.
           </p>

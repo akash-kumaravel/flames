@@ -16,11 +16,11 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
     "Active Thermal Isolation: Table perimeter stays cool to the touch even during peak heat and maximum flame operation",
     "Concealed Gas Cylinder Bay: Built-in magnetic flush hatch discreetly encloses standard 5kg / 11kg composite LPG bottles",
     "Dual Fuel Engineering: Seamlessly engineered for bottled LPG propane or centralized municipal natural gas networks across the UAE",
-    "Turnkey 3D CAD & Installation: Detailed 3D preview before fabrication with direct on-site commissioning and Dubai Civil Defense compliance"
+    "Turnkey 3D Design & Installation: Detailed 3D preview before fabrication with direct on-site commissioning and Dubai Civil Defense compliance"
   ];
 
   const howItWorks = [
-    "Spatial Planning & 3D CAD: We measure your patio and generate accurate 3D renders with surface finish options.",
+    "Spatial Planning & 3D Visualization: We measure your patio and generate accurate 3D renders with surface finish options.",
     "Material & Burner Selection: Choose from Dekton / Marble tops and smart remote, push-to-turn, or key-valve burners.",
     "Precision Fabrication: Marine-grade aluminum or 316 stainless structural frame fabrication with thermal shields.",
     "On-Site Installation: Full connection, gas safety pressure testing, wind glass shield mounting, and client handover."
@@ -50,7 +50,7 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
     },
     {
       question: "What is the lead time for a custom fire table in Dubai?",
-      answer: "Standard turnaround from 3D CAD drawing approval to on-site delivery and installation is typically 10 to 14 business days across Dubai and the UAE."
+      answer: "Standard turnaround from design approval to on-site delivery and installation is typically 10 to 14 business days across Dubai and the UAE."
     }
   ];
 
@@ -183,12 +183,12 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
           {/* 3D Render Consultation Box */}
           <div className="rounded-3xl border border-orange-500/30 bg-gradient-to-b from-neutral-900 to-black p-8 text-white shadow-xl shadow-orange-500/5 lg:sticky lg:top-28">
             <span className="text-xs uppercase tracking-[0.25em] text-orange-400 font-semibold">Turnkey Fabrication</span>
-            <h3 className="mt-3 text-xl font-semibold">Request Custom 3D CAD Renders</h3>
+            <h3 className="mt-3 text-xl font-semibold">Request Custom 3D Renders</h3>
             <p className="mt-3 text-neutral-300 text-sm leading-relaxed font-light">
-              Share your patio dimensions and preferred surface material. Our design team will provide realistic 3D CAD renders and a formal quote within 24 hours.
+              Share your patio dimensions and preferred surface material. Our design team will provide realistic 3D design renders and a formal quote within 24 hours.
             </p>
             <a
-              href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%2C%20please%20send%20CAD%20drawings%20and%20a%20custom%20quote%20for%20a%20Customized%20Fire%20Table."
+              href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%2C%20please%20send%20design%20drawings%20and%20a%20custom%20quote%20for%20a%20Customized%20Fire%20Table."
               target="_blank"
               rel="noreferrer noopener"
               className="mt-6 w-full inline-flex items-center justify-center gap-2 rounded-2xl bg-orange-600 hover:bg-orange-500 px-6 py-3.5 text-sm font-semibold text-white transition-all cursor-pointer shadow-md shadow-orange-600/30"
@@ -244,7 +244,7 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
             Design Your Custom Fire Table with Our Dubai Team
           </h2>
           <p className="mx-auto max-w-2xl text-neutral-300 leading-relaxed text-sm sm:text-base mb-8 font-light">
-            Get personalized material samples, CAD drawings, and turn your outdoor terrace or villa pool deck into an unforgettable luxury gathering space.
+            Get personalized material samples, technical drawings, and turn your outdoor terrace or villa pool deck into an unforgettable luxury gathering space.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a

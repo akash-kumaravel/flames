@@ -217,7 +217,7 @@ export default function WhyChoosePage() {
                 </div>
                 <div>
                   <div className="font-semibold text-sm text-white">Hassan — Architect</div>
-                  <p className="text-xs text-neutral-450">"The design freedom saved our concept. Their technical team delivered precise CAD and install guidance."</p>
+                  <p className="text-xs text-neutral-450">"The design freedom saved our concept. Their technical team delivered precise technical drawings and install guidance."</p>
                 </div>
               </div>
             </div>
@@ -267,7 +267,7 @@ export default function WhyChoosePage() {
           <div className="bg-neutral-900 text-white rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="max-w-2xl">
               <h3 className="font-sans text-2xl font-semibold">Ready to reimagine your space?</h3>
-              <p className="text-xs text-neutral-300 mt-2">Get a tailored recommendation, CAD drawings, and comprehensive specifications from our project team.</p>
+              <p className="text-xs text-neutral-300 mt-2">Get a tailored recommendation, technical drawings, and comprehensive specifications from our project team.</p>
             </div>
             <a
               href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%20team%2C%20I'd%20like%20to%20discuss%20a%20custom%20fireplace%20project."

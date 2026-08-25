@@ -27,7 +27,7 @@ export default function FaqAccordion({
   title = 'Frequently Asked Questions',
   subtitle = 'Find clear answers regarding heat clearances, installation timelines, gas lines, and UAE safety standards.',
   eyebrow = 'Got Questions?',
-  showSupportCard = true,
+  showSupportCard = false,
   whatsappMessage = "Hi Flames Fireplace, I have a few questions regarding fireplace specifications and installation in Dubai.",
   onNavigate,
   className = '',
@@ -190,7 +190,7 @@ export default function FaqAccordion({
               <h4 className="text-sm font-semibold text-white">Have a specific question or custom layout?</h4>
             </div>
             <p className="text-xs text-neutral-400 font-light leading-relaxed">
-              Our Dubai fireplace engineers provide free CAD reviews, heat clearance verification, and turnkey project estimates.
+              Our Dubai fireplace engineers provide free design reviews, heat clearance verification, and turnkey project estimates.
             </p>
           </div>
 

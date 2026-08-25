@@ -112,7 +112,7 @@ export default function OutdoorGasFireplacePage({ onNavigate }: OutdoorGasProps)
           <span className="text-xs uppercase tracking-[0.25em] text-orange-500 font-semibold">Choose Your Control System</span>
           <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">5 Specialized Gas Fireplace Models</h2>
           <p className="mt-4 text-neutral-400 max-w-2xl mx-auto text-sm sm:text-base font-light">
-            Select a model below to explore in-depth technical specifications, installation guidelines, CAD drawings, and custom fabrication options.
+            Select a model below to explore in-depth technical specifications, installation guidelines, dimension schematics, and custom fabrication options.
           </p>
         </div>
 
