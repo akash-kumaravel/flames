@@ -15,7 +15,7 @@ export default function FireTablePage({ onNavigate }: FireTableProps) {
       title="Customized Fire Table with Fire Unit"
       tagline="Integrated Outdoor Fire Feature for Luxury Entertaining"
       description="Custom fire tables with integrated fire units, built for private villas, hospitality terraces, and modern outdoor spaces."
-      detailedDescription="Customized fire tables with fire units combine premium materials, clean lines, and practical outdoor functionality. Designed for the UAE climate, these bespoke installations can include remote control, push-and-turn ignition, or key valve fire places for a refined outdoor experience."
+      detailedDescription="Customized fire tables with fire units combine premium materials, clean lines, and practical outdoor functionality. Designed for the UAE climate, these custom installations can include remote control, push-and-turn ignition, or key valve fire places for a refined outdoor experience."
       imageUrl={svc?.image || "https://images.unsplash.com/photo-1566558236202-ad0e17c20d85?auto=format&fit=crop&q=80&w=1200"}
 
       features={[

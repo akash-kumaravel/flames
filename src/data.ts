@@ -36,7 +36,7 @@ export const META_SUMMARY = {
   },
   contact: {
     title: "Contact Flames Fireplace | Get a Quote in Dubai",
-    description: "Request a quote for custom fireplaces in Dubai, including outdoor gas fire places, manual ethanol fire places, 3D water vapor fire places, and bespoke fire tables.",
+    description: "Request a quote for custom fireplaces in Dubai, including outdoor gas fire places, manual ethanol fire places, 3D water vapor fire places, and custom fire tables.",
     primaryKW: "contact Flames Fireplace, fireplace quote Dubai",
     secondaryKW: "custom fire table, indoor fireplace quote"
   },
@@ -155,7 +155,7 @@ export const META_SUMMARY = {
     secondaryKW: "glowing ceramic rock, lightweight fire table media"
   },
   'fire-pot-tables': {
-    title: "Fire Pot & Fire Tables Dubai | Concrete, Metal, GRC & Bespoke Tables",
+    title: "Fire Pot & Fire Tables Dubai | Concrete, Metal, GRC & Custom Tables",
     description: "Discover luxury concrete fire pots, metal powder-coated pots, GRC fire bowls, and custom-designed fire tables in Dubai.",
     primaryKW: "fire pot Dubai, fire tables UAE",
     secondaryKW: "GRC fire bowls, concrete fire pot, metal powder coated pot"
@@ -179,26 +179,26 @@ export const META_SUMMARY = {
     secondaryKW: "lightweight stone fire bowl, penthouse fire pit"
   },
   'customized-fire-tables-general': {
-    title: "Customized Fire Tables Dubai | Bespoke Dekton & Marble Tables",
-    description: "Bespoke fire dining, coffee, and lounge tables in Dubai with integrated burner systems and luxury Dekton, marble, or granite surfaces.",
-    primaryKW: "customized fire tables Dubai, bespoke fire table UAE",
+    title: "Customized Fire Tables Dubai | Custom Dekton & Marble Tables",
+    description: "Custom fire dining, coffee, and lounge tables in Dubai with integrated burner systems and luxury Dekton, marble, or granite surfaces.",
+    primaryKW: "customized fire tables Dubai, custom fire table UAE",
     secondaryKW: "Dekton fire table, marble fire pit table"
   },
   'custom-fire-tables': {
-    title: "Custom Fire Tables Dubai | Bespoke Fire Table with Fire Unit",
+    title: "Custom Fire Tables Dubai | Custom Fire Table with Fire Unit",
     description: "Customized fire tables with integrated fire units in Dubai. Turnkey design, 3D CAD modeling, and on-site commissioning.",
     primaryKW: "custom fire table Dubai, fire table with burner UAE",
     secondaryKW: "integrated fire table, outdoor fire table installation"
   },
   'custom-fire-table': {
     title: "Customized Fire Table with Fire Unit | Flames Fireplace Dubai",
-    description: "Bespoke outdoor fire table fabrication with integrated burners and remote control options for luxury villas and hospitality.",
+    description: "Custom outdoor fire table fabrication with integrated burners and remote control options for luxury villas and hospitality.",
     primaryKW: "customized fire table Dubai, integrated fire unit",
-    secondaryKW: "luxury fire table, bespoke outdoor fire feature"
+    secondaryKW: "luxury fire table, custom outdoor fire feature"
   },
   'custom-fire-table-with-fire-unit': {
     title: "Customized Fire Table with Fire Unit | Flames Fireplace Dubai",
-    description: "Bespoke outdoor fire table fabrication with integrated burners, smart remote control, and luxury stone finishes in Dubai.",
+    description: "Custom outdoor fire table fabrication with integrated burners, smart remote control, and luxury stone finishes in Dubai.",
     primaryKW: "customized fire table with fire unit Dubai, outdoor fire table",
     secondaryKW: "integrated burner fire table, luxury fire feature UAE"
   },
@@ -208,9 +208,9 @@ export const META_SUMMARY = {
     primaryKW: "3D artificial fireplace Dubai, safe flame effect UAE",
     secondaryKW: "electric artificial fire, media wall flame"
   },
-  portfolio: {
+  'portfolio': {
     title: "Our Works | Flames Fireplace Dubai Luxury Installations",
-    description: "Explore luxury fireplace installations and bespoke projects by Flames Fireplace in Dubai, including indoor fire places, outdoor fire units, and custom fire tables.",
+    description: "Explore luxury fireplace installations and custom projects by Flames Fireplace in Dubai, including indoor fire places, outdoor fire units, and custom fire tables.",
     primaryKW: "Flames Fireplace our works Dubai",
     secondaryKW: "fireplace installations, custom fire unit, luxury fire features"
   },
@@ -240,7 +240,7 @@ export const OUTDOOR_GAS_VARIANTS: GasFireplaceVariant[] = [
     tagline: "Smart Home, BMS & App-Controlled Outdoor Gas Fire Feature",
     description: "Seamless one-touch automation for luxury villas and hospitality. Integrates directly with Control4, Crestron, Lutron, KNX, or smartphone apps for effortless on/off control.",
     detailedDescription: "Engineered for high-end residential estates and luxury hospitality across Dubai and the UAE, the Home Automated On & Off Gas Fireplace delivers effortless one-touch fire ignition and safety shutdown. Designed with smart dry-contact relays, hot-surface electronic spark ignition, and automatic flame-sensing safety thermocouples, this system connects directly into your central Building Management System (BMS), KNX, Control4, Crestron, Lutron, Google Home, Apple HomeKit, or dedicated wall switches.",
-    image: "https://www.flamesfireplace.com/assets/OutdoorGasFireplace.webp",
+    image: "https://www.flamesfireplace.com/assets/Automated.webp",
     badge: "SMART HOME AUTOMATION",
     features: [],
     benefits: [
@@ -279,7 +279,7 @@ export const OUTDOOR_GAS_VARIANTS: GasFireplaceVariant[] = [
     tagline: "Modulating Flame Height & Variable BTU Output Gas Burner",
     description: "Adjust flame height and warmth effortlessly. Switch between a vibrant high flame centerpiece and an intimate low ambient glow with energy-saving mode.",
     detailedDescription: "The High & Low Flame Gas Fireplace gives you precise micro-control over your outdoor ambiance and heating output. Featuring a dual-stage electronic gas modulating valve and servo-actuator, you can toggle between maximum flame height for brisk desert winter evenings and a subtle low-profile flame for mild summer nights, saving gas while sustaining an enchanting fire presence.",
-    image: "https://www.flamesfireplace.com/assets/OutdoorGasFireplac.webp",
+    image: "https://www.flamesfireplace.com/assets/High%20and%20Low.webp",
     badge: "MODULATING FLAME CONTROL",
     features: [],
     benefits: [
@@ -318,7 +318,7 @@ export const OUTDOOR_GAS_VARIANTS: GasFireplaceVariant[] = [
     tagline: "Wireless RF Handheld Remote Control Outdoor Gas Fire Feature",
     description: "Light and extinguish your outdoor gas fire feature effortlessly from up to 30 meters away with an ergonomic, encrypted wireless handheld remote.",
     detailedDescription: "Designed for ultimate relaxation and effortless hospitality entertaining, the On and Off Remote Operated Gas Fireplace brings wireless freedom to your outdoor lounge, patio, or poolside terrace. Featuring an encrypted radio-frequency (RF) receiver, battery-operated electronic pilot, and reliable flame-rectification safety system, you can ignite the fire from your couch without approaching the burner.",
-    image: "https://www.flamesfireplace.com/assets/Outdoor%20Fireplace%20_%20Poolside%20(1).webp",
+    image: "https://www.flamesfireplace.com/assets/On%20and%20Off.webp",
     badge: "WIRELESS REMOTE CONTROL",
     features: [],
     benefits: [
@@ -357,7 +357,7 @@ export const OUTDOOR_GAS_VARIANTS: GasFireplaceVariant[] = [
     tagline: "Battery-Assisted Piezo Push-and-Turn Safety Gas Fireplace",
     description: "Intuitive, reliable, and entirely independent of external electrical wiring. Push and rotate the dial to ignite instantly with tactile safety-locking feedback.",
     detailedDescription: "The Push & Turn Gas Fireplace provides the timeless tactile feel of a high-end gas barbecue combined with the refined aesthetics of architectural fire features. Featuring a mechanical push-in safety interlock and continuous battery-powered piezo sparker, this system prevents accidental gas release and requires zero electrical trenching to your garden or roof terrace.",
-    image: "https://www.flamesfireplace.com/assets/Poolside%20Fire%20Pit%20_%20Luxury%20Patio.webp",
+    image: "https://www.flamesfireplace.com/assets/Push%20%26%20Turn.webp",
     badge: "PIEZO SPARK IGNITION",
     features: [],
     benefits: [
@@ -396,7 +396,7 @@ export const OUTDOOR_GAS_VARIANTS: GasFireplaceVariant[] = [
     tagline: "Heavy-Duty Brass Quarter-Turn Key Valve Gas Fireplace",
     description: "The gold standard in durable, tamper-proof outdoor fire control. Features a solid brass valve and removable chrome or brass key for safe, secure operation.",
     detailedDescription: "Engineered for maximum reliability and tamper-proof security in private residences, hotels, and luxury resorts, the Key Valve Gas Fireplace uses a heavy-duty quarter-turn solid brass ball valve. The removable key acts as an absolute physical safety lock, ensuring children or unauthorized guests cannot activate the fire feature.",
-    image: "https://www.flamesfireplace.com/assets/Concrete_Metal_GRCFireCollectio.webp",
+    image: "https://www.flamesfireplace.com/assets/Key%20Valve%20Fireplace.webp",
     badge: "TAMPER-PROOF MANUAL VALVE",
     features: [],
     benefits: [
@@ -439,7 +439,7 @@ export const ETHANOL_VARIANTS: OutdoorFireUnitVariant[] = [
     tagline: "Precision Stainless Steel Manual Bioethanol Burner Tray",
     description: "Ventless, zero-electricity bio-ethanol fireplace with manual flame damping snuffer lid, internal ceramic wool wadding, and zero flue requirement.",
     detailedDescription: "The Manual Ethanol Fireplace provides authentic dancing golden flames using high-purity liquid bioethanol. It operates completely independently of gas lines, chimneys, or electrical wiring. Fabricated from heavy-gauge 304 and marine-grade 316 stainless steel, it features high-density ceramic fiber wadding that stabilizes the liquid fuel against accidental spillage while extending burn efficiency by up to 30%.",
-    image: "https://www.flamesfireplace.com/assets/Bio-Ethanol%20Fireplace%20_%20Product%20Close-up.webp",
+    image: "https://www.flamesfireplace.com/assets/Manual%20Ethanol%20Fireplace.webp",
     badge: "MANUAL BIO-ETHANOL",
     benefits: [
       "100% ventless — zero smoke, soot, odor, or ash residue",
@@ -477,7 +477,7 @@ export const ETHANOL_VARIANTS: OutdoorFireUnitVariant[] = [
     tagline: "High-Purity 96.6% Eco-Friendly Biofuel & Combustion Engineering",
     description: "Ultra-pure denatured bioethanol fuel delivering vibrant golden flames with clean, smoke-free, soot-free combustion for luxury environments.",
     detailedDescription: "Our premium bioethanol fuel is distilled from 100% renewable agricultural biomass (sugarcane and grain fermentations). Refined to a 96.6%–98% purity standard, it achieves complete clean combustion inside modern manual and automated ethanol burner units. It generates only warmth, water vapor, and trace CO2, eliminating the need for smoke flues or chimney exhaust while ensuring absolute safety for family living areas, luxury penthouses, and hospitality venues.",
-    image: "https://www.flamesfireplace.com/assets/Bio-Ethanol%20Cassette%20Media%20Wall.webp",
+    image: "https://www.flamesfireplace.com/assets/Ethanol%20Fuel%20_%20Burner%20System.webp",
     badge: "BIO-ETHANOL FUEL",
     benefits: [
       "96.6%+ Ultra-pure distillation with clean, odor-neutral combustion",
@@ -518,7 +518,7 @@ export const WOOD_VARIANTS: OutdoorFireUnitVariant[] = [
     tagline: "Authentic Wood-Burning Hearths, Fire Pits & Chimeneas for UAE Gardens",
     description: "Timeless crackling wood-burning fire pits and built-in hearths crafted from heavy-gauge corten steel, stainless steel, and refractory firebricks.",
     detailedDescription: "Experience the authentic primal allure, hypnotic aroma, and crackling heat of an authentic wood-burning fire feature. Designed for luxury villa gardens, desert courtyards, and open-air rooftop terraces, our wood fireplace systems combine heavy-duty weather-resistant materials with precision engineered ember control. Available as freestanding chimeneas, circular steel fire bowls, or custom masonry hearth inserts with integrated spark protection screens and ash cleanout pans.",
-    image: "https://www.flamesfireplace.com/assets/Outdoor%20Fireplace%20_%20Poolside%20(1).webp",
+    image: "https://www.flamesfireplace.com/assets/Wood%20Fire%20Place.webp",
     badge: "AUTHENTIC WOOD FIRE",
     benefits: [
       "Authentic natural wood scent, ambient crackle, and high radiant heat",
@@ -560,7 +560,7 @@ export const ROCKS_MEDIA_VARIANTS: OutdoorFireUnitVariant[] = [
     tagline: "Natural Volcanic Basalt Lava Rock for Gas & Ethanol Fire Beds",
     description: "Porous, high-heat volcanic stones that disperse gas evenly across the burner bed while radiating intense, uniform warmth.",
     detailedDescription: "Sourced from natural volcanic basalt quarries, our Lava Rock fire media withstands temperatures exceeding 1100°C without fracturing, popping, or discolouring. The porous structure promotes micro-diffusion of LPG or Natural Gas, creating a fuller, more authentic dancing flame while storing and radiating soothing infrared warmth long into chilly desert evenings.",
-    image: "https://www.flamesfireplace.com/assets/Rocks_StoneonHous.webp",
+    image: "https://www.flamesfireplace.com/assets/Lava%20Rocks.webp",
     badge: "VOLCANIC LAVA ROCK",
     benefits: [
       "Excellent thermal heat retention radiating warmth after shutdown",
@@ -598,7 +598,7 @@ export const ROCKS_MEDIA_VARIANTS: OutdoorFireUnitVariant[] = [
     tagline: "Refractory Ceramic & Tumbled Basalt River Stones for Modern Fire Beds",
     description: "Ultra-smooth, tumbled fire pebbles in contemporary monochrome shades, engineered for extreme thermal endurance and sleek architectural aesthetics.",
     detailedDescription: "Transform your outdoor fire table or linear burner into a sculptural masterpiece with our smooth fire pebbles. Manufactured from ultra-dense refractory ceramic and tumble-polished basalt stones, they provide a clean, modern aesthetic with zero soot buildup. Available in matte graphite, snow ivory, slate grey, and earthy river tones.",
-    image: "https://www.flamesfireplace.com/assets/Rocks_StoneonHous.webp",
+    image: "https://www.flamesfireplace.com/assets/Pebbles.webp",
     badge: "FIRE PEBBLES & STONES",
     benefits: [
       "Smooth, tumbled architectural appearance ideal for modern minimalist villas",
@@ -634,7 +634,7 @@ export const ROCKS_MEDIA_VARIANTS: OutdoorFireUnitVariant[] = [
     tagline: "Engineered Refractory Ceramic Fiber Stone Boulders & Logs",
     description: "Hand-sculpted ceramic fiber stones and geometric boulders that mimic natural desert rock formations with superior heat glow and zero structural weight.",
     detailedDescription: "Engineered specifically for high-end hospitality and private estate fire features, our Artificial Stone collection consists of ceramic fiber stones, geometric cubes, and realistic log shapes. Hand-painted with heat-resistant pigments, these pieces glow cherry-red under intense gas flames, creating breathtaking depth and warmth without the heavy weight of natural boulders.",
-    image: "https://www.flamesfireplace.com/assets/Rocks_StoneonHous.webp",
+    image: "https://www.flamesfireplace.com/assets/Artificial%20Stone.webp",
     badge: "ENGINEERED CERAMIC STONE",
     benefits: [
       "Generates mesmerizing radiant red-orange glow when exposed to flame",
@@ -673,7 +673,7 @@ export const FIRE_POT_VARIANTS: OutdoorFireUnitVariant[] = [
     tagline: "Architectural Precast Concrete Fire Pots for Gardens & Patios",
     description: "Solid reinforced architectural concrete fire pots with sealed weather-resistant finishes, integrated burner trays, and custom volcanic media.",
     detailedDescription: "Our Concrete Fire Pots combine monolithic architectural substance with refined artisanal craftsmanship. Cast from ultra-high-performance reinforced concrete and sealed with hydrophobic UV coatings, these fire pots withstand Dubai’s desert heat, sun exposure, and rain while creating dramatic focal points around swimming pools, garden paths, and patio lounges.",
-    image: "https://www.flamesfireplace.com/assets/Concrete_Metal_GRCFireCollectio.webp",
+    image: "https://www.flamesfireplace.com/assets/Concrete%20Fire%20Pot.webp",
     badge: "ARCHITECTURAL CONCRETE",
     benefits: [
       "Heavy monolithic stability impervious to strong coastal winds",
@@ -710,7 +710,7 @@ export const FIRE_POT_VARIANTS: OutdoorFireUnitVariant[] = [
     tagline: "Marine Aluminum & Stainless Steel Pots with High-Temp Powder Finishes",
     description: "Sleek, lightweight metal fire pots crafted from precision laser-cut marine aluminum and stainless steel with baked high-temperature electrostatic powder coatings.",
     detailedDescription: "For a crisp, contemporary aesthetic with limitless color customization, our Metal Powder Coated Fire Pots deliver unmatched elegance. Fabricated from marine-grade aluminum and stainless steel, each unit undergoes a multi-stage pre-treatment and electrostatic thermoset powder bake, delivering a scratch-resistant, UV-stable finish in any RAL color to match your outdoor architecture.",
-    image: "https://www.flamesfireplace.com/assets/Concrete_Metal_GRCFireCollectio.webp",
+    image: "https://www.flamesfireplace.com/assets/Powder%20Coated%20Fire%20Bowl.webp",
     badge: "POWDER COATED METAL",
     benefits: [
       "100% rust-proof marine aluminum and 304 stainless steel build",
@@ -747,7 +747,7 @@ export const FIRE_POT_VARIANTS: OutdoorFireUnitVariant[] = [
     tagline: "Glass Fiber Reinforced Concrete (GFRC) Lightweight Fire Bowls",
     description: "High-tensile Glass Fiber Reinforced Concrete fire bowls offering stone strength at 50% lighter weight—the premier choice for luxury penthouses and wooden pool decks.",
     detailedDescription: "Engineered for rooftop penthouses, beachfront villas, and timber pool decks where structural load is a primary consideration, GRC (Glass Fiber Reinforced Concrete) fire bowls deliver the authentic tactile beauty of cast stone at a fraction of the weight. The high-density matrix of alkali-resistant glass fibers embedded in high-grade cement provides exceptional flexural tensile strength and resistance to cracking.",
-    image: "https://www.flamesfireplace.com/assets/Concrete_Metal_GRCFireCollectio.webp",
+    image: "https://www.flamesfireplace.com/assets/GRC%20Fire%20Bowl.webp",
     badge: "GFRC LIGHTWEIGHT STONE",
     benefits: [
       "50% lighter than solid concrete with superior flexural tensile strength",
@@ -774,43 +774,6 @@ export const FIRE_POT_VARIANTS: OutdoorFireUnitVariant[] = [
     waMessage: "Hi Flames Fireplace, I'm inquiring about GRC / GFRC Fire Bowls.",
     seoTitle: "GRC Fire Bowls Dubai | Glass Fiber Reinforced Concrete Fire Pits",
     seoDescription: "Lightweight GRC fire bowls in Dubai for rooftop penthouses, gardens, and luxury villas."
-  },
-  {
-    id: "customized-fire-tables-general",
-    categoryId: "fire-pot-tables",
-    categoryTitle: "Fire Pot & Fire Tables",
-    title: "COUSTOMIZED FIRE TABLES",
-    shortTitle: "Custom Fire Tables",
-    tagline: "Bespoke Dining, Coffee & Lounge Tables with Built-in Fire Features",
-    description: "Fully bespoke fire tables designed to your precise dimensions, geometry, and surface finishes (Dekton, natural marble, granite, fluted GRC).",
-    detailedDescription: "We fabricate bespoke fire tables tailored to your outdoor architectural vision. Whether you desire a 3-meter outdoor dining table with a central dancing ribbon of flame, a low-slung sunken seating coffee table, or a standing cocktail bar with an integrated gas burner, our team provides 3D CAD modeling, material fabrication, and turnkey installation across the UAE.",
-    image: "https://www.flamesfireplace.com/assets/CustomizedFireTabl.webp",
-    badge: "CUSTOM ARCHITECTURAL TABLES",
-    benefits: [
-      "Tailored to any dimension, height, and geometry (Rectangular, Round, Square, Oval)",
-      "Luxury top surfaces: Dekton, Sintered Ultra-Compact Stone, Calacatta Marble, Granite",
-      "Integrated burner configurations: Linear flame troughs, square pans, round rings",
-      "Optional removable tabletop flush lid transforming fire pit into solid dining surface",
-      "Turnkey 3D engineering CAD drawings and custom fabrication in Dubai"
-    ],
-    howItWorks: [
-      "Share your spatial dimensions, seating layout, and preferred top material.",
-      "We provide detailed 3D CAD engineering renderings and material samples.",
-      "Our master craftsmen fabricate, assemble, test, and commission on-site."
-    ],
-    specs: [
-      { label: "Framework", value: "Marine 304/316 Stainless Steel or Aluminum internal chassis" },
-      { label: "Table Tops", value: "Dekton, Neolith, Natural Marble, Granite, GRC Stone" },
-      { label: "Heights", value: "Lounge Coffee Table (45cm), Dining Table (75cm), Bar Height (105cm)" },
-      { label: "Burner Systems", value: "Electronic Smart Remote, Push & Turn, or Bio-Ethanol" },
-      { label: "Accessories", value: "Tempered wind glass shield, flush matching lid, all-weather cover" }
-    ],
-    faqs: [
-      { question: "Can I eat or place drinks on the fire table while the fire is lit?", answer: "Yes. Our custom tables are engineered with wide perimeter ledges (minimum 25-35cm clearance) and thermal barriers, keeping the dining perimeter cool to touch." }
-    ],
-    waMessage: "Hi Flames Fireplace, I'm inquiring about Customized Fire Tables.",
-    seoTitle: "Customized Fire Tables Dubai | Bespoke Outdoor Fire Tables UAE",
-    seoDescription: "Bespoke fire tables with integrated burners in Dubai. Custom Dekton, marble, and GRC fire tables."
   }
 ];
 
@@ -847,7 +810,7 @@ export const SERVICES: ServiceItem[] = [
     title: "Ethanol Fire Place",
     subtitle: "Manual & Automated Ethanol Burners",
     description: "Clean-burning manual and automated bio-ethanol fireplace systems engineered for smoke-free elegance in indoor and sheltered outdoor spaces.",
-    image: "https://www.flamesfireplace.com/assets/Bio-Ethanol%20Fireplace%20_%20Product%20Close-up.webp",
+    image: "https://www.flamesfireplace.com/assets/Ethanol%20Fireplace.webp",
     badge: "ETHANOL FIRE PLACE",
     category: "indoor",
     waMessage: "Inquiry regarding Ethanol Fire Place",
@@ -862,7 +825,7 @@ export const SERVICES: ServiceItem[] = [
     title: "Wood Fire Place",
     subtitle: "Traditional Wood-Burning Options",
     description: "Classic wood-fired solutions for outdoor settings and designated hearth areas, with ember control and safety options.",
-    image: "https://www.flamesfireplace.com/assets/Outdoor%20Fireplace%20_%20Poolside%20(1).webp",
+    image: "https://www.flamesfireplace.com/assets/Wood%20Fire%20Place.webp",
     badge: "WOOD FIRE PLACE",
     category: "outdoor",
     waMessage: "Inquiry regarding Wood Fire Place",
@@ -877,7 +840,7 @@ export const SERVICES: ServiceItem[] = [
     title: "Rocks",
     subtitle: "Lava Rock, Pebbles & Artificial Stone",
     description: "Supply of lava rock, decorative pebbles, and architectural artificial stone media for styling fire beds and pots.",
-    image: "https://www.flamesfireplace.com/assets/Rocks_StoneonHous.webp",
+    image: "https://www.flamesfireplace.com/assets/rocks.webp",
     badge: "FIRE MEDIA",
     category: "outdoor",
     waMessage: "Inquiry regarding Rocks",
@@ -891,7 +854,7 @@ export const SERVICES: ServiceItem[] = [
     id: "fire-pot-tables",
     title: "Fire Pot & Fire Tables",
     subtitle: "Concrete, Metal & GRC Bowls and Tables",
-    description: "Concrete fire pots, powder-coated metal bowls, GRC fire bowls and bespoke fire tables with integrated burners and finishes.",
+    description: "Concrete fire pots, powder-coated metal bowls, GRC fire bowls and custom fire tables with integrated burners and finishes.",
     image: "https://www.flamesfireplace.com/assets/FireTable_FirePotShowcas.webp",
     badge: "FIRE POTS & TABLES",
     category: "outdoor",
@@ -905,14 +868,14 @@ export const SERVICES: ServiceItem[] = [
   {
     id: "custom-fire-table",
     title: "Customized Fire Table with Fire Unit",
-    subtitle: "Bespoke Tables with Integrated Burners",
+    subtitle: "Custom Tables with Integrated Burners",
     description: "Custom-designed fire tables with integrated burners, tailored to site needs and available with remote or automated control options.",
-    image: "https://www.flamesfireplace.com/assets/CustomizedFireTabl.webp",
+    image: "https://www.flamesfireplace.com/assets/Fire%20Table.webp",
     badge: "CUSTOM FIRE TABLE",
     category: "outdoor",
     waMessage: "Inquiry regarding Customized Fire Table",
     seoTitle: "Customized Fire Table Dubai | Flames Fireplace",
-    seoDescription: "Bespoke fire tables with integrated fire units, designed for villas, restaurants and hospitality terraces.",
+    seoDescription: "Custom fire tables with integrated fire units, designed for villas, restaurants and hospitality terraces.",
     faqs: [
       { question: "Can the table include remote operation?", answer: "Yes — remote control and keyed-valve options are available per specification." }
     ]
@@ -987,7 +950,7 @@ export const PRODUCTS: ProductDetails[] = [
     tagline: "Manual ethanol fireplaces — clean real flame",
     description: "Manual ethanol fireplaces and burners for outdoor and sheltered settings; simple refill operation using high-quality ethanol fuel.",
     detailedDescription: "A straightforward ethanol burner range for terraces and outdoor seating — manual refills, low maintenance, and available in multiple finishes.",
-    imageUrl: "https://www.flamesfireplace.com/assets/Bio-Ethanol%20Fireplace%20_%20Product%20Close-up.webp",
+    imageUrl: "https://www.flamesfireplace.com/assets/Ethanol%20Fireplace.webp",
     bgGradient: "from-orange-50 to-orange-100",
     features: [],
     benefits: ["Clean-burning real flame", "No gas line required"],
@@ -1000,7 +963,7 @@ export const PRODUCTS: ProductDetails[] = [
     tagline: "Classic wood-fire for outdoor areas",
     description: "Traditional wood-burning fireplaces and fire pits designed for outdoor use with ember control and durable finishes.",
     detailedDescription: "Wood-fire solutions including chimeneas, built-in hearths and engineered pits — specify ember guards and finishes suitable for terraces and gardens.",
-    imageUrl: "https://www.flamesfireplace.com/assets/WOOD%20FIRE%20PLACE.webp",
+    imageUrl: "https://www.flamesfireplace.com/assets/Wood%20Fire%20Place.webp",
     bgGradient: "from-neutral-50 to-orange-50",
     features: [],
     benefits: ["Authentic campfire ambiance", "Robust outdoor performance"],
@@ -1013,7 +976,7 @@ export const PRODUCTS: ProductDetails[] = [
     tagline: "Lava Rock, Pebbles, Artificial Stone",
     description: "Decorative and functional media for fire beds: lava rock, pebbles and artificial stone selections for pots, bowls and linear burners.",
     detailedDescription: "Choose from graded lava rock, decorative pebbles and engineered artificial stone to style and protect your burner area. Suitable for poolside and high-moisture environments when specified correctly.",
-    imageUrl: "https://www.flamesfireplace.com/assets/Rocks_StoneonHous.webp",
+    imageUrl: "https://www.flamesfireplace.com/assets/rocks.webp",
     bgGradient: "from-neutral-50 to-neutral-100",
     features: [],
     benefits: ["Improved flame aesthetics", "Durable under heat", "Multiple textures and colours"],
@@ -1036,10 +999,10 @@ export const PRODUCTS: ProductDetails[] = [
   {
     id: "custom-fire-tables",
     name: "Customized Fire Tables",
-    tagline: "Customized fire tables and bespoke integrated units",
+    tagline: "Customized fire tables and custom integrated units",
     description: "Full custom fire table fabrication and integration with optional fire unit installations per client specification.",
-    detailedDescription: "Bespoke design and fabrication of fire tables with integrated burners, controls and finishing — ideal for villas, restaurants and hospitality terraces.",
-    imageUrl: "https://www.flamesfireplace.com/assets/CustomizedFireTabl.webp",
+    detailedDescription: "Custom design and fabrication of fire tables with integrated burners, controls and finishing — ideal for villas, restaurants and hospitality terraces.",
+    imageUrl: "https://www.flamesfireplace.com/assets/Fire%20Table.webp",
     bgGradient: "from-amber-100 to-orange-100",
     features: [],
     benefits: ["Tailored aesthetics", "Full installation and commissioning available"],
@@ -1254,7 +1217,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
   },
   {
     id: "modern-outdoor-kitchen-trends",
-    title: "Bespoke Outdoor Kitchens & BBQs: Designing Luxury GCC Gardens",
+    title: "Custom Outdoor Kitchens & BBQs: Designing Luxury GCC Gardens",
     slug: "/blog/luxury-outdoor-kitchen-bbq-trends",
     targetKeyword: "outdoor kitchen Dubai, built-in BBQ Dubai",
     schema: "Article",

@@ -241,7 +241,7 @@ export default function GasFireplaceVariantPage({ variantId, onNavigate }: GasFi
               Bring the Magic of Real Flame to Your Outdoor Oasis
             </h2>
             <p className="text-orange-100 text-sm sm:text-base leading-relaxed mb-8">
-              From automated villa masterplans to bespoke resort fire bowls, Flames Fireplace delivers turnkey design, gas supply coordination, and professional installation across Dubai & UAE.
+              From automated villa masterplans to custom resort fire bowls, Flames Fireplace delivers turnkey design, gas supply coordination, and professional installation across Dubai & UAE.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a

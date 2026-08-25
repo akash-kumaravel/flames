@@ -13,10 +13,10 @@ export default function CustomFireTablesPage({ onNavigate }: CustomFireTablesPro
     <ProductPage
       productId="custom-fire-tables"
       title="Customized Fire Tables"
-      tagline="Bespoke fire tables with integrated burners"
+      tagline="Custom fire tables with integrated burners"
       description="Full custom fire table fabrication and integration with optional fire unit installations per client specification."
-      detailedDescription="Bespoke design and fabrication of fire tables with integrated burners, controls and finishing — ideal for villas, restaurants and hospitality terraces."
-      imageUrl={svc?.image || "https://www.flamesfireplace.com/assets/CustomizedFireTabl.webp"}
+      detailedDescription="Custom design and fabrication of fire tables with integrated burners, controls and finishing — ideal for villas, restaurants and hospitality terraces."
+      imageUrl={svc?.image || "https://www.flamesfireplace.com/assets/Fire%20Table.webp"}
 
       features={["Custom sizes and finishes", "Integration with fire unit optional"]}
       benefits={["Tailored aesthetics", "Full installation and commissioning available"]}

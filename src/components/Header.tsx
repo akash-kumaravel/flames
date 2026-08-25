@@ -53,11 +53,11 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
           className="flex items-center gap-2 group cursor-pointer z-10"
         >
           <img
-            src="https://www.flamesfireplace.com/assets/flames%20logo.svg"
+            src="https://www.flamesfireplace.com/assets/flames%20white.svg"
             alt="Flames Fireplace logo"
-            width={150}
-            height={28}
-            className="h-6 sm:h-7 w-auto object-contain"
+            width={280}
+            height={52}
+            className="h-10 sm:h-12 md:h-14 w-auto object-contain transition-transform duration-200 group-hover:scale-105"
           />
         </button>
 

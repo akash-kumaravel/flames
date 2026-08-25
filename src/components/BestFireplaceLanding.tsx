@@ -37,7 +37,7 @@ export default function BestFireplaceLanding({ onNavigate }: Props) {
                 <strong>UAE Civil Defense Compatibility:</strong> Engineered according to international CE, UL, and regional safety guidelines.
               </li>
               <li>
-                <strong>Bespoke Remodeling:</strong> Complete technical casing coordination for interior designers and fit-out specialists.
+                <strong>Custom Remodeling:</strong> Complete technical casing coordination for interior designers and fit-out specialists.
               </li>
             </ul>
           </div>
@@ -92,7 +92,7 @@ export default function BestFireplaceLanding({ onNavigate }: Props) {
               </p>
             </div>
             <div className="bg-[#121212] border border-neutral-800 p-6 rounded-2xl space-y-3">
-              <h3 className="font-semibold text-white text-base">Bespoke Outdoor Fire Pits</h3>
+              <h3 className="font-semibold text-white text-base">Custom Outdoor Fire Pits</h3>
               <p className="text-xs text-neutral-400 leading-relaxed font-light">
                 Individually customized weather-proof fire tables, gas burners, and pool fire bowls. Designed with marine-grade steel to withstand high temperature swings and summer humidity.
               </p>
@@ -121,7 +121,7 @@ export default function BestFireplaceLanding({ onNavigate }: Props) {
             </div>
             <div className="space-y-1.5">
               <strong className="text-sm font-semibold text-white">How does Flames Fireplace ensure safety for wall casings under TVs?</strong>
-              <p className="text-xs text-neutral-450 leading-relaxed font-light">We engineer bespoke double-wall casings with marine steel inserts and technical ventilation paths. This ensures the heat from our bioethanol burners is directed outward rather than upward, protecting smart TV consoles and surrounding wood or marble drywall frames.</p>
+              <p className="text-xs text-neutral-450 leading-relaxed font-light">We engineer custom double-wall casings with marine steel inserts and technical ventilation paths. This ensures the heat from our bioethanol burners is directed outward rather than upward, protecting smart TV consoles and surrounding wood or marble drywall frames.</p>
             </div>
             <div className="space-y-1.5">
               <strong className="text-sm font-semibold text-white">Do you provide site measurements and custom CAD planning?</strong>

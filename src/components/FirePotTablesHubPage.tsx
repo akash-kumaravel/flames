@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Check, Shield, Sparkles, Sliders, ChevronDown, Layers, Box, Paintbrush } from 'lucide-react';
+import { Check, ChevronDown } from 'lucide-react';
 import { ActiveSection } from '../types';
 import { FIRE_POT_VARIANTS } from '../data';
 import ServiceCard from './ServiceCard';
@@ -18,12 +18,8 @@ export default function FirePotTablesHubPage({ onNavigate }: FirePotTablesHubPro
       answer: "Concrete Fire Pots are cast from heavy reinforced architectural concrete offering monolithic stability in high-wind areas. Metal Powder Coated Pots are fabricated from marine-grade aluminum and stainless steel with baked electrostatic finishes in any custom RAL color. GRC (GFRC) Fire Bowls use glass fiber reinforcement to achieve stone texture at 50% lighter weight—ideal for rooftop penthouses."
     },
     {
-      question: "Can these fire pots and tables be connected to either LPG bottles or Natural Gas lines?",
+      question: "Can these fire pots and bowls be connected to either LPG bottles or Natural Gas lines?",
       answer: "Yes. All our units are dual-certified. They can be plumbed directly into subterranean Natural Gas/LPG lines or configured with internal hidden access compartments that conceal standard 5kg or 11kg LPG composite cylinders."
-    },
-    {
-      question: "How do you customize a Fire Table?",
-      answer: "We fabricate bespoke tables to your required length, width, and height. You select the tabletop surface (Dekton sintered stone, Calacatta marble, granite, or fluted concrete), the burner type (automated remote, push & turn, key valve, or bioethanol), and add accessories like glass wind guards and matching tabletop lids."
     },
     {
       question: "Are fire pots safe for wooden pool decks and grass lawns in Dubai?",
@@ -44,7 +40,7 @@ export default function FirePotTablesHubPage({ onNavigate }: FirePotTablesHubPro
             transition={{ delay: 0.1 }}
             className="font-sans font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white tracking-tight leading-tight max-w-4xl mx-auto mb-6"
           >
-            Architectural Fire Pots & Fire Tables in Dubai
+            Architectural Fire Pots & Bowls in Dubai
           </motion.h1>
 
           <motion.p
@@ -53,7 +49,7 @@ export default function FirePotTablesHubPage({ onNavigate }: FirePotTablesHubPro
             transition={{ delay: 0.2 }}
             className="text-base sm:text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed font-light mb-10"
           >
-            Discover precast concrete fire pots, powder coated marine aluminum vessels, lightweight GRC fire bowls, and bespoke custom fire tables engineered for UAE villas and luxury resorts.
+            Discover precast concrete fire pots, powder coated marine aluminum vessels, and lightweight GRC fire bowls engineered for UAE luxury villas, poolside decks, and resort gardens.
           </motion.p>
 
           <motion.div
@@ -63,29 +59,29 @@ export default function FirePotTablesHubPage({ onNavigate }: FirePotTablesHubPro
             className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-neutral-300"
           >
             <span className="inline-flex items-center gap-1.5 bg-neutral-900/80 px-3.5 py-2 rounded-full border border-neutral-800">
-              <Check className="w-3.5 h-3.5 text-orange-400" /> Precast Concrete & Lightweight GFRC
+              <Check className="w-3.5 h-3.5 text-orange-400" /> Precast Concrete & Monolithic Stone
             </span>
             <span className="inline-flex items-center gap-1.5 bg-neutral-900/80 px-3.5 py-2 rounded-full border border-neutral-800">
               <Check className="w-3.5 h-3.5 text-orange-400" /> Marine-Grade 316 Stainless Burners
             </span>
             <span className="inline-flex items-center gap-1.5 bg-neutral-900/80 px-3.5 py-2 rounded-full border border-neutral-800">
-              <Check className="w-3.5 h-3.5 text-orange-400" /> Custom RAL & Dekton Table Finishes
+              <Check className="w-3.5 h-3.5 text-orange-400" /> Lightweight GFRC & Custom RAL Finishes
             </span>
           </motion.div>
         </div>
       </section>
 
-      {/* 4 Models Grid */}
+      {/* 3 Models Grid */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 py-20">
         <div className="text-center mb-16">
           <span className="text-xs uppercase tracking-[0.25em] text-orange-500 font-semibold">Product Catalog</span>
-          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">Select Your Vessel & Table Architecture</h2>
+          <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">Select Your Vessel Architecture</h2>
           <p className="mt-4 text-neutral-400 max-w-2xl mx-auto text-sm sm:text-base font-light">
             Click on any model below to view inside specifications, material samples, diameter options, and turnkey installation details.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {FIRE_POT_VARIANTS.map((item) => (
             <div key={item.id}>
               <ServiceCard 
@@ -108,7 +104,7 @@ export default function FirePotTablesHubPage({ onNavigate }: FirePotTablesHubPro
             <h3 className="text-2xl sm:text-3xl font-bold text-white mt-2">Material Comparison Matrix</h3>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-3 gap-6">
             <div className="p-5 rounded-2xl bg-neutral-900/60 border border-neutral-800">
               <span className="px-2.5 py-0.5 rounded-full bg-orange-500/10 text-orange-400 text-[10px] font-semibold uppercase">Concrete</span>
               <h4 className="text-base font-bold text-white mt-2">Cast Concrete</h4>
@@ -128,13 +124,6 @@ export default function FirePotTablesHubPage({ onNavigate }: FirePotTablesHubPro
               <h4 className="text-base font-bold text-white mt-2">GRC Fire Bowls</h4>
               <p className="text-xs text-neutral-300 mt-2 font-light">Glass fiber matrix stone. High tensile strength, ideal for luxury penthouses.</p>
               <div className="mt-4 pt-3 border-t border-neutral-800 text-[11px] text-neutral-400">Weight: 25–55kg</div>
-            </div>
-
-            <div className="p-5 rounded-2xl bg-neutral-900/60 border border-neutral-800">
-              <span className="px-2.5 py-0.5 rounded-full bg-orange-500/10 text-orange-400 text-[10px] font-semibold uppercase">Bespoke</span>
-              <h4 className="text-base font-bold text-white mt-2">Custom Tables</h4>
-              <p className="text-xs text-neutral-300 mt-2 font-light">Bespoke Dekton / marble tables with integrated flame units and dining lids.</p>
-              <div className="mt-4 pt-3 border-t border-neutral-800 text-[11px] text-neutral-400">Custom Dimensions</div>
             </div>
           </div>
         </div>
@@ -177,14 +166,14 @@ export default function FirePotTablesHubPage({ onNavigate }: FirePotTablesHubPro
       <section className="max-w-7xl mx-auto px-6 md:px-12 pt-8">
         <div className="rounded-3xl bg-gradient-to-r from-orange-950/40 via-neutral-900 to-[#121212] border border-orange-500/20 p-8 sm:p-12 text-center">
           <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Custom Fire Pot & Fire Table Fabrication in Dubai
+            Custom Fire Pot & Bowl Fabrication in Dubai
           </h3>
           <p className="text-neutral-300 max-w-2xl mx-auto text-sm sm:text-base font-light mb-8">
-            Speak with our engineering team to design custom diameter vessels, choose powder coating finishes, or review 3D CAD renders for bespoke fire tables.
+            Speak with our engineering team to design custom diameter vessels, choose powder coating finishes, or request customized drop-in fire pan solutions.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             <a
-              href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%2C%20I'm%20inquiring%20about%20Custom%20Fire%20Pots%20and%20Fire%20Tables."
+              href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%2C%20I'm%20inquiring%20about%20Custom%20Fire%20Pots%20and%20Fire%20Bowls."
               target="_blank"
               rel="noreferrer noopener"
               className="px-8 py-4 rounded-2xl bg-orange-600 hover:bg-orange-500 text-white font-semibold text-sm transition-all shadow-lg shadow-orange-600/30 flex items-center gap-2 cursor-pointer"

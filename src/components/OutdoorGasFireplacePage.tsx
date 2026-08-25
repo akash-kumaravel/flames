@@ -100,69 +100,6 @@ export default function OutdoorGasFireplacePage({ onNavigate }: OutdoorGasProps)
         </div>
       </section>
 
-      {/* Comparison Guide */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 py-16">
-        <div className="bg-[#121212] rounded-3xl p-8 sm:p-12 border border-neutral-800">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <span className="text-xs uppercase tracking-[0.25em] text-orange-500 font-semibold">Technical Comparison</span>
-            <h3 className="mt-2 text-2xl sm:text-3xl font-bold text-white">How to Choose the Right Ignition System</h3>
-            <p className="mt-3 text-neutral-400 text-sm font-light">
-              Compare power requirements, controls, and ideal application scenarios across all five models.
-            </p>
-          </div>
-
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm text-neutral-300">
-              <thead className="border-b border-neutral-800 text-xs uppercase tracking-wider text-orange-400 bg-neutral-900/50">
-                <tr>
-                  <th className="py-4 px-4 font-semibold">Model</th>
-                  <th className="py-4 px-4 font-semibold">Ignition Method</th>
-                  <th className="py-4 px-4 font-semibold">Power Source</th>
-                  <th className="py-4 px-4 font-semibold">Safety Control</th>
-                  <th className="py-4 px-4 font-semibold">Best For</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-neutral-800/80">
-                <tr>
-                  <td className="py-4 px-4 font-semibold text-white">Home Automated On & Off</td>
-                  <td className="py-4 px-4">Electronic Hot Surface / Direct Spark</td>
-                  <td className="py-4 px-4">220V Low-Voltage Relay</td>
-                  <td className="py-4 px-4">Flame-sensing Auto Shutoff</td>
-                  <td className="py-4 px-4 text-orange-300">Smart Villas, Crestron / KNX</td>
-                </tr>
-                <tr>
-                  <td className="py-4 px-4 font-semibold text-white">High and Low Flame</td>
-                  <td className="py-4 px-4">Dual-Stage Electronic Modulation</td>
-                  <td className="py-4 px-4">220V / Modulating Valve</td>
-                  <td className="py-4 px-4">Hi/Lo Solenoid + Safety Sensor</td>
-                  <td className="py-4 px-4 text-orange-300">Variable climate & gas savings</td>
-                </tr>
-                <tr>
-                  <td className="py-4 px-4 font-semibold text-white">On & Off Remote Operated</td>
-                  <td className="py-4 px-4">Encrypted 433MHz Wireless RF</td>
-                  <td className="py-4 px-4">Battery Pack (4x AA) or 220V</td>
-                  <td className="py-4 px-4">Child Lock & Sleep Timer</td>
-                  <td className="py-4 px-4 text-orange-300">Poolside patios, wire-free comfort</td>
-                </tr>
-                <tr>
-                  <td className="py-4 px-4 font-semibold text-white">Push & Turn Fireplace</td>
-                  <td className="py-4 px-4">Continuous Piezo Spark</td>
-                  <td className="py-4 px-4">1x AA Battery (No Mains)</td>
-                  <td className="py-4 px-4">Mechanical Push-in Safety Lock</td>
-                  <td className="py-4 px-4 text-orange-300">Garden fire tables, family homes</td>
-                </tr>
-                <tr>
-                  <td className="py-4 px-4 font-semibold text-white">Key Valve Fireplace</td>
-                  <td className="py-4 px-4">Manual Match-Lit / Long Lighter</td>
-                  <td className="py-4 px-4">Zero Electricity Needed</td>
-                  <td className="py-4 px-4">Removable Brass Key Lock</td>
-                  <td className="py-4 px-4 text-orange-300">Resorts, tamper-proof spaces</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
 
       {/* FAQs */}
       <section className="max-w-4xl mx-auto px-6 md:px-12 py-16">

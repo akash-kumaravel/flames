@@ -398,7 +398,7 @@ export default function App() {
     const svcForOg = SERVICES.find(s => s.id === activeSection);
     const ogImage = activeArticleObj
       ? 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=1200'
-      : (svcForOg ? svcForOg.image : 'https://www.flamesfireplace.com/assets/Bio-Ethanol%20Fireplace%20_%20Product%20Close-up.webp');
+      : (svcForOg ? svcForOg.image : 'https://www.flamesfireplace.com/assets/Ethanol%20Fireplace.webp');
 
     const ogProperties = {
       'og:title': currentMeta.title,
@@ -453,7 +453,7 @@ export default function App() {
       '@type': 'LocalBusiness',
       name: 'Flames Fireplace',
       alternateName: 'FlamesFireplace',
-      image: `${origin}/assets/Bio-Ethanol%20Fireplace%20_%20Product%20Close-up.webp`,
+      image: `${origin}/assets/Ethanol%20Fireplace.webp`,
       '@id': `${origin}/#localbusiness`,
       url: origin,
       telephone: '+971542112891',
@@ -576,7 +576,7 @@ export default function App() {
           '@context': 'https://schema.org',
           '@type': 'Store',
           name: 'Flames Fireplace',
-          image: `${origin}/assets/Bio-Ethanol Fireplace _ Product Close-up.webp`,
+          image: `${origin}/assets/Ethanol%20Fireplace.webp`,
           '@id': `${origin}/#organization`,
           url: origin,
           telephone: '+971542112891',

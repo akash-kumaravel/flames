@@ -40,7 +40,7 @@ export const PORTFOLIO_ITEMS: PortfolioItem[] = [
     category: "fire-pit",
     categoryLabel: "Fire Pit & Table",
     location: "Yas Island, Abu Dhabi",
-    description: "A gorgeous sunken seating garden pavilion designed for late-night family gatherings. Centered by a bespoke concrete fire table operating on a concealed LPG supply with tempered fire glass beads and a wind-guard shroud.",
+    description: "A gorgeous sunken seating garden pavilion designed for late-night family gatherings. Centered by a custom concrete fire table operating on a concealed LPG supply with tempered fire glass beads and a wind-guard shroud.",
     image: "https://www.flamesfireplace.com/assets/project 3.webp",
     specs: [
       "Custom hand-cast volcanic basalt concrete tabletop housing",

@@ -50,7 +50,7 @@ export default function ProductPage({
                 className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/25 text-orange-400 text-xs font-semibold uppercase tracking-wider mb-6"
               >
                 <Flame className="w-3.5 h-3.5 text-orange-500" />
-                <span>FLAMES FIREPLACE DUBAI • BESPOKE CRAFT</span>
+                <span>FLAMES FIREPLACE DUBAI • PREMIUM CRAFT</span>
               </motion.div>
 
               <motion.h1

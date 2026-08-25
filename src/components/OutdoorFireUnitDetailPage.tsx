@@ -148,7 +148,7 @@ export default function OutdoorFireUnitDetailPage({ variantId, onNavigate }: Out
         <div className="bg-[#121212] rounded-3xl p-8 sm:p-12 border border-neutral-800">
           <div className="flex items-center gap-2 text-orange-400 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
             <Sparkles className="w-4 h-4" />
-            <span>{variant.badge || 'Bespoke Fire Engineering'}</span>
+            <span>{variant.badge || 'Custom Fire Engineering'}</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-white mb-6">
             {variant.shortTitle || variant.title}: System Profile & Performance

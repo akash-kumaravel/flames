@@ -243,7 +243,7 @@ export default function WhyChoosePage() {
               <p className="text-xs text-neutral-300 mt-2">Get a tailored recommendation, CAD drawings, and comprehensive specifications from our project team.</p>
             </div>
             <a
-              href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%20team%2C%20I'd%20like%20to%20discuss%20a%20bespoke%20fireplace%20project."
+              href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%20team%2C%20I'd%20like%20to%20discuss%20a%20custom%20fireplace%20project."
               target="_blank"
               rel="noreferrer noopener"
               className="px-6 py-3.5 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-sans text-xs font-semibold"

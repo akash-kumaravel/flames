@@ -12,7 +12,7 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   const benefits = [
-    "Bespoke Dimensions & Seating: Fabricated to exact millimeter measurements for coffee, lounge, or 8–12 seat dining height",
+    "Custom Dimensions & Seating: Fabricated to exact millimeter measurements for coffee, lounge, or 8–12 seat dining height",
     "Luxury Sintered Tops: Choose from Dekton, Neolith, natural Italian Calacatta marble, Nero Marquina, granite, or GRC stone",
     "Active Thermal Isolation: Table perimeter stays cool to the touch even during peak heat and maximum flame operation",
     "Concealed Gas Cylinder Bay: Built-in magnetic flush hatch discreetly encloses standard 5kg / 11kg composite LPG bottles",
@@ -50,7 +50,7 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
       answer: "Absolutely. For properties without underground gas pipe infrastructure, we engineer concealed magnetic access doors inside the table pedestal to house standard 5kg or 11kg composite LPG bottles."
     },
     {
-      question: "What is the lead time for a bespoke custom fire table in Dubai?",
+      question: "What is the lead time for a custom fire table in Dubai?",
       answer: "Standard turnaround from 3D CAD drawing approval to on-site delivery and installation is typically 10 to 14 business days across Dubai and the UAE."
     }
   ];
@@ -70,7 +70,7 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
                 className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/25 text-orange-400 text-xs font-semibold uppercase tracking-wider mb-6"
               >
                 <Flame className="w-3.5 h-3.5 text-orange-500" />
-                <span>BESPOKE OUTDOOR FIRE TABLE</span>
+                <span>CUSTOM OUTDOOR FIRE TABLE</span>
               </motion.div>
 
               <motion.h1
@@ -89,7 +89,7 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
                 transition={{ delay: 0.2 }}
                 className="text-base sm:text-lg text-neutral-300 leading-relaxed max-w-2xl mb-8"
               >
-                Bespoke luxury outdoor dining, coffee, and lounge tables with integrated certified gas burner troughs, sintered Dekton stone or Italian marble tops, and concealed LPG cylinder compartments engineered for Dubai villas and luxury hospitality.
+                Custom luxury outdoor dining, coffee, and lounge tables with integrated certified gas burner troughs, sintered Dekton stone or Italian marble tops, and concealed LPG cylinder compartments engineered for Dubai villas and luxury hospitality.
               </motion.p>
 
               {/* Quick Spec Badges */}
@@ -149,7 +149,7 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
             >
               <div className="aspect-[4/3] w-full overflow-hidden">
                 <img
-                  src="https://www.flamesfireplace.com/assets/CustomizedFireTabl.webp"
+                  src="https://www.flamesfireplace.com/assets/Fire%20Table.webp"
                   alt="Customized Fire Table with Integrated Burner Unit Dubai Showroom"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="eager"
@@ -175,7 +175,7 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
           <div className="bg-[#121212] rounded-3xl p-8 sm:p-10 border border-neutral-800">
             <div className="flex items-center gap-2 text-orange-400 text-xs uppercase tracking-[0.2em] font-semibold mb-3">
               <Sparkles className="w-4 h-4" />
-              <span>Bespoke Engineering</span>
+              <span>Custom Engineering</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-semibold text-white mb-5">
               Tailored Outdoor Fire Dining & Lounge Tables
@@ -211,7 +211,7 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
           <div className="text-center max-w-3xl mx-auto mb-14">
             <span className="text-xs uppercase tracking-[0.25em] text-orange-500 font-semibold">Engineered Superiority</span>
             <h2 className="mt-3 text-2xl sm:text-3xl md:text-4xl font-semibold text-white">
-              Why Choose Our Bespoke Fire Tables
+              Why Choose Our Custom Fire Tables
             </h2>
           </div>
 
