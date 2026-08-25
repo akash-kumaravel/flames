@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useLayoutEffect } from 'react';
 import { 
   Flame, Info, ShieldCheck, Check, Search, ArrowRight, MessageCircle, ArrowUp
 } from 'lucide-react';
@@ -41,6 +41,7 @@ import FirePotTablesHubPage from './components/FirePotTablesHubPage';
 import CustomFireTableWithUnitPage from './components/CustomFireTableWithUnitPage';
 import BestFireplaceLanding from './components/BestFireplaceLanding';
 import Artificial3DFireplacePage from './components/Artificial3DFireplacePage';
+import FaqAccordion from './components/FaqAccordion';
 
 const sectionToPath: Record<ActiveSection, string> = {
   'home': '/',
@@ -150,8 +151,10 @@ const getSectionFromPath = (): ActiveSection => {
 
 // Helper component to handle scrolling to the top after page transitions complete (mount of new page)
 function ScrollToTopTrigger() {
-  useEffect(() => {
+  useLayoutEffect(() => {
     window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
   }, []);
   return null;
 }
@@ -165,6 +168,13 @@ export default function App() {
   const [searchQuery, setSearchQuery] = useState('');
   const [faqCategory, setFaqCategory] = useState<'all' | 'general' | 'safety' | 'fuel'>('all');
   const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Instantly start at top whenever route or active article changes
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  }, [activeSection, selectedArticleId]);
 
   useEffect(() => {
     const handleWindowScroll = () => {
@@ -187,7 +197,9 @@ export default function App() {
 
   // Sync state back to the URL Path on navigate, tracking history block
   const handleNavigation = (section: ActiveSection, updateHistory = true) => {
-    console.log('[App] handleNavigation ->', section, { updateHistory });
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
     setActiveSection(section);
     if (section !== 'blog') {
       setSelectedArticleId(null);
@@ -199,6 +211,9 @@ export default function App() {
   };
 
   const handleSelectArticle = (articleId: string | null, updateHistory = true) => {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
     setSelectedArticleId(articleId);
     setActiveSection('blog');
     if (updateHistory) {
@@ -655,25 +670,14 @@ export default function App() {
 
 
                 {/* Featured Q&A section */}
-                <div className="py-20 px-6 md:px-12">
-                  <div className="max-w-3xl mx-auto space-y-10">
-                    <div className="text-center">
-                      <span className="text-xs font-bold uppercase tracking-widest text-orange-400 block mb-2">Quick Answers</span>
-                      <h3 className="font-sans text-2xl md:text-3xl font-semibold text-white tracking-tight">Featured Q&amp;A</h3>
-                    </div>
-                    
-                    <div className="space-y-6">
-                      {COMMON_FAQS.slice(0, 4).map((faq, index) => (
-                        <div key={`${faq.question}-${index}`} className="bg-[#121212] p-6 rounded-2xl border border-neutral-800 shadow-xs">
-                          <strong className="text-sm font-bold text-white font-sans block mb-2">Q: {faq.question}</strong>
-                          <p className="text-sm text-neutral-350 leading-relaxed font-sans">
-                            {faq.answer}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                <FaqAccordion
+                  items={COMMON_FAQS.slice(0, 5)}
+                  title="Frequently Asked Questions"
+                  subtitle="Quick answers to key queries regarding UAE Civil Defense compliance, bioethanol fuel safety, TV wall clearances, and custom villa installations."
+                  eyebrow="Quick Answers"
+                  onNavigate={handleNavigation}
+                  showSupportCard={true}
+                />
 
                 {/* CTA Final Banner */}
                 <div className="my-16 px-6 md:px-12">
@@ -844,7 +848,7 @@ export default function App() {
             {activeSection === 'faq' && (
               <div id="section-faq" className="min-h-screen bg-[#0b0b0b] text-neutral-350 pb-28 selection:bg-orange-500 selection:text-white">
                 <div className="max-w-4xl mx-auto pt-28 sm:pt-36 px-6 md:px-12">
-                  <div className="text-center mb-12">
+                  <div className="text-center mb-10">
                     <span className="px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 text-xs font-semibold uppercase tracking-widest font-sans inline-block">
                       Common Questions
                     </span>
@@ -857,7 +861,7 @@ export default function App() {
                   </div>
 
                   {/* Search and Category Toggle controls */}
-                  <div className="bg-[#121212] p-4 rounded-3xl border border-neutral-800 mb-12 flex flex-col md:flex-row items-center justify-between gap-4">
+                  <div className="bg-[#121212] p-4 rounded-3xl border border-neutral-800 mb-8 flex flex-col md:flex-row items-center justify-between gap-4">
                     
                     {/* Live search input */}
                     <div className="relative w-full md:w-80">
@@ -868,7 +872,7 @@ export default function App() {
                         placeholder="Search questions or terms..."
                         value={searchQuery}
                         onChange={(e) => setSearchQuery(e.target.value)}
-                        className="w-full bg-[#161616] pl-10 pr-4 py-3 rounded-2xl border border-neutral-800 text-xs font-sans focus:outline-none focus:border-orange-500 text-white"
+                        className="w-full bg-[#161616] pl-10 pr-4 py-3 rounded-2xl border border-neutral-800 text-xs font-sans focus:outline-none focus:border-orange-500 text-white placeholder:text-neutral-500"
                       />
                     </div>
 
@@ -893,19 +897,18 @@ export default function App() {
 
                   {/* Accordion FAQ Block */}
                   {filteredFaqs.length > 0 ? (
-                    <div className="space-y-4">
-                      {filteredFaqs.map((faq, idx) => (
-                        <FAQAccordionItem
-                          key={idx}
-                          idx={idx}
-                          faq={faq}
-                          defaultOpen={idx === 0}
-                        />
-                      ))}
-                    </div>
+                    <FaqAccordion
+                      items={filteredFaqs}
+                      title=""
+                      subtitle=""
+                      eyebrow=""
+                      className="py-0 px-0 sm:py-0 md:px-0"
+                      showSupportCard={true}
+                      onNavigate={handleNavigation}
+                    />
                   ) : (
-                    <div className="text-center py-12 text-neutral-450 text-sm font-sans italic p-8 bg-[#121212] rounded-xl border border-neutral-800">
-                      No matching questions found around &ldquo;{searchQuery}&rdquo;. Try another generic phrase.
+                    <div className="text-center py-12 text-neutral-450 text-sm font-sans italic p-8 bg-[#121212] rounded-2xl border border-neutral-800">
+                      No matching questions found around &ldquo;{searchQuery}&rdquo;. Try another search keyword.
                     </div>
                   )}
 
@@ -1046,40 +1049,6 @@ export default function App() {
         </a>
       </div>
 
-    </div>
-  );
-}
-
-interface FAQAccordionItemProps {
-  key?: any;
-  idx: number;
-  faq: FAQItem;
-  defaultOpen: boolean;
-}
-
-function FAQAccordionItem({ idx, faq, defaultOpen }: FAQAccordionItemProps) {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
-
-  return (
-    <div
-      className="bg-[#121212]/50 rounded-2xl border border-neutral-800 overflow-hidden"
-    >
-      <button
-        id={`general-faq-toggle-${idx}`}
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full text-left p-6 flex justify-between items-center font-sans font-semibold text-white text-sm md:text-base hover:text-orange-400 transition-colors cursor-pointer"
-      >
-        <span>{faq.question}</span>
-        <div className="w-5 h-5 rounded-full bg-[#161616] flex items-center justify-center border border-neutral-850 text-neutral-450 transform transition-transform">
-          <span className="text-xs">{isOpen ? '−' : '+'}</span>
-        </div>
-      </button>
-
-      {isOpen && (
-        <div className="p-6 pt-0 border-t border-neutral-800 max-w-none prose font-sans text-xs md:text-sm text-neutral-350 leading-relaxed">
-          {faq.answer}
-        </div>
-      )}
     </div>
   );
 }

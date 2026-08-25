@@ -1,16 +1,16 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Check, Shield, Sparkles, Sliders, ChevronDown, Trees, Wrench, ArrowRight } from 'lucide-react';
+import { Check, Shield, Sparkles, Sliders, Trees, Wrench, ArrowRight, Flame } from 'lucide-react';
 import { ActiveSection } from '../types';
 import { WOOD_VARIANTS } from '../data';
 import ServiceCard from './ServiceCard';
+import WhatsAppIcon from './WhatsAppIcon';
+import FaqAccordion from './FaqAccordion';
 
 interface WoodFireplaceHubProps {
   onNavigate: (section: ActiveSection) => void;
 }
 
 export default function WoodFireplaceHubPage({ onNavigate }: WoodFireplaceHubProps) {
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   const generalFaqs = [
     {
@@ -34,10 +34,17 @@ export default function WoodFireplaceHubPage({ onNavigate }: WoodFireplaceHubPro
   return (
     <div id="wood-fireplace-hub" className="min-h-screen bg-[#0b0b0b] text-neutral-100 selection:bg-orange-500 selection:text-white pb-28">
       {/* Hero Header Section */}
-      <section className="relative overflow-hidden pt-28 sm:pt-36 pb-16 lg:pb-24 border-b border-neutral-800/80">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(251,146,60,0.18),_transparent_55%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.12),_transparent_40%)] pointer-events-none" />
-
+      <section className="relative overflow-hidden pt-28 sm:pt-36 pb-16 lg:pb-24 border-b border-neutral-800/80 bg-[#0e0e0e]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/25 text-orange-400 text-xs font-semibold uppercase tracking-wider mb-6"
+          >
+            <Flame className="w-3.5 h-3.5 text-orange-500" />
+            <span>AUTHENTIC WOOD-BURNING COLLECTION • DESERT LIVING</span>
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -51,7 +58,7 @@ export default function WoodFireplaceHubPage({ onNavigate }: WoodFireplaceHubPro
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-base sm:text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed font-light mb-10"
+            className="text-base sm:text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed font-light mb-8"
           >
             Experience the timeless crackling warmth, hypnotic aroma, and primal campfire atmosphere of authentic wood-burning hearths, heavy corten pits, and engineered chimeneas.
           </motion.p>
@@ -59,18 +66,42 @@ export default function WoodFireplaceHubPage({ onNavigate }: WoodFireplaceHubPro
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-neutral-300"
+            transition={{ delay: 0.25 }}
+            className="flex flex-wrap items-center justify-center gap-3 mb-8 text-xs font-medium text-neutral-300"
           >
-            <span className="inline-flex items-center gap-1.5 bg-neutral-900/80 px-3.5 py-2 rounded-full border border-neutral-800">
+            <span className="inline-flex items-center gap-1.5 bg-neutral-900/90 px-3.5 py-1.5 rounded-lg border border-neutral-800">
               <Check className="w-3.5 h-3.5 text-orange-400" /> Heavy-Gauge Corten & 304 Steel
             </span>
-            <span className="inline-flex items-center gap-1.5 bg-neutral-900/80 px-3.5 py-2 rounded-full border border-neutral-800">
+            <span className="inline-flex items-center gap-1.5 bg-neutral-900/90 px-3.5 py-1.5 rounded-lg border border-neutral-800">
               <Check className="w-3.5 h-3.5 text-orange-400" /> 1400°C Refractory Firebrick Lining
             </span>
-            <span className="inline-flex items-center gap-1.5 bg-neutral-900/80 px-3.5 py-2 rounded-full border border-neutral-800">
+            <span className="inline-flex items-center gap-1.5 bg-neutral-900/90 px-3.5 py-1.5 rounded-lg border border-neutral-800">
               <Check className="w-3.5 h-3.5 text-orange-400" /> Spark Arrestor Safety Screens
             </span>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3.5"
+          >
+            <button
+              onClick={() => onNavigate('contact')}
+              className="px-7 py-3.5 rounded-full bg-orange-600 hover:bg-orange-500 text-white font-sans text-xs font-semibold shadow-lg shadow-orange-600/20 hover:shadow-orange-500/30 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group"
+            >
+              Request Technical Quotation
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <a
+              href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%2C%20I'd%20like%20to%20consult%20with%20an%20engineer%20regarding%20an%20outdoor%20wood%20fireplace."
+              target="_blank"
+              rel="noreferrer noopener"
+              className="px-6 py-3.5 rounded-full bg-[#161616] hover:bg-[#202020] border border-neutral-700/80 hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer text-xs font-semibold text-neutral-200 hover:text-orange-400"
+            >
+              <WhatsAppIcon className="w-4 h-4 shrink-0" />
+              Chat on WhatsApp
+            </a>
           </motion.div>
         </div>
       </section>
@@ -90,10 +121,7 @@ export default function WoodFireplaceHubPage({ onNavigate }: WoodFireplaceHubPro
             <div key={item.id}>
               <ServiceCard 
                 service={item} 
-                onNavigate={() => {
-                  onNavigate(item.id as ActiveSection);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }} 
+                onNavigate={() => onNavigate(item.id as ActiveSection)} 
               />
             </div>
           ))}
@@ -144,65 +172,43 @@ export default function WoodFireplaceHubPage({ onNavigate }: WoodFireplaceHubPro
       </section>
 
       {/* FAQs Section */}
-      <section className="max-w-4xl mx-auto px-6 md:px-12 py-16">
-        <div className="text-center mb-12">
-          <span className="text-xs uppercase tracking-[0.25em] text-orange-500 font-semibold">Technical Q&A</span>
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mt-2">Wood Fireplace FAQs</h3>
-        </div>
-
-        <div className="space-y-4">
-          {generalFaqs.map((faq, idx) => {
-            const isOpen = expandedFaq === idx;
-            return (
-              <div 
-                key={idx}
-                className="bg-[#121212] rounded-2xl border border-neutral-800/90 overflow-hidden transition-colors"
-              >
-                <button
-                  onClick={() => setExpandedFaq(isOpen ? null : idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer"
-                >
-                  <span className="font-semibold text-white text-sm sm:text-base">{faq.question}</span>
-                  <ChevronDown className={`w-5 h-5 text-orange-400 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-neutral-300 text-sm leading-relaxed border-t border-neutral-800/60 font-light">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      <FaqAccordion
+        items={generalFaqs}
+        title="Wood Fireplace FAQs"
+        subtitle="Clarifications regarding seasoned wood selection, ember arrestors, villa garden clearances, and ash cleanout maintenance."
+        eyebrow="Technical Q&A"
+        whatsappMessage="Hi Flames Fireplace, I'd like to ask a few questions regarding outdoor wood fireplace designs and safety."
+        onNavigate={onNavigate}
+      />
 
       {/* Consultation Banner */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-8">
-        <div className="rounded-3xl bg-gradient-to-r from-orange-950/40 via-neutral-900 to-[#121212] border border-orange-500/20 p-8 sm:p-12 text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Custom Built-in Wood Fireplaces & Garden Hearths in Dubai
-          </h3>
-          <p className="text-neutral-300 max-w-2xl mx-auto text-sm sm:text-base font-light mb-8">
-            Book a site survey to determine optimal wind orientation, firebrick safety offsets, and custom Corten steel masonry designs.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%2C%20I'm%20inquiring%20about%20Outdoor%20Wood%20Fireplaces."
-              target="_blank"
-              rel="noreferrer noopener"
-              className="px-8 py-4 rounded-2xl bg-orange-600 hover:bg-orange-500 text-white font-semibold text-sm transition-all shadow-lg shadow-orange-600/30 flex items-center gap-2 cursor-pointer"
-            >
-              Chat on WhatsApp: +971 54 211 2891
-            </a>
-            <button
-              onClick={() => {
-                onNavigate('contact');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="px-8 py-4 rounded-2xl bg-white/5 hover:bg-white/10 text-white border border-white/10 font-semibold text-sm transition-colors cursor-pointer"
-            >
-              Contact Our Team
-            </button>
+      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-8 pb-12">
+        <div className="rounded-3xl bg-[#121212] border border-neutral-800 p-8 sm:p-12 text-center text-white relative overflow-hidden">
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+              Custom Wood Fireplace & Chimenea Construction in Dubai
+            </h3>
+            <p className="text-neutral-300 text-sm sm:text-base leading-relaxed mb-8 font-light">
+              Discuss custom firebrick sizing, corten steel pit fabrication, or spark arrestor fitments with our Dubai installation team.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%2C%20I'm%20inquiring%20about%20Custom%20Outdoor%20Wood%20Fireplaces."
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-2.5 rounded-full bg-[#182a1d] hover:bg-[#1e3825] border border-emerald-500/40 text-emerald-400 px-7 py-3.5 text-xs font-semibold shadow-lg transition-all cursor-pointer"
+              >
+                <WhatsAppIcon className="w-4 h-4 shrink-0" />
+                Inquire on WhatsApp
+              </a>
+              <button
+                onClick={() => onNavigate('contact')}
+                className="inline-flex items-center gap-2 rounded-full bg-orange-600 hover:bg-orange-500 text-white px-7 py-3.5 text-xs font-semibold shadow-lg shadow-orange-600/20 transition-all cursor-pointer"
+              >
+                Book a Site Assessment
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
       </section>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ShieldCheck, Zap, Flame, Droplet, Star, ArrowRight, HeartHandshake, Check, HelpCircle } from 'lucide-react';
 import { motion } from 'motion/react';
+import FaqAccordion from './FaqAccordion';
 
 interface MetricDetail {
   label: string;
@@ -234,6 +235,32 @@ export default function WhyChoosePage() {
             </div>
           </div>
         </section>
+
+        {/* FAQs */}
+        <FaqAccordion
+          items={[
+            {
+              question: "How do Flames Fireplace solutions compare with traditional chimney fireplaces?",
+              answer: "Our modern bioethanol, 3D water vapor, and custom gas systems require no complex masonry chimney construction. They install seamlessly into apartments, luxury villas, and commercial spaces with superior thermal efficiency, zero soot/smoke emissions, and full safety automation."
+            },
+            {
+              question: "Can bioethanol and gas fireplaces be installed in existing residential villas?",
+              answer: "Yes, our engineering team conducts comprehensive site surveys to integrate insulated casing blocks, gas hookups, or vent-free recessed wall niches with minimal disruption to your interior decor."
+            },
+            {
+              question: "What warranty and aftercare support is included with your installations?",
+              answer: "All Flames Fireplace burners and custom enclosures come with a comprehensive 2-year manufacturer warranty, Dubai Civil Defense compliant documentation, and dedicated local technician support across the UAE."
+            },
+            {
+              question: "Are your fire units safe to operate beneath television consoles and acoustic wall panels?",
+              answer: "Yes. For bioethanol and gas units, we install engineered heat-deflection hoods and thermal insulation. For 100% zero-heat peace of mind directly beneath sensitive electronics, our 3D Water Vapor fireplaces produce cool-to-the-touch visual flames."
+            }
+          ]}
+          title="Frequently Asked Questions"
+          subtitle="Clear answers on engineering, civil defense compliance, installation feasibility, and local UAE warranty support."
+          eyebrow="Why Flames Fireplace"
+          whatsappMessage="Hi Flames Fireplace, I'd like to ask a few questions about your fireplace engineering and services."
+        />
 
         {/* Final CTA */}
         <section className="mb-20">

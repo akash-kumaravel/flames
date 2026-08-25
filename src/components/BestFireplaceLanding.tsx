@@ -1,8 +1,27 @@
 import { ActiveSection } from '../types';
+import FaqAccordion from './FaqAccordion';
 
 interface Props { onNavigate: (section: ActiveSection) => void }
 
 export default function BestFireplaceLanding({ onNavigate }: Props) {
+  const landingFaqs = [
+    {
+      question: "Why is bio ethanol considered the best fireplace choice for Dubai apartments and villas?",
+      answer: "Bioethanol fireplaces require zero venting pipes, chimneys, or gas hookups. They generate real warmth and dancing golden flames without producing smoke, ash, or soot, making them highly versatile for residential spaces without pre-installed flues."
+    },
+    {
+      question: "How does Flames Fireplace ensure safety for wall casings directly under smart TVs?",
+      answer: "We engineer custom double-wall casings with marine-grade 316 stainless steel insulated inserts and specialized air deflection baffles. This ensures the heat is directed outward rather than upward, protecting smart TV consoles, wood paneling, and delicate marble drywall frames."
+    },
+    {
+      question: "Do you provide on-site measurements and custom 3D CAD planning across the UAE?",
+      answer: "Yes. Our Dubai engineering support team coordinates direct 3D CAD blocks, conducts precise site inspections, and commissions units at handover to ensure optimal safety compliance and perfect aesthetics."
+    },
+    {
+      question: "Are your water vapor and gas fireplaces compliant with UAE Civil Defense regulations?",
+      answer: "Yes, all our 3D water vapor fireplaces are 100% cool-to-the-touch and certified child-safe. Our gas systems feature CE/UL-certified flame failure safety valves and automatic gas shutoff mechanisms fully aligned with Dubai Civil Defense guidelines."
+    }
+  ];
   return (
     <div className="min-h-screen bg-[#0b0b0b] text-neutral-350 pb-28 selection:bg-orange-500 selection:text-white">
       <section className="max-w-5xl mx-auto pt-28 sm:pt-36 px-6 md:px-12 pb-20 space-y-16">
@@ -111,33 +130,14 @@ export default function BestFireplaceLanding({ onNavigate }: Props) {
         </div>
 
         {/* FAQs Segment */}
-        <div className="bg-[#121212] rounded-3xl p-8 border border-neutral-800 space-y-6">
-          <h3 className="font-semibold text-white text-xl">Best Fireplace Dubai — FAQ Desk</h3>
-          
-          <div className="space-y-6 text-neutral-300">
-            <div className="space-y-1.5">
-              <strong className="text-sm font-semibold text-white">Why is bio ethanol considered the best fireplace choice for Dubai apartments?</strong>
-              <p className="text-xs text-neutral-400 leading-relaxed font-light">Bioethanol fireplaces require zero venting pipes, chimneys, or gas hookups. They generate real warmth and flickering flames without producing smoke or ash, making them highly versatile for residential spaces without pre-installed flues.</p>
-            </div>
-            <div className="space-y-1.5">
-              <strong className="text-sm font-semibold text-white">How does Flames Fireplace ensure safety for wall casings under TVs?</strong>
-              <p className="text-xs text-neutral-450 leading-relaxed font-light">We engineer custom double-wall casings with marine steel inserts and technical ventilation paths. This ensures the heat from our bioethanol burners is directed outward rather than upward, protecting smart TV consoles and surrounding wood or marble drywall frames.</p>
-            </div>
-            <div className="space-y-1.5">
-              <strong className="text-sm font-semibold text-white">Do you provide site measurements and custom CAD planning?</strong>
-              <p className="text-xs text-neutral-450 leading-relaxed font-light">Yes. Our Dubai engineering support team coordinates direct CAD blocks, conducts precise site inspections, and commissions units at handover to ensure optimal safety compliance and perfect aesthetics.</p>
-            </div>
-          </div>
-
-          <div className="mt-8 pt-4 border-t border-neutral-800">
-            <button 
-              onClick={() => onNavigate('contact')} 
-              className="px-8 py-3.5 rounded-full bg-orange-600 hover:bg-orange-500 text-white font-sans text-xs font-semibold cursor-pointer transition shadow-lg shadow-orange-500/10"
-            >
-              Speak to a Dubai Fireplace Advisor
-            </button>
-          </div>
-        </div>
+        <FaqAccordion
+          items={landingFaqs}
+          title="Best Fireplace Dubai — FAQ Desk"
+          subtitle="Key advisory insights regarding ventless bioethanol technology, TV safety clearances, architectural CAD drawings, and Dubai Civil Defense compliance."
+          eyebrow="Advisory Guidance"
+          whatsappMessage="Hi Flames Fireplace, I'm reading through the Best Fireplace Dubai guide and have a question."
+          onNavigate={onNavigate}
+        />
 
       </section>
     </div>

@@ -1,16 +1,16 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Check, Shield, Sparkles, Sliders, ChevronDown, Droplets, Leaf } from 'lucide-react';
+import { Check, Shield, Sparkles, Sliders, Droplets, Leaf, ArrowRight, Flame } from 'lucide-react';
 import { ActiveSection } from '../types';
 import { ETHANOL_VARIANTS } from '../data';
 import ServiceCard from './ServiceCard';
+import WhatsAppIcon from './WhatsAppIcon';
+import FaqAccordion from './FaqAccordion';
 
 interface EthanolFireplaceHubProps {
   onNavigate: (section: ActiveSection) => void;
 }
 
 export default function EthanolFireplaceHubPage({ onNavigate }: EthanolFireplaceHubProps) {
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   const generalFaqs = [
     {
@@ -34,10 +34,17 @@ export default function EthanolFireplaceHubPage({ onNavigate }: EthanolFireplace
   return (
     <div id="ethanol-fireplace-hub" className="min-h-screen bg-[#0b0b0b] text-neutral-100 selection:bg-orange-500 selection:text-white pb-28">
       {/* Hero Header Section */}
-      <section className="relative overflow-hidden pt-28 sm:pt-36 pb-16 lg:pb-24 border-b border-neutral-800/80">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(251,146,60,0.18),_transparent_55%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.12),_transparent_40%)] pointer-events-none" />
-
+      <section className="relative overflow-hidden pt-28 sm:pt-36 pb-16 lg:pb-24 border-b border-neutral-800/80 bg-[#0e0e0e]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 text-center relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-orange-500/10 border border-orange-500/25 text-orange-400 text-xs font-semibold uppercase tracking-wider mb-6"
+          >
+            <Flame className="w-3.5 h-3.5 text-orange-500" />
+            <span>VENTLESS BIO-ETHANOL COLLECTION • 100% SMOKELESS</span>
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -51,7 +58,7 @@ export default function EthanolFireplaceHubPage({ onNavigate }: EthanolFireplace
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-base sm:text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed font-light mb-10"
+            className="text-base sm:text-lg text-neutral-300 max-w-3xl mx-auto leading-relaxed font-light mb-8"
           >
             Explore our manual stainless steel bioethanol burner trays and high-purity eco-fuel systems — 100% ventless, smokeless, and soot-free for indoor living spaces and outdoor terraces.
           </motion.p>
@@ -59,18 +66,42 @@ export default function EthanolFireplaceHubPage({ onNavigate }: EthanolFireplace
           <motion.div
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-            className="flex flex-wrap items-center justify-center gap-4 text-xs font-medium text-neutral-300"
+            transition={{ delay: 0.25 }}
+            className="flex flex-wrap items-center justify-center gap-3 mb-8 text-xs font-medium text-neutral-300"
           >
-            <span className="inline-flex items-center gap-1.5 bg-neutral-900/80 px-3.5 py-2 rounded-full border border-neutral-800">
+            <span className="inline-flex items-center gap-1.5 bg-neutral-900/90 px-3.5 py-1.5 rounded-lg border border-neutral-800">
               <Check className="w-3.5 h-3.5 text-orange-400" /> 100% Ventless (No Flue or Chimney)
             </span>
-            <span className="inline-flex items-center gap-1.5 bg-neutral-900/80 px-3.5 py-2 rounded-full border border-neutral-800">
+            <span className="inline-flex items-center gap-1.5 bg-neutral-900/90 px-3.5 py-1.5 rounded-lg border border-neutral-800">
               <Check className="w-3.5 h-3.5 text-orange-400" /> 96.6%+ Ultra-Pure Biofuel
             </span>
-            <span className="inline-flex items-center gap-1.5 bg-neutral-900/80 px-3.5 py-2 rounded-full border border-neutral-800">
+            <span className="inline-flex items-center gap-1.5 bg-neutral-900/90 px-3.5 py-1.5 rounded-lg border border-neutral-800">
               <Check className="w-3.5 h-3.5 text-orange-400" /> Marine 316 Stainless Steel
             </span>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-3.5"
+          >
+            <button
+              onClick={() => onNavigate('contact')}
+              className="px-7 py-3.5 rounded-full bg-orange-600 hover:bg-orange-500 text-white font-sans text-xs font-semibold shadow-lg shadow-orange-600/20 hover:shadow-orange-500/30 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group"
+            >
+              Request Technical Quotation
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <a
+              href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%2C%20I'm%20inquiring%20about%20Custom%20Ethanol%20Burners%20and%20Biofuel%20Supply."
+              target="_blank"
+              rel="noreferrer noopener"
+              className="px-6 py-3.5 rounded-full bg-[#161616] hover:bg-[#202020] border border-neutral-700/80 hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer text-xs font-semibold text-neutral-200 hover:text-orange-400"
+            >
+              <WhatsAppIcon className="w-4 h-4 shrink-0" />
+              Chat on WhatsApp
+            </a>
           </motion.div>
         </div>
       </section>
@@ -90,10 +121,7 @@ export default function EthanolFireplaceHubPage({ onNavigate }: EthanolFireplace
             <div key={item.id}>
               <ServiceCard 
                 service={item} 
-                onNavigate={() => {
-                  onNavigate(item.id as ActiveSection);
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                }} 
+                onNavigate={() => onNavigate(item.id as ActiveSection)} 
               />
             </div>
           ))}
@@ -144,65 +172,43 @@ export default function EthanolFireplaceHubPage({ onNavigate }: EthanolFireplace
       </section>
 
       {/* FAQs Section */}
-      <section className="max-w-4xl mx-auto px-6 md:px-12 py-16">
-        <div className="text-center mb-12">
-          <span className="text-xs uppercase tracking-[0.25em] text-orange-500 font-semibold">Got Questions?</span>
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mt-2">Bio-Ethanol Fireplace FAQs</h3>
-        </div>
-
-        <div className="space-y-4">
-          {generalFaqs.map((faq, idx) => {
-            const isOpen = expandedFaq === idx;
-            return (
-              <div 
-                key={idx}
-                className="bg-[#121212] rounded-2xl border border-neutral-800/90 overflow-hidden transition-colors"
-              >
-                <button
-                  onClick={() => setExpandedFaq(isOpen ? null : idx)}
-                  className="w-full p-6 text-left flex items-center justify-between gap-4 cursor-pointer"
-                >
-                  <span className="font-semibold text-white text-sm sm:text-base">{faq.question}</span>
-                  <ChevronDown className={`w-5 h-5 text-orange-400 shrink-0 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-neutral-300 text-sm leading-relaxed border-t border-neutral-800/60 font-light">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      <FaqAccordion
+        items={generalFaqs}
+        title="Bio-Ethanol Fireplace FAQs"
+        subtitle="Frequently asked questions about clean combustion, fuel purity, ceramic wool safety, and indoor ventless guidelines."
+        eyebrow="Got Questions?"
+        whatsappMessage="Hi Flames Fireplace, I have a question regarding Bio-Ethanol fireplaces and biofuel delivery."
+        onNavigate={onNavigate}
+      />
 
       {/* Consultation Banner */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-8">
-        <div className="rounded-3xl bg-gradient-to-r from-orange-950/40 via-neutral-900 to-[#121212] border border-orange-500/20 p-8 sm:p-12 text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-            Need Custom Ethanol Burner Trays or Bulk Biofuel Delivery in Dubai?
-          </h3>
-          <p className="text-neutral-300 max-w-2xl mx-auto text-sm sm:text-base font-light mb-8">
-            We custom-fabricate linear stainless steel ethanol inserts to any dimension and supply certified 96.6% bioethanol with same-day delivery across Dubai and the UAE.
-          </p>
-          <div className="flex flex-wrap items-center justify-center gap-4">
-            <a
-              href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%2C%20I'm%20inquiring%20about%20Custom%20Ethanol%20Burners%20and%20Biofuel%20Supply."
-              target="_blank"
-              rel="noreferrer noopener"
-              className="px-8 py-4 rounded-2xl bg-orange-600 hover:bg-orange-500 text-white font-semibold text-sm transition-all shadow-lg shadow-orange-600/30 flex items-center gap-2 cursor-pointer"
-            >
-              Order Bioethanol Fuel / Inquire on WhatsApp
-            </a>
-            <button
-              onClick={() => {
-                onNavigate('contact');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="px-8 py-4 rounded-2xl bg-white/5 hover:bg-white/10 text-white border border-white/10 font-semibold text-sm transition-colors cursor-pointer"
-            >
-              Contact Our Engineers
-            </button>
+      <section className="max-w-7xl mx-auto px-6 md:px-12 pt-8 pb-12">
+        <div className="rounded-3xl bg-[#121212] border border-neutral-800 p-8 sm:p-12 text-center text-white relative overflow-hidden">
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
+              Need Custom Ethanol Burner Trays or Bulk Biofuel Delivery in Dubai?
+            </h3>
+            <p className="text-neutral-300 text-sm sm:text-base leading-relaxed mb-8 font-light">
+              We custom-fabricate linear stainless steel ethanol inserts to any dimension and supply certified 96.6% bioethanol with fast delivery across Dubai and the UAE.
+            </p>
+            <div className="flex flex-wrap items-center justify-center gap-4">
+              <a
+                href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%2C%20I'm%20inquiring%20about%20Custom%20Ethanol%20Burners%20and%20Biofuel%20Supply."
+                target="_blank"
+                rel="noreferrer noopener"
+                className="inline-flex items-center gap-2.5 rounded-full bg-[#182a1d] hover:bg-[#1e3825] border border-emerald-500/40 text-emerald-400 px-7 py-3.5 text-xs font-semibold shadow-lg transition-all cursor-pointer"
+              >
+                <WhatsAppIcon className="w-4 h-4 shrink-0" />
+                Order Biofuel on WhatsApp
+              </a>
+              <button
+                onClick={() => onNavigate('contact')}
+                className="inline-flex items-center gap-2 rounded-full bg-orange-600 hover:bg-orange-500 text-white px-7 py-3.5 text-xs font-semibold shadow-lg shadow-orange-600/20 transition-all cursor-pointer"
+              >
+                Contact Our Engineers
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </div>
           </div>
         </div>
       </section>

@@ -80,16 +80,20 @@ export default function ServiceCard({ service, onNavigate }: ServiceCardProps) {
           </p>
         </div>
 
-        <div className="pt-4 border-t border-neutral-800 flex justify-center">
+        <div className="pt-4 border-t border-neutral-800/80 flex items-center justify-between gap-3">
+          <span className="text-[11px] font-medium text-orange-400 group-hover:text-orange-300 transition-colors flex items-center gap-1">
+            View Details
+            <span className="group-hover:translate-x-0.5 transition-transform">→</span>
+          </span>
           <a
             id={`wa-cta-service-${service.id}`}
             href={`https://wa.me/971542112891?text=${encodeURIComponent(waText)}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="w-full sm:min-w-[140px] justify-center px-4 py-3 rounded-2xl bg-[#1b1b1b] hover:bg-emerald-950/60 border border-neutral-700 hover:border-emerald-500/50 transition-all duration-300 flex items-center gap-2 cursor-pointer text-sm font-semibold text-neutral-100"
+            className="px-4 py-2 rounded-full bg-[#161616] hover:bg-[#1f1f1f] border border-neutral-700/70 hover:border-orange-500/50 transition-all duration-300 flex items-center gap-2 cursor-pointer text-xs font-semibold text-neutral-200 hover:text-orange-400"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552" className="w-4 h-4 shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552" className="w-3.5 h-3.5 shrink-0">
               <defs>
                 <linearGradient id={`wa-sh-service-${service.id}`} x1="85.915" x2="86.535" y1="32.567" y2="137.092" gradientUnits="userSpaceOnUse">
                   <stop offset="0" stopColor="#57d163" />

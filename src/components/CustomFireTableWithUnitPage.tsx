@@ -1,15 +1,14 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Check, ArrowRight, ChevronDown, Flame, Shield, Sparkles, Sliders, Layers, Zap } from 'lucide-react';
+import { Check, ArrowRight, Flame, Shield, Sparkles, Sliders, Layers, Zap } from 'lucide-react';
 import { ActiveSection } from '../types';
 import WhatsAppIcon from './WhatsAppIcon';
+import FaqAccordion from './FaqAccordion';
 
 interface CustomFireTableProps {
   onNavigate: (section: ActiveSection) => void;
 }
 
 export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTableProps) {
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   const benefits = [
     "Custom Dimensions & Seating: Fabricated to exact millimeter measurements for coffee, lounge, or 8–12 seat dining height",
@@ -58,9 +57,7 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
   return (
     <div id="custom-fire-table-unit" className="bg-[#0b0b0b] text-neutral-100 selection:bg-orange-500 selection:text-white pb-24">
       {/* ──── SECTION 1: HERO SECTION ──── */}
-      <section className="relative overflow-hidden pt-28 sm:pt-36 pb-16 lg:pb-24">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(251,146,60,0.18),_transparent_40%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.14),_transparent_35%)] pointer-events-none" />
-        
+      <section className="relative overflow-hidden pt-28 sm:pt-36 pb-16 lg:pb-24 bg-[#0e0e0e] border-b border-neutral-800/80">
         <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
@@ -115,27 +112,25 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4"
+                className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5"
               >
+                <button
+                  id="quote-cta-custom-fire-table"
+                  onClick={() => onNavigate('contact')}
+                  className="px-7 py-3.5 rounded-full bg-orange-600 hover:bg-orange-500 text-white font-sans text-xs font-semibold shadow-lg shadow-orange-600/20 hover:shadow-orange-500/30 transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer group"
+                >
+                  Request Technical Quotation
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
                 <a
                   id="wa-cta-custom-fire-table"
                   href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%2C%20I'm%20inquiring%20about%20a%20Customized%20Fire%20Table%20with%20Integrated%20Fire%20Unit."
                   target="_blank"
                   rel="noreferrer noopener"
-                  className="w-fit sm:min-w-[160px] justify-center px-6 py-3.5 rounded-2xl bg-[#1b1b1b] hover:bg-emerald-950/60 border border-neutral-700 hover:border-emerald-500/50 transition-all duration-300 flex items-center gap-2.5 cursor-pointer text-sm font-semibold text-neutral-100 shadow-lg"
+                  className="px-6 py-3.5 rounded-full bg-[#161616] hover:bg-[#202020] border border-neutral-700/80 hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center gap-2.5 cursor-pointer text-xs font-semibold text-neutral-200 hover:text-orange-400"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.216 175.552" className="w-5 h-5 shrink-0">
-                    <defs>
-                      <linearGradient id="wa-btn-grad-custom-fire-table" x1="85.915" x2="86.535" y1="32.567" y2="137.092" gradientUnits="userSpaceOnUse">
-                        <stop offset="0" stopColor="#57d163" />
-                        <stop offset="1" stopColor="#23b33a" />
-                      </linearGradient>
-                    </defs>
-                    <path fill="#fff" d="m12.966 161.238 10.439-38.114a73.42 73.42 0 0 1-9.821-36.772c.017-40.556 33.021-73.55 73.578-73.55 19.681.01 38.154 7.669 52.047 21.572s21.537 32.383 21.53 52.037c-.018 40.553-33.027 73.553-73.578 73.553h-.032c-12.313-.005-24.412-3.094-35.159-8.954z" />
-                    <path fill="url(#wa-btn-grad-custom-fire-table)" d="M87.184 25.227c-33.733 0-61.166 27.423-61.178 61.13a60.98 60.98 0 0 0 9.349 32.535l1.455 2.312-6.179 22.559 23.146-6.069 2.235 1.324c9.387 5.571 20.15 8.518 31.126 8.524h.023c33.707 0 61.14-27.426 61.153-61.135a60.75 60.75 0 0 0-17.895-43.251 60.75 60.75 0 0 0-43.235-17.929z" />
-                    <path fill="#fff" fillRule="evenodd" d="M68.016 54.843c-1.378-3.061-2.828-3.123-4.137-3.176l-3.524-.043c-1.226 0-3.218.46-4.902 2.3s-6.435 6.287-6.435 15.332 6.588 17.785 7.506 19.013c.918 1.228 12.718 20.381 31.405 27.75 15.529 6.124 18.689 4.906 22.061 4.6s10.877-4.447 12.408-8.74c1.531-4.293 1.531-7.971 1.072-8.74-.459-.769-1.685-1.226-3.525-2.146s-10.877-5.367-12.562-5.981-2.91-.919-4.137.921-4.746 5.979-5.819 7.206-2.144 1.381-3.984.462-7.76-2.861-14.784-9.124c-5.465-4.873-9.154-10.891-10.228-12.73s-.114-2.835.808-3.751c.825-.824 1.838-2.147 2.759-3.22s1.224-1.84 1.836-3.065.307-2.301-.153-3.22-4.032-10.011-5.666-13.647" />
-                  </svg>
-                  WhatsApp
+                  <WhatsAppIcon className="w-4 h-4 shrink-0" />
+                  Chat on WhatsApp
                 </a>
               </motion.div>
             </div>
@@ -231,42 +226,24 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
       </section>
 
       {/* ──── SECTION 4: FREQUENTLY ASKED QUESTIONS ──── */}
-      <section className="max-w-4xl mx-auto px-6 md:px-12 py-20">
-        <div className="text-center mb-12">
-          <span className="text-xs uppercase tracking-[0.25em] text-orange-500 font-semibold">Common Queries</span>
-          <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-white">Frequently Asked Questions</h2>
-        </div>
-
-        <div className="space-y-4">
-          {faqs.map((faq, idx) => {
-            const isOpen = expandedFaq === idx;
-            return (
-              <div key={idx} className="rounded-2xl border border-neutral-800 bg-[#121212] overflow-hidden">
-                <button
-                  onClick={() => setExpandedFaq(isOpen ? null : idx)}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 hover:bg-neutral-800/40 transition-colors cursor-pointer"
-                >
-                  <span className="font-medium text-sm sm:text-base text-white">{faq.question}</span>
-                  <ChevronDown className={`w-4 h-4 text-orange-400 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`} />
-                </button>
-                {isOpen && (
-                  <div className="px-6 pb-6 pt-2 text-neutral-300 text-sm leading-relaxed border-t border-neutral-800/80 bg-neutral-900/40">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
-            );
-          })}
-        </div>
-      </section>
+      {faqs && faqs.length > 0 && (
+        <FaqAccordion
+          items={faqs}
+          title="Frequently Asked Questions"
+          subtitle="Clear information regarding tabletop materials, heat barrier protection, LPG bottle storage, and custom sizing."
+          eyebrow="Common Queries"
+          whatsappMessage="Hi Flames Fireplace, I'd like to ask a few questions regarding Custom Fire Tables."
+          onNavigate={onNavigate}
+        />
+      )}
 
       {/* ──── SECTION 5: BOTTOM CONSULTATION BANNER ──── */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 pt-8 pb-12">
-        <div className="rounded-3xl bg-gradient-to-r from-orange-600 to-orange-700 p-8 sm:p-12 text-center text-white shadow-2xl shadow-orange-600/20">
+        <div className="rounded-3xl bg-[#121212] border border-neutral-800 p-8 sm:p-12 text-center text-white relative overflow-hidden">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
             Design Your Custom Fire Table with Our Dubai Team
           </h2>
-          <p className="mx-auto max-w-2xl text-orange-100 leading-relaxed text-sm sm:text-base mb-8">
+          <p className="mx-auto max-w-2xl text-neutral-300 leading-relaxed text-sm sm:text-base mb-8 font-light">
             Get personalized material samples, CAD drawings, and turn your outdoor terrace or villa pool deck into an unforgettable luxury gathering space.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-4">
@@ -274,17 +251,14 @@ export default function CustomFireTableWithUnitPage({ onNavigate }: CustomFireTa
               href="https://wa.me/971542112891?text=Hi%20Flames%20Fireplace%2C%20I'd%20like%20to%20book%20a%20consultation%20for%20a%20Customized%20Fire%20Table."
               target="_blank"
               rel="noreferrer noopener"
-              className="inline-flex items-center gap-3 rounded-2xl bg-neutral-950 px-8 py-4 text-sm font-semibold text-white shadow-xl hover:bg-neutral-900 transition-all border border-white/10 cursor-pointer"
+              className="inline-flex items-center gap-2.5 rounded-full bg-[#182a1d] hover:bg-[#1e3825] border border-emerald-500/40 text-emerald-400 px-7 py-3.5 text-xs font-semibold shadow-lg transition-all cursor-pointer"
             >
-              <WhatsAppIcon className="w-5 h-5" />
+              <WhatsAppIcon className="w-4 h-4 shrink-0" />
               Chat on WhatsApp
             </a>
             <button
-              onClick={() => {
-                onNavigate('contact');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-              className="inline-flex items-center gap-2 rounded-2xl bg-white/15 hover:bg-white/25 px-8 py-4 text-sm font-semibold text-white transition-all border border-white/20 cursor-pointer"
+              onClick={() => onNavigate('contact')}
+              className="inline-flex items-center gap-2 rounded-full bg-orange-600 hover:bg-orange-500 text-white px-7 py-3.5 text-xs font-semibold shadow-lg shadow-orange-600/20 transition-all cursor-pointer"
             >
               Book Site Visit
               <ArrowRight className="w-4 h-4" />

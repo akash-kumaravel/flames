@@ -1,8 +1,8 @@
-import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Check, ArrowRight, ChevronDown, Flame, Shield, Sparkles, Sliders } from 'lucide-react';
+import { Check, ArrowRight, Flame, Shield, Sparkles, Sliders } from 'lucide-react';
 import { ActiveSection, GasFireplaceVariant } from '../types';
 import { OUTDOOR_GAS_VARIANTS } from '../data';
+import FaqAccordion from './FaqAccordion';
 
 interface GasFireplaceVariantPageProps {
   variantId: string;
@@ -10,7 +10,6 @@ interface GasFireplaceVariantPageProps {
 }
 
 export default function GasFireplaceVariantPage({ variantId, onNavigate }: GasFireplaceVariantPageProps) {
-  const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   const variant = OUTDOOR_GAS_VARIANTS.find(v => v.id === variantId) || OUTDOOR_GAS_VARIANTS[0];
   const otherVariants = OUTDOOR_GAS_VARIANTS.filter(v => v.id !== variant.id);
@@ -18,9 +17,7 @@ export default function GasFireplaceVariantPage({ variantId, onNavigate }: GasFi
   return (
     <div id={`variant-${variant.id}`} className="min-h-screen bg-[#0b0b0b] text-neutral-100 selection:bg-orange-500 selection:text-white pb-24">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-28 sm:pt-36 pb-20 lg:pb-28">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(251,146,60,0.16),_transparent_40%),radial-gradient(circle_at_bottom_right,_rgba(249,115,22,0.12),_transparent_35%)] pointer-events-none" />
-        
+      <section className="relative overflow-hidden pt-28 sm:pt-36 pb-20 lg:pb-28 bg-[#0e0e0e] border-b border-neutral-800/80">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div>
@@ -156,32 +153,15 @@ export default function GasFireplaceVariantPage({ variantId, onNavigate }: GasFi
       </section>
 
       {/* FAQs Section */}
-      {variant.faqs.length > 0 && (
-        <section className="max-w-4xl mx-auto px-6 md:px-12 py-20">
-          <div className="text-center mb-12">
-            <span className="text-xs uppercase tracking-[0.25em] text-orange-500 font-semibold">Common Queries</span>
-            <h2 className="mt-3 text-2xl sm:text-3xl font-semibold text-white">Frequently Asked Questions</h2>
-          </div>
-
-          <div className="space-y-4">
-            {variant.faqs.map((faq, idx) => (
-              <div key={idx} className="rounded-2xl border border-neutral-800 bg-[#121212] overflow-hidden">
-                <button
-                  onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 hover:bg-neutral-800/40 transition-colors cursor-pointer"
-                >
-                  <span className="font-medium text-sm sm:text-base text-white">{faq.question}</span>
-                  <ChevronDown className={`w-4 h-4 text-orange-400 transition-transform ${expandedFaq === idx ? 'rotate-180' : ''}`} />
-                </button>
-                {expandedFaq === idx && (
-                  <div className="px-6 pb-6 pt-2 text-neutral-300 text-sm leading-relaxed border-t border-neutral-800/80 bg-neutral-900/40">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </section>
+      {variant.faqs && variant.faqs.length > 0 && (
+        <FaqAccordion
+          items={variant.faqs}
+          title="Frequently Asked Questions"
+          subtitle={`Detailed answers regarding ignition, gas fuel pressure, safety sensors, and weather protection for ${variant.title}.`}
+          eyebrow="Common Queries"
+          whatsappMessage={`Hi Flames Fireplace, I'd like to ask a few questions regarding ${variant.title}.`}
+          onNavigate={onNavigate}
+        />
       )}
 
       {/* Other Gas Fireplace Models */}
@@ -204,10 +184,7 @@ export default function GasFireplaceVariantPage({ variantId, onNavigate }: GasFi
           {otherVariants.slice(0, 4).map((item) => (
             <div
               key={item.id}
-              onClick={() => {
-                onNavigate(item.id as ActiveSection);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
+              onClick={() => onNavigate(item.id as ActiveSection)}
               className="group bg-[#121212] rounded-2xl border border-neutral-800 overflow-hidden hover:border-orange-500/50 transition-all cursor-pointer flex flex-col"
             >
               <div className="aspect-[16/10] overflow-hidden">
@@ -235,12 +212,12 @@ export default function GasFireplaceVariantPage({ variantId, onNavigate }: GasFi
 
       {/* Bottom CTA Banner */}
       <section className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="rounded-3xl bg-gradient-to-r from-orange-600 to-orange-700 p-8 sm:p-12 text-center text-white relative overflow-hidden">
+        <div className="rounded-3xl bg-[#121212] border border-neutral-800 p-8 sm:p-12 text-center text-white relative overflow-hidden">
           <div className="relative z-10 max-w-3xl mx-auto">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
               Bring the Magic of Real Flame to Your Outdoor Oasis
             </h2>
-            <p className="text-orange-100 text-sm sm:text-base leading-relaxed mb-8">
+            <p className="text-neutral-300 text-sm sm:text-base leading-relaxed mb-8 font-light">
               From automated villa masterplans to custom resort fire bowls, Flames Fireplace delivers turnkey design, gas supply coordination, and professional installation across Dubai & UAE.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -248,14 +225,14 @@ export default function GasFireplaceVariantPage({ variantId, onNavigate }: GasFi
                 href={`https://wa.me/971542112891?text=${encodeURIComponent(`Hi Flames Fireplace, I'd like to book a consultation for ${variant.title}.`)}`}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="px-8 py-4 rounded-full bg-neutral-900 hover:bg-black text-white font-semibold text-sm shadow-xl flex items-center gap-2 cursor-pointer transition-all"
+                className="inline-flex items-center gap-2.5 px-8 py-4 rounded-full bg-[#182a1d] hover:bg-[#1e3825] border border-emerald-500/40 text-emerald-400 font-semibold text-sm shadow-xl cursor-pointer transition-all"
               >
                 Inquire on WhatsApp
                 <ArrowRight className="w-4 h-4" />
               </a>
               <button
                 onClick={() => onNavigate('contact')}
-                className="px-8 py-4 rounded-full bg-white/20 hover:bg-white/30 text-white font-semibold text-sm backdrop-blur-sm transition-all cursor-pointer"
+                className="px-8 py-4 rounded-full bg-orange-600 hover:bg-orange-500 text-white font-semibold text-sm shadow-lg shadow-orange-600/20 transition-all cursor-pointer"
               >
                 Contact Our Engineers
               </button>

@@ -159,15 +159,18 @@ export default function BlogPage({ onNavigateContact, onNavigate, selectedArticl
 
               {/* Special Q&A schema block if present */}
               {activeArticle?.content.faq && (
-                <div className="bg-orange-950/20 rounded-2xl p-6 border border-orange-900/40 mt-8">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-orange-400">
-                    Expert Design Guidance
-                  </span>
-                  <h4 className="font-sans font-semibold text-white text-sm md:text-base mt-2 mb-2">
-                    Q: {activeArticle.content.faq.question}
+                <div className="bg-[#121212] rounded-2xl p-6 sm:p-8 border border-neutral-800 mt-10 relative overflow-hidden">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
+                    <span className="text-[11px] font-bold uppercase tracking-widest text-orange-400 font-mono">
+                      Design FAQ Insight
+                    </span>
+                  </div>
+                  <h4 className="font-sans font-semibold text-white text-base sm:text-lg mb-3">
+                    {activeArticle.content.faq.question}
                   </h4>
-                  <p className="font-sans text-xs md:text-sm text-neutral-350 leading-relaxed">
-                    A: {activeArticle.content.faq.answer}
+                  <p className="font-sans text-sm text-neutral-300 leading-relaxed font-light">
+                    {activeArticle.content.faq.answer}
                   </p>
                 </div>
               )}
