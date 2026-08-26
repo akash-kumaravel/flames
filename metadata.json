@@ -1,6 +1,6 @@
 {
-  "name": "Flames Fireplaces Catalog",
-  "description": "Super minimal, high-end Apple-style premium showcase for Flames Fireplace indoor and outdoor fire units, including 3D water vapor fire places, manual ethanol fire places, outdoor gas fire places, fire pots, fire tables, and custom integrated fire units.",
+  "name": "Flames Fireplaces | Luxury Indoor & Outdoor Fire Features",
+  "description": "Explore Flames Fireplaces' premium collection of modern fire features: 3D water vapor fireplaces, manual ethanol fireplaces, outdoor gas fireplaces, fire pots, fire tables, and fully custom integrated fire units. Discover sleek, Apple-inspired designs built for luxury homes, patios, and commercial spaces.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
