@@ -156,7 +156,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="pt-10 flex flex-col lg:flex-row items-center justify-between gap-6 text-xs text-neutral-300">
           
           <div>
-            <span>&copy; {new Date().getFullYear()} <a href="https://www.memoinfotech.com/" target="_blank" rel="noopener noreferrer" className="text-neutral-300 hover:text-white underline">Memo Infotech</a>. All rights reserved.</span>
+            <span>&copy; {new Date().getFullYear()} <a href="https://sequelbox.com/" target="_blank" rel="noopener noreferrer" className="text-neutral-300 hover:text-white underline">Sequelbox</a>. All rights reserved.</span>
           </div>
 
           {/* Schema designations removed from UI (kept in JSON-LD only) */}

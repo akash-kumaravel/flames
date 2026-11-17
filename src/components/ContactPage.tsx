@@ -102,7 +102,7 @@ export default function ContactPage() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
         {/* Left Column: Direct Contact Form */}
-        <div className="lg:col-span-7 bg-[#121212] rounded-3xl border border-neutral-800 shadow-xs p-8 md:p-10">
+        <div className="lg:col-span-7 bg-[#121212] rounded-3xl border border-neutral-800 shadow-sm p-8 md:p-10">
           <AnimatePresence mode="wait">
             {!isSubmitted ? (
               <motion.form
@@ -284,7 +284,7 @@ export default function ContactPage() {
         <div className="lg:col-span-5 space-y-6">
           
           {/* Company Details Block */}
-          <div className="bg-[#121212] rounded-3xl border border-neutral-800 shadow-xs p-6 md:p-8 space-y-6 text-left">
+          <div className="bg-[#121212] rounded-3xl border border-neutral-800 shadow-sm p-6 md:p-8 space-y-6 text-left">
             <div className="space-y-1">
               <span className="text-[9px] font-mono font-bold text-orange-450 uppercase tracking-widest block">
                 Office &amp; Support

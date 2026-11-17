@@ -36,7 +36,7 @@ export default function BlogPage({ onNavigateContact, onNavigate, selectedArticl
               {BLOG_ARTICLES.map((article) => (
                 <div
                   key={article.id}
-                  className="bg-[#121212] rounded-3xl overflow-hidden border border-neutral-800 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
+                  className="bg-[#121212] rounded-3xl overflow-hidden border border-neutral-800 shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
                 >
                   <div className="p-8">
                     {/* Meta stats */}
@@ -98,7 +98,7 @@ export default function BlogPage({ onNavigateContact, onNavigate, selectedArticl
           </>
         ) : (
           /* SECTION 2: INDIVIDUAL ARTICLE READING VIEW */
-          <div className="max-w-4xl mx-auto bg-[#121212] rounded-3xl p-8 md:p-14 border border-neutral-800 shadow-xs">
+          <div className="max-w-4xl mx-auto bg-[#121212] rounded-3xl p-8 md:p-14 border border-neutral-800 shadow-sm">
             
             <button
               id="back-to-hub-btn"

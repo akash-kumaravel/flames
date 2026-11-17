@@ -96,7 +96,7 @@ export default function ProductsOverview({ products, onSelectProduct, onNavigate
         <div className="absolute inset-0 bg-radial-gradient from-orange-500/5 via-transparent to-transparent pointer-events-none" />
         
         <div className="relative z-10 max-w-3xl mx-auto space-y-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-50/80 border border-orange-100 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-orange-50/80 border border-orange-100 shadow-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-orange-500 animate-pulse" />
             <span className="text-[9px] font-mono tracking-widest text-orange-700 uppercase font-bold">
               THE FLAMES SYSTEM MANIFESTO • SWISS ENGINEERING • LUXURY CASING
@@ -187,15 +187,15 @@ export default function ProductsOverview({ products, onSelectProduct, onNavigate
                     <div className="absolute top-4 left-4">
                       <span className={`px-3 py-1.5 rounded-lg text-[9px] font-mono tracking-widest font-extrabold uppercase ${
                         isVapor 
-                          ? 'bg-sky-100 text-sky-800 border border-sky-200 shadow-xs' 
-                          : 'bg-orange-105 bg-orange-100 text-orange-850 border border-orange-200 shadow-xs'
+                          ? 'bg-sky-100 text-sky-800 border border-sky-200 shadow-sm' 
+                          : 'bg-orange-105 bg-orange-100 text-orange-850 border border-orange-200 shadow-sm'
                       }`}>
                         {isVapor ? 'HYDRO-SONIC 3D VAPOR' : 'BOTANICAL BIOCUMBUST'}
                       </span>
                     </div>
 
                     {/* Standard Specs badge */}
-                    <div className="absolute bottom-4 left-4 flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-neutral-200/80 text-[10px] font-mono tracking-wide text-neutral-700 shadow-xs">
+                    <div className="absolute bottom-4 left-4 flex items-center gap-1.5 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-lg border border-neutral-200/80 text-[10px] font-mono tracking-wide text-neutral-700 shadow-sm">
                       <Flame className="w-3.5 h-3.5 text-orange-500 shrink-0" />
                       <span>{specBadge}</span>
                     </div>
@@ -268,7 +268,7 @@ export default function ProductsOverview({ products, onSelectProduct, onNavigate
                     <button
                       id={`explore-specs-btn-${prod.id}`}
                       onClick={() => onSelectProduct(prod.id, routeMapping[prod.id])}
-                      className="px-5 py-2.5 rounded-xl bg-neutral-900 text-xs font-semibold text-white hover:bg-orange-500 hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center gap-1.5 cursor-pointer shadow-xs"
+                      className="px-5 py-2.5 rounded-xl bg-neutral-900 text-xs font-semibold text-white hover:bg-orange-500 hover:scale-[1.02] active:scale-95 transition-all duration-300 flex items-center gap-1.5 cursor-pointer shadow-sm"
                     >
                       Configure Specs
                       <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -317,7 +317,7 @@ export default function ProductsOverview({ products, onSelectProduct, onNavigate
                     onClick={() => setSelectedScaleIndex(idx)}
                     className={`w-full p-4 rounded-xl border text-left transition-all duration-300 flex justify-between items-center cursor-pointer ${
                       selectedScaleIndex === idx
-                        ? 'bg-orange-50 border-orange-500 text-orange-950 shadow-xs'
+                        ? 'bg-orange-50 border-orange-500 text-orange-950 shadow-sm'
                         : 'bg-white border-neutral-200 hover:bg-neutral-100/50 text-neutral-500'
                     }`}
                   >
@@ -364,7 +364,7 @@ export default function ProductsOverview({ products, onSelectProduct, onNavigate
                     
                     {/* Simulated live flame mist inside container */}
                     <div className="w-full bg-neutral-950 rounded h-3 flex items-center justify-center relative shadow-inner overflow-hidden">
-                      <div className="absolute inset-x-4 h-2 rounded-full filter blur-xs bg-gradient-to-r from-orange-600 via-amber-400 to-amber-600 animate-pulse" />
+                      <div className="absolute inset-x-4 h-2 rounded-full filter blur-sm bg-gradient-to-r from-orange-600 via-amber-400 to-amber-600 animate-pulse" />
                     </div>
 
                     <span className="text-[10px] font-mono tracking-widest text-orange-600 font-bold block mt-2 text-center">
@@ -375,7 +375,7 @@ export default function ProductsOverview({ products, onSelectProduct, onNavigate
                 </div>
 
                 {/* Alignment center line guide info indicator */}
-                <div className="absolute -bottom-1.5 bg-white px-3 py-1 border border-neutral-200/80 text-[10px] font-mono tracking-widest text-neutral-500 uppercase rounded-full shadow-xs">
+                <div className="absolute -bottom-1.5 bg-white px-3 py-1 border border-neutral-200/80 text-[10px] font-mono tracking-widest text-neutral-500 uppercase rounded-full shadow-sm">
                   PROPORTIONAL CO-ALIGNMENT
                 </div>
 
@@ -441,7 +441,7 @@ export default function ProductsOverview({ products, onSelectProduct, onNavigate
           </div>
         </div>
 
-        <div className="mt-6 p-4 bg-white rounded-2xl border border-neutral-200/50 text-neutral-500 text-xs leading-normal flex items-start gap-3 justify-center max-w-3xl mx-auto shadow-xs">
+        <div className="mt-6 p-4 bg-white rounded-2xl border border-neutral-200/50 text-neutral-500 text-xs leading-normal flex items-start gap-3 justify-center max-w-3xl mx-auto shadow-sm">
           <Info className="w-5 h-5 text-orange-500 shrink-0" />
           <span>
             <strong>Architectural Support:</strong> Instant design advice and product dimension sheets are available directly via WhatsApp (+971 54 211 2891) for quick project integration with your architectural plans.
@@ -449,7 +449,7 @@ export default function ProductsOverview({ products, onSelectProduct, onNavigate
         </div>
 
         {/* Fixing the FAQ not easily visible next step from products */}
-        <div className="mt-14 p-8 rounded-3xl bg-amber-500/[0.03] border border-orange-200/65 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
+        <div className="mt-14 p-8 rounded-3xl bg-amber-500/[0.03] border border-orange-200/65 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div className="space-y-1.5 text-left">
             <span className="text-[10px] font-mono tracking-widest text-orange-600 font-bold uppercase flex items-center gap-1.5">
               <HelpCircle className="w-4 h-4 text-orange-500" />
@@ -464,7 +464,7 @@ export default function ProductsOverview({ products, onSelectProduct, onNavigate
           </div>
           <button
             onClick={() => onSelectProduct('faq', 'faq')}
-            className="px-5 py-3 rounded-full bg-neutral-900 hover:bg-orange-500 text-white font-sans text-xs font-semibold cursor-pointer transition flex items-center gap-1.5 shrink-0 shadow-xs"
+            className="px-5 py-3 rounded-full bg-neutral-900 hover:bg-orange-500 text-white font-sans text-xs font-semibold cursor-pointer transition flex items-center gap-1.5 shrink-0 shadow-sm"
           >
             Open Buyer FAQs page
             <ArrowRight className="w-3.5 h-3.5" />

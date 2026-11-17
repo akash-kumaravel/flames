@@ -91,7 +91,7 @@ export default function Hero({ onNavigate }: HeroProps) {
             <button
               id="hero-quote-btn"
               onClick={() => onNavigate('contact')}
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/15 text-white font-sans text-sm font-semibold border border-white/15 shadow-xs transition-colors cursor-pointer"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-white/10 hover:bg-white/15 text-white font-sans text-sm font-semibold border border-white/15 shadow-sm transition-colors cursor-pointer"
             >
               Get a Free Quote
             </button>

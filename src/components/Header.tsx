@@ -38,8 +38,8 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
       id="header-navigation"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#111]/95 backdrop-blur-md border-b border-neutral-800/80 py-2.5 sm:py-3 shadow-xs'
-          : 'bg-[#111]/80 backdrop-blur-xs py-3.5 sm:py-5 border-b border-neutral-800/70'
+          ? 'bg-[#111]/95 backdrop-blur-md border-b border-neutral-800/80 py-2.5 sm:py-3 shadow-sm'
+          : 'bg-[#111]/80 backdrop-blur-sm py-3.5 sm:py-5 border-b border-neutral-800/70'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between relative">
@@ -108,7 +108,7 @@ export default function Header({ activeSection, onNavigate }: HeaderProps) {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="lg:hidden fixed inset-0 bg-neutral-900/35 backdrop-blur-xs z-40"
+              className="lg:hidden fixed inset-0 bg-neutral-900/35 backdrop-blur-sm z-40"
             />
 
             {/* Mobile Drawer Panel */}

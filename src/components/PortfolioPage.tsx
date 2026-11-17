@@ -125,7 +125,7 @@ export default function PortfolioPage() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.4 }}
-                className="bg-[#121212] rounded-3xl overflow-hidden border border-neutral-800 shadow-xs hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
+                className="bg-[#121212] rounded-3xl overflow-hidden border border-neutral-800 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group cursor-pointer"
                 onClick={() => setSelectedProject(item)}
               >
                 <div className="relative h-64 overflow-hidden bg-neutral-950">
@@ -140,7 +140,7 @@ export default function PortfolioPage() {
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 opacity-95 group-hover:opacity-100"
                   />
                   {/* Subtle Top badge */}
-                  <div className="absolute top-4 left-4 bg-neutral-900/80 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-wider font-mono px-3 py-1.5 rounded-full shadow-xs flex items-center gap-1">
+                  <div className="absolute top-4 left-4 bg-neutral-900/80 backdrop-blur-md text-white text-[9px] font-bold uppercase tracking-wider font-mono px-3 py-1.5 rounded-full shadow-sm flex items-center gap-1">
                     {item.category === 'indoor' ? (
                       <Droplets className="w-2.5 h-2.5 text-orange-400" />
                     ) : (
@@ -222,7 +222,7 @@ export default function PortfolioPage() {
                     referrerPolicy="no-referrer"
                     className="w-full h-full object-cover"
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
                   <div className="absolute bottom-6 left-6 right-6 text-white space-y-1.5">
                     <span className="px-3 py-1 rounded-full bg-orange-500 text-white text-[9px] font-bold uppercase tracking-wider font-mono inline-block">
                       {selectedProject.categoryLabel}
@@ -266,7 +266,7 @@ export default function PortfolioPage() {
                       href={`https://wa.me/971542112891?text=${encodeURIComponent(selectedProject.waMessage)}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-sans text-xs font-semibold tracking-wide transition duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-xs"
+                      className="flex-1 py-3.5 rounded-xl bg-orange-500 hover:bg-orange-600 text-white font-sans text-xs font-semibold tracking-wide transition duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-sm"
                     >
                       Inquire About This Work
                       <ArrowRight className="w-4 h-4" />

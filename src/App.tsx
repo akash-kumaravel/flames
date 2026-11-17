@@ -308,7 +308,6 @@ export default function App() {
   useEffect(() => {
     const handleNavigationEvent = () => {
       const matched = getSectionFromPath();
-      console.log('[App] popstate matched ->', matched, 'path=', window.location.pathname);
       setActiveSection(matched);
       const matchedArticle = BLOG_ARTICLES.find(article => article.slug === window.location.pathname);
       setSelectedArticleId(matchedArticle ? matchedArticle.id : null);
@@ -424,7 +423,7 @@ export default function App() {
     // 3. Manage Open Graph (OG) Cards — direct injection for major indexing crawlers (Gemini, ChatGPT, Perplexity)
     const svcForOg = SERVICES.find(s => s.id === activeSection);
     const ogImage = activeArticleObj
-      ? 'https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=1200'
+      ? 'https://www.flamesfireplace.com/assets/Bio-Ethanol%20Fireplace%20_%20Product%20Close-up.webp'
       : (svcForOg ? svcForOg.image : 'https://www.flamesfireplace.com/assets/Ethanol%20Fireplace.webp');
 
     const ogProperties = {
@@ -466,12 +465,7 @@ export default function App() {
       '@type': 'WebSite',
       name: 'Flames Fireplace',
       alternateName: 'FlamesFireplace',
-      url: origin,
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: `${origin}/?q={search_term_string}`,
-        'query-input': 'required name=search_term_string'
-      }
+      url: origin
     };
 
 
@@ -491,10 +485,9 @@ export default function App() {
       areaServed: ['Dubai', 'Abu Dhabi', 'Sharjah', 'Ajman', 'Umm Al Quwain', 'Ras Al Khaimah', 'Fujairah', 'UAE'],
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Sheikh Zayed Road',
+        streetAddress: 'Office 1420, Primetime Tower, Business Bay',
         addressLocality: 'Dubai',
         addressRegion: 'Dubai',
-        postalCode: '00000',
         addressCountry: 'AE'
       },
       geo: {
